@@ -1,27 +1,47 @@
-import { Badge, Box, Heading, Image, Text } from "@chakra-ui/react";
+import { Badge, Box, Flex, Heading, HStack, Image, Text } from "@chakra-ui/react";
 import React from "react";
-
+import { StarIcon } from "@chakra-ui/icons";
 export const Card = () => {
   const property = {
-    imageUrl: "https://bit.ly/2Z4KKcF",
+    imageUrl:
+      "https://apollo-singapore.akamaized.net/v1/files/ph3towfxfi3j1-IN/image;s=300x600;q=60",
     imageAlt: "Rear view of modern home with pool",
     beds: 3,
     baths: 2,
     title: "Modern home in city center in the heart of historic Los Angeles",
-    formattedPrice: "$1,900.00",
-    reviewCount: 34,
-    rating: 4,
+    formattedPrice: "₹ 1,900.00",
+    reviewCount: "SEP 03",
+    address: "Indore, Madhya Pradesh",
   };
 
   return (
-    <Box maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden">
-      <Image src={property.imageUrl} alt={property.imageAlt} />
+    <Box  maxW="350" borderWidth="1px" borderRadius="lg" overflow="hidden">
+          <Flex  justifyContent='center' >
+          <Box zIndex={580}>
+          <Badge  
+                px="2" bg="#ffce32" color="black">
+            Featured
+          </Badge>
+        </Box>
+        <Image
+                  margin={"auto"}
+               
+          height={200}
+          src={property.imageUrl}
+          alt={property.imageAlt}
+        />
+      
+      </Flex>
 
       <Box p="6">
+        {/* Price box */}
+
+        <Box>
+          {property.formattedPrice}
+          <Box as="span" color="gray.600" fontSize="sm"></Box>
+        </Box>
+
         <Box display="flex" alignItems="baseline">
-          <Badge borderRadius="full" px="2" colorScheme="teal">
-            New
-          </Badge>
           <Box
             color="gray.500"
             fontWeight="semibold"
@@ -29,9 +49,7 @@ export const Card = () => {
             fontSize="xs"
             textTransform="uppercase"
             ml="2"
-          >
-            {property.beds} beds &bull; {property.baths} baths
-          </Box>
+          ></Box>
         </Box>
 
         <Box
@@ -44,24 +62,10 @@ export const Card = () => {
           {property.title}
         </Box>
 
-        <Box>
-          {property.formattedPrice}
-          <Box as="span" color="gray.600" fontSize="sm">
-            / wk
-          </Box>
-        </Box>
-
         <Box display="flex" mt="2" alignItems="center">
-          {Array(5)
-            .fill("")
-            .map((_, i) => (
-              <StarIcon
-                key={i}
-                color={i < property.rating ? "teal.500" : "gray.300"}
-              />
-            ))}
+          {property.address}
           <Box as="span" ml="2" color="gray.600" fontSize="sm">
-            {property.reviewCount} reviews
+            {property.reviewCount} 
           </Box>
         </Box>
       </Box>
