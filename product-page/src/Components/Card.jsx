@@ -63,9 +63,9 @@ export const Card = () => {
           as="h4"
           lineHeight="tight"
           noOfLines={1}
-                  color="002f34"
-                  opacity="64%"
-                //   color="green.200"
+          color="002f34"
+          opacity="64%"
+          //   color="green.200"
         >
           {property.title}
         </Box>

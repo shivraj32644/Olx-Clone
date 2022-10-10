@@ -4,9 +4,9 @@ import { ProducPage } from "./Components/ProducPage";
 
 function App() {
   return (
-    <Box  className="App">
+    <Box className="App">
       {/* <Card/> */}
-      <ProducPage/>
+      <ProducPage />
     </Box>
   );
 }
