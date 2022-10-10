@@ -2,30 +2,34 @@ import {
   Box,
   Flex,
   HStack,
-  Image,
   Input,
   Menu,
-  Accordion,
-  AccordionItem,
-  AccordionButton,
-  AccordionPanel,
-  AccordionIcon,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  InputGroup,
+  InputLeftElement,
   Button,
+  Spacer,
 } from "@chakra-ui/react";
 import React from "react";
 import { Link } from "react-router-dom";
-import { BiSearch } from "react-icons/bi";
-import { RiChat1Line } from "react-icons/ri";
-import { MdNotificationsNone } from "react-icons/md";
+
+import {
+  ChevronDownIcon,
+  CheckIcon,
+  Search2Icon,
+  AddIcon,
+} from "@chakra-ui/icons";
 
 import DownNavbar from "./DownNavbar";
 
 const UpNavbar = () => {
   return (
     <Box>
-      <HStack p="4" bg="#eff1f3">
+      <HStack p="2" bg="#eff1f3" spacing="18px">
         <Box>
-          <Link to="#">
+          <Link to="#" cursor="pointer">
             <svg
               width="48px"
               height="48px"
@@ -33,6 +37,7 @@ const UpNavbar = () => {
               data-aut-id="icon"
               class=""
               fill-rule="evenodd"
+              color="#002f34"
             >
               <path
                 class="rui-4K4Y7"
@@ -42,49 +47,100 @@ const UpNavbar = () => {
           </Link>
         </Box>
         <Box>
-          <Flex border="1px solid black" alignItems="center">
+          <InputGroup border="2px solid #002f34" borderRadius="4px">
+            <InputLeftElement
+              pointerEvents="initial"
+              children={<Search2Icon color="gray.500" />}
+            />
+            <Input
+              type="text"
+              borderRadius="none"
+              placeholder="Search city, area or locality.."
+              bg="white"
+              focusBorderColor="#23e5db"
+            />
+          </InputGroup>
+        </Box>
+        <Box width="50%">
+          <Flex
+            border="2px solid #002f34"
+            alignItems="center"
+            borderRadius="4px"
+            width="100%"
+          >
+            <Input
+              placeholder="Find Cars, Mobile Phones and more..."
+              borderRadius="none"
+              bg="white"
+              focusBorderColor="#23e5db"
+            />
             <span>
-              <BiSearch />
-            </span>
-            <Input outline="none" placeholder="Serach here" />
-            <span>
-              <Menu></Menu>
+              <Button
+                bg="#002f34"
+                border="none"
+                borderRadius="none"
+                _hover="none"
+                cursor="pointer"
+              >
+                <Search2Icon color="white" />
+              </Button>
             </span>
           </Flex>
         </Box>
         <Box>
-          <Flex border="1px solid black" alignItems="center">
-            <Input width="100%" border="none" placeholder="Serach here" />
-            <span>
-              <BiSearch />
-            </span>
-          </Flex>
+          <Menu>
+            <MenuButton
+              display="flex"
+              transition="all 0.2s"
+              borderRadius="md"
+              fontWeight="600"
+            >
+              ENGLISH <ChevronDownIcon fontSize="30px" />
+            </MenuButton>
+
+            <MenuList>
+              <MenuItem>
+                ENGLISH <Spacer />
+                <span>
+                  <CheckIcon />
+                </span>
+              </MenuItem>
+              <MenuItem>हिंदी</MenuItem>
+            </MenuList>
+          </Menu>
         </Box>
-        <Box>
-          <Accordion allowToggle>
-            <AccordionItem>
-              <h2>
-                <AccordionButton>
-                  <Box flex="1" textAlign="left">
-                    ENGLISH
-                  </Box>
-                  <AccordionIcon />
-                </AccordionButton>
-              </h2>
-              <AccordionPanel pb={4}>ENGLISH</AccordionPanel>
-              <AccordionPanel pb={4}>HINDI</AccordionPanel>
-            </AccordionItem>
-          </Accordion>
-        </Box>
-        <Box>
+        {/* <Box cursor="pointer">
           <RiChat1Line />
         </Box>
-        <Box>
+        <Box cursor="pointer">
           <MdNotificationsNone />
-        </Box>
-        <Box>Profile</Box>
+        </Box> */}
         <Box>
-          <Button bg="white">+ SELL</Button>
+          <Button
+            colorScheme="black"
+            variant="link"
+            fontSize="17px"
+            fontWeight="600"
+            // borderBottom=" 2px solid black"
+            borderRadius="none"
+          >
+            Login
+          </Button>
+        </Box>
+        <Box>
+          <Button
+            bg="white"
+            _hover="none"
+            borderRadius="30px"
+            p="17px"
+            borderTop="5px solid #23e5db"
+            borderLeft="5px solid #ffce32"
+            borderRight="5px solid #3a77ff"
+            borderBottom="5px solid #ffce32"
+          >
+            <AddIcon mr="5px" />
+            SELL
+          </Button>
         </Box>
       </HStack>
       <DownNavbar />
