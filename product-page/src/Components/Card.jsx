@@ -1,4 +1,12 @@
-import { Badge, Box, Flex, Heading, HStack, Image, Text } from "@chakra-ui/react";
+import {
+  Badge,
+  Box,
+  Flex,
+  Heading,
+  HStack,
+  Image,
+  Text,
+} from "@chakra-ui/react";
 import React from "react";
 import { StarIcon } from "@chakra-ui/icons";
 export const Card = () => {
@@ -15,22 +23,19 @@ export const Card = () => {
   };
 
   return (
-    <Box  maxW="350" borderWidth="1px" borderRadius="lg" overflow="hidden">
-          <Flex  justifyContent='center' >
-          <Box zIndex={580}>
-          <Badge  
-                px="2" bg="#ffce32" color="black">
+    <Box maxW="350" borderWidth="1px" borderRadius="lg" overflow="hidden">
+      <Flex justifyContent="center">
+        <Box zIndex={580}>
+          <Badge px="2" bg="#ffce32" color="black">
             Featured
           </Badge>
         </Box>
         <Image
-                  margin={"auto"}
-               
+          margin={"auto"}
           height={200}
           src={property.imageUrl}
           alt={property.imageAlt}
         />
-      
       </Flex>
 
       <Box p="6">
@@ -58,6 +63,9 @@ export const Card = () => {
           as="h4"
           lineHeight="tight"
           noOfLines={1}
+                  color="002f34"
+                  opacity="64%"
+                //   color="green.200"
         >
           {property.title}
         </Box>
@@ -65,7 +73,7 @@ export const Card = () => {
         <Box display="flex" mt="2" alignItems="center">
           {property.address}
           <Box as="span" ml="2" color="gray.600" fontSize="sm">
-            {property.reviewCount} 
+            {property.reviewCount}
           </Box>
         </Box>
       </Box>
