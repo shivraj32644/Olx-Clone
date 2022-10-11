@@ -10,6 +10,7 @@ import {
   RangeSliderFilledTrack,
   RangeSliderThumb,
   RangeSliderTrack,
+  Button
 } from "@chakra-ui/react";
 import React from "react";
 import {
@@ -41,9 +42,9 @@ export const Accordian = () => {
   }
   return (
     <Accordion defaultIndex={[0,1,2,3]} allowMultiple>
-      <AccordionItem>
+      <AccordionItem border="0" >
         <h2>
-          <AccordionButton>
+          <AccordionButton >
             <Box flex="1" textAlign="left">
               CATEGORIES
             </Box>
@@ -102,13 +103,14 @@ export const Accordian = () => {
           </AccordionButton>
         </h2>
         <AccordionPanel pb={4}>
-          <RangeSlider defaultValue={[0, 240]} min={0} max={300} step={30}>
+          <RangeSlider defaultValue={[0, 500]} min={0} max={300} step={30}>
             <RangeSliderTrack bg="red.100">
               <RangeSliderFilledTrack bg="black" />
             </RangeSliderTrack>
             <RangeSliderThumb boxSize={6} index={0} />
             <RangeSliderThumb boxSize={6} index={1} />
           </RangeSlider>
+          <Button>Apply</Button>
         </AccordionPanel>
       </AccordionItem>
       <AccordionItem>

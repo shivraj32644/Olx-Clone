@@ -3,9 +3,9 @@ import React from "react";
 
 export const SortMenu = () => {
   return (
-    <Menu closeOnSelect={false}>
-      <MenuButton>Sort By : Date Published</MenuButton>
-      <MenuList minWidth="240px">
+    <Menu zIndex={582} closeOnSelect={true}>
+      <MenuButton zIndex={582} >Sort By : Date Published</MenuButton>
+      <MenuList zIndex={582} minWidth="240px">
         <MenuOptionGroup defaultValue="asc" title="Order" type="radio">
           <MenuItemOption value="date">Date Published</MenuItemOption>
           <MenuItemOption value="relevance">Relevance</MenuItemOption>
