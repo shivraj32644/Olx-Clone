@@ -1,12 +1,30 @@
-import { Box, Container, Stack } from "@chakra-ui/react";
+import { Box, Container, Input, Stack } from "@chakra-ui/react";
 import React from "react";
+import { useRef } from "react";
 import { Accordian } from "./Accordian";
 import { Card } from "./Card";
 import { SortMenu } from "./SortMenu";
 
 export const ProducPage = () => {
+  const inpref = useRef(null)
+
+  // function handleFocus(e) {
+  //   console.log();
+  //   // e.target.style="border:5px solid black"
+  // }
+
+
   return (
     <Container mt={10} maxW="83.2%">
+
+      {/* <Input 
+        onFocus={handleFocus}
+      ref={inpref}
+        placeholder='Here is a sample placeholder'
+        size='sm'
+      /> */}
+
+
       <Stack direction="row">
         <Box maxH="fit-content" w="25%">
           <Accordian></Accordian>
