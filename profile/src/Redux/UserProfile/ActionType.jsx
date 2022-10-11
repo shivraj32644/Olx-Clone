@@ -1,0 +1,7 @@
+
+const ON_ERROR = "ON_ERROR";
+const ON_LOADING = "ON_LOADING";
+const ON_SUCCESS = "ON_SUCCESS";
+
+
+export {ON_ERROR,ON_LOADING,ON_SUCCESS}
