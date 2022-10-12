@@ -1,17 +1,22 @@
 import { Box, Container, Input, Stack ,Grid, GridItem} from "@chakra-ui/react";
 import React from "react";
-import { useRef } from "react";
 import { Accordian } from "./Accordian";
 import { Card } from "./Card";
 import { SortMenu } from "./SortMenu";
 import { Divider } from '@chakra-ui/react'
-export const ProducPage = () => {
-  const inpref = useRef(null);
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchData, getData } from "../redux/action";
+import { Link } from "react-router-dom";
 
-  // function handleFocus(e) {
-  //   console.log();
-  //   // e.target.style="border:5px solid black"
-  // }
+export const ProducPage = () => {
+  const dispatch = useDispatch();
+  const {data} = useSelector((store) => store);
+  // console.log("data is looks like " , data);
+
+  useEffect(() => {
+    dispatch(fetchData());
+  },[])
 
   return (
     <Container mt={10} maxW="84%">
@@ -45,6 +50,7 @@ export const ProducPage = () => {
           columnGap="15px"
           rowGap="15px" pl="2"  area={"main"}>
 
+          {/* <Card />
           <Card />
           <Card />
           <Card />
@@ -53,8 +59,22 @@ export const ProducPage = () => {
           <Card />
           <Card />
           <Card />
-          <Card />
-          <Card />
+          <Card /> */}
+
+           {
+            data?.map((e) => (
+              
+              <Card key={e.id} img={e.published_ads.cars[0].car_images.img1}
+                des={e.published_ads.cars[0].description}
+                price={e.published_ads.cars[0].set_price}
+                city={e.published_ads.cars[0].ads_location.city }
+                state={e.published_ads.cars[0].ads_location.state}
+                date={e.published_ads.cars[0].date_from}
+                premium={e.isPremium}
+              />
+              
+            ))
+          } 
 
         </GridItem>
       </Grid>

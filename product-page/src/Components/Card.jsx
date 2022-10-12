@@ -9,15 +9,14 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { StarIcon } from "@chakra-ui/icons";
-export const Card = () => {
+export const Card = ({img,des,price,city,state,date,premium}) => {
   const property = {
-    imageUrl:
-      "https://apollo-singapore.akamaized.net/v1/files/rv168m2busso-IN/image;s=300x600;q=60",
+    imageUrl:img,
     imageAlt: "Rear view of modern home with pool",
-    title: "Modern home in city center in the heart of historic Los Angeles",
-    formattedPrice: "₹ 1,900",
-    date: "SEP 03",
-    address: "Indore, Madhya Pradesh",
+    title: des,
+    formattedPrice: `₹ ${new Intl.NumberFormat('en-IN').format(price) }`,
+    date: date,
+    address: `${city} ${state}`,
   };
 
   return (
@@ -36,7 +35,9 @@ export const Card = () => {
         justifyContent="center"
         align="start"
       >
-        <Badge
+
+        {
+          premium ? <Badge
           zIndex={580}
           position="absolute"
           left={1}
@@ -45,7 +46,9 @@ export const Card = () => {
           color="black"
         >
           Featured
-        </Badge>
+          </Badge> : null
+        }
+        
         <Image height="160px" src={property.imageUrl} alt={property.imageAlt} />
       </Flex>
 
