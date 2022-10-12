@@ -12,10 +12,21 @@ import { Link } from "react-router-dom";
 export const ProducPage = () => {
   const dispatch = useDispatch();
   const {data} = useSelector((store) => store);
-  // console.log("data is looks like " , data);
+
+
+  const params = {
+    id: 1,
+    
+  }
+
+  function getparams(payload) {
+    
+    return {}
+  }
 
   useEffect(() => {
-    dispatch(fetchData());
+    dispatch(fetchData({_page:1,_limit:10,_sort:"published_ads.cars[0].set_price",_order:"asc" ,id:""}));
+    // dispatch(fetchData({_page:1,_limit:30,_sort:"",_order:"" }));
   },[])
 
   return (
