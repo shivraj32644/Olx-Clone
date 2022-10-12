@@ -15,8 +15,10 @@ export const ProducPage = () => {
 
 
   const params = {
-    id: 1,
-    
+    _page: 1,
+    _limit: 10,
+    _sort:"published_ads.cars[0].set_price",
+    _order:"asc"
   }
 
   function getparams(payload) {
@@ -25,7 +27,7 @@ export const ProducPage = () => {
   }
 
   useEffect(() => {
-    dispatch(fetchData({_page:1,_limit:10,_sort:"published_ads.cars[0].set_price",_order:"asc" ,id:""}));
+    dispatch(fetchData(params));
     // dispatch(fetchData({_page:1,_limit:30,_sort:"",_order:"" }));
   },[])
 

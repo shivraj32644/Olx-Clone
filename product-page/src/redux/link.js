@@ -2,16 +2,13 @@ import axios  from 'axios'
 var url = `http://localhost:5000/data`;
 
 
-export const axiosdata = ({_page,_limit,_sort,_order,id}) => {
-    return axios.get(`http://localhost:5000/data`, {
-        params: {
-            _page,
-            _limit,
-            _sort,
-            _order,
-            id
 
-        }
+// pass global params here without destructure
+
+
+export const axiosdata = (params) => {
+    return axios.get(`http://localhost:5000/data`, {
+        params: params
     })
 }
 export const axiosdata2 = () => {
