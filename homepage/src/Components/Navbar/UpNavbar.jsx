@@ -143,7 +143,7 @@ const UpNavbar = () => {
           </Button>
         </Box>
       </HStack>
-      <DownNavbar />
+      {/* <DownNavbar /> */}
     </Box>
   );
 };

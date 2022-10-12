@@ -27,7 +27,7 @@ function MobileCarousal() {
   ];
   const getMobile = () => {
     setLoading(true);
-    fetch("http://localhost:4000/appliances")
+    fetch("http://localhost:5000/homedata")
       .then((res) => res.json())
       .then((res) => setappliances(res))
       .catch((err) => setError(true))
@@ -61,32 +61,12 @@ function MobileCarousal() {
   return (
     <div>
       <Box
-        display={"flex"}
         mt="10px"
         boxShadow="rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px"
         p="1"
         bg="white"
       >
-        <Box w="15%" m="auto" textAlign={"center"}>
-          <Text fontSize={{ base: "10px", md: "20px", lg: "30px" }}>
-            {" "}
-            Top Deals On Appliances
-          </Text>
-          <WrapItem>
-            <Button
-              fontSize={{ base: "6px", md: "9px", lg: "12px" }}
-              m={"auto"}
-              colorScheme="messenger"
-            >
-              VIEW ALL
-            </Button>
-          </WrapItem>
-          <img
-            src="https://bsscommerce.com/blog/wp-content/uploads/2020/12/BLOG-04.jpg"
-            alt="fg"
-          />
-        </Box>
-        <Box w="84%" m="auto">
+        <Box w="90%" m="auto">
           <Carousel breakPoints={breakPoints}>
             {appliances.map((item) => (
               <Box
@@ -101,12 +81,11 @@ function MobileCarousal() {
                   m="auto"
                   _hover={{ transform: "scale(1.1)" }}
                   p="10px"
-                  src={item.image}
+                  src={item.img_url}
                   alt=""
                 />
-                <Text> {item.description}</Text>
-                <Text>₹ {item.new_price}</Text>
-                {item.title}
+                <Text> {item.title}</Text>
+                <Text>₹ {item.price}</Text>
               </Box>
             ))}
           </Carousel>
