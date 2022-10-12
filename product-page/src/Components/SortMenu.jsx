@@ -14,9 +14,9 @@ export const SortMenu = () => {
   const handleChange = (e) => {
     setCurValue(e);
 
-    console.log(valfun(e));
+    // console.log(valfun(e));
 
-    
+
   };
 
   const valfun = (e) => {
