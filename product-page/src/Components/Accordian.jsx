@@ -10,7 +10,7 @@ import {
   RangeSliderFilledTrack,
   RangeSliderThumb,
   RangeSliderTrack,
-  Button
+  Button,
 } from "@chakra-ui/react";
 import React from "react";
 import {
@@ -21,9 +21,12 @@ import {
   UnorderedList,
 } from "@chakra-ui/react";
 import { useRef } from "react";
-import styles from './styles/Accordian.module.css'
+import styles from "./styles/Accordian.module.css";
+import { useState } from "react";
 
 export const Accordian = () => {
+  const [sliderVal, setSliderVal]=useState([])
+
   const ref1 = useRef(null);
   function handleFocus(e) {
     ref1.current.className = "active";
@@ -41,10 +44,10 @@ export const Accordian = () => {
     }
   }
   return (
-    <Accordion defaultIndex={[0,1,2,3]} allowMultiple>
-      <AccordionItem border="0" >
+    <Accordion defaultIndex={[0, 1, 2, 3,4]} allowMultiple>
+      <AccordionItem border="0">
         <h2>
-          <AccordionButton >
+          <AccordionButton>
             <Box flex="1" textAlign="left">
               CATEGORIES
             </Box>
@@ -93,6 +96,9 @@ export const Accordian = () => {
           </UnorderedList>
         </AccordionPanel>
       </AccordionItem>
+
+      
+
       <AccordionItem>
         <h2>
           <AccordionButton>
@@ -103,16 +109,127 @@ export const Accordian = () => {
           </AccordionButton>
         </h2>
         <AccordionPanel pb={4}>
-          <RangeSlider defaultValue={[0, 500]} min={0} max={300} step={30}>
+          <RangeSlider onChangeEnd={(e) =>setSliderVal(e) } defaultValue={[0, 199300]} min={0} max={199300} step={30}>
             <RangeSliderTrack bg="red.100">
               <RangeSliderFilledTrack bg="black" />
             </RangeSliderTrack>
             <RangeSliderThumb boxSize={6} index={0} />
             <RangeSliderThumb boxSize={6} index={1} />
+            {/* <Button>Apply</Button> */}
           </RangeSlider>
-          <Button>Apply</Button>
+          <Button onClick={() => console.log(sliderVal) } >Apply</Button>
         </AccordionPanel>
       </AccordionItem>
+
+
+
+      <AccordionItem>
+        <h2>
+          <AccordionButton>
+            <Box flex="1" textAlign="left">
+              CAR MODEL
+            </Box>
+            <AccordionIcon />
+          </AccordionButton>
+        </h2>
+
+        <AccordionPanel onChange={(e) => console.log(e.target) }
+          mt={5}
+          h={170}
+          className={styles.track}
+          overflow="auto"
+          pb={4}
+        >
+          <Checkbox size="lg" iconColor="black" colorScheme='white'>
+          Silverado
+          </Checkbox>{" "}
+          <br />
+          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
+          Fortwo
+          </Checkbox>{" "}
+          <br />
+          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
+          Corvette
+          </Checkbox>{" "}
+          <br />
+          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
+          A4
+          </Checkbox>{" "}
+          <br />
+          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
+          Camry
+          </Checkbox>{" "}
+          <br />
+          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
+          Model 3
+          </Checkbox>{" "}
+          <br />
+          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
+          Volt
+          </Checkbox>{" "}
+          <br />
+          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
+          Fortwo
+          </Checkbox>{" "}
+          <br />
+          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
+          Accord
+          </Checkbox>{" "}
+          <br />
+          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
+          Element
+          </Checkbox>{" "}
+          <br />
+          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
+          CX-9
+          </Checkbox>{" "}
+          <br />
+          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
+          V90
+          </Checkbox>{" "}
+          <br />
+          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
+          Charger
+          </Checkbox>{" "}
+          <br />
+          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
+          Prius
+          </Checkbox>{" "}
+          <br />
+          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
+          A8
+          </Checkbox>{" "}
+          <br />
+          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
+          Land Cruiser
+          </Checkbox>{" "}
+          <br />
+          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
+          Escalade
+          </Checkbox>{" "}
+          <br />
+          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
+          Grand Caravan
+          </Checkbox>{" "}
+          <br />
+          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
+          Civic
+          </Checkbox>{" "}
+          <br />
+          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
+          Challenger
+          </Checkbox>{" "}
+          <br />
+          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
+          Corvette
+          </Checkbox>{" "}
+          <br />
+        </AccordionPanel>
+      </AccordionItem>
+
+
+
+
       <AccordionItem>
         <h2>
           <AccordionButton>
@@ -123,79 +240,102 @@ export const Accordian = () => {
           </AccordionButton>
         </h2>
 
-       
-        <AccordionPanel w="95%" pb={4}>
-        <h2>TOP BRAND</h2>
-          <Checkbox mt={4} size="lg"colorScheme="black.200" iconColor='black' >
-            Checkbox
-          </Checkbox> <br />
-          <Checkbox size="lg" colorScheme="black.200" iconColor='white' >
-            Checkbox
-          </Checkbox> <br />
-          <Checkbox size="lg" colorScheme="black.200" iconColor='white' >
-            Checkbox
-          </Checkbox> <br />
-          <Checkbox mb={5} size="lg" colorScheme="black.200" iconColor='white' >
-            Checkbox
-          </Checkbox> <br />
-          
-        <h2 >ALL BRAND</h2>
-         
-          
-
-        <AccordionPanel mt={5}  h={170} className={styles.track} overflow="auto" pb={4}>
-        <Checkbox size="lg"colorScheme="black.200" iconColor='black' >
-            Checkbox
-          </Checkbox> <br /><Checkbox size="lg"colorScheme="black.200" iconColor='black' >
-            Checkbox
-          </Checkbox> <br /><Checkbox size="lg"colorScheme="black.200" iconColor='black' >
-            Checkbox
-          </Checkbox> <br /><Checkbox size="lg"colorScheme="black.200" iconColor='black' >
-            Checkbox
-          </Checkbox> <br /><Checkbox size="lg"colorScheme="black.200" iconColor='black' >
-            Checkbox
-          </Checkbox> <br /><Checkbox size="lg"colorScheme="black.200" iconColor='black' >
-            Checkbox
-          </Checkbox> <br /><Checkbox size="lg"colorScheme="black.200" iconColor='black' >
-            Checkbox
-          </Checkbox> <br /><Checkbox size="lg"colorScheme="black.200" iconColor='black' >
-            Checkbox
-          </Checkbox> <br /><Checkbox size="lg"colorScheme="black.200" iconColor='black' >
-            Checkbox
-          </Checkbox> <br /><Checkbox size="lg"colorScheme="black.200" iconColor='black' >
-            Checkbox
-          </Checkbox> <br /><Checkbox size="lg"colorScheme="black.200" iconColor='black' >
-            Checkbox
-          </Checkbox> <br /><Checkbox size="lg"colorScheme="black.200" iconColor='black' >
-            Checkbox
-          </Checkbox> <br /><Checkbox size="lg"colorScheme="black.200" iconColor='black' >
-            Checkbox
-          </Checkbox> <br /><Checkbox size="lg"colorScheme="black.200" iconColor='black' >
-            Checkbox
-          </Checkbox> <br /><Checkbox size="lg"colorScheme="black.200" iconColor='black' >
-            Checkbox
-          </Checkbox> <br /><Checkbox size="lg"colorScheme="black.200" iconColor='black' >
-            Checkbox
-          </Checkbox> <br /><Checkbox size="lg"colorScheme="black.200" iconColor='black' >
-            Checkbox
-          </Checkbox> <br /><Checkbox size="lg"colorScheme="black.200" iconColor='black' >
-            Checkbox
-          </Checkbox> <br /><Checkbox size="lg"colorScheme="black.200" iconColor='black' >
-            Checkbox
-          </Checkbox> <br /><Checkbox size="lg"colorScheme="black.200" iconColor='black' >
-            Checkbox
-          </Checkbox> <br /><Checkbox size="lg"colorScheme="black.200" iconColor='black' >
-            Checkbox
-          </Checkbox> <br />
-        </AccordionPanel>
-
-
-
-
-          
+        <AccordionPanel
+          mt={5}
+          h={170}
+          className={styles.track}
+          overflow="auto"
+          pb={4}
+        >
+          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
+            Fiat Beetle
+          </Checkbox>{" "}
+          <br />
+          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
+            Ford 1
+          </Checkbox>{" "}
+          <br />
+          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
+            Dodge Escalade
+          </Checkbox>{" "}
+          <br />
+          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
+            Mazda Prius
+          </Checkbox>{" "}
+          <br />
+          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
+            BMW Countach
+          </Checkbox>{" "}
+          <br />
+          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
+            Fiat Silverado
+          </Checkbox>{" "}
+          <br />
+          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
+            BMW A4
+          </Checkbox>{" "}
+          <br />
+          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
+            Honda 911
+          </Checkbox>{" "}
+          <br />
+          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
+            Maserati ATS
+          </Checkbox>{" "}
+          <br />
+          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
+            Lamborghini Roadster
+          </Checkbox>{" "}
+          <br />
+          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
+            Fiat Volt
+          </Checkbox>{" "}
+          <br />
+          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
+            Ford 911
+          </Checkbox>{" "}
+          <br />
+          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
+            Rolls Royce Durango
+          </Checkbox>{" "}
+          <br />
+          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
+            Tesla Challenger
+          </Checkbox>{" "}
+          <br />
+          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
+            Volkswagen LeBaron
+          </Checkbox>{" "}
+          <br />
+          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
+            Bugatti Mustang
+          </Checkbox>{" "}
+          <br />
+          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
+            Bugatti Model T
+          </Checkbox>{" "}
+          <br />
+          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
+            Smart Wrangler
+          </Checkbox>{" "}
+          <br />
+          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
+            Nissan ATS
+          </Checkbox>{" "}
+          <br />
+          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
+            Honda Land Cruiser
+          </Checkbox>{" "}
+          <br />
+          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
+            Volkswagen Taurus
+          </Checkbox>{" "}
+          <br />
         </AccordionPanel>
       </AccordionItem>
-      
+
+
+
     </Accordion>
   );
 };

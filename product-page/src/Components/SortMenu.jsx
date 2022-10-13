@@ -7,17 +7,19 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+
+import { fetchData } from "../redux/action";
 
 export const SortMenu = () => {
   const [currValue, setCurValue] = useState("Date Published");
 
+  const dispatch = useDispatch();
   const handleChange = (e) => {
     setCurValue(e);
+    console.log(e);
 
-    // console.log(valfun(e));
-
-    
-
+    dispatch(fetchData(valfun(e)));
   };
 
   const valfun = (e) => {
@@ -28,19 +30,25 @@ export const SortMenu = () => {
         return (val = "date");
       }
       case "Relevance": {
-        return (val = "relevance");
+        return (val = {});
       }
       case "Price : Low to High": {
-        return (val = "asc");
+        return (val = {
+          _sort: "published_ads.cars[0].set_price",
+          _order: "asc",
+        });
       }
       case "Price : High to Low": {
-        return (val = "desc");
+        return (val = {
+          _sort: "published_ads.cars[0].set_price",
+          _order: "desc",
+        });
       }
       case "Distance": {
-        return (val = "distance");
+        return (val = {});
       }
       default: {
-        return (val = "date");
+        return (val = {});
       }
     }
   };

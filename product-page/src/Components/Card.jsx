@@ -21,7 +21,7 @@ export const Card = ({img,des,price,city,state,date,premium}) => {
 
   return (
     <Box
-      width="93%"
+      width="100%"
       h="270px"
       borderWidth="2px"
       borderRadius="md"
