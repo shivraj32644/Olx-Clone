@@ -72,7 +72,7 @@ const DownNavbar = () => {
               ALL CATEGORIES
               <ChevronDownIcon fontSize="20px" />
             </MenuButton>
-            <MenuList sixe="2xl">
+            <MenuList sixe="2xl" zIndex="600">
               <SimpleGrid
                 columns={[1, 2, 4]}
                 spacing="50px"
@@ -80,7 +80,6 @@ const DownNavbar = () => {
                 my="1rem"
               >
                 {/* 1st column */}
-
                 <Box>
                   <Box _hover={{ color: "#319795" }}>
                     <Text as="b">
@@ -136,9 +135,7 @@ const DownNavbar = () => {
                     </Box>
                   </Box>
                 </Box>
-
                 {/* 2nd column */}
-
                 <Box>
                   <Box>
                     <Box as="b" _hover={{ color: "#319795" }} mb="1rem">
@@ -184,9 +181,7 @@ const DownNavbar = () => {
                     </Box>
                   </Box>
                 </Box>
-
                 {/* 3rd column */}
-
                 <Box>
                   <Box mb="15px">
                     <Box mb="15px" as="b" _hover={{ color: "#319795" }}>
@@ -211,31 +206,83 @@ const DownNavbar = () => {
 
                   <Box>
                     <Box mb="15px" as="b" _hover={{ color: "#319795" }}>
-                      <Link to="#">Electronics & Appliances</Link>
+                      <Link to="#"> Furniture</Link>
                     </Box>
                     <Box _hover={{ color: "#319795" }}>
-                      <Link to="#">TVs, Video - Audio</Link>
+                      <Link to="#"> Sofa & Dining</Link>
                     </Box>
                     <Box _hover={{ color: "#319795" }}>
-                      <Link to="#">Kitchen & Other Appliances</Link>
+                      <Link to="#">Beds & Wardrobes</Link>
                     </Box>
                     <Box _hover={{ color: "#319795" }}>
-                      <Link to="#">Computers & Laptops</Link>
+                      <Link to="#">Home Decor & Garden </Link>
                     </Box>
                     <Box _hover={{ color: "#319795" }}>
-                      <Link to="#">Washing Machines </Link>
+                      <Link to="#"> Kids Furniture </Link>
                     </Box>
                     <Box _hover={{ color: "#319795" }}>
-                      <Link to="#">Cameras & Lenses</Link>
+                      <Link to="#">Other Household Items</Link>
                     </Box>
                   </Box>
                 </Box>
-
                 {/* 4th column */}
 
                 <Box>
+                  <Box mb="15px">
+                    <Box mb="15px" as="b" _hover={{ color: "#319795" }}>
+                      <Link to="#">Books, Sports & Hobbies</Link>
+                    </Box>
+                    <Box _hover={{ color: "#319795" }}>
+                      <Link to="#">Books</Link>
+                    </Box>
+                    <Box _hover={{ color: "#319795" }}>
+                      <Link to="#">Gym & Fitness</Link>
+                    </Box>
+                    <Box _hover={{ color: "#319795" }}>
+                      <Link to="#">Musical Instruments</Link>
+                    </Box>
+                    <Box _hover={{ color: "#319795" }}>
+                      <Link to="#"> Sports Equipment</Link>
+                    </Box>
+                    <Box _hover={{ color: "#319795" }}>
+                      <Link to="#">Other Hobbies</Link>
+                    </Box>
+                  </Box>
+
                   <Box>
-                    <Text as="b">FOLLOW US</Text>
+                    <Box mb="15px" as="b" _hover={{ color: "#319795" }}>
+                      <Link to="#">Fashion</Link>
+                    </Box>
+                    <Box _hover={{ color: "#319795" }}>
+                      <Link to="#">Men</Link>
+                    </Box>
+                    <Box _hover={{ color: "#319795" }}>
+                      <Link to="#">Women</Link>
+                    </Box>
+                    <Box _hover={{ color: "#319795" }}>
+                      <Link to="#">Kids</Link>
+                    </Box>
+                  </Box>
+
+                  <Box>
+                    <Box mb="15px" as="b" _hover={{ color: "#319795" }}>
+                      <Link to="#">Services</Link>
+                    </Box>
+                    <Box _hover={{ color: "#319795" }}>
+                      <Link to="#">Electronics & Computer</Link>
+                    </Box>
+                    <Box _hover={{ color: "#319795" }}>
+                      <Link to="#">Education & Classes</Link>
+                    </Box>
+                    <Box _hover={{ color: "#319795" }}>
+                      <Link to="#">Drivers & Taxi</Link>
+                    </Box>
+                    <Box _hover={{ color: "#319795" }}>
+                      <Link to="#">Health & Beauty </Link>
+                    </Box>
+                    <Box _hover={{ color: "#319795" }}>
+                      <Link to="#">Other Services</Link>
+                    </Box>
                   </Box>
                 </Box>
               </SimpleGrid>
