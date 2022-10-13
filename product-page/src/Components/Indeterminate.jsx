@@ -1,6 +1,6 @@
 import React from 'react'
-
-export function IndeterminateExample() {
+import { Checkbox, CheckboxGroup, Stack } from '@chakra-ui/react'
+export function Indeterminate() {
     const [checkedItems, setCheckedItems] = React.useState([false, false])
   
     const allChecked = checkedItems.every(Boolean)
@@ -22,7 +22,6 @@ export function IndeterminateExample() {
           >
             Cars
           </Checkbox>
-          
         </Stack>
       </>
     )

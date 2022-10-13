@@ -23,6 +23,7 @@ import {
 import { useRef } from "react";
 import styles from "./styles/Accordian.module.css";
 import { useState } from "react";
+import { Indeterminate } from "./Indeterminate";
 
 export const Accordian = () => {
   const [sliderVal, setSliderVal]=useState([])
@@ -55,19 +56,10 @@ export const Accordian = () => {
           </AccordionButton>
         </h2>
         <AccordionPanel pb={4}>
-          <UnorderedList
-            onClick={handleFocus}
-            listStyleType="none"
-            spacing={2}
-            cursor="pointer"
-          >
-            <ListItem ref={ref1} opacity="60%">
-              Lorem ipsum dolor sit amet
-            </ListItem>
-            <ListItem opacity="60%">Consectetur adipiscing elit</ListItem>
-            <ListItem opacity="60%">Integer molestie lorem at massa</ListItem>
-            <ListItem opacity="60%">Facilisis in pretium nisl aliquet</ListItem>
-          </UnorderedList>
+          
+        <Indeterminate/>
+
+
         </AccordionPanel>
       </AccordionItem>
 

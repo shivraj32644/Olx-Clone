@@ -32,7 +32,6 @@ export const getData = (payload) => ({
 
 // pass global params here without destructure
 export const fetchData = (params) => (dispatch) => {
-  // console.log(params ," inside actions of redux");
   dispatch(isloading(true));
   axiosdata(params)
     .then((res) => dispatch(getData(res.data)))
