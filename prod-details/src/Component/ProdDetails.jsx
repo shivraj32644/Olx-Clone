@@ -1,36 +1,24 @@
-import { Box } from "@chakra-ui/react";
-import { Carousel } from "react-responsive-carousel";
+import { Box} from "@chakra-ui/react";
+// import { GiCircle } from "react-icons/gi";
+// import { MdArrowForwardIos } from "react-icons/md";
+import ProdBanner from "../Pages/ProductDetails/ProdBanner";
+import ProdDescription from "../Pages/ProductDetails/ProdDescription";
+const ProductDetails = () => {
+  return (
+    <Box display="flex" justifyContent="space-between" gap="10"
+    paddingLeft="50px"
+   paddingRight="50px" >
 
-const Slider= ()=>{
-  return(
-    <Box >
-    <Carousel autoPlay 
-    height="100px" 
-    width="500px"
-    >
-    <div>
-      <img
-        alt=""
-        src="https://statics.olx.in/external/base/img/loginEntryPointPost.webp"
-      />
-      <p className="legend">Legend 1</p>
-    </div>
-    <div>
-      <img
-        alt=""
-        src="https://statics.olx.in/external/base/img/loginEntryPointFavorite.webp"
-      />
-      <p className="legend">Legend 2</p>
-    </div>
-    <div>
-      <img
-        alt=""
-        src="https://statics.olx.in/external/base/img/loginEntryPointChat.webp"
-      />
-      <p className="legend">Legend 3</p>
-    </div>
-  </Carousel>
+
+      <Box >
+        <ProdBanner />
+      </Box>
+         
+          <Box>
+            <ProdDescription />
+          </Box>
     </Box>
   )
 }
-export default Slider
+export default ProductDetails
+
