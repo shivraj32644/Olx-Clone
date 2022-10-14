@@ -55,6 +55,7 @@ const styles = {
 const DownNavbar = () => {
   return (
     <Box>
+      <h1>Hello</h1>
       <HStack mt="5px" border="1px solid green">
         <Box>
           <Menu>
