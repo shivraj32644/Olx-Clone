@@ -1,11 +1,12 @@
 import './App.css';
-import ControlledCarousel from './Pages/SignIn';
-// import Login from './Pages/SignIn';
+import AllRoutes from './Component/AllRoutes';
+import ProdDetails from './Pages/ProdDetails';
 
 function App() {
   return (
     <div className="App">
-      <ControlledCarousel/>
+      <AllRoutes/>
+      <ProdDetails/>
     </div>
   );
 }
