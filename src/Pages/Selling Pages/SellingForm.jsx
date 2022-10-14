@@ -92,7 +92,7 @@ const SellingForm=()=>{
                    <Input  type="number" placeholder='Enter amount' />
                    
                 </InputGroup>
-                <hr mt="15px" mb="15px"  />
+                <hr mt="15px" mb="15px"    />
               </Box>
               <hr/>
               
