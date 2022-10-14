@@ -6,7 +6,10 @@ import {TiShoppingBag} from "react-icons/ti"
 import {RiMotorbikeFill,RiComputerLine ,RiTShirtLine} from "react-icons/ri"
 import {FaGuitar} from "react-icons/fa"
 import {MdOutlineMedicalServices} from "react-icons/md"
-import { useState } from "react"
+import { useContext, useState } from "react"
+import { Link } from "react-router-dom"
+import { CategoryDataContext } from "../../Context/AuthContext/SellingDetail"
+import { ArrowBackIcon } from '@chakra-ui/icons'
 
 const categoryArray=[
   { 
@@ -102,14 +105,21 @@ const categoryArray=[
 
 let arr=[]
 const SellCategories=()=>{
+  const {sendCategory}=useContext(CategoryDataContext)
+
   const [ subcategoryArr,setSubcategoryArr]=useState([])
- console.log(subcategoryArr)
+  const [ category, setCategory]=useState("")
+
+ console.log(typeof category+ " --"+category)
+ console.log("this is aray"+"---"+subcategoryArr)
+
   const DisplaySubcategories=((clicked_id)=>{
     console.log(clicked_id)
     categoryArray.map((ele)=>{
+      
       if(ele.cat_id===clicked_id){
+        setCategory(ele.cat_title)
         ele.sub_category.map((subcat)=>{
-          console.log(subcat)
              arr.push(subcat)            
            })
            setSubcategoryArr(arr)
@@ -120,7 +130,12 @@ const SellCategories=()=>{
   })
 
  return(
-    <>
+    <Box >
+     <Box position="fixed" top={0} w="100%" h="48px" bg="#EDF2F7" >
+       <Box ml={15} mr={20} my="10px" h="28px" w="auto" >
+       <Link to="/"> <ArrowBackIcon w="32px"/></Link>
+       </Box>
+     </Box>
      <VStack w="760px" display="block" margin="auto" mt={14} marginBottom="40px">
        <Box  fontSize="24px" fontWeight="bold" textAlign="center" >POST YOUR ADS</Box> 
        <VStack fontFamily="sans-serif" fontSize="16px" border="1px solid #cecece"  borderRadius="5px">
@@ -136,7 +151,7 @@ const SellCategories=()=>{
            mt={2} >
             CHOOSE A CATEGORY
         </Box>
-        <HStack w="100%" spacing={0}>
+        <HStack w="100%" spacing={0} >
           <VStack w="50% " spacing={0}>
            {
             categoryArray.map((elem)=>{
@@ -161,12 +176,11 @@ const SellCategories=()=>{
             })
            }                                                                                                                                                       
           </VStack>
-          <VStack w="50%" spacing={0}>
+          <VStack w="50%" h="max-height" spacing={0} >
             {
               subcategoryArr.map((ele)=>{
                 return(
-                 <Box 
-                  w="100%"
+                  <Box w="100%"
                   pl={4}
                   border="1px solid #cecece" 
                   borderLeft={0}
@@ -175,11 +189,17 @@ const SellCategories=()=>{
                   alignItems="center"
                   py={5} 
                   cursor="pointer"
-                  pos
+                  _hover={{ bg: '#CECECE' }}
+                  onClick={()=>sendCategory(category,ele)}>
+                  <Link to="/sellingform">
+
+                  <Box height="32px" width={360} py={5} textAlign="start" display="flex" alignItems="center">
+                     {ele}
+                   </Box> 
+                   
+                  </Link>
                  
-                  _hover={{ bg: '#CECECE' }}>
-                    {ele}
-                  </Box>            
+                  </Box>           
                  )
               })
 
@@ -195,7 +215,7 @@ const SellCategories=()=>{
       <Box>Other Countries Pakistan - South Africa - Indonesia</Box>
       <Box>Free Classifieds in India. © 2006-2022 OLX</Box>
      </HStack>
-    </>
+    </Box>
  )
 }
 export default SellCategories

@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const links=[
-//   {path:"/",title:"Home"},
+  {path:"/",title:"Home"},
   {path:"/login",title:"Login"},
   {path:"/sellcategories",title:"Sell"},
 ]
