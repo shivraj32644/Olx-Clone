@@ -3,8 +3,11 @@ import { Carousel } from "react-responsive-carousel";
 
 const Slider= ()=>{
   return(
-    <Box>
-    <Carousel autoPlay >
+    <Box >
+    <Carousel autoPlay 
+    height="100px" 
+    width="500px"
+    >
     <div>
       <img
         alt=""
