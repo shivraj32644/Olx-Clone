@@ -9,9 +9,6 @@ import poster from "./Images/land.png";
 import MobileCarousal from "./MobileCarousal";
 const Home = () => {
   return (
-    // <Container minW="xl" border="1px solid green">
-    //   <Image src={poster} />
-    // </Container>
     <div>
       <UpNavbar />
       <DownNavbar />
