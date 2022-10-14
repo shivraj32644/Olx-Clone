@@ -69,7 +69,6 @@ const SellingForm=()=>{
                   <Box {...fuelBoxStyle}>Manual</Box>
                  </Box>
                 </Box>
-<<<<<<< HEAD
                 <InputBox/>
                 <Box mb="15px">
                   <Box fontSize="12px" mb="1px" >No. of owners *</Box>
@@ -94,43 +93,8 @@ const SellingForm=()=>{
                    
                 </InputGroup>
                 <hr mt="15px" mb="15px"    />
-=======
-               <InputBox/>
-               <Box mb="15px">
-               <Box fontSize="12px" mb="1px" >No. of owners *</Box>
-               <Box fontSize="12px" display="flex"  flexWrap="wrap">
-                 <Box {...fuelBoxStyle}>1st</Box>
-                 <Box {...fuelBoxStyle}>2nd</Box>
-                 <Box {...fuelBoxStyle}>3rd</Box>
-                 <Box {...fuelBoxStyle}>4th</Box>
-                 <Box {...fuelBoxStyle}>4+</Box>
-               </Box>
               </Box>
-              <InputGroup mb="15px">
-   
-              <InputLeftElement
-                pointerEvents='none'
-                color='gray.300'
-                fontSize='1.2em'
-                children={<BiRupee h="8px" w="8px" />}
-              />
-              <Input  type="number" placeholder='Enter amount' />
-              
-           </InputGroup>
-           <hr mt="15px" mb="15px"    />
->>>>>>> 053e779486cdd2e406f23751e0c9b525e9d74446
-              </Box>
-              <hr/>
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
+              <hr/>                    
               
             </FormControl> 
           </VStack>
