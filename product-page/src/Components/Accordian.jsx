@@ -24,9 +24,90 @@ import { useRef } from "react";
 import styles from "./styles/Accordian.module.css";
 import { useState } from "react";
 import { Indeterminate } from "./Indeterminate";
+import { LocationChekbox } from "./LocationChekbox";
+import { useDispatch } from "react-redux";
+import { fetchData } from "../redux/action";
+import { CheckboxC } from "./Checkbox";
+
+const AllBrands = [
+  {
+    id: 1,
+    brand: "Maruti Suzuki",
+  },
+  {
+    id: 2,
+    brand: "Hyundai",
+  },
+  {
+    id: 3,
+    brand: "Mahindra",
+  },
+  {
+    id: 4,
+    brand: "Tata",
+  },
+  {
+    id: 5,
+    brand: "Honda",
+  },
+  {
+    id: 6,
+    brand: "Ford",
+  },
+  {
+    id: 7,
+    brand: "Toyota",
+  },
+  {
+    id: 8,
+    brand: "Chevrolet",
+  },
+  {
+    id: 9,
+    brand: "Renualt",
+  },
+  {
+    id: 10,
+    brand: "Skoda",
+  },
+];
 
 export const Accordian = () => {
-  const [sliderVal, setSliderVal]=useState([])
+  const dispatch = useDispatch();
+  const [sliderVal, setSliderVal] = useState([]);
+  const [Check, setCheck]=useState([])
+
+  const handleSlider = () => {
+    const lowVal = sliderVal[0];
+    const upperVal = sliderVal[1];
+
+    const params = {
+      "published_ads.cars.0.set_price_lte": upperVal,
+      "published_ads.cars.0.set_price_gte": lowVal,
+    };
+    // console.log(params);
+
+    dispatch(fetchData(params));
+  };
+
+  const handleCarModel = (id, value ,e) => {
+    const currIndex = Check.indexOf(value);
+    const newChecked = [...Check];
+    if (currIndex === -1) {
+      newChecked.push(value)
+    }
+    else {
+      newChecked.splice(currIndex, 1)
+    }
+
+    setCheck(newChecked)
+    const params = {
+      "published_ads.cars.0.car_brand": newChecked,
+    };
+    dispatch(fetchData(params))
+  };
+
+  
 
   const ref1 = useRef(null);
   function handleFocus(e) {
@@ -45,7 +126,7 @@ export const Accordian = () => {
     }
   }
   return (
-    <Accordion defaultIndex={[0, 1, 2, 3,4]} allowMultiple>
+    <Accordion defaultIndex={[0, 1, 2, 3, 4]} allowMultiple>
       <AccordionItem border="0">
         <h2>
           <AccordionButton>
@@ -56,10 +137,7 @@ export const Accordian = () => {
           </AccordionButton>
         </h2>
         <AccordionPanel pb={4}>
-          
-        <Indeterminate/>
-
-
+          <Indeterminate />
         </AccordionPanel>
       </AccordionItem>
 
@@ -73,23 +151,9 @@ export const Accordian = () => {
           </AccordionButton>
         </h2>
         <AccordionPanel pb={4}>
-          <UnorderedList
-            onClick={handleFocus}
-            listStyleType="none"
-            spacing={2}
-            cursor="pointer"
-          >
-            <ListItem ref={ref1} opacity="60%">
-              Lorem ipsum dolor sit amet
-            </ListItem>
-            <ListItem opacity="60%">Consectetur adipiscing elit</ListItem>
-            <ListItem opacity="60%">Integer molestie lorem at massa</ListItem>
-            <ListItem opacity="60%">Facilisis in pretium nisl aliquet</ListItem>
-          </UnorderedList>
+          <LocationChekbox />
         </AccordionPanel>
       </AccordionItem>
-
-      
 
       <AccordionItem>
         <h2>
@@ -101,7 +165,13 @@ export const Accordian = () => {
           </AccordionButton>
         </h2>
         <AccordionPanel pb={4}>
-          <RangeSlider onChangeEnd={(e) =>setSliderVal(e) } defaultValue={[0, 199300]} min={0} max={199300} step={30}>
+          <RangeSlider
+            onChangeEnd={(e) => setSliderVal(e)}
+            defaultValue={[0, 199300]}
+            min={0}
+            max={199300}
+            step={30}
+          >
             <RangeSliderTrack bg="red.100">
               <RangeSliderFilledTrack bg="black" />
             </RangeSliderTrack>
@@ -109,124 +179,40 @@ export const Accordian = () => {
             <RangeSliderThumb boxSize={6} index={1} />
             {/* <Button>Apply</Button> */}
           </RangeSlider>
-          <Button onClick={() => console.log(sliderVal) } >Apply</Button>
+          <Button onClick={handleSlider}>Apply</Button>
         </AccordionPanel>
       </AccordionItem>
-
-
 
       <AccordionItem>
         <h2>
           <AccordionButton>
             <Box flex="1" textAlign="left">
-              CAR MODEL
+             ALL BRAND
             </Box>
             <AccordionIcon />
           </AccordionButton>
         </h2>
 
-        <AccordionPanel onChange={(e) => console.log(e.target) }
+        <AccordionPanel
+          // onChange={handleCarModel}
           mt={5}
           h={170}
           className={styles.track}
           overflow="auto"
           pb={4}
         >
-          <Checkbox size="lg" iconColor="black" colorScheme='white'>
-          Silverado
-          </Checkbox>{" "}
-          <br />
-          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
-          Fortwo
-          </Checkbox>{" "}
-          <br />
-          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
-          Corvette
-          </Checkbox>{" "}
-          <br />
-          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
-          A4
-          </Checkbox>{" "}
-          <br />
-          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
-          Camry
-          </Checkbox>{" "}
-          <br />
-          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
-          Model 3
-          </Checkbox>{" "}
-          <br />
-          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
-          Volt
-          </Checkbox>{" "}
-          <br />
-          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
-          Fortwo
-          </Checkbox>{" "}
-          <br />
-          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
-          Accord
-          </Checkbox>{" "}
-          <br />
-          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
-          Element
-          </Checkbox>{" "}
-          <br />
-          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
-          CX-9
-          </Checkbox>{" "}
-          <br />
-          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
-          V90
-          </Checkbox>{" "}
-          <br />
-          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
-          Charger
-          </Checkbox>{" "}
-          <br />
-          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
-          Prius
-          </Checkbox>{" "}
-          <br />
-          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
-          A8
-          </Checkbox>{" "}
-          <br />
-          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
-          Land Cruiser
-          </Checkbox>{" "}
-          <br />
-          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
-          Escalade
-          </Checkbox>{" "}
-          <br />
-          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
-          Grand Caravan
-          </Checkbox>{" "}
-          <br />
-          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
-          Civic
-          </Checkbox>{" "}
-          <br />
-          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
-          Challenger
-          </Checkbox>{" "}
-          <br />
-          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
-          Corvette
-          </Checkbox>{" "}
-          <br />
+
+          {AllBrands.map(({ id, brand }) => (
+            <CheckboxC handleCarModel={handleCarModel} id={id} key={id} value={brand} />
+          ))}
         </AccordionPanel>
       </AccordionItem>
-
-
-
 
       <AccordionItem>
         <h2>
           <AccordionButton>
             <Box flex="1" textAlign="left">
-              BRAND
+              ALL MODELS
             </Box>
             <AccordionIcon />
           </AccordionButton>
@@ -325,9 +311,6 @@ export const Accordian = () => {
           <br />
         </AccordionPanel>
       </AccordionItem>
-
-
-
     </Accordion>
   );
 };

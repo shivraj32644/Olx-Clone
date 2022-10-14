@@ -23,6 +23,10 @@ export function Indeterminate() {
             Cars
           </Checkbox>
         </Stack>
+ 
+        
       </>
-    )
+
+  )
+  
   }

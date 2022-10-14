@@ -27,20 +27,20 @@ export const SortMenu = () => {
 
     switch (e) {
       case "Date Published": {
-        return (val = "date");
+        return (val = {});
       }
       case "Relevance": {
         return (val = {});
       }
       case "Price : Low to High": {
         return (val = {
-          _sort: "published_ads.cars[0].set_price",
+          _sort: "published_ads.cars.0.set_price",
           _order: "asc",
         });
       }
       case "Price : High to Low": {
         return (val = {
-          _sort: "published_ads.cars[0].set_price",
+          _sort: "published_ads.cars.0.set_price",
           _order: "desc",
         });
       }
