@@ -6,20 +6,29 @@ import {
   MenuOptionGroup,
 } from "@chakra-ui/react";
 import React from "react";
+import { useContext } from "react";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
+import { useSearchParams } from "react-router-dom";
+import { ParamContext } from "../Context/ParamContext";
 
 import { fetchData } from "../redux/action";
 
 export const SortMenu = () => {
   const [currValue, setCurValue] = useState("Date Published");
+  const [searchParams, setSearchParams] = useSearchParams();
+  const { ParamObj, addParams } = useContext(ParamContext);
 
   const dispatch = useDispatch();
   const handleChange = (e) => {
     setCurValue(e);
     console.log(e);
 
-    dispatch(fetchData(valfun(e)));
+    // dispatch(fetchData(valfun(e)));
+    // setSearchParams(valfun(e));
+    const obj = valfun(e);
+
+    addParams( {...ParamObj, obj})
   };
 
   const valfun = (e) => {

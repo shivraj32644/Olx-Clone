@@ -7,15 +7,18 @@ import { ChakraProvider } from "@chakra-ui/react";
 import { store } from "./redux/store";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
+import { ParamContextProvider } from "./Context/ParamContext";
 // import { ParamsContextProvider } from "./Context/Params";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <ChakraProvider>
     <BrowserRouter>
+      <ParamContextProvider>
       <Provider store={store}>
         <App />
-      </Provider>
+        </Provider>
+        </ParamContextProvider>
       </BrowserRouter>
   </ChakraProvider>
 );

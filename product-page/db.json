@@ -10,7 +10,7 @@
       "login": false,
       "isPremium": true,
       "id": 1,
-  
+
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -31,7 +31,7 @@
             "date_to": "DEC 8, 22 ",
             "category": "OLX Auto(Cars)",
             "category_type": "Cars",
-            "car_name": "Fiat Beetle",
+            "car_name": "Skoda Fabia",
             "car_brand": "Skoda",
             "car_varient": "Passenger Van",
             "year_buy": 2001,
@@ -43,9 +43,9 @@
             "description": "Iam willing to sell my lovely car due to financial issues want a buyer fast giving amazing offer for first comer.",
             "set_price": 918000,
             "car_images": {
-              "img1": "https://www.renderhub.com/markos3d/srt-hellcat-dodge-challenger-2021/srt-hellcat-dodge-challenger-2021-08.jpg",
-              "img2": "https://www.renderhub.com/markos3d/srt-hellcat-dodge-challenger-2021/srt-hellcat-dodge-challenger-2021-01.jpg",
-              "img3": "https://www.renderhub.com/markos3d/srt-hellcat-dodge-challenger-2021/srt-hellcat-dodge-challenger-2021-07.jpg"
+              "img1": "https://apollo-singapore.akamaized.net/v1/files/m8vuc9zh3zzb2-IN/image;s=300x600;q=60",
+              "img2": "https://in.fcgapi.com/image/olxautos-prd-inspection-images-ap-southeast-1/21a4a6bf-277a-424c-b02b-e4e153ef661d/209361/850/478?watermark=false&country=in&cache=true",
+              "img3": "https://apollo-singapore.akamaized.net/v1/files/ow03morzl3mu3-IN/image;s=400x0"
             },
             "ads_location": {
               "state": "M.P.",
@@ -320,7 +320,7 @@
       "login": false,
       "isPremium": true,
       "id": 2,
-  
+
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -341,7 +341,7 @@
             "date_to": "DEC 8, 22 ",
             "category": "OLX Auto(Cars)",
             "category_type": "Cars",
-            "car_name": "Ford 1",
+            "car_name": "Skoda Fabia",
             "car_brand": "Skoda",
             "car_varient": "Sedan",
             "year_buy": 2013,
@@ -353,8 +353,10 @@
             "description": "Want to sell this car, with lot of amazing feature buyer can inspect first then buy call me aor msg me urgent to sell so best deal available.",
             "set_price": 479500,
             "car_images": {
-              "img1": "https://www.seekpng.com/png/full/56-569744_classic-car-3-svg-transparent-library-vintage-car.png",
-              "img2": "https://media.istockphoto.com/vectors/black-because-xix-vector-id165064117?b=1&k=20&m=165064117&s=612x612&w=0&h=GPkBEVk_7i7jtqLxdJcGe6hol0EnXeAaFgov91oIFZI="
+              "img1": "https://apollo-singapore.akamaized.net/v1/files/v1pux3leur2k2-IN/image;s=300x600;q=60",
+              "img2": "https://apollo-singapore.akamaized.net/v1/files/0fv0zlkbdf042-IN/image;s=780x0;q=60",
+              "img3":"https://apollo-singapore.akamaized.net/v1/files/mu77gshne33w-IN/image;s=780x0;q=60",
+              "img4":"https://apollo-singapore.akamaized.net/v1/files/qjy4u0s9h6q32-IN/image;s=780x0;q=60"
             },
             "ads_location": {
               "state": "Delhi",
@@ -646,7 +648,7 @@
       "login": false,
       "isPremium": true,
       "id": 3,
-  
+
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -667,7 +669,7 @@
             "date_to": "DEC 8, 22 ",
             "category": "OLX Auto(Cars)",
             "category_type": "Cars",
-            "car_name": "Dodge Escalade",
+            "car_name": "Skoda Fabia",
             "car_brand": "Skoda",
             "car_varient": "Cargo Van",
             "year_buy": 2015,
@@ -679,8 +681,9 @@
             "description": "Iam willing to sell my lovely car due to financial issues want a buyer fast giving amazing offer for first comer.",
             "set_price": 596500,
             "car_images": {
-              "img1": "https://cdn5.vectorstock.com/i/1000x1000/49/99/modern-generic-car-front-view-vector-18244999.jpg",
-              "img2": "https://st3.depositphotos.com/4559725/17918/v/1600/depositphotos_179189572-stock-illustration-realistic-car-sedan-back-view.jpg"
+              "img1": "https://apollo-singapore.akamaized.net/v1/files/zr8mmlrfwg843-IN/image;s=300x600;q=60",
+              "img2": "https://apollo-singapore.akamaized.net/v1/files/7rd8srph93fy-IN/image;s=780x0;q=60",
+              "img3":"https://apollo-singapore.akamaized.net/v1/files/bi9k7u82aeuq1-IN/image;s=780x0;q=60"
             },
             "ads_location": {
               "state": "M.P.",
@@ -939,7 +942,7 @@
       "login": false,
       "isPremium": false,
       "id": 4,
-  
+
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -960,7 +963,7 @@
             "date_to": "DEC 8, 22 ",
             "category": "OLX Auto(Cars)",
             "category_type": "Cars",
-            "car_name": "Mazda Prius",
+            "car_name": "Skoda Rapid",
             "car_brand": "Skoda",
             "car_varient": "Wagon",
             "year_buy": 2018,
@@ -972,9 +975,9 @@
             "description": "Amazing car with good experience of driving not too old with good condition contact me fast for best offer",
             "set_price": 572900,
             "car_images": {
-              "img1": "https://www.renderhub.com/markos3d/srt-hellcat-dodge-challenger-2021/srt-hellcat-dodge-challenger-2021-08.jpg",
-              "img2": "https://www.renderhub.com/markos3d/srt-hellcat-dodge-challenger-2021/srt-hellcat-dodge-challenger-2021-01.jpg",
-              "img3": "https://www.renderhub.com/markos3d/srt-hellcat-dodge-challenger-2021/srt-hellcat-dodge-challenger-2021-07.jpg"
+              "img1": "https://apollo-singapore.akamaized.net/v1/files/w0t316n9l2c31-IN/image;s=300x600;q=60",
+              "img2": "https://apollo-singapore.akamaized.net/v1/files/zqj1xr2oxmbq1-IN/image;s=780x0;q=60",
+              "img3": "https://apollo-singapore.akamaized.net/v1/files/70dsuh0fbu9j3-IN/image;s=780x0;q=60"
             },
             "ads_location": {
               "state": "Karnatak",
@@ -1247,7 +1250,7 @@
       "login": false,
       "isPremium": false,
       "id": 5,
-  
+
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -1268,7 +1271,7 @@
             "date_to": "DEC 8, 22 ",
             "category": "OLX Auto(Cars)",
             "category_type": "Cars",
-            "car_name": "BMW Countach",
+            "car_name": "Renualt Duster",
             "car_brand": "Renualt",
             "car_varient": "Passenger Van",
             "year_buy": 2011,
@@ -1280,8 +1283,9 @@
             "description": "Amazing car with good experience of driving not too old with good condition contact me fast for best offer",
             "set_price": 627000,
             "car_images": {
-              "img1": "https://cdn5.vectorstock.com/i/1000x1000/49/99/modern-generic-car-front-view-vector-18244999.jpg",
-              "img2": "https://st3.depositphotos.com/4559725/17918/v/1600/depositphotos_179189572-stock-illustration-realistic-car-sedan-back-view.jpg"
+              "img1": "https://apollo-singapore.akamaized.net/v1/files/a55vdxifol9a2-IN/image;s=300x600;q=60",
+              "img2": "https://apollo-singapore.akamaized.net/v1/files/uyl0wy79kwpo-IN/image;s=780x0;q=60",
+              "img3":"https://apollo-singapore.akamaized.net/v1/files/w1su4y6f86k31-IN/image;s=780x0;q=60"
             },
             "ads_location": {
               "state": "Jharkhand",
@@ -1491,7 +1495,7 @@
       "login": false,
       "isPremium": false,
       "id": 6,
-  
+
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -1512,7 +1516,7 @@
             "date_to": "DEC 8, 22 ",
             "category": "OLX Auto(Cars)",
             "category_type": "Cars",
-            "car_name": "Fiat Silverado",
+            "car_name": "Maruti Suzuki Baleno",
             "car_brand": "Maruti Suzuki",
             "car_varient": "Minivan",
             "year_buy": 2000,
@@ -1524,9 +1528,11 @@
             "description": "Iam willing to sell my lovely car due to financial issues want a buyer fast giving amazing offer for first comer.",
             "set_price": 350900,
             "car_images": {
-              "img1": "https://imgd.aeplcdn.com/0x0/n/cw/ec/100121/i20-n-line-exterior-right-front-three-quarter-12.jpeg?isig=0",
-              "img2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPWHQX9wdXc_cRhBFsOT4SKoqI36Rm2WW00G10Lwx2cqfyCd3pEbs9Md3Phmpglqhw6l8&usqp=CAU",
-              "img3": "https://english.cdn.zeenews.com/sites/default/files/styles/zm_700x400/public/2021/09/02/966881-i20nline.jpg"
+              "img1": "https://apollo-singapore.akamaized.net/v1/files/fx1ylih90jd12-IN/image;s=300x600;q=60",
+              "img2": "https://apollo-singapore.akamaized.net/v1/files/38mq4atj150n3-IN/image;s=780x0;q=60",
+              "img3": "https://apollo-singapore.akamaized.net/v1/files/abasc9azy9ew-IN/image;s=780x0;q=60",
+              "img4":"https://apollo-singapore.akamaized.net/v1/files/91xgirdecfg92-IN/image;s=780x0;q=60",
+              "img5":"https://apollo-singapore.akamaized.net/v1/files/yqo271d1476a1-IN/image;s=780x0;q=60"
             },
             "ads_location": {
               "state": "Karnatak",
@@ -1769,7 +1775,7 @@
       "login": false,
       "isPremium": false,
       "id": 7,
-  
+
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -1790,7 +1796,7 @@
             "date_to": "DEC 8, 22 ",
             "category": "OLX Auto(Cars)",
             "category_type": "Cars",
-            "car_name": "BMW A4",
+            "car_name": "Hyundai Verna",
             "car_brand": "Hyundai",
             "car_varient": "SUV",
             "year_buy": 1999,
@@ -1800,11 +1806,11 @@
             "no_of_oweners": 3,
             "key_feature": "ex ea veniam",
             "description": "Amazing car with good experience of driving not too old with good condition contact me fast for best offer",
-            "set_price": 142000,
+            "set_price": 542000,
             "car_images": {
-              "img1": "https://imgd.aeplcdn.com/0x0/n/cw/ec/100121/i20-n-line-exterior-right-front-three-quarter-12.jpeg?isig=0",
-              "img2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPWHQX9wdXc_cRhBFsOT4SKoqI36Rm2WW00G10Lwx2cqfyCd3pEbs9Md3Phmpglqhw6l8&usqp=CAU",
-              "img3": "https://english.cdn.zeenews.com/sites/default/files/styles/zm_700x400/public/2021/09/02/966881-i20nline.jpg"
+              "img1": "https://apollo-singapore.akamaized.net/v1/files/l3kvgyqmhb6t2-IN/image;s=300x600;q=60",
+              "img2": "https://apollo-singapore.akamaized.net/v1/files/7keaq52uhe4q-IN/image;s=780x0;q=60",
+              "img3": "https://apollo-singapore.akamaized.net/v1/files/z1kjavzhz3su2-IN/image;s=780x0;q=60"
             },
             "ads_location": {
               "state": "Delhi",
@@ -2061,7 +2067,7 @@
       "login": false,
       "isPremium": false,
       "id": 8,
-  
+
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -2082,7 +2088,7 @@
             "date_to": "DEC 8, 22 ",
             "category": "OLX Auto(Cars)",
             "category_type": "Cars",
-            "car_name": "Honda 911",
+            "car_name": "Mahindra Scorpio",
             "car_brand": "Mahindra",
             "car_varient": "Crew Cab Pickup",
             "year_buy": 2013,
@@ -2094,9 +2100,9 @@
             "description": "Purchased this car on mu birthday but now buying new one bored with this one if you are intrested to buy contact soon cover and interior will be free.",
             "set_price": 715800,
             "car_images": {
-              "img1": "https://freevector-images.s3.amazonaws.com/uploads/vector/preview/30435/431.jpg",
-              "img2": "https://image.shutterstock.com/image-vector/vector-layout-muscle-car-dodge-600w-1344972059.jpg",
-              "img3": "https://cdn.dealeraccelerate.com/streetside/4/17567/545741/1920x1440/2009-dodge-challenger-srt-8"
+              "img1": "https://apollo-singapore.akamaized.net/v1/files/9sk6ski3fdzd3-IN/image;s=780x0;q=60",
+              "img2": "https://apollo-singapore.akamaized.net/v1/files/254mguch7jzo-IN/image;s=780x0;q=60",
+              "img3": "https://apollo-singapore.akamaized.net/v1/files/stkjoej5l2do1-IN/image;s=780x0;q=60"
             },
             "ads_location": {
               "state": "M.P.",
@@ -2373,7 +2379,7 @@
       "login": false,
       "isPremium": false,
       "id": 9,
-  
+
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -2394,7 +2400,7 @@
             "date_to": "DEC 8, 22 ",
             "category": "OLX Auto(Cars)",
             "category_type": "Cars",
-            "car_name": "Maserati ATS",
+            "car_name": "Maruti Suzuki Baleno",
             "car_brand": "Maruti Suzuki",
             "car_varient": "Cargo Van",
             "year_buy": 2003,
@@ -2406,8 +2412,8 @@
             "description": "Purchased this car on mu birthday but now buying new one bored with this one if you are intrested to buy contact soon cover and interior will be free.",
             "set_price": 480000,
             "car_images": {
-              "img1": "https://www.seekpng.com/png/full/56-569744_classic-car-3-svg-transparent-library-vintage-car.png",
-              "img2": "https://media.istockphoto.com/vectors/black-because-xix-vector-id165064117?b=1&k=20&m=165064117&s=612x612&w=0&h=GPkBEVk_7i7jtqLxdJcGe6hol0EnXeAaFgov91oIFZI="
+              "img1": "https://apollo-singapore.akamaized.net/v1/files/v2in3wsq8kol-IN/image;s=300x600;q=60",
+              "img2": "https://in.fcgapi.com/image/olxautos-prd-inspection-images-ap-southeast-1/4de28a8c-f9f3-4e3c-bf9a-ed4ed60955d1/113079/850/478?watermark=false&country=in&cache=true"
             },
             "ads_location": {
               "state": "Rajasthan",
@@ -2652,7 +2658,7 @@
       "login": false,
       "isPremium": false,
       "id": 10,
-  
+
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -2673,7 +2679,7 @@
             "date_to": "DEC 8, 22 ",
             "category": "OLX Auto(Cars)",
             "category_type": "Cars",
-            "car_name": "Lamborghini Roadster",
+            "car_name": "Hyundai Creta",
             "car_brand": "Hyundai",
             "car_varient": "Sedan",
             "year_buy": 2016,
@@ -2683,10 +2689,11 @@
             "no_of_oweners": 3,
             "key_feature": "non cillum",
             "description": "Want to sell this car, with lot of amazing feature buyer can inspect first then buy call me aor msg me urgent to sell so best deal available.",
-            "set_price": 576300,
+            "set_price": 1576300,
             "car_images": {
-              "img1": "https://cdn5.vectorstock.com/i/1000x1000/49/99/modern-generic-car-front-view-vector-18244999.jpg",
-              "img2": "https://st3.depositphotos.com/4559725/17918/v/1600/depositphotos_179189572-stock-illustration-realistic-car-sedan-back-view.jpg"
+              "img1": "https://apollo-singapore.akamaized.net/v1/files/75nowcopxeih1-IN/image;s=300x600;q=60",
+              "img2": "https://in.fcgapi.com/image/olxautos-prd-inspection-images-ap-southeast-1/d9523871-f96d-4744-b186-56b79ad5dcb1/frontPhoto/850/478?watermark=false&country=in&cache=true",
+              "img3":"https://in.fcgapi.com/image/olxautos-prd-inspection-images-ap-southeast-1/d9523871-f96d-4744-b186-56b79ad5dcb1/backPhoto/850/478?watermark=false&country=in&cache=true"
             },
             "ads_location": {
               "state": "Karnatak",
@@ -2927,7 +2934,7 @@
       "login": false,
       "isPremium": false,
       "id": 11,
-  
+
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -2948,7 +2955,7 @@
             "date_to": "DEC 8, 22 ",
             "category": "OLX Auto(Cars)",
             "category_type": "Cars",
-            "car_name": "Fiat Volt",
+            "car_name": "Mahindra KUV 100",
             "car_brand": "Mahindra",
             "car_varient": "Sedan",
             "year_buy": 2018,
@@ -2960,9 +2967,9 @@
             "description": "Purchased this car on mu birthday but now buying new one bored with this one if you are intrested to buy contact soon cover and interior will be free.",
             "set_price": 762900,
             "car_images": {
-              "img1": "https://imgd.aeplcdn.com/0x0/n/cw/ec/100121/i20-n-line-exterior-right-front-three-quarter-12.jpeg?isig=0",
-              "img2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPWHQX9wdXc_cRhBFsOT4SKoqI36Rm2WW00G10Lwx2cqfyCd3pEbs9Md3Phmpglqhw6l8&usqp=CAU",
-              "img3": "https://english.cdn.zeenews.com/sites/default/files/styles/zm_700x400/public/2021/09/02/966881-i20nline.jpg"
+              "img1": "https://apollo-singapore.akamaized.net/v1/files/q2571qzk9q2w-IN/image;s=300x600;q=60",
+              "img2": "https://apollo-singapore.akamaized.net/v1/files/l93i5k6dj49m2-IN/image;s=780x0;q=60",
+              "img3": "https://apollo-singapore.akamaized.net/v1/files/h1l0imh61exn-IN/image;s=780x0;q=60"
             },
             "ads_location": {
               "state": "U.P.",
@@ -3239,7 +3246,7 @@
       "login": false,
       "isPremium": false,
       "id": 12,
-  
+
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -3260,7 +3267,7 @@
             "date_to": "DEC 8, 22 ",
             "category": "OLX Auto(Cars)",
             "category_type": "Cars",
-            "car_name": "Ford 911",
+            "car_name": "Mahindra KUV 100",
             "car_brand": "Mahindra",
             "car_varient": "Coupe",
             "year_buy": 2006,
@@ -3272,8 +3279,8 @@
             "description": "Amazing car with good experience of driving not too old with good condition contact me fast for best offer",
             "set_price": 937000,
             "car_images": {
-              "img1": "https://cdn5.vectorstock.com/i/1000x1000/49/99/modern-generic-car-front-view-vector-18244999.jpg",
-              "img2": "https://st3.depositphotos.com/4559725/17918/v/1600/depositphotos_179189572-stock-illustration-realistic-car-sedan-back-view.jpg"
+              "img1": "https://apollo-singapore.akamaized.net/v1/files/rgnat6xihe9l-IN/image;s=300x600;q=60",
+              "img2": "https://apollo-singapore.akamaized.net/v1/files/a4uc6t1xcvi33-IN/image;s=780x0;q=60"
             },
             "ads_location": {
               "state": "Rajasthan",
@@ -3531,7 +3538,7 @@
       "login": false,
       "isPremium": false,
       "id": 13,
-  
+
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -3552,7 +3559,7 @@
             "date_to": "DEC 8, 22 ",
             "category": "OLX Auto(Cars)",
             "category_type": "Cars",
-            "car_name": "Rolls Royce Durango",
+            "car_name": "Mahindra KUV 100",
             "car_brand": "Mahindra",
             "car_varient": "Cargo Van",
             "year_buy": 2011,
@@ -3564,8 +3571,8 @@
             "description": "Purchased this car on mu birthday but now buying new one bored with this one if you are intrested to buy contact soon cover and interior will be free.",
             "set_price": 493800,
             "car_images": {
-              "img1": "https://www.seekpng.com/png/full/56-569744_classic-car-3-svg-transparent-library-vintage-car.png",
-              "img2": "https://media.istockphoto.com/vectors/black-because-xix-vector-id165064117?b=1&k=20&m=165064117&s=612x612&w=0&h=GPkBEVk_7i7jtqLxdJcGe6hol0EnXeAaFgov91oIFZI="
+              "img1": "https://apollo-singapore.akamaized.net/v1/files/q7nzct0gjmvg-IN/image;s=300x600;q=60",
+              "img2": "https://apollo-singapore.akamaized.net/v1/files/e0b8wjld1n302-IN/image;s=780x0;q=60"
             },
             "ads_location": {
               "state": "Jharkhand",
@@ -3792,7 +3799,7 @@
       "login": false,
       "isPremium": false,
       "id": 14,
-  
+
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -3813,7 +3820,7 @@
             "date_to": "DEC 8, 22 ",
             "category": "OLX Auto(Cars)",
             "category_type": "Cars",
-            "car_name": "Tesla Challenger",
+            "car_name": "Mahindra KUV 100",
             "car_brand": "Mahindra",
             "car_varient": "Convertible",
             "year_buy": 2003,
@@ -3825,8 +3832,8 @@
             "description": "Want to sell this car, with lot of amazing feature buyer can inspect first then buy call me aor msg me urgent to sell so best deal available.",
             "set_price": 473200,
             "car_images": {
-              "img1": "https://www.seekpng.com/png/full/56-569744_classic-car-3-svg-transparent-library-vintage-car.png",
-              "img2": "https://media.istockphoto.com/vectors/black-because-xix-vector-id165064117?b=1&k=20&m=165064117&s=612x612&w=0&h=GPkBEVk_7i7jtqLxdJcGe6hol0EnXeAaFgov91oIFZI="
+              "img1": "https://apollo-singapore.akamaized.net/v1/files/p6yzp5cdgh833-IN/image;s=300x600;q=60",
+              "img2": "https://apollo-singapore.akamaized.net/v1/files/gow4au3pefut3-IN/image;s=780x0;q=60"
             },
             "ads_location": {
               "state": "Rajasthan",
@@ -4052,7 +4059,7 @@
       "login": false,
       "isPremium": false,
       "id": 15,
-  
+
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -4073,7 +4080,7 @@
             "date_to": "DEC 8, 22 ",
             "category": "OLX Auto(Cars)",
             "category_type": "Cars",
-            "car_name": "Volkswagen LeBaron",
+            "car_name": "Hyundai Alcazar",
             "car_brand": "Hyundai",
             "car_varient": "SUV",
             "year_buy": 1996,
@@ -4085,9 +4092,9 @@
             "description": "Iam willing to sell my lovely car due to financial issues want a buyer fast giving amazing offer for first comer.",
             "set_price": 655200,
             "car_images": {
-              "img1": "https://imgd.aeplcdn.com/0x0/n/cw/ec/100121/i20-n-line-exterior-right-front-three-quarter-12.jpeg?isig=0",
-              "img2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPWHQX9wdXc_cRhBFsOT4SKoqI36Rm2WW00G10Lwx2cqfyCd3pEbs9Md3Phmpglqhw6l8&usqp=CAU",
-              "img3": "https://english.cdn.zeenews.com/sites/default/files/styles/zm_700x400/public/2021/09/02/966881-i20nline.jpg"
+              "img1": "https://apollo-singapore.akamaized.net/v1/files/85340izsqozn-IN/image;s=300x600;q=60",
+              "img2": "https://apollo-singapore.akamaized.net/v1/files/u1przs3456w73-IN/image;s=780x0;q=60",
+              "img3": "https://apollo-singapore.akamaized.net/v1/files/3qrtolqrstdm2-IN/image;s=780x0;q=60"
             },
             "ads_location": {
               "state": "U.P.",
@@ -4344,7 +4351,7 @@
       "login": false,
       "isPremium": false,
       "id": 16,
-  
+
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -4365,7 +4372,7 @@
             "date_to": "DEC 8, 22 ",
             "category": "OLX Auto(Cars)",
             "category_type": "Cars",
-            "car_name": "Bugatti Mustang",
+            "car_name": "Hyundai Alcazar",
             "car_brand": "Hyundai",
             "car_varient": "Hatchback",
             "year_buy": 2008,
@@ -4377,9 +4384,9 @@
             "description": "Iam willing to sell my lovely car due to financial issues want a buyer fast giving amazing offer for first comer.",
             "set_price": 303300,
             "car_images": {
-              "img1": "https://freevector-images.s3.amazonaws.com/uploads/vector/preview/30435/431.jpg",
-              "img2": "https://image.shutterstock.com/image-vector/vector-layout-muscle-car-dodge-600w-1344972059.jpg",
-              "img3": "https://cdn.dealeraccelerate.com/streetside/4/17567/545741/1920x1440/2009-dodge-challenger-srt-8"
+              "img1": "https://apollo-singapore.akamaized.net/v1/files/5ior5l2x9nlp3-IN/image;s=300x600;q=60",
+              "img2": "https://apollo-singapore.akamaized.net/v1/files/junf1xgxgg772-IN/image;s=780x0;q=60",
+              "img3": "https://apollo-singapore.akamaized.net/v1/files/ij2of8vpnvsz2-IN/image;s=780x0;q=60"
             },
             "ads_location": {
               "state": "U.P.",
@@ -4671,7 +4678,7 @@
       "login": false,
       "isPremium": false,
       "id": 17,
-  
+
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -4692,7 +4699,7 @@
             "date_to": "DEC 8, 22 ",
             "category": "OLX Auto(Cars)",
             "category_type": "Cars",
-            "car_name": "Bugatti Model T",
+            "car_name": "Hyundai Alcazar",
             "car_brand": "Hyundai",
             "car_varient": "Passenger Van",
             "year_buy": 2008,
@@ -4702,11 +4709,11 @@
             "no_of_oweners": 4,
             "key_feature": "nisi esse excepteur",
             "description": "Amazing car with good experience of driving not too old with good condition contact me fast for best offer",
-            "set_price": 444400,
+            "set_price": 2150000,
             "car_images": {
-              "img1": "https://freevector-images.s3.amazonaws.com/uploads/vector/preview/30435/431.jpg",
-              "img2": "https://image.shutterstock.com/image-vector/vector-layout-muscle-car-dodge-600w-1344972059.jpg",
-              "img3": "https://cdn.dealeraccelerate.com/streetside/4/17567/545741/1920x1440/2009-dodge-challenger-srt-8"
+              "img1": "https://apollo-singapore.akamaized.net/v1/files/5yh9c5nlhjnz-IN/image;s=300x600;q=60",
+              "img2": "https://apollo-singapore.akamaized.net/v1/files/two2wh321cfj3-IN/image;s=780x0;q=60",
+              "img3": "https://apollo-singapore.akamaized.net/v1/files/wxlciwylxkab2-IN/image;s=780x0;q=60"
             },
             "ads_location": {
               "state": "Jharkhand",
@@ -4948,7 +4955,7 @@
       "login": false,
       "isPremium": false,
       "id": 18,
-  
+
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -4969,7 +4976,7 @@
             "date_to": "DEC 8, 22 ",
             "category": "OLX Auto(Cars)",
             "category_type": "Cars",
-            "car_name": "Smart Wrangler",
+            "car_name": "Maruti Suzuki Vitara Brezza",
             "car_brand": "Maruti Suzuki",
             "car_varient": "Sedan",
             "year_buy": 2014,
@@ -4981,9 +4988,9 @@
             "description": "Amazing car with good experience of driving not too old with good condition contact me fast for best offer",
             "set_price": 300000,
             "car_images": {
-              "img1": "https://images.vexels.com/media/users/3/169874/raw/ec441a7efeb5ffa0e612d030bb3e28d7-car-side-view-design.jpg",
-              "img2": "https://img.freepik.com/premium-vector/front-view-orange-off-road-truck-suv-pickup-jeep-car-flat-vector-illustration_648968-46.jpg?w=2000",
-              "img3": "https://img.freepik.com/premium-vector/red-jeep-car-illustration_173474-66.jpg?w=2000"
+              "img1": "https://apollo-singapore.akamaized.net/v1/files/wgu13f3pzu6o2-IN/image;s=300x600;q=60",
+              "img2": "https://apollo-singapore.akamaized.net/v1/files/p92di50kx5nf2-IN/image;s=780x0;q=60",
+              "img3": "https://apollo-singapore.akamaized.net/v1/files/wclzpz7wz3r8-IN/image;s=780x0;q=60"
             },
             "ads_location": {
               "state": "U.P.",
@@ -5260,7 +5267,7 @@
       "login": false,
       "isPremium": false,
       "id": 19,
-  
+
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -5281,7 +5288,7 @@
             "date_to": "DEC 8, 22 ",
             "category": "OLX Auto(Cars)",
             "category_type": "Cars",
-            "car_name": "Nissan ATS",
+            "car_name": "Maruti Suzuki Ciaz",
             "car_brand": "Maruti Suzuki",
             "car_varient": "Cargo Van",
             "year_buy": 2003,
@@ -5293,8 +5300,8 @@
             "description": "Iam willing to sell my lovely car due to financial issues want a buyer fast giving amazing offer for first comer.",
             "set_price": 834900,
             "car_images": {
-              "img1": "https://cdn5.vectorstock.com/i/1000x1000/49/99/modern-generic-car-front-view-vector-18244999.jpg",
-              "img2": "https://st3.depositphotos.com/4559725/17918/v/1600/depositphotos_179189572-stock-illustration-realistic-car-sedan-back-view.jpg"
+              "img1": "https://apollo-singapore.akamaized.net/v1/files/yta7z3dxz5tk3-IN/image;s=300x600;q=60",
+              "img2": "https://apollo-singapore.akamaized.net/v1/files/ocutiiodwkwp-IN/image;s=780x0;q=60"
             },
             "ads_location": {
               "state": "Karnatak",
@@ -5487,7 +5494,7 @@
       "login": false,
       "isPremium": false,
       "id": 20,
-  
+
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -5508,7 +5515,7 @@
             "date_to": "DEC 8, 22 ",
             "category": "OLX Auto(Cars)",
             "category_type": "Cars",
-            "car_name": "Honda Land Cruiser",
+            "car_name": "Maruti Suzuki Baleno",
             "car_brand": "Maruti Suzuki",
             "car_varient": "Minivan",
             "year_buy": 2000,
@@ -5520,9 +5527,9 @@
             "description": "Amazing car with good experience of driving not too old with good condition contact me fast for best offer",
             "set_price": 241400,
             "car_images": {
-              "img1": "https://static.vecteezy.com/system/resources/thumbnails/008/278/157/small/perspective-view-car-illustration-for-conceptual-design-free-vector.jpg",
-              "img2": "https://thumbs.dreamstime.com/b/sports-car-238733268.jpg",
-              "img3": "https://img.freepik.com/premium-vector/car-vector-illustration-conceptual-design_85054-173.jpg?w=360"
+              "img1": "https://apollo-singapore.akamaized.net/v1/files/nuc73otitq5k3-IN/image;s=300x600;q=60",
+              "img2": "https://apollo-singapore.akamaized.net/v1/files/vat3cpetqk4o-IN/image;s=780x0;q=60",
+              "img3": "https://apollo-singapore.akamaized.net/v1/files/0kkddbja77h83-IN/image;s=780x0;q=60"
             },
             "ads_location": {
               "state": "Rajasthan",
@@ -5764,7 +5771,7 @@
       "login": false,
       "isPremium": false,
       "id": 21,
-  
+
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -5785,7 +5792,7 @@
             "date_to": "DEC 8, 22 ",
             "category": "OLX Auto(Cars)",
             "category_type": "Cars",
-            "car_name": "Volkswagen Taurus",
+            "car_name": "Maruti Suzuki Swift Dezire",
             "car_brand": "Maruti Suzuki",
             "car_varient": "Coupe",
             "year_buy": 1999,
@@ -5797,9 +5804,9 @@
             "description": "Amazing car with good experience of driving not too old with good condition contact me fast for best offer",
             "set_price": 776600,
             "car_images": {
-              "img1": "https://imgd.aeplcdn.com/0x0/n/cw/ec/100121/i20-n-line-exterior-right-front-three-quarter-12.jpeg?isig=0",
-              "img2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPWHQX9wdXc_cRhBFsOT4SKoqI36Rm2WW00G10Lwx2cqfyCd3pEbs9Md3Phmpglqhw6l8&usqp=CAU",
-              "img3": "https://english.cdn.zeenews.com/sites/default/files/styles/zm_700x400/public/2021/09/02/966881-i20nline.jpg"
+              "img1": "https://apollo-singapore.akamaized.net/v1/files/386mia0u94qo2-IN/image;s=300x600;q=60",
+              "img2": "https://apollo-singapore.akamaized.net/v1/files/x6zcgzhepmxz2-IN/image;s=780x0;q=60",
+              "img3": "https://apollo-singapore.akamaized.net/v1/files/gcl5csfwms6z-IN/image;s=780x0;q=60"
             },
             "ads_location": {
               "state": "Jharkhand",
@@ -6026,7 +6033,7 @@
       "login": false,
       "isPremium": false,
       "id": 22,
-  
+
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -6047,7 +6054,7 @@
             "date_to": "DEC 8, 22 ",
             "category": "OLX Auto(Cars)",
             "category_type": "Cars",
-            "car_name": "Fiat Wrangler",
+            "car_name": "Maruti Suzuki Swift Dezire",
             "car_brand": "Maruti Suzuki",
             "car_varient": "Convertible",
             "year_buy": 2007,
@@ -6059,8 +6066,8 @@
             "description": "Purchased this car on mu birthday but now buying new one bored with this one if you are intrested to buy contact soon cover and interior will be free.",
             "set_price": 651700,
             "car_images": {
-              "img1": "https://www.seekpng.com/png/full/56-569744_classic-car-3-svg-transparent-library-vintage-car.png",
-              "img2": "https://media.istockphoto.com/vectors/black-because-xix-vector-id165064117?b=1&k=20&m=165064117&s=612x612&w=0&h=GPkBEVk_7i7jtqLxdJcGe6hol0EnXeAaFgov91oIFZI="
+              "img1": "https://apollo-singapore.akamaized.net/v1/files/ppmjxug3ylzy-IN/image;s=300x600;q=60",
+              "img2": "https://apollo-singapore.akamaized.net/v1/files/jp9pw3tjrddo1-IN/image;s=780x0;q=60"
             },
             "ads_location": {
               "state": "Jharkhand",
@@ -6253,7 +6260,7 @@
       "login": false,
       "isPremium": false,
       "id": 23,
-  
+
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -6274,7 +6281,7 @@
             "date_to": "DEC 8, 22 ",
             "category": "OLX Auto(Cars)",
             "category_type": "Cars",
-            "car_name": "Bentley Altima",
+            "car_name": "Maruti Suzuki Swift",
             "car_brand": "Maruti Suzuki",
             "car_varient": "Coupe",
             "year_buy": 2012,
@@ -6286,9 +6293,9 @@
             "description": "Want to sell this car, with lot of amazing feature buyer can inspect first then buy call me aor msg me urgent to sell so best deal available.",
             "set_price": 501300,
             "car_images": {
-              "img1": "https://static.vecteezy.com/system/resources/thumbnails/008/278/157/small/perspective-view-car-illustration-for-conceptual-design-free-vector.jpg",
-              "img2": "https://thumbs.dreamstime.com/b/sports-car-238733268.jpg",
-              "img3": "https://img.freepik.com/premium-vector/car-vector-illustration-conceptual-design_85054-173.jpg?w=360"
+              "img1": "https://apollo-singapore.akamaized.net/v1/files/hqfhxubir2bu1-IN/image;s=300x600;q=60",
+              "img2": "https://apollo-singapore.akamaized.net/v1/files/jp1hux38bcja-IN/image;s=780x0;q=60",
+              "img3": "https://apollo-singapore.akamaized.net/v1/files/t2g5tebvfwdi1-IN/image;s=780x0;q=60"
             },
             "ads_location": {
               "state": "Maharastra",
@@ -6532,7 +6539,7 @@
       "login": false,
       "isPremium": false,
       "id": 24,
-  
+
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -6553,7 +6560,7 @@
             "date_to": "DEC 8, 22 ",
             "category": "OLX Auto(Cars)",
             "category_type": "Cars",
-            "car_name": "BMW Cruze",
+            "car_name": "Tata Nexon",
             "car_brand": "Tata",
             "car_varient": "Crew Cab Pickup",
             "year_buy": 2005,
@@ -6565,7 +6572,7 @@
             "description": "Iam willing to sell my lovely car due to financial issues want a buyer fast giving amazing offer for first comer.",
             "set_price": 359200,
             "car_images": {
-              "img1": "https://freevector-images.s3.amazonaws.com/uploads/vector/preview/30435/431.jpg",
+              "img1": "https://apollo-singapore.akamaized.net/v1/files/kq8vcqoqygkq3-IN/image;s=300x600;q=60",
               "img2": "https://image.shutterstock.com/image-vector/vector-layout-muscle-car-dodge-600w-1344972059.jpg",
               "img3": "https://cdn.dealeraccelerate.com/streetside/4/17567/545741/1920x1440/2009-dodge-challenger-srt-8"
             },
@@ -6777,7 +6784,7 @@
       "login": false,
       "isPremium": false,
       "id": 25,
-  
+
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -7084,7 +7091,7 @@
       "login": false,
       "isPremium": false,
       "id": 26,
-  
+
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -7346,7 +7353,7 @@
       "login": false,
       "isPremium": false,
       "id": 27,
-  
+
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -7609,7 +7616,7 @@
       "login": false,
       "isPremium": false,
       "id": 28,
-  
+
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -7920,7 +7927,7 @@
       "login": false,
       "isPremium": false,
       "id": 29,
-  
+
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -8183,7 +8190,7 @@
       "login": false,
       "isPremium": false,
       "id": 30,
-  
+
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -8493,7 +8500,7 @@
       "login": false,
       "isPremium": false,
       "id": 31,
-  
+
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -8785,7 +8792,7 @@
       "login": false,
       "isPremium": false,
       "id": 32,
-  
+
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -9112,7 +9119,7 @@
       "login": false,
       "isPremium": false,
       "id": 33,
-  
+
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -9455,7 +9462,7 @@
       "login": false,
       "isPremium": false,
       "id": 34,
-  
+
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -9749,7 +9756,7 @@
       "login": false,
       "isPremium": false,
       "id": 35,
-  
+
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -10027,7 +10034,7 @@
       "login": false,
       "isPremium": false,
       "id": 36,
-  
+
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -10290,7 +10297,7 @@
       "login": false,
       "isPremium": false,
       "id": 37,
-  
+
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -10534,7 +10541,7 @@
       "login": false,
       "isPremium": false,
       "id": 38,
-  
+
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -10796,7 +10803,7 @@
       "login": false,
       "isPremium": false,
       "id": 39,
-  
+
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -11076,7 +11083,7 @@
       "login": false,
       "isPremium": false,
       "id": 40,
-  
+
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -11370,7 +11377,7 @@
       "login": false,
       "isPremium": false,
       "id": 41,
-  
+
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -11665,7 +11672,7 @@
       "login": false,
       "isPremium": false,
       "id": 42,
-  
+
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -11925,7 +11932,7 @@
       "login": false,
       "isPremium": false,
       "id": 43,
-  
+
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -12251,7 +12258,7 @@
       "login": false,
       "isPremium": false,
       "id": 44,
-  
+
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -12513,7 +12520,7 @@
       "login": false,
       "isPremium": false,
       "id": 45,
-  
+
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -12774,7 +12781,7 @@
       "login": false,
       "isPremium": false,
       "id": 46,
-  
+
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -13068,7 +13075,7 @@
       "login": false,
       "isPremium": false,
       "id": 47,
-  
+
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -13378,7 +13385,7 @@
       "login": false,
       "isPremium": false,
       "id": 48,
-  
+
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -13656,7 +13663,7 @@
       "login": false,
       "isPremium": false,
       "id": 49,
-  
+
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -13982,7 +13989,7 @@
       "login": false,
       "isPremium": false,
       "id": 50,
-  
+
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -14250,5 +14257,4 @@
       }
     }
   ]
-  
 }

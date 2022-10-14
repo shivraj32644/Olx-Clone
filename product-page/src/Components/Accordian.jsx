@@ -28,6 +28,9 @@ import { LocationChekbox } from "./LocationChekbox";
 import { useDispatch } from "react-redux";
 import { fetchData } from "../redux/action";
 import { CheckboxC } from "./Checkbox";
+import { useSearchParams } from "react-router-dom";
+import { useContext } from "react";
+import { ParamContext } from "../Context/ParamContext";
 
 const AllBrands = [
   {
@@ -75,7 +78,9 @@ const AllBrands = [
 export const Accordian = () => {
   const dispatch = useDispatch();
   const [sliderVal, setSliderVal] = useState([]);
-  const [Check, setCheck]=useState([])
+  const [Check, setCheck] = useState([])
+  const [searchParams, setSearchParams] = useSearchParams();
+  const { ParamObj, addParams } = useContext(ParamContext);
 
   const handleSlider = () => {
     const lowVal = sliderVal[0];
@@ -85,7 +90,6 @@ export const Accordian = () => {
       "published_ads.cars.0.set_price_lte": upperVal,
       "published_ads.cars.0.set_price_gte": lowVal,
     };
-    // console.log(params);
 
     dispatch(fetchData(params));
   };
@@ -104,27 +108,14 @@ export const Accordian = () => {
     const params = {
       "published_ads.cars.0.car_brand": newChecked,
     };
-    dispatch(fetchData(params))
+    // dispatch(fetchData(params))
+    addParams({...ParamObj, params});
+    // setSearchParams(params)
   };
 
   
-
-  const ref1 = useRef(null);
-  function handleFocus(e) {
-    ref1.current.className = "active";
-    console.log(ref1.current);
-
-    console.log(e.target.style.color);
-    if (e.target.style.backgroundColor === "none") {
-      e.target.style.backgroundColor = "#c8f8f6";
-      e.target.style.color = "black";
-      e.target.style.opacity = "100%";
-    } else {
-      e.target.style.backgroundColor = "none";
-      e.target.style.color = "grey";
-      // e.target.style.opacity="60%"
-    }
-  }
+  console.log("Params from PramsContext ", ParamObj );
+ 
   return (
     <Accordion defaultIndex={[0, 1, 2, 3, 4]} allowMultiple>
       <AccordionItem border="0">
@@ -225,90 +216,10 @@ export const Accordian = () => {
           overflow="auto"
           pb={4}
         >
-          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
-            Fiat Beetle
-          </Checkbox>{" "}
-          <br />
-          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
-            Ford 1
-          </Checkbox>{" "}
-          <br />
-          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
-            Dodge Escalade
-          </Checkbox>{" "}
-          <br />
-          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
-            Mazda Prius
-          </Checkbox>{" "}
-          <br />
-          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
-            BMW Countach
-          </Checkbox>{" "}
-          <br />
-          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
-            Fiat Silverado
-          </Checkbox>{" "}
-          <br />
-          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
-            BMW A4
-          </Checkbox>{" "}
-          <br />
-          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
-            Honda 911
-          </Checkbox>{" "}
-          <br />
-          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
-            Maserati ATS
-          </Checkbox>{" "}
-          <br />
-          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
-            Lamborghini Roadster
-          </Checkbox>{" "}
-          <br />
-          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
-            Fiat Volt
-          </Checkbox>{" "}
-          <br />
-          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
-            Ford 911
-          </Checkbox>{" "}
-          <br />
-          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
-            Rolls Royce Durango
-          </Checkbox>{" "}
-          <br />
-          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
-            Tesla Challenger
-          </Checkbox>{" "}
-          <br />
-          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
-            Volkswagen LeBaron
-          </Checkbox>{" "}
-          <br />
-          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
-            Bugatti Mustang
-          </Checkbox>{" "}
-          <br />
-          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
-            Bugatti Model T
-          </Checkbox>{" "}
-          <br />
-          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
-            Smart Wrangler
-          </Checkbox>{" "}
-          <br />
-          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
-            Nissan ATS
-          </Checkbox>{" "}
-          <br />
-          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
-            Honda Land Cruiser
-          </Checkbox>{" "}
-          <br />
-          <Checkbox size="lg" colorScheme="black.200" iconColor="black">
-            Volkswagen Taurus
-          </Checkbox>{" "}
-          <br />
+          <CheckboxC />
+
+
+
         </AccordionPanel>
       </AccordionItem>
     </Accordion>
