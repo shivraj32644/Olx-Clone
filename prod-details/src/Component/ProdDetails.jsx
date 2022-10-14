@@ -1,8 +1,10 @@
+import { Box } from "@chakra-ui/react";
 import { Carousel } from "react-responsive-carousel";
 
 const Slider= ()=>{
   return(
-    <Carousel autoPlay>
+    <Box>
+    <Carousel autoPlay >
     <div>
       <img
         alt=""
@@ -25,6 +27,7 @@ const Slider= ()=>{
       <p className="legend">Legend 3</p>
     </div>
   </Carousel>
+    </Box>
   )
 }
 export default Slider

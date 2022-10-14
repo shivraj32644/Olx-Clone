@@ -1,5 +1,5 @@
-// import { useContext } from "react"
-// import { ContextModal } from "../Component/ContextModal"
+import { useContext } from "react"
+import { ContextModal } from "../Component/ContextModal"
 
 
 // import { Link } from "react-router-dom"
@@ -8,6 +8,7 @@ import { Box, Button, Link, Text } from "@chakra-ui/react"
 import Carousel from "react-elastic-carousel";
 import { AiOutlineMobile } from "react-icons/ai"
 import { FcGoogle } from 'react-icons/fc'
+// import LoginEmail from "./Login_Email";
 // import LoginPass from "./Login_Pass";
 
 
@@ -29,8 +30,8 @@ const items =
 
 
     export default function DummyLogin() {
-   
-    // const {pages,setCurrPage} = useContext(ContextModal);
+    // const [currPage, setCurrPage] = useState(Page1);
+    const {pages,setCurrPage} = useContext(ContextModal);
 
     return (
         <>
@@ -81,12 +82,12 @@ const items =
             {/* <Link to="/" ></Link> */}
             <Box textAlign='center'>
 
-                {/* <Link to="/loginemail"> */}
-                    <Button >
+
+                    <Button onClick={()=>setCurrPage(pages.Page_2)}>
                     <Text>Login With Email</Text>
                     </Button>
-                    {/* {setCurrPage= <LoginPass/>} */}
-                {/* </Link> */}
+
+            
 
                 <br />
                 <Text fontSize='xs'>All Your Presonal Details Are Safe With Us</Text><br />
