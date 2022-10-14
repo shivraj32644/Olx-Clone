@@ -78,6 +78,18 @@ const SellingForm=()=>{
                  <Box {...fuelBoxStyle}>4+</Box>
                </Box>
               </Box>
+              <InputGroup mb="15px">
+   
+              <InputLeftElement
+                pointerEvents='none'
+                color='gray.300'
+                fontSize='1.2em'
+                children={<BiRupee h="8px" w="8px" />}
+              />
+              <Input  type="number" placeholder='Enter amount' />
+              
+           </InputGroup>
+           <hr mt="15px" mb="15px"    />
               </Box>
               
               
