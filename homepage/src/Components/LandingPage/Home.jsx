@@ -1,4 +1,4 @@
-import { Container, Box, Image } from "@chakra-ui/react";
+import { Box, Image, Button } from "@chakra-ui/react";
 import React from "react";
 import DownNavbar from "../Navbar/DownNavbar";
 import UpNavbar from "../Navbar/UpNavbar";
@@ -7,9 +7,12 @@ import Footer2 from "./Footer2";
 import FreshRecom from "./FreshRecom";
 import poster from "./Images/land.png";
 import MobileCarousal from "./MobileCarousal";
+import SellButton from "./SellButton";
+
 const Home = () => {
   return (
-    <div>
+    <div className="Container">
+      <SellButton />
       <UpNavbar />
       <DownNavbar />
       <img src={poster} alt="poster" />

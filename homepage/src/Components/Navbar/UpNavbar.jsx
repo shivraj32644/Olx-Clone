@@ -13,7 +13,8 @@ import {
   Spacer,
 } from "@chakra-ui/react";
 import React from "react";
-import { Link } from "react-router-dom";
+
+import "./Navbar.css";
 
 import {
   ChevronDownIcon,
@@ -22,12 +23,11 @@ import {
   AddIcon,
 } from "@chakra-ui/icons";
 
-import DownNavbar from "./DownNavbar";
+import { Link } from "react-router-dom";
 
 const UpNavbar = () => {
   return (
     <Box
-      // border="1px solid red"
       position="fixed"
       top="0"
       zIndex="900"
@@ -36,6 +36,7 @@ const UpNavbar = () => {
       boxSizing="border-box"
       boxShadow="0 1px 5px 0 rgb(0 0 0 / 10%)"
       display="block"
+      className="NavContainer"
     >
       <HStack p="2" bg="#eff1f3" spacing="18px">
         <Box>
@@ -135,21 +136,6 @@ const UpNavbar = () => {
             borderRadius="none"
           >
             Login
-          </Button>
-        </Box>
-        <Box>
-          <Button
-            bg="white"
-            _hover="none"
-            borderRadius="30px"
-            p="17px"
-            borderTop="5px solid #23e5db"
-            borderLeft="5px solid #ffce32"
-            borderRight="5px solid #3a77ff"
-            borderBottom="5px solid #ffce32"
-          >
-            <AddIcon mr="5px" />
-            SELL
           </Button>
         </Box>
       </HStack>

@@ -55,7 +55,7 @@ const styles = {
 const DownNavbar = () => {
   return (
     <Box>
-      <HStack padding="68px 16px 0" boxShadow=" 0 1px 4px 0 rgb(0 0 0 / 10%)">
+      <HStack padding="25px 16px 0" boxShadow=" 0 1px 4px 0 rgb(0 0 0 / 10%)">
         <Box>
           <Menu>
             <MenuButton
