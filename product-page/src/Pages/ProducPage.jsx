@@ -122,3 +122,7 @@ export const ProducPage = () => {
     </>
   );
 };
+
+
+
+

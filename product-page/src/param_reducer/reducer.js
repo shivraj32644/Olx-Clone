@@ -6,7 +6,7 @@ var initState = {
     // _order: "",
     // "published_ads.cars.0.set_price_lte": "",
     // "published_ads.cars.0.set_price_gte": "",
-    // "published_ads.cars.0.car_brand": [],
+    // "published_ads.cars.0.car_brand": ["Maruti Suzuki"],
   },
 };
 
