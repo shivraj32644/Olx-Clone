@@ -19,21 +19,21 @@ function ProdBanner() {
                             alt=""
                             src="https://apollo-singapore.akamaized.net/v1/files/8vmbf07qk7uv2-IN/image;s=780x0;q=60"
                         />
-                        <p className="legend">Legend 1</p>
+                        {/* <p className="legend">Legend 1</p> */}
                     </div>
                     <div>
                         <img
                             alt=""
                             src="https://apollo-singapore.akamaized.net/v1/files/8vmbf07qk7uv2-IN/image;s=780x0;q=60"
                         />
-                        <p className="legend">Legend 2</p>
+                        {/* <p className="legend">Legend 2</p> */}
                     </div>
                     <div>
                         <img
                             alt=""
                             src="https://apollo-singapore.akamaized.net/v1/files/8vmbf07qk7uv2-IN/image;s=780x0;q=60"
                         />
-                        <p className="legend">Legend 3</p>
+                        {/* <p className="legend">Legend 3</p> */}
                     </div>
                 </Carousel>
             </Box>
@@ -41,7 +41,7 @@ function ProdBanner() {
 
             <Box
                 boxShadow='xs' p='6' rounded='md' bg='white'
-                border="1px solid black" height="300px"
+                border="1px solid black" height="0%"
                 width="100%">
                 <Text as='b' fontSize='xl'>Details</Text>
 
