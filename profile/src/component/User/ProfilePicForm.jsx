@@ -1,10 +1,8 @@
 import { Flex, HStack ,Box, Text,Image,Button, VStack} from "@chakra-ui/react";
 
-function ProfilePicForm({ user }) {
-
-
-
-  
+function ProfilePicForm(props) {
+   let {user} = props;
+   console.log(user)
 
   return (
     <>

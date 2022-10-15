@@ -26,6 +26,7 @@ import {
   InputLeftElement,
   Spacer,
   HStack,
+  color,
   
 } from "@chakra-ui/react";
 import { useState } from "react";
@@ -33,7 +34,7 @@ import { useState } from "react";
 import ProfilePicForm from "./ProfilePicForm";
 import ProfileDetailForm from "./ProfileDetailFrom";
 
-function EditProfile({userData,getUser}) {
+function NewProfilePicForm({userData,getUser}) {
  
     let {loading,error,user} = userData
  
@@ -44,7 +45,6 @@ function EditProfile({userData,getUser}) {
     getUser();
   }, []);
 
- 
   let activeStyle ={
     fontWeight:"bold",
     fontSize:"17px",
@@ -55,6 +55,9 @@ function EditProfile({userData,getUser}) {
    color:"gray",
    marginBottom:"30px"
   }
+
+
+ 
 
  
 
@@ -77,13 +80,13 @@ function EditProfile({userData,getUser}) {
   return (
     <Box position={"relative"}  >
       <Flex font-family="'Roboto', sans-serif" width="95%" margin="auto">
-        <Box textAlign={"left"} width="30%" marginRight="20px" marginTop={4}>
+        <Box textAlign={"left"} width="30%" marginRight="20px">
          <NavLink
         
          to="/"
           style={({ isActive }) => {
             return isActive ? activeStyle : defaultStyle;
-          }}
+          }}end
          >
          {/* <Text
               paddingBottom={"8px"}
@@ -96,10 +99,10 @@ function EditProfile({userData,getUser}) {
               Edit profile
             {/* </Text> */}
          </NavLink><br />
-         <NavLink   to="/editProfile/picture" 
-          style={({ isActive }) => {
-            return isActive ? activeStyle : defaultStyle;
-          }}
+         <NavLink   to="/editProfile/picture"
+            style={({ isActive }) => {
+                return isActive ? activeStyle : defaultStyle;
+              }}end
          >
 
          {/* <Text
@@ -152,7 +155,7 @@ function EditProfile({userData,getUser}) {
 
           {/* // for data */}
           
-          <ProfileDetailForm user={user}/>
+          <ProfilePicForm user={user}/>
          
         </Box>
       </Flex>
@@ -164,4 +167,4 @@ function EditProfile({userData,getUser}) {
 
 }
 
-export default EditProfile;
+export default NewProfilePicForm;

@@ -23,8 +23,19 @@ import { HiOutlineLightBulb } from "react-icons/hi";
 import { useState } from "react";
 
 
-function ProfileDetailForm({user}){
-
+function ProfileDetailForm(props){
+  //  let user = (Object.keys(props.user).length === 0)?{
+  //   "user_id": "bbdd236b-5dc5-4a85-99dc-2019ee7f1b17",
+  //   "img_url": "https://png.pngtree.com/png-clipart/20190924/original/pngtree-human-avatar-free-vector-png-image_4825373.jpg",
+  //   "full_name": "Katrina Mills",
+  //   "email_id": "Katrina_Mills@hotmail.com",
+  //   "followers": 338,
+  //   "following": 88,
+  //   "login": false,
+  //   "isPremium": false,
+  //   "user_number":8210106539,
+  //   "id": 1}:props.user
+  let user = props.user
 
     let [userData,setUserData] = useState(user)
     let nameIsError = (userData.full_name.length<3)
