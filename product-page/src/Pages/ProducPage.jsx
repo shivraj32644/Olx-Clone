@@ -91,7 +91,7 @@ export const ProducPage = () => {
                 <Card
                   key={e.id}
                   img={e.published_ads.cars[0].car_images.img1}
-                  des={e.published_ads.cars[0].car_brand}
+                  des={e.published_ads.cars[0].car_name}
                   price={e.published_ads.cars[0].set_price}
                   city={e.published_ads.cars[0].ads_location.city}
                   state={e.published_ads.cars[0].ads_location.state}

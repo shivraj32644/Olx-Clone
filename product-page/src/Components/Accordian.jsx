@@ -75,10 +75,52 @@ const AllBrands = [
     brand: "Skoda",
   },
 ];
+const AllCarModel = [
+  {
+    id: 1,
+    brand: "Maruti Suzuki",
+  },
+  {
+    id: 2,
+    brand: "Hyundai",
+  },
+  {
+    id: 3,
+    brand: "Mahindra",
+  },
+  {
+    id: 4,
+    brand: "Tata",
+  },
+  {
+    id: 5,
+    brand: "Honda",
+  },
+  {
+    id: 6,
+    brand: "Ford",
+  },
+  {
+    id: 7,
+    brand: "Toyota",
+  },
+  {
+    id: 8,
+    brand: "Chevrolet",
+  },
+  {
+    id: 9,
+    brand: "Renualt",
+  },
+  {
+    id: 10,
+    brand: "Skoda",
+  },
+];
 
 export const Accordian = () => {
   const dispatch = useDispatch();
-  const [sliderVal, setSliderVal] = useState([0,3000000]);
+  const [sliderVal, setSliderVal] = useState([0,1600000]);
   const [Check, setCheck] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
   // const { ParamObj, addParams } = useContext(ParamContext);
@@ -167,15 +209,15 @@ export const Accordian = () => {
           </AccordionButton>
         </h2>
         <AccordionPanel pb={4}>
-          <Box>
+          <Box  display={"flex"} justifyContent="space-between" >
             <h3>₹  {new Intl.NumberFormat('en-IN').format(lowVal)}</h3>
             <h3> ₹  { new Intl.NumberFormat('en-IN').format(upperVal)  }</h3>
           </Box>
           <RangeSlider
             onChange={(e) => setSliderVal(e)}
-            defaultValue={[0, 3000000]}
+            defaultValue={[0, 1600000]}
             min={0}
-            max={3000000}
+            max={1600000}
             step={30}
           >
             <RangeSliderTrack bg="red.100">

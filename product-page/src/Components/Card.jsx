@@ -73,9 +73,10 @@ export const Card = ({img,des,price,city,state,date,premium}) => {
           as="h4"
           lineHeight="16px"
           fontSize="16px"
+          fontWeight={500}
           noOfLines={1}
-          color="002f34"
-          opacity="64%"
+          color="black"
+          opacity="100%"
         >
           {property.title}
         </Box>
