@@ -7,10 +7,12 @@ const ProductDetails = () => {
   return (
     <Box display="flex" justifyContent="space-between" gap="10"
     paddingLeft="50px"
-   paddingRight="50px" >
+   paddingRight="50px"
+   width="100%" 
+   bg="#f2f4f5">
 
 
-      <Box >
+      <Box width="-moz-min-content">
         <ProdBanner />
       </Box>
          

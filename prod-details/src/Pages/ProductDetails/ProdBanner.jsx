@@ -3,12 +3,16 @@ import { Carousel } from "react-responsive-carousel";
 
 function ProdBanner() {
     return (
-        <Box>
+        <Box >
             <Box
-            boxShadow='dark-lg' p='6' rounded='md' bg='white'
+            boxShadow='xs' p='6' rounded='md' bg='white'
+            width="100%"
+            margin="auto"
+           
             >
                 <Carousel autoPlay
-                   
+                    height="200px"
+                    width="700px"
                 >
                     <div>
                         <img
@@ -36,9 +40,9 @@ function ProdBanner() {
 
 
             <Box
-                boxShadow='dark-lg' p='6' rounded='md' bg='white'
+                boxShadow='xs' p='6' rounded='md' bg='white'
                 border="1px solid black" height="300px"
-                width="80%">
+                width="100%">
                 <Text as='b' fontSize='xl'>Details</Text>
 
                 <Box >
