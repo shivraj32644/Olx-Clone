@@ -26,11 +26,12 @@ import { useState } from "react";
 import { Indeterminate } from "./Indeterminate";
 import { LocationChekbox } from "./LocationChekbox";
 import { useDispatch } from "react-redux";
-import { fetchData } from "../redux/action";
+import { fetchData } from "../data_redux/action";
 import { CheckboxC } from "./Checkbox";
 import { useSearchParams } from "react-router-dom";
 import { useContext } from "react";
 import { ParamContext } from "../Context/ParamContext";
+import { addParams } from "../param_reducer/action";
 
 const AllBrands = [
   {
@@ -77,45 +78,55 @@ const AllBrands = [
 
 export const Accordian = () => {
   const dispatch = useDispatch();
-  const [sliderVal, setSliderVal] = useState([]);
-  const [Check, setCheck] = useState([])
+  const [sliderVal, setSliderVal] = useState([0,3000000]);
+  const [Check, setCheck] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
-  const { ParamObj, addParams } = useContext(ParamContext);
-
+  // const { ParamObj, addParams } = useContext(ParamContext);
+  var lowVal = sliderVal[0];
+  var upperVal = sliderVal[1];
   const handleSlider = () => {
-    const lowVal = sliderVal[0];
-    const upperVal = sliderVal[1];
+   
+    console.log(lowVal, upperVal);
 
     const params = {
       "published_ads.cars.0.set_price_lte": upperVal,
       "published_ads.cars.0.set_price_gte": lowVal,
     };
 
-    dispatch(fetchData(params));
+    // dispatch(fetchData(params));
+    dispatch(addParams(params))
   };
 
-  const handleCarModel = (id, value ,e) => {
+  const handleCarModel = (id, value, e) => {
     const currIndex = Check.indexOf(value);
     const newChecked = [...Check];
     if (currIndex === -1) {
-      newChecked.push(value)
-    }
-    else {
-      newChecked.splice(currIndex, 1)
+      newChecked.push(value);
+    } else {
+      newChecked.splice(currIndex, 1);
     }
 
-    setCheck(newChecked)
-    const params = {
+    setCheck(newChecked);
+
+
+    const brand_filter = {
       "published_ads.cars.0.car_brand": newChecked,
     };
-    // dispatch(fetchData(params))
-    addParams({...ParamObj, params});
-    // setSearchParams(params)
+    console.log(brand_filter)
+    dispatch(addParams(brand_filter));
+
+
+
+    // addParams({ ...ParamObj, ...brand_filter });
+    // setSearchParams(brand_filter)
+    // const a = searchParams.getAll('published_ads.cars.0.car_brand')
+    // console.log(a)
+
+    // dispatch(fetchData({ ...ParamObj }))
   };
 
-  
-  console.log("Params from PramsContext ", ParamObj );
- 
+  // console.log("Params from PramsContext ", {  });
+
   return (
     <Accordion defaultIndex={[0, 1, 2, 3, 4]} allowMultiple>
       <AccordionItem border="0">
@@ -156,11 +167,15 @@ export const Accordian = () => {
           </AccordionButton>
         </h2>
         <AccordionPanel pb={4}>
+          <Box>
+            <h3>₹  {new Intl.NumberFormat('en-IN').format(lowVal)}</h3>
+            <h3> ₹  { new Intl.NumberFormat('en-IN').format(upperVal)  }</h3>
+          </Box>
           <RangeSlider
-            onChangeEnd={(e) => setSliderVal(e)}
-            defaultValue={[0, 199300]}
+            onChange={(e) => setSliderVal(e)}
+            defaultValue={[0, 3000000]}
             min={0}
-            max={199300}
+            max={3000000}
             step={30}
           >
             <RangeSliderTrack bg="red.100">
@@ -178,7 +193,7 @@ export const Accordian = () => {
         <h2>
           <AccordionButton>
             <Box flex="1" textAlign="left">
-             ALL BRAND
+              ALL BRAND
             </Box>
             <AccordionIcon />
           </AccordionButton>
@@ -192,9 +207,13 @@ export const Accordian = () => {
           overflow="auto"
           pb={4}
         >
-
           {AllBrands.map(({ id, brand }) => (
-            <CheckboxC handleCarModel={handleCarModel} id={id} key={id} value={brand} />
+            <CheckboxC
+              handleCarModel={handleCarModel}
+              id={id}
+              key={id}
+              value={brand}
+            />
           ))}
         </AccordionPanel>
       </AccordionItem>
@@ -217,9 +236,6 @@ export const Accordian = () => {
           pb={4}
         >
           <CheckboxC />
-
-
-
         </AccordionPanel>
       </AccordionItem>
     </Accordion>

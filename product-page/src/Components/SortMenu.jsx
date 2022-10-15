@@ -12,23 +12,30 @@ import { useDispatch } from "react-redux";
 import { useSearchParams } from "react-router-dom";
 import { ParamContext } from "../Context/ParamContext";
 
-import { fetchData } from "../redux/action";
+import { fetchData } from "../data_redux/action";
+import { addParams } from "../param_reducer/action";
 
 export const SortMenu = () => {
   const [currValue, setCurValue] = useState("Date Published");
   const [searchParams, setSearchParams] = useSearchParams();
-  const { ParamObj, addParams } = useContext(ParamContext);
+ 
 
   const dispatch = useDispatch();
   const handleChange = (e) => {
     setCurValue(e);
-    console.log(e);
+   
+    const sort = valfun(e);
+   
+    var size = Object.keys(sort).length;
+    if (size == 0) {
+      console.log("its Empty");
+    }
+    else {
+      dispatch(addParams(sort));
+      
+    }
 
-    // dispatch(fetchData(valfun(e)));
-    // setSearchParams(valfun(e));
-    const obj = valfun(e);
 
-    addParams( {...ParamObj, obj})
   };
 
   const valfun = (e) => {

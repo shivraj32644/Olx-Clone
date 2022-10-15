@@ -1,4 +1,5 @@
-import {legacy_createStore as createStore,applyMiddleware} from 'redux'
+import {legacy_createStore as createStore , combineReducers ,applyMiddleware} from 'redux'
+import { ParamReducer } from '../param_reducer/reducer';
 import { reducer } from './reducer';
 
 
@@ -12,7 +13,14 @@ const thunkmiddleware = (store)=>(next)=>(action) => {
 
 
 const think = applyMiddleware(thunkmiddleware)
-export const store = createStore(reducer, think)
+
+
+const rootReducer = combineReducers({
+    reducer: reducer,
+    ParamReducer: ParamReducer,
+    
+})
+export const store = createStore(rootReducer, think)
 
 // store.subscribe(() => {
 //     console.log(store.getState())

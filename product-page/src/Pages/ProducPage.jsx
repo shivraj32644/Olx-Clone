@@ -6,6 +6,7 @@ import {
   Grid,
   GridItem,
   Button,
+  getSlideTransition,
 } from "@chakra-ui/react";
 import React from "react";
 import { Accordian } from "../Components/Accordian";
@@ -20,19 +21,32 @@ import {
   fetchData,
   fetchMobile,
   getData,
-} from "../redux/action";
-import { Link, NavLink } from "react-router-dom";
+} from "../data_redux/action";
+import { Link, NavLink, useSearchParams } from "react-router-dom";
+import { useState } from "react";
 // import { useContext } from "react";
 
 export const ProducPage = () => {
   const dispatch = useDispatch();
-  const { data } = useSelector((store) => store);
+  const  {data}  = useSelector((store) => store.reducer);
+  const {globalParams}= useSelector((store)=>store.ParamReducer)
+  const [searchParams, setSearchParams]=useSearchParams()
+  // console.log("THIS ARE THE GLOBAL PARAMS = >"  , globalParams);
+  // const params = {};
+  const test = searchParams.getAll("published_ads.cars.0.car_brand");
+  const [params, setParams] = useState({});
 
-  const params = {};
+  // setParams(globalParams)
+
+  console.log( "testing ==> ",test)
+  useEffect(() => {
+    
+    setSearchParams(globalParams);
+  },[globalParams])
 
   useEffect(() => {
-    dispatch(fetchData(params));
-  }, []);
+    dispatch(fetchData(globalParams));
+  }, [globalParams]);
 
   return (
     <>

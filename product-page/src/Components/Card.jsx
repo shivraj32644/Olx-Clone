@@ -9,6 +9,8 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { StarIcon } from "@chakra-ui/icons";
+import { AiOutlineHeart } from "react-icons/ai";
+import styles from './styles/Card.module.css'
 export const Card = ({img,des,price,city,state,date,premium}) => {
   const property = {
     imageUrl:img,
@@ -18,6 +20,8 @@ export const Card = ({img,des,price,city,state,date,premium}) => {
     date: date,
     address: `${city} ${state}`,
   };
+
+  
 
   return (
     <Box
@@ -49,6 +53,8 @@ export const Card = ({img,des,price,city,state,date,premium}) => {
           </Badge> : null
         }
         
+        {/* <AiOutlineHeart  className={styles.heart}  /> */}
+
         <Image height="160px" src={property.imageUrl} alt={property.imageAlt} />
       </Flex>
 
