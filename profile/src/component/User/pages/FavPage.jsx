@@ -5,15 +5,17 @@ import { Outlet } from "react-router-dom";
 
 function FavPage() {
   return (
-    <>
-    <VStack width={"95%"} margin="auto">
+    <> 
+    <VStack width={"95%"} margin="auto" >
 
     <Flex width={"100%"}  >
-     <Tabs width={"200px"}>
-        <TabList>
-          <Tab  color={"black"} fontSize="16px" >ADS</Tab>
-         <Link to="/myfavorites">  <Tab>FAVORITES</Tab></Link>
-        </TabList>
+     <Tabs variant='unstyled' >
+     <TabList borderBottom="1px solid #cfcdcd">
+     <Link to='/myads'>
+    <Tab fontSize={"14px"} _selected={{ color: 'black',fontWeight:"bold",fontSize:"",  borderBottom:"5px solid" }}>ADS</Tab></Link>
+    <Link to='/myfavorites'>
+    <Tab fontSize={"14px"} _selected={{ color: 'black',fontWeight:"bold",fontSize:"",  borderBottom:"5px solid" }}>FAVOURITES</Tab></Link>
+  </TabList>
       </Tabs>
      </Flex>
      

@@ -133,6 +133,7 @@ function ProfileDetailForm(props){
                 _placeholder={{ color: "Gray" }}
                 border="1px"
                 borderRadius="4px"
+                _autofill="none"
                 focusBorderColor={"red"}
                _focus={{border:"3px solid red"}}
                 placeholder={"About me (optional)"}
@@ -140,6 +141,7 @@ function ProfileDetailForm(props){
                 borderColor="black"
                 name="user_about"
                 onChange={formHandler}
+                resize="none"
                 maxLength="200"
               />
                 :<Textarea

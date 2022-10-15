@@ -108,13 +108,13 @@ function MyCard( {img,fav,price,title,date,getAllData,cardClick,user,index}){
          {fav?<RiHeartFill cursor={"pointer"} onClick={RemoveFav} fontSize={'25px'}/>:<RiHeartLine  cursor={"pointer"} color="black" onClick={AddFav}   fontSize={'25px'}/>}
          </Box>
 
-         <Box width={"100%"} px="15px" >
+         <VStack spacing={"2px"} width={"100%"} px="8px" >
          <Text as="b" width="100%" fontSize={"18px"} textAlign={"left"} >₹ {new Intl.NumberFormat('en-IN').format(price) }</Text>
           <Text color={"gray"} fontSize={"14px"} width="100%" textAlign={"left"} >{title}</Text>
           <Text fontSize={"10px"} color={"gray"} width="100%" textAlign={"right"} > {date}</Text>
          
 
-         </Box>
+         </VStack>
 
 
       </VStack>

@@ -13,36 +13,93 @@
       "id": 1,
       "favourite_ads": [
         {
-          "ad_id": "380fcb56-365d-4dee-9472-c86b82408635",
+          "ad_id": "b0d96509-e7b7-4e83-a2b5-2e99da32c0dd",
           "ad_active": true,
           "date_from": "NOV 9, 22",
           "date_to": "DEC 8, 22 ",
           "category": "OLX Auto(Cars)",
           "category_type": "Cars",
-          "name": "Bugatti Model S",
-          "car_model": "A4",
-          "car_varient": "Convertible",
-          "year_buy": 2011,
-          "fuel": "Petrol",
-          "transmission": "Automatic",
-          "km_driven": 55439,
-          "no_of_oweners": 1,
-          "key_feature": "sunt aute est",
-          "description": "Amazing car with good experience of driving not too old with good condition contact me fast for best offer",
-          "set_price": 354700,
+          "name": "Fiat Beetle",
+          "car_model": "PT Cruiser",
+          "car_varient": "Passenger Van",
+          "year_buy": 2001,
+          "fuel": "CNG",
+          "transmission": "Manual",
+          "km_driven": 89484,
+          "no_of_oweners": 3,
+          "key_feature": "veniam nostrud est",
+          "description": "Iam willing to sell my lovely car due to financial issues want a buyer fast giving amazing offer for first comer.",
+          "set_price": 918000,
           "images": {
             "img1": "https://www.renderhub.com/markos3d/srt-hellcat-dodge-challenger-2021/srt-hellcat-dodge-challenger-2021-08.jpg",
             "img2": "https://www.renderhub.com/markos3d/srt-hellcat-dodge-challenger-2021/srt-hellcat-dodge-challenger-2021-01.jpg",
             "img3": "https://www.renderhub.com/markos3d/srt-hellcat-dodge-challenger-2021/srt-hellcat-dodge-challenger-2021-07.jpg"
           },
           "ads_location": {
-            "state": "Rajasthan",
-            "city": "Jaipur",
+            "state": "M.P.",
+            "city": "Indore",
             "neighbour": "Railway station"
           },
-          "likes": 20,
-          "views": 17,
+          "likes": 33,
+          "views": 45,
           "inspected": true,
+          "fav": true,
+          "user_id": "bbdd236b-5dc5-4a85-99dc-2019ee7f1b17"
+        },
+        {
+          "ad_id": "1NM3ujHcGuCYa9AdSxbkN6iEACrkSMQ4Nz",
+          "category": "Mobiles",
+          "category_type": "Mobile Phones",
+          "name": "OnePlus 9.",
+          "description": "Ad et eu aliquip adipisicing laboris. Tempor consequat do ex enim. Duis est dolore in nostrud aute consectetur aliqua quis tempor ex enim fugiat id velit. Est Lorem Lorem esse sint sint nulla.",
+          "set_price": 9000,
+          "images": {
+            "img1": "https://images.hindustantimes.com/img/2021/06/08/1600x900/IMG_5223_1623145084295_1623145098953.jpg",
+            "img2": "https://cms-assets.bajajfinserv.in/is/image/bajajfinance/realme-5g-mobile-in-india?scl=1"
+          },
+          "ads_location": {
+            "state": "Karnatak",
+            "city": "Banglore",
+            "neighbour": "Railway station"
+          },
+          "fav": true,
+          "user_id": "bbdd236b-5dc5-4a85-99dc-2019ee7f1b17"
+        },
+        {
+          "ad_id": "AXISINBB067",
+          "category": "Books Sports & Hoobies",
+          "category_type": "Books",
+          "name": "irure voluptate quis anim",
+          "description": "Fugiat enim aliquip commodo laborum irure tempor aute do nulla tempor sunt. Nisi sit do nulla adipisicing cupidatat dolore elit ipsum proident eiusmod veniam elit. Nisi irure et laboris ea id. Culpa mollit minim quis ullamco sit veniam aliqua deserunt nulla voluptate.",
+          "set_price": 550,
+          "images": {
+            "img1": "https://m.media-amazon.com/images/I/81CxXmRFnBL.jpg",
+            "img2": "https://cdn.shopify.com/s/files/1/0261/7291/5805/products/9781797205151.jpg?v=1635886444"
+          },
+          "ads_location": {
+            "state": "M.P.",
+            "city": "Indore",
+            "neighbour": "Railway station"
+          },
+          "fav": true,
+          "user_id": "bbdd236b-5dc5-4a85-99dc-2019ee7f1b17"
+        },
+        {
+          "ad_id": "SBININBB798",
+          "category": "Books Sports & Hoobies",
+          "category_type": "Books",
+          "name": "minim est eiusmod cupidatat ad in deserunt",
+          "description": "Amet culpa veniam et do ea duis. Est aute do velit nulla aliquip proident deserunt veniam officia elit. Exercitation dolor cillum tempor ad velit laboris labore labore exercitation nulla ut laborum. Deserunt laborum enim culpa consequat laboris.",
+          "set_price": 650,
+          "images": {
+            "img1": "https://m.media-amazon.com/images/I/81CxXmRFnBL.jpg",
+            "img2": "https://cdn.shopify.com/s/files/1/0261/7291/5805/products/9781797205151.jpg?v=1635886444"
+          },
+          "ads_location": {
+            "state": "M.P.",
+            "city": "Indore",
+            "neighbour": "Railway station"
+          },
           "fav": true,
           "user_id": "bbdd236b-5dc5-4a85-99dc-2019ee7f1b17"
         },
@@ -115,36 +172,21 @@
           "user_id": "bbdd236b-5dc5-4a85-99dc-2019ee7f1b17"
         },
         {
-          "ad_id": "b0d96509-e7b7-4e83-a2b5-2e99da32c0dd",
-          "ad_active": true,
-          "date_from": "NOV 9, 22",
-          "date_to": "DEC 8, 22 ",
-          "category": "OLX Auto(Cars)",
-          "category_type": "Cars",
-          "name": "Fiat Beetle",
-          "car_model": "PT Cruiser",
-          "car_varient": "Passenger Van",
-          "year_buy": 2001,
-          "fuel": "CNG",
-          "transmission": "Manual",
-          "km_driven": 89484,
-          "no_of_oweners": 3,
-          "key_feature": "veniam nostrud est",
-          "description": "Iam willing to sell my lovely car due to financial issues want a buyer fast giving amazing offer for first comer.",
-          "set_price": 918000,
+          "ad_id": "16aHyKWoU8HhKYG5sCMrE8x4RkWM5Badaw",
+          "category": "Mobiles",
+          "category_type": "Mobile Phones",
+          "name": "Google Pixel 6A.",
+          "description": "Reprehenderit ex esse sunt et sunt eu commodo dolore officia pariatur ullamco non reprehenderit. Ea adipisicing occaecat nostrud est anim excepteur Lorem aliqua ad eu ullamco ipsum laborum est.",
+          "set_price": 5350,
           "images": {
-            "img1": "https://www.renderhub.com/markos3d/srt-hellcat-dodge-challenger-2021/srt-hellcat-dodge-challenger-2021-08.jpg",
-            "img2": "https://www.renderhub.com/markos3d/srt-hellcat-dodge-challenger-2021/srt-hellcat-dodge-challenger-2021-01.jpg",
-            "img3": "https://www.renderhub.com/markos3d/srt-hellcat-dodge-challenger-2021/srt-hellcat-dodge-challenger-2021-07.jpg"
+            "img1": "https://images.hindustantimes.com/img/2021/06/08/1600x900/IMG_5223_1623145084295_1623145098953.jpg",
+            "img2": "https://cms-assets.bajajfinserv.in/is/image/bajajfinance/realme-5g-mobile-in-india?scl=1"
           },
           "ads_location": {
-            "state": "M.P.",
-            "city": "Indore",
+            "state": "Jharkhand",
+            "city": "Ranchi",
             "neighbour": "Railway station"
           },
-          "likes": 33,
-          "views": 45,
-          "inspected": true,
           "fav": true,
           "user_id": "bbdd236b-5dc5-4a85-99dc-2019ee7f1b17"
         }
@@ -288,7 +330,7 @@
           "likes": 30,
           "views": 21,
           "inspected": false,
-          "fav": false,
+          "fav": true,
           "user_id": "bbdd236b-5dc5-4a85-99dc-2019ee7f1b17"
         },
         {
@@ -339,7 +381,7 @@
             "city": "Jaunpur",
             "neighbour": "Railway station"
           },
-          "fav": false,
+          "fav": true,
           "user_id": "bbdd236b-5dc5-4a85-99dc-2019ee7f1b17"
         },
         {
@@ -357,7 +399,9 @@
             "state": "U.P.",
             "city": "Jaunpur",
             "neighbour": "Railway station"
-          }
+          },
+          "fav": true,
+          "user_id": "bbdd236b-5dc5-4a85-99dc-2019ee7f1b17"
         },
         {
           "ad_id": "SBININBB798",
@@ -374,7 +418,9 @@
             "state": "M.P.",
             "city": "Indore",
             "neighbour": "Railway station"
-          }
+          },
+          "fav": true,
+          "user_id": "bbdd236b-5dc5-4a85-99dc-2019ee7f1b17"
         },
         {
           "ad_id": "AXISINBB067",
@@ -391,7 +437,9 @@
             "state": "M.P.",
             "city": "Indore",
             "neighbour": "Railway station"
-          }
+          },
+          "fav": true,
+          "user_id": "bbdd236b-5dc5-4a85-99dc-2019ee7f1b17"
         },
         {
           "ad_id": "1FSfyxTv5NHe5jgchbWpWu1UGQ4mwLUDAi",
@@ -408,7 +456,9 @@
             "state": "Jharkhand",
             "city": "Ranchi",
             "neighbour": "Railway station"
-          }
+          },
+          "fav": true,
+          "user_id": "bbdd236b-5dc5-4a85-99dc-2019ee7f1b17"
         },
         {
           "ad_id": "16aHyKWoU8HhKYG5sCMrE8x4RkWM5Badaw",
@@ -425,7 +475,9 @@
             "state": "Jharkhand",
             "city": "Ranchi",
             "neighbour": "Railway station"
-          }
+          },
+          "fav": true,
+          "user_id": "bbdd236b-5dc5-4a85-99dc-2019ee7f1b17"
         },
         {
           "ad_id": "1NM3ujHcGuCYa9AdSxbkN6iEACrkSMQ4Nz",
@@ -442,7 +494,9 @@
             "state": "Karnatak",
             "city": "Banglore",
             "neighbour": "Railway station"
-          }
+          },
+          "fav": true,
+          "user_id": "bbdd236b-5dc5-4a85-99dc-2019ee7f1b17"
         }
       ]
     },
