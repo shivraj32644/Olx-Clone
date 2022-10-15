@@ -12,6 +12,7 @@ export const ParamContextProvider = ({ children }) => {
   const dispatch = useDispatch();
   const [searchParams, setSearchParams] = useSearchParams();
   const [ParamObj, setParamObj] = useState({});
+  console.log("first")
 
   const addParams = (value) => {
     setParamObj({ ...value });
