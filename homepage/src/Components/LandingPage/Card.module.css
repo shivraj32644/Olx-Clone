@@ -1,0 +1,26 @@
+.heartIcon {
+    background-color: none;
+
+}
+
+.heartBtn {
+    /* display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-style: none; */
+    background: none;
+    /* outline: none; */
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    /* text-decoration: none; */
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    /* padding: 0; */
+
+
+
+
+
+}
