@@ -55,8 +55,7 @@ const styles = {
 const DownNavbar = () => {
   return (
     <Box>
-      <h1>Hello</h1>
-      <HStack mt="5px" border="1px solid green">
+      <HStack padding="68px 16px 0" boxShadow=" 0 1px 4px 0 rgb(0 0 0 / 10%)">
         <Box>
           <Menu>
             <MenuButton
@@ -290,14 +289,17 @@ const DownNavbar = () => {
             </MenuList>
           </Menu>
         </Box>
-        <HStack shadow="md" lineHeight="3rem">
+        <HStack lineHeight="3rem">
           {links.map((link) => (
             <Box
               className="navbox"
               _hover={{ color: "#23e5db" }}
-              spacing="15px"
+              spacing="10px"
             >
-              <Link style={{ textDecoration: "none" }} to={link.path}>
+              <Link
+                style={{ textDecoration: "none", paddingRight: "5px" }}
+                to={link.path}
+              >
                 {link.title}
               </Link>
             </Box>

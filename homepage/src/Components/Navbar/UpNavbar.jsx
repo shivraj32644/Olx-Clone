@@ -26,7 +26,17 @@ import DownNavbar from "./DownNavbar";
 
 const UpNavbar = () => {
   return (
-    <Box>
+    <Box
+      // border="1px solid red"
+      position="fixed"
+      top="0"
+      zIndex="900"
+      width="100%"
+      background="#fff"
+      boxSizing="border-box"
+      boxShadow="0 1px 5px 0 rgb(0 0 0 / 10%)"
+      display="block"
+    >
       <HStack p="2" bg="#eff1f3" spacing="18px">
         <Box>
           <Link to="#" cursor="pointer">
@@ -47,7 +57,7 @@ const UpNavbar = () => {
           </Link>
         </Box>
         <Box>
-          <InputGroup border="2px solid #002f34" borderRadius="4px">
+          <InputGroup border="1px solid #002f34" borderRadius="4px">
             <InputLeftElement
               pointerEvents="initial"
               children={<Search2Icon color="gray.500" />}
@@ -63,7 +73,7 @@ const UpNavbar = () => {
         </Box>
         <Box width="50%">
           <Flex
-            border="2px solid #002f34"
+            border="1px solid #002f34"
             alignItems="center"
             borderRadius="4px"
             width="100%"
@@ -143,7 +153,6 @@ const UpNavbar = () => {
           </Button>
         </Box>
       </HStack>
-      {/* <DownNavbar /> */}
     </Box>
   );
 };
