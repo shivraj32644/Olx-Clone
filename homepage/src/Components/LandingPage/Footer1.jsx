@@ -6,8 +6,8 @@ import playStoreApple from "./Images/appstore_2x.png";
 const Footer1 = () => {
   return (
     <div>
-      <Box my="1rem" bg="#f7f8f9">
-        <SimpleGrid columns={[1, 2, 3]} spacing="30px" pt="1rem" pb="1rem">
+      <Box mt="2rem" bg="#f7f8f9">
+        <SimpleGrid columns={[1, 2, 3]} spacing="30px">
           <Box>
             <img src={phone} alt="phone" />
           </Box>

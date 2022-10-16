@@ -3,11 +3,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import playstore from "./Images/playstore.png";
 import playtoreapple from "./Images/appstore.png";
-
+import { TiSocialFacebookCircular } from "react-icons/ti";
+import { RiInstagramLine } from "react-icons/ri";
+import { TiSocialTwitterCircular } from "react-icons/ti";
+import { MdOutlinePlayCircle } from "react-icons/md";
 const Footer2 = () => {
   return (
     <div>
-      <Box bg="#ebeeef">
+      <Box bg="#ebeeef" border="1px solid #ebeeef">
         <SimpleGrid columns={[1, 2, 4, 5]} spacing="20px" mx="2rem" my="1rem">
           <Box>
             <Box>
@@ -82,20 +85,40 @@ const Footer2 = () => {
           </Box>
           <Box>
             <Box>
+              {/* Folloe us section */}
+
               <Text as="b">FOLLOW US</Text>
-              <Box>
-                <Flex></Flex>
+              <Box mt="3px" mb="55px">
+                <Flex gap="2">
+                  <Link to="https://www.facebook.com/olxindia/">
+                    <TiSocialFacebookCircular size="20px" color="#557477" />
+                  </Link>
+                  <Link to="https://www.instagram.com/olx_india/">
+                    <RiInstagramLine size="20px" color="#557477" />
+                  </Link>
+                  <Link to="https://twitter.com/OLX_India">
+                    <TiSocialTwitterCircular size="20px" color="#557477" />
+                  </Link>
+                  <Link to="https://www.youtube.com/user/OLXInTv">
+                    <MdOutlinePlayCircle size="20px" color="#557477" />
+                  </Link>
+                </Flex>
               </Box>
               <Box>
                 <Flex>
-                  <Image width="130px" src={playstore} alt="phone" />
+                  <Link to="https://play.google.com/store/apps/details?id=com.olx.southasia">
+                    <Image width="130px" src={playstore} alt="phone" />
+                  </Link>
 
-                  <Image
-                    px="5px"
-                    width="130px"
-                    src={playtoreapple}
-                    alt="phone"
-                  />
+                  <Link to="https://itunes.apple.com/in/app/olx-buy-sell-near-you/id913492792?mt=8">
+                    <Image
+                      height="35px"
+                      px="5px"
+                      width="130px"
+                      src={playtoreapple}
+                      alt="phone"
+                    />
+                  </Link>
                 </Flex>
               </Box>
             </Box>
