@@ -18,6 +18,9 @@ import {
   MenuDivider,
   Text,
   Image,
+  Heading,
+  Divider,
+  VStack,
 } from "@chakra-ui/react";
 import React from "react";
 
@@ -27,12 +30,19 @@ import {
   ChevronDownIcon,
   CheckIcon,
   Search2Icon,
+  QuestionOutlineIcon,
   AddIcon,
 } from "@chakra-ui/icons";
-
+import { FiCamera } from "react-icons/fi";
+import { GiEarthAmerica } from "react-icons/gi";
 import { Link } from "react-router-dom";
 import { useMediaQuery } from "@chakra-ui/react";
 import { HiOutlineLocationMarker } from "react-icons/hi";
+import { MdContentCopy } from "react-icons/md";
+import { RiChat1Line } from "react-icons/ri";
+// import { IoEarthOutline } from "react-icons/io";
+// import { IoEarthSharp } from "react-icons/io";
+// import { IoEarthOutline } from "react-icons/io/EarthOutline";
 
 import { ReactNode } from "react";
 
@@ -393,34 +403,123 @@ const UpNavbar = () => {
 
           {isOpen ? (
             <Box pb={4} display={{ md: "none" }}>
-              <Flex>
-                <Box
-                  width="96px"
-                  height="96px"
-                  // backgroundImage={{
-                  //   url: "https://statics.olx.in/external/base/img/avatar_empty_state.png",
-                  // }}
-                >
+              <Flex alignItems="center">
+                <Box width="96px" height="96px" borderRadius="50%" mt="15px">
                   {" "}
                   <Image
                     src=" https://statics.olx.in/external/base/img/avatar_empty_state.png"
                     alt="Profile pic"
                   />
                 </Box>
-                <Box>
+
+                <Box mx="1rem">
                   <Box>
-                    <span>Welcome to OLX!</span>
+                    <Heading
+                      as="h2"
+                      size="md"
+                      font-family="Roboto,Arial,Helvetica,sans-serif"
+                    >
+                      Welcome to OLX!
+                    </Heading>
                   </Box>
-                  <h1>
-                    <span>Take charge of your buying and selling journey.</span>
-                  </h1>
+
+                  <Text
+                    color="#5b5c5d"
+                    font-family="Roboto,Arial,Helvetica,sans-serif"
+                  >
+                    Take charge of your buying and selling journey.
+                  </Text>
                 </Box>
               </Flex>
+              <Divider orientation="horizontal" />
+              <VStack align="stretch">
+                <Flex alignItems="center" my="10px" fontSize="20px">
+                  <Box mx="5px">
+                    <FiCamera />
+                  </Box>
+
+                  <Box mx="10px">
+                    <Text
+                      fontSize="17px"
+                      color="#002f34"
+                      font-family="Roboto,Arial,Helvetica,sans-serif"
+                    >
+                      Start selling
+                    </Text>
+                  </Box>
+                </Flex>
+                <Flex alignItems="center" my="10px" fontSize="20px">
+                  <Box mx="5px">
+                    <MdContentCopy />
+                  </Box>
+                  <Box mx="10px">
+                    <Text
+                      fontSize="17px"
+                      color="#002f34"
+                      font-family="Roboto,Arial,Helvetica,sans-serif"
+                    >
+                      My ADS
+                    </Text>
+                  </Box>
+                </Flex>
+
+                <Flex alignItems="center" my="10px" fontSize="20px">
+                  <Box mx="5px">
+                    <RiChat1Line />
+                  </Box>
+
+                  <Box mx="10px">
+                    <Text
+                      fontSize="17px"
+                      color="#002f34"
+                      font-family="Roboto,Arial,Helvetica,sans-serif"
+                    >
+                      Chat
+                    </Text>
+                  </Box>
+                </Flex>
+
+                <Divider orientation="horizontal" />
+
+                <Flex alignItems="center" my="10px" fontSize="20px">
+                  <Box mx="5px">
+                    <QuestionOutlineIcon />
+                  </Box>
+
+                  <Box mx="10px">
+                    <Text
+                      fontSize="17px"
+                      color="#002f34"
+                      font-family="Roboto,Arial,Helvetica,sans-serif"
+                    >
+                      Help
+                    </Text>
+                  </Box>
+                </Flex>
+
+                <Flex alignItems="center" my="10px" fontSize="20px" py="8px">
+                  <Box mx="5px">
+                    <GiEarthAmerica />
+                  </Box>
+
+                  <Box mx="10px">
+                    <Text
+                      fontSize="17px"
+                      color="#002f34"
+                      font-family="Roboto,Arial,Helvetica,sans-serif"
+                    >
+                      Select language / भाषा चुनें
+                    </Text>
+                  </Box>
+                </Flex>
+
+                <Button bg="#002f34" color="white" fontSize="15px">
+                  <Link to="#">Login</Link>
+                </Button>
+              </VStack>
             </Box>
           ) : null}
         </Box>
-
-        <Box p={4}>Main Content Here</Box>
       </>
     );
   }

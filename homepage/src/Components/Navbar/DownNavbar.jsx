@@ -48,9 +48,9 @@ const links = [
 ];
 
 const DownNavbar = () => {
-  const [isLargerThan426] = useMediaQuery("(min-width: 426px)");
+  const [isLargerThan425] = useMediaQuery("(min-width: 426px)");
 
-  if (isLargerThan426) {
+  if (isLargerThan425) {
     return (
       <Box>
         <HStack padding="25px 16px 0" boxShadow=" 0 1px 4px 0 rgb(0 0 0 / 10%)">
