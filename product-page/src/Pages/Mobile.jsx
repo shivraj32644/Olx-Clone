@@ -26,7 +26,7 @@ import { Link, NavLink } from "react-router-dom";
 
 export const Mobile = () => {
   const dispatch = useDispatch();
-  const { data } = useSelector((store) => store);
+  const { data } = useSelector((store) => store.reducer);
 
   const params = {};
 

@@ -26,11 +26,10 @@ import { Link, NavLink } from "react-router-dom";
 
 export const Books = () => {
   const dispatch = useDispatch();
-  const { data } = useSelector((store) => store);
-
+  const {data} = useSelector((store) => store.reducer);
+  console.log(data,"data at line 30");
   const params = {};
 
-  console.log("this is book spage");
 
   useEffect(() => {
     dispatch(fetchData(params));

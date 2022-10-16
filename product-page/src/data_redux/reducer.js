@@ -10,7 +10,7 @@ const initState = {
 export const reducer = (store = initState, { type, payload }) => {
   switch (type) {
     case LOADING: {
-      return { ...store, loading: true };
+      return { ...store, loading: payload };
     }
     case ERROR: {
       return (store.error = true);
