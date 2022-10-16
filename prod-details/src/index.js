@@ -8,6 +8,7 @@ import { BrowserRouter } from "react-router-dom"
 import ContextModalProvider from './Component/ContextModal';
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 import ProductDetails from './Component/ProdDetails';
+import GenOtp from './Pages/SigninPages/GenOtp';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -18,6 +19,7 @@ root.render(
             <ContextModalProvider>
                 <App />
                 <ProductDetails/>
+                <GenOtp/>
             </ContextModalProvider>
             </BrowserRouter>
         </ChakraProvider>

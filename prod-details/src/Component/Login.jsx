@@ -17,10 +17,12 @@ import { Box, Button } from "@chakra-ui/react"
 
 export const LoginPage = () => {
     const { currPage } = useContext(ContextModal)
-
-
+   
     const { isOpen, onOpen, onClose } = useDisclosure()
     const finalRef = React.useRef(null);
+
+       
+
 
 
 
@@ -31,7 +33,7 @@ export const LoginPage = () => {
                 {/* Some other content that'll receive focus on close. */}
             </Box>
 
-            <Button mt={4} onClick={onOpen}>
+            <Button mt={4} onClick={onOpen} >
                 LOGIN
             </Button>
             <Modal finalFocusRef={finalRef} isOpen={isOpen} onClose={onClose}>

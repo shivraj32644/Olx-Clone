@@ -24,7 +24,7 @@ const LoginPass=()=>{
             
                  {/* Input Password Starts Here */}
             <Box>
-             <Text as='b'>Enter Your Password</Text><br /><br />
+             <Text as='b'>Enter Your Password</Text>
                     <Text>Welcome Back { }
                         <Text as='b'>
                             mail id
