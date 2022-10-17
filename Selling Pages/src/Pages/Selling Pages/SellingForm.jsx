@@ -12,6 +12,7 @@ import handleAddSellPosts from "./axios.jsx"
 import KmInput from "./Form Components/KmInput"
 import YearInput from "./Form Components/YearInput"
 import DescriptionInput from "./Form Components/DescriptionInput"
+import SelectLocation from "./Form Components/SelectLocation"
 
 
 
@@ -491,10 +492,10 @@ const SellingForm=()=>{
                         </TabList>
                         <TabPanels>
                           <TabPanel>
-                            
+                            <SelectLocation/>
                           </TabPanel>
                           <TabPanel>
-                            {/*append text selct box here  */}
+                            <SelectLocation/>
                           </TabPanel>
                         </TabPanels>
                    </Tabs>

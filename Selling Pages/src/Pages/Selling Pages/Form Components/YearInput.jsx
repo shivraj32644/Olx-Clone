@@ -2,7 +2,7 @@ import { FormControl, FormErrorMessage, FormHelperText, FormLabel, Input } from 
 import { useState } from "react"
 
 
-function InputBox() {
+function YearInput() {
     const [input, setInput] = useState('')
   
     const handleInputChange = (e) => setInput(e.target.value)
@@ -23,4 +23,4 @@ function InputBox() {
       </FormControl>
     )
   }
-  export default InputBox
+  export default YearInput

@@ -1,57 +1,57 @@
 import { Box, FormControl, FormErrorMessage, FormHelperText, FormLabel, Input, Select } from "@chakra-ui/react"
 import { useEffect, useState } from "react"
 
-const Brands=[
+const States=[
     {id:"1",name:"Honda"},
     {id:"2",name:"Toyota"},
     {id:"3",name:"BMW"},
 ]
-const Models=[
-    {id:"5",modelId:"1",name:"Honda Model 1"},
-    {id:"6",modelId:"1",name:"Honda Model 2"},
-    {id:"7",modelId:"2",name:"Toyota Model 1"},
-    {id:"8",modelId:"2",name:"Toyota Model 2"},
-    {id:"9",modelId:"3",name:"BMW Model 1"},
-    {id:"10",modelId:"3",name:"BMW Model 2"},
+const Cities=[
+    {id:"5",cityId:"1",name:"Honda Model 1"},
+    {id:"6",cityId:"1",name:"Honda Model 2"},
+    {id:"7",cityId:"2",name:"Toyota Model 1"},
+    {id:"8",cityId:"2",name:"Toyota Model 2"},
+    {id:"9",cityId:"3",name:"BMW Model 1"},
+    {id:"10",cityId:"3",name:"BMW Model 2"},
 ]
-const Varients=[
-    {id:"11", varientId:"5",name:"Honda M1 V1"},
-    {id:"12", varientId:"5",name:"Honda M1 V2"},
-    {id:"13", varientId:"6",name:"Honda M2 V1"},
-    {id:"14", varientId:"6",name:"Honda M2 V2"},
-    {id:"15", varientId:"7",name:"Toyota M1 V1"},
-    {id:"16", varientId:"7",name:"Toyota M1 V2"},
-    {id:"17", varientId:"8",name:"Toyota M2 V1"},
-    {id:"18", varientId:"8",name:"Toyota M2 V2"},
-    {id:"19", varientId:"9",name:"BMW M1 V1"},
-    {id:"20", varientId:"9",name:"BMW M1 V2"},
-    {id:"21", varientId:"10",name:"BMW M2 V1"},
-    {id:"22", varientId:"10",name:"BMW M2 V2"},
+const Neighbourhoods=[
+    {id:"11", neighbourhoodId:"5",name:"Honda M1 V1"},
+    {id:"12", neighbourhoodId:"5",name:"Honda M1 V2"},
+    {id:"13", neighbourhoodId:"6",name:"Honda M2 V1"},
+    {id:"14", neighbourhoodId:"6",name:"Honda M2 V2"},
+    {id:"15", neighbourhoodId:"7",name:"Toyota M1 V1"},
+    {id:"16", neighbourhoodId:"7",name:"Toyota M1 V2"},
+    {id:"17", neighbourhoodId:"8",name:"Toyota M2 V1"},
+    {id:"18", neighbourhoodId:"8",name:"Toyota M2 V2"},
+    {id:"19", neighbourhoodId:"9",name:"BMW M1 V1"},
+    {id:"20", neighbourhoodId:"9",name:"BMW M1 V2"},
+    {id:"21", neighbourhoodId:"10",name:"BMW M2 V1"},
+    {id:"22", neighbourhoodId:"10",name:"BMW M2 V2"},
 ]
 
-const SelectBrand=()=>{
+const SelectLocation=({collectAllFormData})=>{
     const [input, setInput] = useState({
         car_name:"",
-        car_model:"",
-        car_varient:"",
+        car_city:"",
+        car_neighbourhood:"",
     })
-    const [brand,setBrand]=useState([])
-    const [model,setModel]=useState([])
-    const [varient,setVarient]=useState([])
+    const [state,setBrand]=useState([])
+    const [city,setModel]=useState([])
+    const [neighbourhood,setVarient]=useState([])
 
 
     useEffect(()=>{
-        setBrand(Brands)
+        setBrand(States)
     },[])
 
     const handleChooseCountry = (id) =>{ 
         if(id==0){ 
-            setInput({...input,car_name:"",car_model:"",car_varient:""})
+            setInput({...input,car_name:"",car_city:"",car_neighbourhood:""})
             setModel([])
         }
         else{
-            const car_name=Brands.filter(x=>x.id===id )
-            const giveModel=Models.filter(x=>x.modelId===id)
+            const car_name=States.filter(x=>x.id===id )
+            const giveModel=Cities.filter(x=>x.cityId===id)
             setInput({...input,car_name:car_name[0].name})
             setModel(giveModel)
         }
@@ -59,30 +59,30 @@ const SelectBrand=()=>{
     }
     const handleChooseModel = (id) =>{ 
         if(id==0){
-            setInput({...input,car_model:"",car_varient:""})
+            setInput({...input,car_city:"",car_neighbourhood:""})
             setVarient( [] )
         }
         else{
-            const car_model=Models.filter(x=>x.id===id )
-            const giveVarient=Varients.filter(x=>x.varientId===id)
-            setInput({...input,car_model:car_model[0].name})
+            const car_city=Cities.filter(x=>x.id===id )
+            const giveVarient=Neighbourhoods.filter(x=>x.neighbourhoodId===id)
+            setInput({...input,car_city:car_city[0].name})
             setVarient( giveVarient )
         }
 
     }
     const handleChooseVarient=(id)=>{
         
-        const car_varient=Varients.filter(x=> x.id===id )
-        id==0 ? setInput({...input,car_varient:""}):
-        setInput({...input,car_varient:car_varient[0].name})
+        const car_neighbourhood=Neighbourhoods.filter(x=> x.id===id )
+        id==0 ? setInput({...input,car_neighbourhood:""}):
+        setInput({...input,car_neighbourhood:car_neighbourhood[0].name})
 
 
     }
     console.log(input)
 
     const isErrorBrand = input.car_name==="" 
-    const isErrorModel = input.car_model===""
-    const isErrorVarient = input.car_varient===""
+    const isErrorModel = input.car_city===""
+    const isErrorVarient = input.car_neighbourhood===""
 
     return (
       <Box>
@@ -93,9 +93,9 @@ const SelectBrand=()=>{
           <Select fontSize="12px" h="38px" borderRadius="2px" onChange={(e)=>handleChooseCountry(e.target.value)}>
             <option value="0"></option>
            {
-               brand && brand!==undefined ? brand.map((brand)=>{
+               state && state!==undefined ? state.map((state)=>{
                    return(
-                       <option key={brand.id} value={brand.id}>{brand.name}</option>
+                       <option key={state.id} value={state.id}>{state.name}</option>
                    )
                }) : "NO Car data"
            } 
@@ -115,20 +115,20 @@ const SelectBrand=()=>{
 
 
 
-   {model==[]||input.car_name=="" ?"":<FormControl isInvalid={isErrorModel} mb="15px">
+   {city==[]||input.car_name=="" ?"":<FormControl isInvalid={isErrorModel} mb="15px">
       <FormLabel fontSize="12px" mb="1px" >Model *</FormLabel>
       <Select fontSize="12px" h="38px" borderRadius="2px" onChange={(e)=>handleChooseModel(e.target.value)}>
         <option value="0"></option>
        {
-           model && model!==undefined ? model.map((model)=>{
+           city && city!==undefined ? city.map((city)=>{
                return(
-                   <option key={model.id} value={model.id}>{model.name}</option>
+                   <option key={city.id} value={city.id}>{city.name}</option>
                )
            }) : "NO Car data"
        } 
       </Select>
       
-      {  input.car_model!=="" ? (
+      {  input.car_city!=="" ? (
         <FormHelperText fontSize="12px">
           
         </FormHelperText>
@@ -143,20 +143,20 @@ const SelectBrand=()=>{
 
 
 
-   { varient==[] || input.car_model=="" ||input.car_name==""?"": <FormControl isInvalid={isErrorVarient} mb="15px">
+   { neighbourhood==[] || input.car_city=="" ||input.car_name==""?"": <FormControl isInvalid={isErrorVarient} mb="15px">
       <FormLabel fontSize="12px" mb="1px" >Varient *</FormLabel>
       <Select fontSize="12px" h="38px" borderRadius="2px" onChange={(e)=>handleChooseVarient(e.target.value)} >
         <option value="0"></option>
        {
-           varient && varient!==undefined ? varient.map((varient)=>{
+           neighbourhood && neighbourhood!==undefined ? neighbourhood.map((neighbourhood)=>{
                return(
-                   <option key={varient.id} value={varient.id}>{varient.name}</option>
+                   <option key={neighbourhood.id} value={neighbourhood.id}>{neighbourhood.name}</option>
                )
            }) : "NO Car data"
        } 
       </Select>
       
-      {input.car_varient!="" ? (
+      {input.car_neighbourhood!="" ? (
         <FormHelperText fontSize="12px">
           
         </FormHelperText>
@@ -175,4 +175,4 @@ const SelectBrand=()=>{
        
     )
 }
-export default SelectBrand
+export default SelectLocation
