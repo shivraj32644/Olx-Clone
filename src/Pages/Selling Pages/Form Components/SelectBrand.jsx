@@ -29,7 +29,7 @@ const Varients=[
     {id:"22", varientId:"10",name:"BMW M2 V2"},
 ]
 
-const SelectBrand=()=>{
+const SelectBrand=({collectAllFormData})=>{
     const [input, setInput] = useState({
         car_name:"",
         car_model:"",
@@ -52,7 +52,7 @@ const SelectBrand=()=>{
         else{
             const car_name=Brands.filter(x=>x.id===id )
             const giveModel=Models.filter(x=>x.modelId===id)
-            setInput({...input,car_name:car_name[0].name})
+            setInput({...input,car_name:car_name[0].name,car_model:"",car_varient:""})
             setModel(giveModel)
         }
 
@@ -65,7 +65,7 @@ const SelectBrand=()=>{
         else{
             const car_model=Models.filter(x=>x.id===id )
             const giveVarient=Varients.filter(x=>x.varientId===id)
-            setInput({...input,car_model:car_model[0].name})
+            setInput({...input,car_model:car_model[0].name,car_varient:""})
             setVarient( giveVarient )
         }
 

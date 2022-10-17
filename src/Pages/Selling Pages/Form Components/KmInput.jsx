@@ -4,7 +4,9 @@ import { useState } from "react"
 
 function KmInput() {
     const [input, setInput] = useState('')
-  
+    
+    console.log(input)
+      
     const handleInputChange = (e) => setInput(e.target.value)
   
     const isError = input === ''
@@ -12,7 +14,7 @@ function KmInput() {
     return (
       <FormControl isInvalid={isError} mb="15px">
         <FormLabel fontSize="12px" mb="1px" >KM driven *</FormLabel>
-        <Input fontSize="12px" h="38px" borderRadius="2px" type='email' value={input} onChange={handleInputChange} />
+        <Input fontSize="12px" h="38px" borderRadius="2px" type='number' value={input} onChange={handleInputChange} />
         {!isError ? (
           <FormHelperText fontSize="12px">
             
