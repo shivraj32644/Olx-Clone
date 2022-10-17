@@ -1,4 +1,4 @@
-import { Grid,SkeletonText,SkeletonCircle,Skeleton ,Stack } from "@chakra-ui/react";
+import { Grid,SkeletonText,SkeletonCircle,Skeleton ,Stack, Image,Box,Text ,Button } from "@chakra-ui/react";
 import { useEffect } from "react";
 import MyCard from "../Iteams/myCard";
 import LoadingPage from "../util/Loading";
@@ -110,6 +110,34 @@ function MyFav({ userData, getUser }) {
         index={i}
       />
     );
+  }
+
+  if(user.favourite_ads.length==0){
+    return <>
+        
+          <Stack width="100%"  height={"90vh"} justifyContent={"center"} alignItems={"center"} textAlign={"center"} margin="auto"  >
+
+
+          <Image src='https://statics.olx.in/external/base/img/no-favorites.png' height={"200px"} alt='Dan Abramov' />
+          <Text as={"b"} color="#5c7a81" >You haven't liked any ads yet</Text>
+          <Text color={"#5c7a81"} fontSize="sm">  `Like ads and share <br /> them with the world`</Text>
+          <Button
+           
+           size="md"
+           borderRadius={"4px"}
+           
+           border="2px"
+           color={"black"}
+           borderColor="black"
+           background={"white"}
+           _hover={{ border: "5px solid black", backgroundColor: "white" }}
+         >Discover
+         </Button>
+
+          </Stack>
+    
+    
+    </>
   }
 
   return (

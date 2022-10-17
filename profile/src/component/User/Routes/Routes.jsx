@@ -45,14 +45,15 @@ function  AllRoutes(){
     
     <Routes>
 
-   {/* editProfile this will be updated */}
-   <Route path='/myads'  element={<FavPage/>}></Route>
+   
+   <Route path='/yourads'  element={<FavPage/>}></Route>
 
    <Route  element={<FavPage/>}>
-    <Route path='/myads' element={<h1>hi</h1>}></Route>
+    <Route path='/myads' element={<MyAds userData={userState}  getUser={getUser}/>}></Route>
     <Route path="/myfavorites" element={<MyFav  userData={userState}  getUser={getUser} />}></Route>
    </Route>
-<Route path="/" element={<EditProfile userData={userState}  getUser={getUser}/>}></Route>
+   {/* editProfile this will be updated */ }
+<Route path="/editProfile" element={<EditProfile userData={userState}  getUser={getUser}/>}></Route>
 <Route path="/editProfile/picture" element={<NewProfilePicForm userData={userState}  getUser={getUser}/>}></Route>
 <Route path="/profile" element={<Profile userData={userState}  getUser={getUser}/>}></Route>
     {/* 
