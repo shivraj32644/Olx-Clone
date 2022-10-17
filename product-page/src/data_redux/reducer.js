@@ -8,6 +8,7 @@ const initState = {
 };
 
 export const reducer = (store = initState, { type, payload }) => {
+ 
   switch (type) {
     case LOADING: {
       return { ...store, loading: payload };

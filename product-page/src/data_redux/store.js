@@ -23,5 +23,5 @@ const rootReducer = combineReducers({
 export const store = createStore(rootReducer, think)
 
 // store.subscribe(() => {
-//     console.log(store.getState())
+//     console.log(store.getState().reducer.data.published_ads)
 // })

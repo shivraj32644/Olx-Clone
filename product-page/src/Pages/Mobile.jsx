@@ -8,9 +8,9 @@ import {
   Button,
 } from "@chakra-ui/react";
 import React from "react";
-import { Accordian } from "../Components/Accordian";
+import { Accordian } from "../Components/MobileComponents/Accordian";
 import { Card } from "../Components/Card";
-import { SortMenu } from "../Components/SortMenu";
+import { SortMenu } from "../Components/MobileComponents/SortMenu";
 import { Divider } from "@chakra-ui/react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -22,16 +22,25 @@ import {
   getData,
 } from "../data_redux/action";
 import { Link, NavLink } from "react-router-dom";
+import { useBreakpointValue } from "@chakra-ui/react";
+import { useContext } from "react";
+import { MobileParamContext } from "../Context/MobileParamContext";
+
 // import { useContext } from "react";
 
 export const Mobile = () => {
+  const variant = useBreakpointValue({
+    base: true,
+    md: false,
+    lg: false,
+  });
   const dispatch = useDispatch();
-  const { data } = useSelector((store) => store.reducer);
-
-  const params = {};
+  const { loading, error, data } = useSelector((store) => store.reducer);
+  const {axiosObject} =  useContext(MobileParamContext)
+  
 
   useEffect(() => {
-    dispatch(fetchData(params));
+    dispatch(fetchData(axiosObject));
   }, []);
 
   return (
@@ -77,7 +86,7 @@ export const Mobile = () => {
                 <Card
                   key={e.id}
                   img={e.published_ads.mobile[0].mobile_images.img1}
-                  des={e.published_ads.mobile[0].description}
+                  des={e.published_ads.mobile[0].ad_title}
                   price={e.published_ads.mobile[0].set_price}
                   city={e.published_ads.mobile[0].ads_location.city}
                   state={e.published_ads.mobile[0].ads_location.state}

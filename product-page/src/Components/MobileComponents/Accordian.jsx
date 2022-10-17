@@ -20,107 +20,19 @@ import {
   OrderedList,
   UnorderedList,
 } from "@chakra-ui/react";
-import { useRef } from "react";
-import styles from "./styles/Accordian.module.css";
+import styles from "../styles/Accordian.module.css";
 import { useState } from "react";
-import { Indeterminate } from "./Indeterminate";
-import { LocationChekbox } from "./LocationChekbox";
-import { useDispatch } from "react-redux";
-import { fetchData } from "../data_redux/action";
-import { CheckboxC } from "./Checkbox";
-import { useSearchParams } from "react-router-dom";
+import { Indeterminate } from "../Indeterminate";
+import { LocationChekbox } from "../LocationChekbox";
+import { CheckboxC } from "../Checkbox";
 import { useContext } from "react";
-import { ParamContext } from "../Context/CarParamContext";
-import { addParams } from "../param_reducer/action";
-
-const AllBrands = [
-  {
-    id: 1,
-    brand: "Maruti Suzuki",
-  },
-  {
-    id: 2,
-    brand: "Hyundai",
-  },
-  {
-    id: 3,
-    brand: "Mahindra",
-  },
-  {
-    id: 4,
-    brand: "Tata",
-  },
-  {
-    id: 5,
-    brand: "Honda",
-  },
-  {
-    id: 6,
-    brand: "Ford",
-  },
-  {
-    id: 7,
-    brand: "Toyota",
-  },
-  {
-    id: 8,
-    brand: "Chevrolet",
-  },
-  {
-    id: 9,
-    brand: "Renualt",
-  },
-  {
-    id: 10,
-    brand: "Skoda",
-  },
-];
-const AllCarModel = [
-  {
-    id: 1,
-    brand: "Maruti Suzuki",
-  },
-  {
-    id: 2,
-    brand: "Hyundai",
-  },
-  {
-    id: 3,
-    brand: "Mahindra",
-  },
-  {
-    id: 4,
-    brand: "Tata",
-  },
-  {
-    id: 5,
-    brand: "Honda",
-  },
-  {
-    id: 6,
-    brand: "Ford",
-  },
-  {
-    id: 7,
-    brand: "Toyota",
-  },
-  {
-    id: 8,
-    brand: "Chevrolet",
-  },
-  {
-    id: 9,
-    brand: "Renualt",
-  },
-  {
-    id: 10,
-    brand: "Skoda",
-  },
-];
+import { MobileParamContext } from "../../Context/MobileParamContext";
+import { familyTree, mobileBrands, mobileCategory } from "../../Data/AllData";
 
 export const Accordian = () => {
-  const { setUpperValue,setLowerValue, setBrand,upp ,low} = useContext(ParamContext);
-  const [sliderVal, setSliderVal] = useState([low,upp]);
+  const { setUpperValue, setLowerValue, setBrand, upp, low } =
+    useContext(MobileParamContext);
+  const [sliderVal, setSliderVal] = useState([low, upp]);
   const [Check, setCheck] = useState([]);
 
   var lowVal = sliderVal[0];
@@ -134,7 +46,7 @@ export const Accordian = () => {
   const handleCarModel = (id, value, e) => {
     const currIndex = Check.indexOf(value);
     const newChecked = [...Check];
-    
+
     if (currIndex === -1) {
       newChecked.push(value);
     } else {
@@ -143,9 +55,7 @@ export const Accordian = () => {
 
     setCheck(newChecked);
     setBrand(newChecked);
-
   };
-
 
   return (
     <Accordion defaultIndex={[0, 1, 2, 3, 4]} allowMultiple>
@@ -159,7 +69,7 @@ export const Accordian = () => {
           </AccordionButton>
         </h2>
         <AccordionPanel pb={4}>
-          <Indeterminate />
+          <LocationChekbox familyTree={mobileCategory} />
         </AccordionPanel>
       </AccordionItem>
 
@@ -173,7 +83,7 @@ export const Accordian = () => {
           </AccordionButton>
         </h2>
         <AccordionPanel pb={4}>
-          <LocationChekbox />
+          <LocationChekbox familyTree={familyTree} />
         </AccordionPanel>
       </AccordionItem>
 
@@ -187,15 +97,15 @@ export const Accordian = () => {
           </AccordionButton>
         </h2>
         <AccordionPanel pb={4}>
-          <Box  display={"flex"} justifyContent="space-between" >
-            <h3>₹  {new Intl.NumberFormat('en-IN').format(lowVal)}</h3>
-            <h3> ₹  { new Intl.NumberFormat('en-IN').format(upperVal)  }</h3>
+          <Box display={"flex"} justifyContent="space-between">
+            <h3>₹ {new Intl.NumberFormat("en-IN").format(lowVal)}</h3>
+            <h3> ₹ {new Intl.NumberFormat("en-IN").format(upperVal)}</h3>
           </Box>
           <RangeSlider
             onChange={(e) => setSliderVal(e)}
-            defaultValue={[0, 1600000]}
+            defaultValue={[0, 25000]}
             min={0}
-            max={1600000}
+            max={25000}
             step={30}
           >
             <RangeSliderTrack bg="red.100">
@@ -213,7 +123,7 @@ export const Accordian = () => {
         <h2>
           <AccordionButton>
             <Box flex="1" textAlign="left">
-              ALL BRAND
+              ALL MODELS
             </Box>
             <AccordionIcon />
           </AccordionButton>
@@ -227,7 +137,7 @@ export const Accordian = () => {
           overflow="auto"
           pb={4}
         >
-          {AllBrands.map(({ id, brand }) => (
+          {mobileBrands.map(({ id, brand }) => (
             <CheckboxC
               handleCarModel={handleCarModel}
               id={id}
@@ -235,27 +145,6 @@ export const Accordian = () => {
               value={brand}
             />
           ))}
-        </AccordionPanel>
-      </AccordionItem>
-
-      <AccordionItem>
-        <h2>
-          <AccordionButton>
-            <Box flex="1" textAlign="left">
-              ALL MODELS
-            </Box>
-            <AccordionIcon />
-          </AccordionButton>
-        </h2>
-
-        <AccordionPanel
-          mt={5}
-          h={170}
-          className={styles.track}
-          overflow="auto"
-          pb={4}
-        >
-          <CheckboxC />
         </AccordionPanel>
       </AccordionItem>
     </Accordion>

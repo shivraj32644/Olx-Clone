@@ -29,6 +29,7 @@ import { SkelotonCard } from "../Components/Skeleton";
 // import { useContext } from "react";
 import { useBreakpointValue } from "@chakra-ui/react";
 import { CarDrawer } from "../Components/CarDrawer";
+// import {CarParamContext} from '../Context/CarParamContext'
 
 export const ProducPage = () => {
   const variant = useBreakpointValue({
@@ -40,10 +41,8 @@ export const ProducPage = () => {
   const { loading, error, data } = useSelector((store) => store.reducer);
   const { globalParams } = useSelector((store) => store.ParamReducer);
   const [searchParams, setSearchParams] = useSearchParams();
-  var item = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-  const test = searchParams.getAll("published_ads.cars.0.car_brand");
-  const [params, setParams] = useState({});
   const { axiosObject } = useContext(ParamContext);
+  const {setLimit}= useContext(ParamContext)
 
   useEffect(() => {
     setSearchParams(globalParams);
@@ -201,10 +200,16 @@ export const ProducPage = () => {
                     </NavLink>
                   ))
                 )}
-              </GridItem>
+                </GridItem>
+                {/* <Box w={"20%"} m="auto" mb="80px"> 
+              <Button mb="80px" mt={"20px"} colorScheme='blackAlpha' variant='outline' border="4px solid black"  onClick={()=>setLimit(50)} >Load More</Button>
+
+
+                </Box> */}
             </>
           )}
         </Grid>
+
       </Container>
     </>
   );

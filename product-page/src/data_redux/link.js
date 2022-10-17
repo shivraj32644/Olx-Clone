@@ -8,7 +8,7 @@ var url = `http://localhost:5000/data`;
 
 
 export const axiosdata = (params) => {
-    return axios.get(`http://localhost:5000/data`, {
+    return axios.get(`http://localhost:5000/allOlxData`, {
         params: params
         
     })
