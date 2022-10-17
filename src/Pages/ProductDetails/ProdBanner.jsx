@@ -44,7 +44,7 @@ function ProdBanner() {
                 boxShadow='xs' p='3' rounded='md' bg='white'
             // key={id}
             // height="200px"
-            // width="50%"
+            // width="100%"
             >
                 <Carousel autoPlay >
 
@@ -72,7 +72,7 @@ function ProdBanner() {
                             style={{ 
                             objectFit:"contain"}}
                             alt="Prod-3"
-                            src={carImages.img3}
+                            src={carImages.img2}
 
                         />
                     </div>
