@@ -1,10 +1,10 @@
 import { Box } from "@chakra-ui/react";
-import { AllRoutes } from "./Routes/AllRoutes";
+import { SDAllRoutes } from "./Routes/AllRoutes";
 
 function App() {
   return (
     <Box className="App">
-      <AllRoutes></AllRoutes>
+      <SDAllRoutes></SDAllRoutes>
     </Box>
   );
 }
