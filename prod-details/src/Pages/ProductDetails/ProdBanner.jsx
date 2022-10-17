@@ -49,7 +49,9 @@ function ProdBanner() {
                 <Carousel autoPlay >
 
                     <div>
-                        <img
+                        <img style={{ 
+                        objectFit:"contain"}}
+                        
                             alt="Prod-1"
                             src={carImages.img1}
                         />
@@ -57,6 +59,8 @@ function ProdBanner() {
 
                     <div>
                         <img
+                            style={{
+                            objectFit:"contain"}}
                             alt="Prod-2"
                             src={carImages.img2}
                         />
@@ -65,6 +69,8 @@ function ProdBanner() {
 
                     <div>
                         <img
+                            style={{ 
+                            objectFit:"contain"}}
                             alt="Prod-3"
                             src={carImages.img3}
 
