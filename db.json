@@ -24,6 +24,7 @@
     "published_ads": {
       "cars": [
         {
+          "user_id": "bbdd236b-5dc5-4a85-99dc-2019ee7f1b17",
           "ad_id": "b0d96509-e7b7-4e83-a2b5-2e99da32c0dd",
           "ad_active": true,
           "date_from": "NOV 9, 22",
@@ -183,6 +184,7 @@
           "views": 19,
           "inspected": false
         }
+
       ],
       "books": [
         {
