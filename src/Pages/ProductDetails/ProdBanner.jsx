@@ -5,15 +5,15 @@ import { useEffect } from "react";
 import { useState } from "react";
 
 
-function ProdBanner() {
+function ProdBanner({id}) {
     // const axios = require('axios').default;
     const [myData, setMyData] = useState();
 
     useEffect(() => {
-        axios.get('http://localhost:5000/data/1')
+        axios.get(`http://localhost:5000/allOlxData/${id}`)
             .then((response) => {
                 // setUser(response.data)
-            setMyData(response.data.published_ads[0])
+            setMyData(response.data.published_ads.cars[0])
             // console.log(response.data.published_ads, "dikh rha kyaa")
             })
             .catch((err) => console.log(err))

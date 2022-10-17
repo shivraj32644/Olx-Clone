@@ -8,10 +8,11 @@ import {
     DrawerCloseButton,
     Button,
     useDisclosure
-  } from '@chakra-ui/react'
+} from '@chakra-ui/react'
+  // import {} from '@chakra-ui/icons'
 import React from 'react'
 import { Accordian } from './Accordian'
-import { TbMist } from "react-icons/tb";
+// import { TbMist } from "react-icons/tb";
 
 export function CarDrawer() {
     const { isOpen, onOpen, onClose } = useDisclosure()
@@ -21,7 +22,7 @@ export function CarDrawer() {
       <>
         
         <Button colorScheme='white' color={"black"} fontSize="30px" onClick={onOpen}>
-          <TbMist/>
+          {/* <TbMist/> */}
         </Button>
         <Drawer size={"lg"} placement={placement} onClose={onClose} isOpen={isOpen}>
           <DrawerOverlay />

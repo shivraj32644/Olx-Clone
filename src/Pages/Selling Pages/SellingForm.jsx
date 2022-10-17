@@ -1,5 +1,5 @@
 import {Box, Button, FormControl, FormLabel, Grid, HStack, Icon, Input, InputGroup, InputLeftElement, InputRightElement, Select, Tab, TabList, TabPanel, TabPanels, Tabs, textDecoration, VStack }from "@chakra-ui/react"
-import { Form, Link } from "react-router-dom"
+import { Form, Link, Navigate, useNavigate } from "react-router-dom"
 import {ArrowBackIcon, CheckIcon} from "@chakra-ui/icons"
 import { useContext, useState } from "react"
 import { CategoryDataContext } from "../../Context/AuthContext/SellingDetail"
@@ -343,7 +343,9 @@ const SellingForm=()=>{
     }  )
     const {categoryObj}=useContext(CategoryDataContext)
     const {category,subcategory}=categoryObj
-    const [sellingFormObj, setSellingFormObj]=useState({
+  const [sellingFormObj, setSellingFormObj] = useState({
+      
+   
 
          user_id: "1",
          ad_id: "2e99da32c0dd",
@@ -376,7 +378,10 @@ const SellingForm=()=>{
          likes: 33,
          views: 45,
          inspected: true
-    })
+  })
+  
+
+  const nav = useNavigate()
     // console.log(category)
     // console.log(subcategory)
     const fuelBoxStyle={
@@ -394,7 +399,8 @@ const SellingForm=()=>{
     const handleFormSubmit=(e)=>{
       e.preventDefault()
 
-      handleAddSellPosts(sellingFormObj,user)
+      handleAddSellPosts(sellingFormObj, user)
+      nav('/myads');
     }
 
     return(

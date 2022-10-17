@@ -7,9 +7,9 @@ import { useDispatch } from "react-redux";
 import { useSearchParams } from "react-router-dom";
 import { fetchData } from "../data_redux/action";
 
-export const ParamContext = createContext();
+export const BooksParamContext = createContext();
 
-export const ParamContextProvider = ({ children }) => {
+export const BooksParamContextProvider = ({ children }) => {
   const dispatch = useDispatch();
   const [searchParams, setSearchParams] = useSearchParams();
 
@@ -137,9 +137,9 @@ export const ParamContextProvider = ({ children }) => {
     setLimit
   };
   return (
-    <ParamContext.Provider value={dispatchValues}>
+    <BooksParamContext.Provider value={dispatchValues}>
       {children}
-    </ParamContext.Provider>
+    </BooksParamContext.Provider>
   );
 };
 

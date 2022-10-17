@@ -17,15 +17,15 @@ import axios from "axios"
 // }
 // let res = randomDate(new Date(2012, 0, 1), new Date())
 
-function ProdDescription() {
+function ProdDescription({id}) {
         const [user, setUser] = useState("");
     const [myData,setMyData] = useState()
 
     useEffect(() => {
-        axios.get('http://localhost:5000/data/1')
+        axios.get(`http://localhost:5000/allOlxData/${id}`)
             .then((response) => {
                 setUser(response.data)
-                return setMyData(response.data.published_ads[0])
+                return setMyData(response.data.published_ads.cars[0])
                 // console.log(response.data.published_ads ," description page")
 })
             .catch((err) => console.log(err))

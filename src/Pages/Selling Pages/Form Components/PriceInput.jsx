@@ -1,4 +1,5 @@
-import { FormControl, FormLabel, Input, InputGroup, InputLeftElement } from "@chakra-ui/react"
+import { FormControl,Box, FormLabel, Input, InputGroup, InputLeftElement } from "@chakra-ui/react"
+import { BiRupee } from "react-icons/bi";
 
 const PriceInput=()=>{
     return(

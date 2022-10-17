@@ -37,9 +37,6 @@ export const Books = () => {
 
   return (
     <>
-      <Link to={"/"}> Cars </Link>
-      <Link to={"/books"}> Books </Link>
-      <Link to={"/mobile"}> Mobile </Link>
       <Container mt={10} maxW="84%">
         <Grid
           templateAreas={`"nav footer" "nav main"`}

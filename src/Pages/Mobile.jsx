@@ -25,6 +25,11 @@ import { Link, NavLink } from "react-router-dom";
 import { useBreakpointValue } from "@chakra-ui/react";
 import { useContext } from "react";
 import { MobileParamContext } from "../Context/MobileParamContext";
+import UpNavbar from "../Components/Navbar/UpNavbar";
+import SellButton from "../Components/LandingPage/SellButton";
+import DownNavbar from "../Components/Navbar/DownNavbar";
+import Footer1 from "../Components/LandingPage/Footer1";
+import Footer2 from "../Components/LandingPage/Footer2";
 
 // import { useContext } from "react";
 
@@ -45,9 +50,11 @@ export const Mobile = () => {
 
   return (
     <>
-      <Link to={"/"}> Cars </Link>
-      <Link to={"/books"}> Books </Link>
-      <Link to={"/mobile"}> Mobile </Link>
+      <UpNavbar />
+      <SellButton />
+      <Box mt={1}>
+        <DownNavbar/>
+      </Box>
       <Container mt={10} maxW="84%">
         <Grid
           templateAreas={`"nav footer" "nav main"`}
@@ -114,6 +121,8 @@ export const Mobile = () => {
           ></Box>
         </Stack>
       </Container>
+      <Footer1 />
+      <Footer2/>
     </>
   );
 };

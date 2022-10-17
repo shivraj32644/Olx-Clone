@@ -24,7 +24,7 @@ import { ReactComponent as HeartLogo } from "./Images/svg10.svg";
 
 const FreshRecom = () => {
   const dispatch = useDispatch();
-  const { data } = useSelector((store) => store);
+  const  {data}  = useSelector((store) => store.HomeReducer);
   console.log("data is looks like ", data);
   const [isFaver, setIsFaver] = useState(false);
   const [isFav, setIsFav] = useState(false);

@@ -448,9 +448,19 @@ function MyAds({ userData, getUser }) {
 
   return (
     <>
-      <HStack width={"100%"} margin="auto" border={"1px solid red"} alignItems='center'>
-        <FormControl border={"1px solid red"} width="300px" alignItems='center' height={"36px"}>
-          <InputGroup alignItems='center'>
+      <HStack
+        width={"100%"}
+        margin="auto"
+        border={"1px solid red"}
+        alignItems="center"
+      >
+        <FormControl
+          border={"1px solid red"}
+          width="300px"
+          alignItems="center"
+          height={"36px"}
+        >
+          <InputGroup alignItems="center">
             <InputLeftElement
               alignItems={"center"}
               padding="5px"
@@ -499,7 +509,7 @@ function MyAds({ userData, getUser }) {
 
         {/* for filltter */}
 
-        <HStack border={"1px solid red"} alignItems='center'>
+        <HStack border={"1px solid red"} alignItems="center">
           <Text>Filter By:</Text>
 
           <Tabs variant="soft-rounded" colorScheme="green">

@@ -12,7 +12,7 @@ export const ParamContext = createContext();
 export const ParamContextProvider = ({ children }) => {
   const dispatch = useDispatch();
   const [searchParams, setSearchParams] = useSearchParams();
-
+  
   var Price = searchParams.get("_order");
   var upp = searchParams.get("published_ads.cars.0.set_price_lte");
   var low = searchParams.get("published_ads.cars.0.set_price_gte");
@@ -129,11 +129,7 @@ export const ParamContextProvider = ({ children }) => {
     dispatch(fetchData(axiosObject));
   },[PriceOrder,lowerValue,upperValue,brand])
 
-  function clearAll() {
-    // axiosObject = {};
-    searchParamObject = {};
-    setSearchParams();
-  }
+
   
 
   
@@ -149,7 +145,6 @@ export const ParamContextProvider = ({ children }) => {
     upp,
     low,
     // setLimit
-    clearAll
   };
   return (
     <ParamContext.Provider value={dispatchValues}>

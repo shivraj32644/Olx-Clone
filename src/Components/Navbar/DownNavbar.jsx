@@ -18,7 +18,7 @@ import { Link } from "react-router-dom";
 import { ChevronDownIcon } from "@chakra-ui/icons";
 const links = [
   {
-    path: "#",
+    path: "/cars",
     title: "Cars",
   },
   {
@@ -26,7 +26,7 @@ const links = [
     title: "Motorcycles",
   },
   {
-    path: "#",
+    path: "/mobile",
     title: "Mobile Phones",
   },
   {
@@ -81,7 +81,7 @@ const DownNavbar = () => {
                   <Box>
                     <Box _hover={{ color: "#319795" }}>
                       <Text as="b">
-                        <Link to="#">OLX Autos (Cars)</Link>
+                        <Link to="/cars">OLX Autos (Cars)</Link>
                       </Text>
                     </Box>
                     <Box my="1rem">
@@ -120,10 +120,10 @@ const DownNavbar = () => {
                         mt="3rem"
                         mb="1rem"
                       >
-                        <Link to="#">Mobiles</Link>
+                        <Link to="/mobile">Mobiles</Link>
                       </Box>
                       <Box _hover={{ color: "#319795" }}>
-                        <Link to="#">Mobile Phones</Link>
+                        <Link to="/mobile">Mobile Phones</Link>
                       </Box>
                       <Box _hover={{ color: "#319795" }}>
                         <Link to="#">Accessories</Link>
@@ -228,10 +228,10 @@ const DownNavbar = () => {
                   <Box>
                     <Box mb="15px">
                       <Box mb="15px" as="b" _hover={{ color: "#319795" }}>
-                        <Link to="#">Books, Sports & Hobbies</Link>
+                        <Link to="/books">Books, Sports & Hobbies</Link>
                       </Box>
                       <Box _hover={{ color: "#319795" }}>
-                        <Link to="#">Books</Link>
+                        <Link to="/books">Books</Link>
                       </Box>
                       <Box _hover={{ color: "#319795" }}>
                         <Link to="#">Gym & Fitness</Link>

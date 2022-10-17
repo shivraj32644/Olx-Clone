@@ -69,14 +69,14 @@ const ProfileBtn = () => {
                 color="#5b5c5d"
                 font-family="Roboto,Arial,Helvetica,sans-serif"
               >
-                <Link to="#">View and edit profile</Link>
+                <Link to="/editProfile">View and edit profile</Link>
               </Text>
             </Box>
           </Flex>
           <hr />
-          <MenuItem icon={<MdContentCopy />}>
-            <Link to="#">My ADS</Link>
-          </MenuItem>
+          <Link to="/myads">
+            <MenuItem icon={<MdContentCopy />}>My ADS</MenuItem>
+          </Link>
           <MenuItem icon={<BsMenuDown />}>Buy Business Packages</MenuItem>
           <MenuItem icon={<RepeatIcon />}>Open Closed</MenuItem>
           <MenuItem icon={<RiLogoutBoxRLine />}>

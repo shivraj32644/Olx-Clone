@@ -191,7 +191,7 @@ const SellCategories=()=>{
                   cursor="pointer"
                   _hover={{ bg: '#CECECE' }}
                   onClick={()=>sendCategory(category,ele)}>
-                  <Link to="/sellingform">
+                  <Link to="/post/attribute">
 
                   <Box height="32px" width={360} py={5} textAlign="start" display="flex" alignItems="center">
                      {ele}

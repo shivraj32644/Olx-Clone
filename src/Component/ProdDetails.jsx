@@ -1,11 +1,13 @@
 import { Box, useMediaQuery } from "@chakra-ui/react";
+import { useParams } from "react-router-dom";
 import ProdBanner from "../Pages/ProductDetails/ProdBanner";
 import ProdDescription from "../Pages/ProductDetails/ProdDescription";
 
 
 const ProductDetails = () => {
   const [isLessThan426] = useMediaQuery('(max-width: 426px)')
-
+  const {product_id} = useParams();
+  const val = Number(product_id)
   const fullScreen = {
     columnGap :"20px",
       display : "flex",
@@ -36,11 +38,11 @@ const ProductDetails = () => {
     >
 
       <Box width="-moz-min-content">
-        <ProdBanner />
+        <ProdBanner id={val} />
       </Box>
 
       <Box>
-        <ProdDescription />
+        <ProdDescription id={val} />
       </Box>
     </Box>
   )

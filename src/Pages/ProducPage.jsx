@@ -29,6 +29,11 @@ import { SkelotonCard } from "../Components/Skeleton";
 // import { useContext } from "react";
 import { useBreakpointValue } from "@chakra-ui/react";
 import { CarDrawer } from "../Components/CarDrawer";
+import UpNavbar from "../Components/Navbar/UpNavbar";
+import DownNavbar from "../Components/Navbar/DownNavbar";
+import SellButton from "../Components/LandingPage/SellButton";
+import Footer2 from "../Components/LandingPage/Footer2";
+import Footer1 from "../Components/LandingPage/Footer1";
 // import {CarParamContext} from '../Context/CarParamContext'
 
 export const ProducPage = () => {
@@ -42,8 +47,8 @@ export const ProducPage = () => {
   const { globalParams } = useSelector((store) => store.ParamReducer);
   const [searchParams, setSearchParams] = useSearchParams();
   const { axiosObject } = useContext(ParamContext);
-  const {setLimit}= useContext(ParamContext)
-
+  const { setLimit } = useContext(ParamContext);
+  // console.log(axiosObject);
   useEffect(() => {
     setSearchParams(globalParams);
   }, [globalParams]);
@@ -54,13 +59,21 @@ export const ProducPage = () => {
 
   return (
     <>
-      <Link to={"/"}> Cars </Link>
-      <Link to={"/books"}> Books </Link>
-      <Link to={"/mobile"}> Mobile </Link>
+      <UpNavbar />
+      <SellButton/>
+      <Box mt={1}>
+      <DownNavbar />
+
+      </Box>
       <Container mt={10} maxW="84%">
         <Grid
           templateAreas={`"nav footer" "nav main"`}
-          gridTemplateColumns={{base: "0", sm: "0 ", md: "303px 1fr", lg: "303px 1fr", }}
+          gridTemplateColumns={{
+            base: "0",
+            sm: "0 ",
+            md: "303px 1fr",
+            lg: "303px 1fr",
+          }}
           gridTemplateRows={"30px 1fr 30px"}
           gap="2"
         >
@@ -75,7 +88,7 @@ export const ProducPage = () => {
                 alignItems="center"
                 justifyContent="space-between"
               >
-                <CarDrawer/>
+                <CarDrawer />
                 <SortMenu />
               </GridItem>
 
@@ -200,8 +213,8 @@ export const ProducPage = () => {
                     </NavLink>
                   ))
                 )}
-                </GridItem>
-                {/* <Box w={"20%"} m="auto" mb="80px"> 
+              </GridItem>
+              {/* <Box w={"20%"} m="auto" mb="80px"> 
               <Button mb="80px" mt={"20px"} colorScheme='blackAlpha' variant='outline' border="4px solid black"  onClick={()=>setLimit(50)} >Load More</Button>
 
 
@@ -211,6 +224,8 @@ export const ProducPage = () => {
         </Grid>
 
       </Container>
+      <Footer1/>
+      <Footer2/>
     </>
   );
 };

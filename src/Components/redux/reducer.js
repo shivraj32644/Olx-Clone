@@ -7,7 +7,7 @@ const initState = {
   data: [],
 };
 
-export const reducer = (store = initState, { type, payload }) => {
+export const Homereducer = (store = initState, { type, payload }) => {
   switch (type) {
     case LOADING: {
       return { ...store, loading: true };
