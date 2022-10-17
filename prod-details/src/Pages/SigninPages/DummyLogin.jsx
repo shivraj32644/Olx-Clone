@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import { ContextModal } from "../../Component/ContextModal"
+import { ContextModal } from "../../Context_V.jsx/ContextModal"
 
 
 // import { Link } from "react-router-dom"

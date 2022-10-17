@@ -8,7 +8,7 @@ import {
     useDisclosure,
 } from '@chakra-ui/react'
 import React, { useContext } from 'react';
-import { ContextModal } from './ContextModal';
+import { ContextModal } from '../Context_V.jsx/ContextModal';
 import { Box, Button } from "@chakra-ui/react"
 
 

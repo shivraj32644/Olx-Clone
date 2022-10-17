@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ChakraProvider } from '@chakra-ui/react';
 import { BrowserRouter } from "react-router-dom"
-import ContextModalProvider from './Component/ContextModal';
+import ContextModalProvider from './Context_V.jsx/ContextModal';
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 import ProductDetails from './Component/ProdDetails';
 // import GenOtp from './Pages/SigninPages/GenOtp';

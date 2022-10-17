@@ -4,7 +4,7 @@ import {
 } from "@chakra-ui/react"
 import { useContext } from "react";
 import { Navigate } from "react-router-dom";
-import { AuthContext } from "../../Component/ContextModal";
+import { AuthContext } from "../../Context_V.jsx/ContextModal";
 // import { Popover } from "@chakra-ui/react";
 
 const GenOtp = (otpLength) => {

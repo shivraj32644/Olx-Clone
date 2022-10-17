@@ -1,4 +1,4 @@
-import { AspectRatio, Box, Button, Image, Text } from "@chakra-ui/react"
+import { AspectRatio, Box, Button, Image,  SkeletonCircle,  SkeletonText, Text } from "@chakra-ui/react"
 import { BiShareAlt } from "react-icons/bi"
 import { AiOutlineHeart } from "react-icons/ai"
 import { MdArrowForwardIos } from "react-icons/md"
@@ -19,13 +19,14 @@ import axios from "axios"
 
 function ProdDescription() {
         const [user, setUser] = useState("");
-
+    const [myData,setMyData] = useState()
 
     useEffect(() => {
-        axios.get('http://localhost:5000/product/1')
+        axios.get('http://localhost:5000/data/1')
             .then((response) => {
                 setUser(response.data)
-                // console.log(response.data)
+                return setMyData(response.data.published_ads[0])
+                // console.log(response.data.published_ads ," description page")
 })
             .catch((err) => console.log(err))
             .finally(() => console.log("success"))
@@ -34,10 +35,23 @@ function ProdDescription() {
     if (
         user === undefined
     ) {
-        return <h1>Loading</h1>
+        return <Box  boxShadow='lg' bg='white'>
+        <SkeletonCircle size='10' />
+        <SkeletonText mt='4' noOfLines={10} spacing='4' />
+      </Box>
+    }
+    if (myData === undefined
+       
+    ) {
+        return  <Box  boxShadow='lg' bg='white'>
+        {/* <SkeletonCircle size='10' />
+        <SkeletonText mt='4' noOfLines={4} spacing='4' /> */}
+      </Box>
     }
     const { full_name, img_url } = user
-
+    // const {set_price} = myData
+    const resData = (myData)
+    // console.log(resData.set_price,"dikha kuch");
     return (
         <Box>
             <Box
@@ -45,16 +59,16 @@ function ProdDescription() {
                 border="1px solid #ecebeb" height="10%"
                 width="100%">
                 <Box display="flex" justifyContent="space-between">
-                    <Text as="b" fontSize='1xl'>₹ 14000</Text>
+                    <Text as="b" fontSize='1xl'>{resData.set_price}</Text>
 
                     <Box display="flex" gap="2">
                         <Text fontSize='3xl'><BiShareAlt /></Text>
                         <Text fontSize='3xl'><AiOutlineHeart /></Text>
                     </Box>
                 </Box>
-                <Text fontSize='md'>Rent for 3BHK Flate for family/ bachelor/whare house</Text><br />
+                <Text fontSize='md'>{resData.description}</Text><br />
                 <Box display="flex" justifyContent="space-around">
-                    <Text fontSize='xs'>South Pateri, Satna, Madhya Pradesh</Text>
+                    <Text fontSize='xs'>{resData.ads_location.neighbour},{resData.ads_location.city},{resData.ads_location.state}</Text>
                     <Text fontSize='xs'>3 Days Ago</Text>
                 </Box>
             </Box>
@@ -103,7 +117,7 @@ function ProdDescription() {
                 border="1px solid #ecebeb" 
              padding="10px" alignContent="center" height="240px" width="100%">
                 <Text as="b">Posted In</Text>
-                <Text fontSize='xs'>South Pateri, Satna, Madhya Pradesh</Text>
+                <Text fontSize='xs'>{resData.ads_location.neighbour},{resData.ads_location.city},{resData.ads_location.state}</Text>
                 <AspectRatio ratio={16 / 9}>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96237.7898914364!2d80.75351566396952!3d24.57265753729708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39847f12a0d55141%3A0xa6208334386e35e2!2sSatna%2C%20Madhya%20Pradesh!5e0!3m2!1sen!2sin!4v1665818720941!5m2!1sen!2sin" title="map" 
                 style={{ margin:"auto",width:"100%" ,height:"166px" ,style:"border:0;" ,allowfullscreen:"" ,loading:"lazy" ,referrerpolicy:"no-referrer-when-downgrade"}}></iframe>
