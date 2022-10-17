@@ -38,7 +38,11 @@ function Profile({userData,getUser}) {
 
 
       let cardta = user.published_ads.map((el,index)=>{
-        return <MyCard  img={el.images.img1} fav={(el.fav==null || el.fav==false)?false:true} date={el.date_from} title={el.name} price={el.set_price}  getAllData={getUser}  cardClick={""} user={user} index={index} />
+          
+
+       
+
+        return <MyCard  img={el.images.img1} fav={(el.fav==null || el.fav==false)?false:true} date={el.date_from} title={el.product_name} price={el.set_price}  getAllData={getUser}  cardClick={""} user={user} index={index} />
       })
 
   return (

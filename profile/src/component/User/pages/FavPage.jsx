@@ -1,9 +1,22 @@
 
 import {Tabs, TabList,Tab, Flex, VStack} from "@chakra-ui/react"
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Outlet } from "react-router-dom";
+import MyFav from "./MyFav";
+
 
 function FavPage() {
+
+  
+  //   let {loading,error,user} = userData
+ 
+
+  // useEffect(() => {
+  //   getUser();
+  // }, []);
+
+
   return (
     <> 
     <VStack width={"95%"} margin="auto" >
