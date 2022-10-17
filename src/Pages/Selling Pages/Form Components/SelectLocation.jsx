@@ -2,94 +2,94 @@ import { Box, FormControl, FormErrorMessage, FormHelperText, FormLabel, Input, S
 import { useEffect, useState } from "react"
 
 const States=[
-    {id:"1",name:"Honda"},
-    {id:"2",name:"Toyota"},
-    {id:"3",name:"BMW"},
+    {id:"1",name:"Madhya Pradesh"},
+    {id:"2",name:"Uttar Pradesh"},
+    {id:"3",name:"Maharastra"},
 ]
 const Cities=[
-    {id:"5",cityId:"1",name:"Honda Model 1"},
-    {id:"6",cityId:"1",name:"Honda Model 2"},
-    {id:"7",cityId:"2",name:"Toyota Model 1"},
-    {id:"8",cityId:"2",name:"Toyota Model 2"},
-    {id:"9",cityId:"3",name:"BMW Model 1"},
-    {id:"10",cityId:"3",name:"BMW Model 2"},
+    {id:"5",cityId:"1",name:"Bhopal"},
+    {id:"6",cityId:"1",name:"Indore"},
+    {id:"7",cityId:"2",name:"Lucknow"},
+    {id:"8",cityId:"2",name:"Jhansi"},
+    {id:"9",cityId:"3",name:"Mumbai"},
+    {id:"10",cityId:"3",name:"Pune"},
 ]
 const Neighbourhoods=[
-    {id:"11", neighbourhoodId:"5",name:"Honda M1 V1"},
-    {id:"12", neighbourhoodId:"5",name:"Honda M1 V2"},
-    {id:"13", neighbourhoodId:"6",name:"Honda M2 V1"},
-    {id:"14", neighbourhoodId:"6",name:"Honda M2 V2"},
-    {id:"15", neighbourhoodId:"7",name:"Toyota M1 V1"},
-    {id:"16", neighbourhoodId:"7",name:"Toyota M1 V2"},
-    {id:"17", neighbourhoodId:"8",name:"Toyota M2 V1"},
-    {id:"18", neighbourhoodId:"8",name:"Toyota M2 V2"},
-    {id:"19", neighbourhoodId:"9",name:"BMW M1 V1"},
-    {id:"20", neighbourhoodId:"9",name:"BMW M1 V2"},
-    {id:"21", neighbourhoodId:"10",name:"BMW M2 V1"},
-    {id:"22", neighbourhoodId:"10",name:"BMW M2 V2"},
+    {id:"11", neighbourhoodId:"5",name:"Bhopal Neighbour 1"},
+    {id:"12", neighbourhoodId:"5",name:"Bhopal Neighbour 2"},
+    {id:"13", neighbourhoodId:"6",name:"Indore Neighbour 1"},
+    {id:"14", neighbourhoodId:"6",name:"Indore Neighbour 2"},
+    {id:"15", neighbourhoodId:"7",name:"Lucknow Neighbour 1"},
+    {id:"16", neighbourhoodId:"7",name:"Lucknow Neighbour 2"},
+    {id:"17", neighbourhoodId:"8",name:"Jhansi Neighbour 1"},
+    {id:"18", neighbourhoodId:"8",name:"Jhansi Neighbour 2"},
+    {id:"19", neighbourhoodId:"9",name:"Mumbai Neighbour 1"},
+    {id:"20", neighbourhoodId:"9",name:"Mumbai Neighbour 2"},
+    {id:"21", neighbourhoodId:"10",name:"Pune Neighbour 1"},
+    {id:"22", neighbourhoodId:"10",name:"Pune Neighbour 2"},
 ]
 
 const SelectLocation=({collectAllFormData})=>{
     const [input, setInput] = useState({
-        car_name:"",
-        car_city:"",
-        car_neighbourhood:"",
+        location_state:"",
+        location_city:"",
+        location_neighbourhood:"",
     })
-    const [state,setBrand]=useState([])
-    const [city,setModel]=useState([])
-    const [neighbourhood,setVarient]=useState([])
+    const [state,setState]=useState([])
+    const [city,setCity]=useState([])
+    const [neighbourhood,setNeighbourhood]=useState([])
 
 
     useEffect(()=>{
-        setBrand(States)
+        setState(States)
     },[])
 
     const handleChooseCountry = (id) =>{ 
         if(id==0){ 
-            setInput({...input,car_name:"",car_city:"",car_neighbourhood:""})
-            setModel([])
+            setInput({...input,location_state:"",location_city:"",location_neighbourhood:""})
+            setCity([])
         }
         else{
-            const car_name=States.filter(x=>x.id===id )
+            const location_state=States.filter(x=>x.id===id )
             const giveModel=Cities.filter(x=>x.cityId===id)
-            setInput({...input,car_name:car_name[0].name})
-            setModel(giveModel)
+            setInput({...input,location_state:location_state[0].name,location_city:"",location_neighbourhood:""})
+            setCity(giveModel)
         }
 
     }
     const handleChooseModel = (id) =>{ 
         if(id==0){
-            setInput({...input,car_city:"",car_neighbourhood:""})
-            setVarient( [] )
+            setInput({...input,location_city:"",location_neighbourhood:""})
+            setNeighbourhood( [] )
         }
         else{
-            const car_city=Cities.filter(x=>x.id===id )
+            const location_city=Cities.filter(x=>x.id===id )
             const giveVarient=Neighbourhoods.filter(x=>x.neighbourhoodId===id)
-            setInput({...input,car_city:car_city[0].name})
-            setVarient( giveVarient )
+            setInput({...input,location_city:location_city[0].name,location_neighbourhood:""})
+            setNeighbourhood( giveVarient )
         }
 
     }
     const handleChooseVarient=(id)=>{
         
-        const car_neighbourhood=Neighbourhoods.filter(x=> x.id===id )
-        id==0 ? setInput({...input,car_neighbourhood:""}):
-        setInput({...input,car_neighbourhood:car_neighbourhood[0].name})
+        const location_neighbourhood=Neighbourhoods.filter(x=> x.id===id )
+        id==0 ? setInput({...input,location_neighbourhood:""}):
+        setInput({...input,location_neighbourhood:location_neighbourhood[0].name})
 
 
     }
     console.log(input)
 
-    const isErrorBrand = input.car_name==="" 
-    const isErrorModel = input.car_city===""
-    const isErrorVarient = input.car_neighbourhood===""
+    const isErrorBrand = input.location_state==="" 
+    const isErrorModel = input.location_city===""
+    const isErrorVarient = input.location_neighbourhood===""
 
     return (
       <Box>
 
 
         <FormControl isInvalid={isErrorBrand} mb="15px">
-          <FormLabel fontSize="12px" mb="1px" >Brand *</FormLabel>
+          <FormLabel fontSize="12px" mb="1px" >State *</FormLabel>
           <Select fontSize="12px" h="38px" borderRadius="2px" onChange={(e)=>handleChooseCountry(e.target.value)}>
             <option value="0"></option>
            {
@@ -101,7 +101,7 @@ const SelectLocation=({collectAllFormData})=>{
            } 
           </Select>
           
-          {input.car_name!=="" ? (
+          {input.location_state!=="" ? (
             <FormHelperText fontSize="12px">
               
             </FormHelperText>
@@ -115,8 +115,8 @@ const SelectLocation=({collectAllFormData})=>{
 
 
 
-   {city==[]||input.car_name=="" ?"":<FormControl isInvalid={isErrorModel} mb="15px">
-      <FormLabel fontSize="12px" mb="1px" >Model *</FormLabel>
+   {city==[]||input.location_state=="" ?"":<FormControl isInvalid={isErrorModel} mb="15px">
+      <FormLabel fontSize="12px" mb="1px" >City *</FormLabel>
       <Select fontSize="12px" h="38px" borderRadius="2px" onChange={(e)=>handleChooseModel(e.target.value)}>
         <option value="0"></option>
        {
@@ -128,7 +128,7 @@ const SelectLocation=({collectAllFormData})=>{
        } 
       </Select>
       
-      {  input.car_city!=="" ? (
+      {  input.location_city!=="" ? (
         <FormHelperText fontSize="12px">
           
         </FormHelperText>
@@ -143,8 +143,8 @@ const SelectLocation=({collectAllFormData})=>{
 
 
 
-   { neighbourhood==[] || input.car_city=="" ||input.car_name==""?"": <FormControl isInvalid={isErrorVarient} mb="15px">
-      <FormLabel fontSize="12px" mb="1px" >Varient *</FormLabel>
+   { neighbourhood==[] || input.location_city=="" ||input.location_state==""?"": <FormControl isInvalid={isErrorVarient} mb="15px">
+      <FormLabel fontSize="12px" mb="1px" >Neighbour *</FormLabel>
       <Select fontSize="12px" h="38px" borderRadius="2px" onChange={(e)=>handleChooseVarient(e.target.value)} >
         <option value="0"></option>
        {
@@ -156,7 +156,7 @@ const SelectLocation=({collectAllFormData})=>{
        } 
       </Select>
       
-      {input.car_neighbourhood!="" ? (
+      {input.location_neighbourhood!="" ? (
         <FormHelperText fontSize="12px">
           
         </FormHelperText>

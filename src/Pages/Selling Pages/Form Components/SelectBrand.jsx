@@ -52,7 +52,7 @@ const SelectBrand=({collectAllFormData})=>{
         else{
             const car_name=Brands.filter(x=>x.id===id )
             const giveModel=Models.filter(x=>x.modelId===id)
-            setInput({...input,car_name:car_name[0].name})
+            setInput({...input,car_name:car_name[0].name,car_model:"",car_varient:""})
             setModel(giveModel)
         }
 
@@ -65,7 +65,7 @@ const SelectBrand=({collectAllFormData})=>{
         else{
             const car_model=Models.filter(x=>x.id===id )
             const giveVarient=Varients.filter(x=>x.varientId===id)
-            setInput({...input,car_model:car_model[0].name})
+            setInput({...input,car_model:car_model[0].name,car_varient:""})
             setVarient( giveVarient )
         }
 

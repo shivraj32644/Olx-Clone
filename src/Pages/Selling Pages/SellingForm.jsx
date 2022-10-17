@@ -13,6 +13,7 @@ import KmInput from "./Form Components/KmInput"
 import YearInput from "./Form Components/YearInput"
 import DescriptionInput from "./Form Components/DescriptionInput"
 import SelectLocation from "./Form Components/SelectLocation"
+import PriceInput from "./Form Components/PriceInput"
 
 
 
@@ -416,6 +417,7 @@ const SellingForm=()=>{
                 <Box fontSize="16px" fontWeight="bold" lineHeight="24px" my="5px" pb="16px" >INCLUDE SOME DETAILS</Box>
                 <SelectBrand/>
                 <YearInput/>
+
                 <Box mb="15px">
                  <Box fontSize="12px" mb="1px" >Fuel *</Box>
                  <Box fontSize="12px" display="flex"  flexWrap="wrap">
@@ -426,6 +428,7 @@ const SellingForm=()=>{
                    <Box {...fuelBoxStyle}>Electric</Box>
                  </Box>
                 </Box>
+
                 <Box mb="15px">
                  <Box fontSize="12px" mb="1px" >Transmission *</Box>
                  <Box fontSize="12px" display="flex"  flexWrap="wrap">
@@ -433,7 +436,9 @@ const SellingForm=()=>{
                   <Box {...fuelBoxStyle}>Manual</Box>
                  </Box>
                 </Box>
+
                 <KmInput/>
+
                 <Box mb="15px">
                   <Box fontSize="12px" mb="1px" >No. of owners *</Box>
                   <Box fontSize="12px" display="flex"  flexWrap="wrap">
@@ -444,28 +449,15 @@ const SellingForm=()=>{
                     <Box {...fuelBoxStyle}>4+</Box>
                   </Box>
                 </Box>
+
                 <Box>
                   <AddTitle/>
                   <DescriptionInput/>
                 </Box>
                 <hr />
-                <FormControl mb="15px">
-                  <Box fontSize="16px" fontWeight="bold" lineHeight="24px" mt="15px" pb="10px" >SET A PRICE</Box>
-                  <FormLabel fontSize="12px" mb="1px">Price *</FormLabel>
-  
-                  <InputGroup >
-                     <InputLeftElement
-                       pointerEvents='none'
-                       color='gray.300'
-                       fontSize='1.2em'
-                       children={<BiRupee/>}
-                     />
-                     
-                     <Input  type="number" placeholder='Enter amount' />
-                     
-                  </InputGroup>
-                </FormControl>
+                <PriceInput/>
                 <hr my="15px" />
+                
                 <FormControl mb="20px">
                  <Box fontSize="16px" fontWeight="bold" lineHeight="24px" mt="15px" pb="10px" >UPLOAD UPTO 20 PHOTOS</Box>
                  <Grid templateColumns='repeat(4, 1fr)' gap="8px">
