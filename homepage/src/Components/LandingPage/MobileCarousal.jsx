@@ -23,6 +23,7 @@ function MobileCarousal() {
   const [appliances, setappliances] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
+  const [isFaver, setIsFaver] = useState(false);
 
   const breakPoints = [
     { width: 1, itemsToShow: 1 },
@@ -86,25 +87,6 @@ function MobileCarousal() {
           </Heading>
           <Carousel breakPoints={breakPoints}>
             {appliances.map((elem) => (
-              // <Box
-              //   m="5px"
-              //   alignItems="center"
-              //   textAlign={"center"}
-              //   key={elem.id}
-              // >
-              //   <Img
-              //     w="120px"
-              //     h="200px"
-              //     m="auto"
-              //     _hover={{ transform: "scale(1.1)" }}
-              //     p="10px"
-              //     src={elem.img_url}
-              //     alt="product"
-              //   />
-              //   <Text> {elem.title}</Text>
-              //   <Text>₹ {elem.price}</Text>
-              // </Box>
-
               <Box
                 key={elem.id}
                 width="95%"
@@ -148,7 +130,7 @@ function MobileCarousal() {
 
                   <Image height="160px" src={elem.img_url} alt="product" />
 
-                  <Badge
+                  {/* <Badge
                     zIndex={580}
                     position="absolute"
                     right={1}
@@ -157,16 +139,32 @@ function MobileCarousal() {
                     //   color="black"
                   >
                     <FaRegHeart />
-                  </Badge>
+                  </Badge> */}
 
-                  {/* <FaRegHeart
-                      zIndex={580}
-                      position="absolute"
-                      left={1}
-                      px="2"
-                      bg="#ffce32"
-                      color="black"
-                    /> */}
+                  <Badge
+                    zIndex={580}
+                    position="absolute"
+                    right="0.1px"
+                    bg="none"
+                  >
+                    <button
+                      type="button"
+                      title="Favourite"
+                      tabIndex="0"
+                      onClick={() => setIsFaver(true)}
+                      // className={styles.heartBtn}
+                    >
+                      <svg
+                        width="24px"
+                        height="24px"
+                        viewBox="0 0 1024 1024"
+                        fill-rule="evenodd"
+                        className="heartIcon"
+                      >
+                        <path d="M830.798 448.659l-318.798 389.915-317.828-388.693c-20.461-27.171-31.263-59.345-31.263-93.033 0-85.566 69.605-155.152 155.152-155.152 72.126 0 132.752 49.552 150.051 116.364h87.777c17.299-66.812 77.905-116.364 150.051-116.364 85.547 0 155.152 69.585 155.152 155.152 0 33.687-10.802 65.862-30.293 91.811zM705.939 124.121c-80.853 0-152.204 41.425-193.939 104.204-41.736-62.778-113.086-104.204-193.939-104.204-128.33 0-232.727 104.378-232.727 232.727 0 50.657 16.194 98.948 47.806 140.897l328.766 402.133h100.189l329.716-403.355c30.662-40.727 46.856-89.018 46.856-139.675 0-128.349-104.398-232.727-232.727-232.727z"></path>
+                      </svg>
+                    </button>
+                  </Badge>
                 </Flex>
 
                 <Box h="72px" p="2" pl="4">
