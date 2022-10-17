@@ -8,17 +8,12 @@ import {
 import React from "react";
 import { useContext } from "react";
 import { useState } from "react";
-import { useDispatch } from "react-redux";
-import { useSearchParams } from "react-router-dom";
-import { ParamContext } from "../Context/CarParamContext";
-
-import { fetchData } from "../data_redux/action";
-import { addParams } from "../param_reducer/action";
+import { MobileParamContext } from "../../Context/MobileParamContext";
 
 export const SortMenu = () => {
   const [currValue, setCurValue] = useState("Date Published");
   
-  const {setDateOrder,setPriceOrder,setDistanceOrder} = useContext(ParamContext)
+  const {setDateOrder,setPriceOrder,setDistanceOrder} = useContext(MobileParamContext)
  
 
   const handleChange = (e) => {

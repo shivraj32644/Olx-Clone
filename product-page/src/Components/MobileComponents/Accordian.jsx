@@ -5,6 +5,7 @@ import {
   AccordionItem,
   AccordionPanel,
   Box,
+  Checkbox,
   RangeSlider,
   RangeSliderFilledTrack,
   RangeSliderThumb,
@@ -13,21 +14,25 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import {
+  List,
+  ListItem,
+  ListIcon,
+  OrderedList,
+  UnorderedList,
 } from "@chakra-ui/react";
-import styles from "./styles/Accordian.module.css";
+import styles from "../styles/Accordian.module.css";
 import { useState } from "react";
-import { Indeterminate } from "./Indeterminate";
-import { LocationChekbox } from "./LocationChekbox";
-import { CheckboxC } from "./Checkbox";
+import { Indeterminate } from "../Indeterminate";
+import { LocationChekbox } from "../LocationChekbox";
+import { CheckboxC } from "../Checkbox";
 import { useContext } from "react";
-import { ParamContext } from "../Context/CarParamContext";
-import { AllBrands, AllCarModel, carCategory, familyTree } from "../Data/AllData";
-
-
+import { MobileParamContext } from "../../Context/MobileParamContext";
+import { familyTree, mobileBrands, mobileCategory } from "../../Data/AllData";
 
 export const Accordian = () => {
-  const { setUpperValue,setLowerValue, clearAll,setBrand,upp ,low} = useContext(ParamContext);
-  const [sliderVal, setSliderVal] = useState([low,upp]);
+  const { setUpperValue, setLowerValue, setBrand, upp, low } =
+    useContext(MobileParamContext);
+  const [sliderVal, setSliderVal] = useState([low, upp]);
   const [Check, setCheck] = useState([]);
 
   var lowVal = sliderVal[0];
@@ -41,7 +46,7 @@ export const Accordian = () => {
   const handleCarModel = (id, value, e) => {
     const currIndex = Check.indexOf(value);
     const newChecked = [...Check];
-    
+
     if (currIndex === -1) {
       newChecked.push(value);
     } else {
@@ -50,9 +55,7 @@ export const Accordian = () => {
 
     setCheck(newChecked);
     setBrand(newChecked);
-
   };
-
 
   return (
     <Accordion defaultIndex={[0, 1, 2, 3, 4]} allowMultiple>
@@ -66,12 +69,7 @@ export const Accordian = () => {
           </AccordionButton>
         </h2>
         <AccordionPanel pb={4}>
-
-
-        <LocationChekbox familyTree={carCategory} />
-
-
-
+          <LocationChekbox familyTree={mobileCategory} />
         </AccordionPanel>
       </AccordionItem>
 
@@ -84,16 +82,8 @@ export const Accordian = () => {
             <AccordionIcon />
           </AccordionButton>
         </h2>
-        <AccordionPanel h={170}
-          className={styles.track}
-          overflow="auto" pb={4}>
-          
-
-
+        <AccordionPanel pb={4}>
           <LocationChekbox familyTree={familyTree} />
-
-
-
         </AccordionPanel>
       </AccordionItem>
 
@@ -107,15 +97,15 @@ export const Accordian = () => {
           </AccordionButton>
         </h2>
         <AccordionPanel pb={4}>
-          <Box  display={"flex"} justifyContent="space-between" >
-            <h3>₹  {new Intl.NumberFormat('en-IN').format(lowVal)}</h3>
-            <h3> ₹  { new Intl.NumberFormat('en-IN').format(upperVal)  }</h3>
+          <Box display={"flex"} justifyContent="space-between">
+            <h3>₹ {new Intl.NumberFormat("en-IN").format(lowVal)}</h3>
+            <h3> ₹ {new Intl.NumberFormat("en-IN").format(upperVal)}</h3>
           </Box>
           <RangeSlider
             onChange={(e) => setSliderVal(e)}
-            defaultValue={[0, 1600000]}
+            defaultValue={[0, 25000]}
             min={0}
-            max={1600000}
+            max={25000}
             step={30}
           >
             <RangeSliderTrack bg="red.100">
@@ -133,7 +123,7 @@ export const Accordian = () => {
         <h2>
           <AccordionButton>
             <Box flex="1" textAlign="left">
-              ALL BRAND
+              ALL MODELS
             </Box>
             <AccordionIcon />
           </AccordionButton>
@@ -147,7 +137,7 @@ export const Accordian = () => {
           overflow="auto"
           pb={4}
         >
-          {AllBrands.map(({ id, brand }) => (
+          {mobileBrands.map(({ id, brand }) => (
             <CheckboxC
               handleCarModel={handleCarModel}
               id={id}
@@ -157,35 +147,6 @@ export const Accordian = () => {
           ))}
         </AccordionPanel>
       </AccordionItem>
-
-      <AccordionItem>
-        <h2>
-          <AccordionButton>
-            <Box flex="1" textAlign="left">
-              ALL MODELS
-            </Box>
-            <AccordionIcon />
-          </AccordionButton>
-        </h2>
-
-        <AccordionPanel
-          mt={5}
-          h={170}
-          className={styles.track}
-          overflow="auto"
-          pb={4}
-        >
-           {AllCarModel.map(({ id, brand }) => (
-            <CheckboxC
-              handleCarModel={handleCarModel}
-              id={id}
-              key={id}
-              value={brand}
-            />
-          ))}
-        </AccordionPanel>
-      </AccordionItem>
-      <Button onClick={clearAll} > Clear All </Button>
     </Accordion>
   );
 };

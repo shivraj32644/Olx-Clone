@@ -1,6 +1,7 @@
 {
-  "data": [
+  "allOlxData": [
     {
+      "id": 1,
       "user_id": "bbdd236b-5dc5-4a85-99dc-2019ee7f1b17",
       "img_url": "https://png.pngtree.com/png-clipart/20190924/original/pngtree-human-avatar-free-vector-png-image_4825373.jpg",
       "full_name": "Katrina Mills",
@@ -9,8 +10,6 @@
       "following": 88,
       "login": false,
       "isPremium": true,
-      "id": 1,
-
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -320,7 +319,6 @@
       "login": false,
       "isPremium": true,
       "id": 2,
-
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -355,8 +353,8 @@
             "car_images": {
               "img1": "https://apollo-singapore.akamaized.net/v1/files/v1pux3leur2k2-IN/image;s=300x600;q=60",
               "img2": "https://apollo-singapore.akamaized.net/v1/files/0fv0zlkbdf042-IN/image;s=780x0;q=60",
-              "img3":"https://apollo-singapore.akamaized.net/v1/files/mu77gshne33w-IN/image;s=780x0;q=60",
-              "img4":"https://apollo-singapore.akamaized.net/v1/files/qjy4u0s9h6q32-IN/image;s=780x0;q=60"
+              "img3": "https://apollo-singapore.akamaized.net/v1/files/mu77gshne33w-IN/image;s=780x0;q=60",
+              "img4": "https://apollo-singapore.akamaized.net/v1/files/qjy4u0s9h6q32-IN/image;s=780x0;q=60"
             },
             "ads_location": {
               "state": "Delhi",
@@ -648,7 +646,6 @@
       "login": false,
       "isPremium": true,
       "id": 3,
-
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -683,7 +680,7 @@
             "car_images": {
               "img1": "https://apollo-singapore.akamaized.net/v1/files/zr8mmlrfwg843-IN/image;s=300x600;q=60",
               "img2": "https://apollo-singapore.akamaized.net/v1/files/7rd8srph93fy-IN/image;s=780x0;q=60",
-              "img3":"https://apollo-singapore.akamaized.net/v1/files/bi9k7u82aeuq1-IN/image;s=780x0;q=60"
+              "img3": "https://apollo-singapore.akamaized.net/v1/files/bi9k7u82aeuq1-IN/image;s=780x0;q=60"
             },
             "ads_location": {
               "state": "M.P.",
@@ -942,7 +939,6 @@
       "login": false,
       "isPremium": false,
       "id": 4,
-
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -1250,7 +1246,6 @@
       "login": false,
       "isPremium": false,
       "id": 5,
-
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -1285,7 +1280,7 @@
             "car_images": {
               "img1": "https://apollo-singapore.akamaized.net/v1/files/a55vdxifol9a2-IN/image;s=300x600;q=60",
               "img2": "https://apollo-singapore.akamaized.net/v1/files/uyl0wy79kwpo-IN/image;s=780x0;q=60",
-              "img3":"https://apollo-singapore.akamaized.net/v1/files/w1su4y6f86k31-IN/image;s=780x0;q=60"
+              "img3": "https://apollo-singapore.akamaized.net/v1/files/w1su4y6f86k31-IN/image;s=780x0;q=60"
             },
             "ads_location": {
               "state": "Jharkhand",
@@ -1495,7 +1490,6 @@
       "login": false,
       "isPremium": false,
       "id": 6,
-
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -1531,8 +1525,8 @@
               "img1": "https://apollo-singapore.akamaized.net/v1/files/fx1ylih90jd12-IN/image;s=300x600;q=60",
               "img2": "https://apollo-singapore.akamaized.net/v1/files/38mq4atj150n3-IN/image;s=780x0;q=60",
               "img3": "https://apollo-singapore.akamaized.net/v1/files/abasc9azy9ew-IN/image;s=780x0;q=60",
-              "img4":"https://apollo-singapore.akamaized.net/v1/files/91xgirdecfg92-IN/image;s=780x0;q=60",
-              "img5":"https://apollo-singapore.akamaized.net/v1/files/yqo271d1476a1-IN/image;s=780x0;q=60"
+              "img4": "https://apollo-singapore.akamaized.net/v1/files/91xgirdecfg92-IN/image;s=780x0;q=60",
+              "img5": "https://apollo-singapore.akamaized.net/v1/files/yqo271d1476a1-IN/image;s=780x0;q=60"
             },
             "ads_location": {
               "state": "Karnatak",
@@ -1775,7 +1769,6 @@
       "login": false,
       "isPremium": false,
       "id": 7,
-
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -2067,7 +2060,6 @@
       "login": false,
       "isPremium": false,
       "id": 8,
-
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -2379,7 +2371,6 @@
       "login": false,
       "isPremium": false,
       "id": 9,
-
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -2658,7 +2649,6 @@
       "login": false,
       "isPremium": false,
       "id": 10,
-
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -2693,7 +2683,7 @@
             "car_images": {
               "img1": "https://apollo-singapore.akamaized.net/v1/files/75nowcopxeih1-IN/image;s=300x600;q=60",
               "img2": "https://in.fcgapi.com/image/olxautos-prd-inspection-images-ap-southeast-1/d9523871-f96d-4744-b186-56b79ad5dcb1/frontPhoto/850/478?watermark=false&country=in&cache=true",
-              "img3":"https://in.fcgapi.com/image/olxautos-prd-inspection-images-ap-southeast-1/d9523871-f96d-4744-b186-56b79ad5dcb1/backPhoto/850/478?watermark=false&country=in&cache=true"
+              "img3": "https://in.fcgapi.com/image/olxautos-prd-inspection-images-ap-southeast-1/d9523871-f96d-4744-b186-56b79ad5dcb1/backPhoto/850/478?watermark=false&country=in&cache=true"
             },
             "ads_location": {
               "state": "Karnatak",
@@ -2934,7 +2924,6 @@
       "login": false,
       "isPremium": false,
       "id": 11,
-
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -3246,7 +3235,6 @@
       "login": false,
       "isPremium": false,
       "id": 12,
-
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -3538,7 +3526,6 @@
       "login": false,
       "isPremium": false,
       "id": 13,
-
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -3799,7 +3786,6 @@
       "login": false,
       "isPremium": false,
       "id": 14,
-
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -4059,7 +4045,6 @@
       "login": false,
       "isPremium": false,
       "id": 15,
-
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -4351,7 +4336,6 @@
       "login": false,
       "isPremium": false,
       "id": 16,
-
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -4678,7 +4662,6 @@
       "login": false,
       "isPremium": false,
       "id": 17,
-
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -4955,7 +4938,6 @@
       "login": false,
       "isPremium": false,
       "id": 18,
-
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -5267,7 +5249,6 @@
       "login": false,
       "isPremium": false,
       "id": 19,
-
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -5494,7 +5475,6 @@
       "login": false,
       "isPremium": false,
       "id": 20,
-
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -5771,7 +5751,6 @@
       "login": false,
       "isPremium": false,
       "id": 21,
-
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -6033,7 +6012,6 @@
       "login": false,
       "isPremium": false,
       "id": 22,
-
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -6260,7 +6238,6 @@
       "login": false,
       "isPremium": false,
       "id": 23,
-
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -6539,7 +6516,6 @@
       "login": false,
       "isPremium": false,
       "id": 24,
-
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -6784,7 +6760,6 @@
       "login": false,
       "isPremium": false,
       "id": 25,
-
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -6805,7 +6780,7 @@
             "date_to": "DEC 8, 22 ",
             "category": "OLX Auto(Cars)",
             "category_type": "Cars",
-            "car_name": "Mazda V90",
+            "car_name": "Tata Tigore",
             "car_brand": "Tata",
             "car_varient": "Cargo Van",
             "year_buy": 2017,
@@ -6817,9 +6792,9 @@
             "description": "Purchased this car on mu birthday but now buying new one bored with this one if you are intrested to buy contact soon cover and interior will be free.",
             "set_price": 77400,
             "car_images": {
-              "img1": "https://static.vecteezy.com/system/resources/thumbnails/008/278/157/small/perspective-view-car-illustration-for-conceptual-design-free-vector.jpg",
-              "img2": "https://thumbs.dreamstime.com/b/sports-car-238733268.jpg",
-              "img3": "https://img.freepik.com/premium-vector/car-vector-illustration-conceptual-design_85054-173.jpg?w=360"
+              "img1": "https://apollo-singapore.akamaized.net/v1/files/gyfxb2ud4g1p3-IN/image;s=300x600;q=60",
+              "img2": "https://apollo-singapore.akamaized.net/v1/files/pn0ygk72m0qy-IN/image;s=780x0;q=60",
+              "img3": "https://apollo-singapore.akamaized.net/v1/files/0560s83kskqn-IN/image;s=780x0;q=60"
             },
             "ads_location": {
               "state": "Karnatak",
@@ -7091,7 +7066,6 @@
       "login": false,
       "isPremium": false,
       "id": 26,
-
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -7112,7 +7086,7 @@
             "date_to": "DEC 8, 22 ",
             "category": "OLX Auto(Cars)",
             "category_type": "Cars",
-            "car_name": "Mazda Roadster",
+            "car_name": "Tata Tigore",
             "car_brand": "Tata",
             "car_varient": "Convertible",
             "year_buy": 2003,
@@ -7124,9 +7098,9 @@
             "description": "Amazing car with good experience of driving not too old with good condition contact me fast for best offer",
             "set_price": 404600,
             "car_images": {
-              "img1": "https://www.renderhub.com/markos3d/srt-hellcat-dodge-challenger-2021/srt-hellcat-dodge-challenger-2021-08.jpg",
-              "img2": "https://www.renderhub.com/markos3d/srt-hellcat-dodge-challenger-2021/srt-hellcat-dodge-challenger-2021-01.jpg",
-              "img3": "https://www.renderhub.com/markos3d/srt-hellcat-dodge-challenger-2021/srt-hellcat-dodge-challenger-2021-07.jpg"
+              "img1": "https://apollo-singapore.akamaized.net/v1/files/4zgegdgk5unm3-IN/image;s=300x600;q=60",
+              "img2": "https://apollo-singapore.akamaized.net/v1/files/9b92je800mmg-IN/image;s=780x0;q=60",
+              "img3": "https://apollo-singapore.akamaized.net/v1/files/2i9oz6nw19yq2-IN/image;s=780x0;q=60"
             },
             "ads_location": {
               "state": "U.P.",
@@ -7353,7 +7327,6 @@
       "login": false,
       "isPremium": false,
       "id": 27,
-
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -7374,7 +7347,7 @@
             "date_to": "DEC 8, 22 ",
             "category": "OLX Auto(Cars)",
             "category_type": "Cars",
-            "car_name": "Tesla ATS",
+            "car_name": "Tata Tigore",
             "car_brand": "Tata",
             "car_varient": "Coupe",
             "year_buy": 2018,
@@ -7386,9 +7359,9 @@
             "description": "Amazing car with good experience of driving not too old with good condition contact me fast for best offer",
             "set_price": 246900,
             "car_images": {
-              "img1": "https://imgd.aeplcdn.com/0x0/n/cw/ec/100121/i20-n-line-exterior-right-front-three-quarter-12.jpeg?isig=0",
-              "img2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPWHQX9wdXc_cRhBFsOT4SKoqI36Rm2WW00G10Lwx2cqfyCd3pEbs9Md3Phmpglqhw6l8&usqp=CAU",
-              "img3": "https://english.cdn.zeenews.com/sites/default/files/styles/zm_700x400/public/2021/09/02/966881-i20nline.jpg"
+              "img1": "https://apollo-singapore.akamaized.net/v1/files/m299w9gzzkfk2-IN/image;s=300x600;q=60",
+              "img2": "https://apollo-singapore.akamaized.net/v1/files/wo1y9ddmlr2g2-IN/image;s=780x0;q=60",
+              "img3": "https://apollo-singapore.akamaized.net/v1/files/fiao3fru3x78-IN/image;s=780x0;q=60"
             },
             "ads_location": {
               "state": "Karnatak",
@@ -7616,7 +7589,6 @@
       "login": false,
       "isPremium": false,
       "id": 28,
-
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -7637,7 +7609,7 @@
             "date_to": "DEC 8, 22 ",
             "category": "OLX Auto(Cars)",
             "category_type": "Cars",
-            "car_name": "Hyundai Colorado",
+            "car_name": "Tata Tigore",
             "car_brand": "Tata",
             "car_varient": "Coupe",
             "year_buy": 1999,
@@ -7649,9 +7621,9 @@
             "description": "Want to sell this car, with lot of amazing feature buyer can inspect first then buy call me aor msg me urgent to sell so best deal available.",
             "set_price": 854500,
             "car_images": {
-              "img1": "https://imgd.aeplcdn.com/0x0/n/cw/ec/100121/i20-n-line-exterior-right-front-three-quarter-12.jpeg?isig=0",
-              "img2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPWHQX9wdXc_cRhBFsOT4SKoqI36Rm2WW00G10Lwx2cqfyCd3pEbs9Md3Phmpglqhw6l8&usqp=CAU",
-              "img3": "https://english.cdn.zeenews.com/sites/default/files/styles/zm_700x400/public/2021/09/02/966881-i20nline.jpg"
+              "img1": "https://apollo-singapore.akamaized.net/v1/files/guub1gt2zkxw2-IN/image;s=300x600;q=60",
+              "img2": "https://apollo-singapore.akamaized.net/v1/files/z3d3dsmsl04g2-IN/image;s=780x0;q=60",
+              "img3": "https://apollo-singapore.akamaized.net/v1/files/pd3pdo2njiy52-IN/image;s=780x0;q=60"
             },
             "ads_location": {
               "state": "Karnatak",
@@ -7927,7 +7899,6 @@
       "login": false,
       "isPremium": false,
       "id": 29,
-
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -7948,7 +7919,7 @@
             "date_to": "DEC 8, 22 ",
             "category": "OLX Auto(Cars)",
             "category_type": "Cars",
-            "car_name": "Ferrari F-150",
+            "car_name": "Tata Nexon",
             "car_brand": "Tata",
             "car_varient": "Sedan",
             "year_buy": 2008,
@@ -7960,9 +7931,9 @@
             "description": "Want to sell this car, with lot of amazing feature buyer can inspect first then buy call me aor msg me urgent to sell so best deal available.",
             "set_price": 581000,
             "car_images": {
-              "img1": "https://www.renderhub.com/markos3d/srt-hellcat-dodge-challenger-2021/srt-hellcat-dodge-challenger-2021-08.jpg",
-              "img2": "https://www.renderhub.com/markos3d/srt-hellcat-dodge-challenger-2021/srt-hellcat-dodge-challenger-2021-01.jpg",
-              "img3": "https://www.renderhub.com/markos3d/srt-hellcat-dodge-challenger-2021/srt-hellcat-dodge-challenger-2021-07.jpg"
+              "img1": "https://apollo-singapore.akamaized.net/v1/files/vg85p96pjc7j2-IN/image;s=300x600;q=60",
+              "img2": "https://apollo-singapore.akamaized.net/v1/files/k3wstwbds9w52-IN/image;s=780x0;q=60",
+              "img3": "https://apollo-singapore.akamaized.net/v1/files/mrzqi401qyfq1-IN/image;s=780x0;q=60"
             },
             "ads_location": {
               "state": "M.P.",
@@ -8190,7 +8161,6 @@
       "login": false,
       "isPremium": false,
       "id": 30,
-
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -8211,7 +8181,7 @@
             "date_to": "DEC 8, 22 ",
             "category": "OLX Auto(Cars)",
             "category_type": "Cars",
-            "car_name": "Porsche Element",
+            "car_name": "Tata Nexon",
             "car_brand": "Tata",
             "car_varient": "Crew Cab Pickup",
             "year_buy": 2004,
@@ -8223,9 +8193,9 @@
             "description": "Iam willing to sell my lovely car due to financial issues want a buyer fast giving amazing offer for first comer.",
             "set_price": 157900,
             "car_images": {
-              "img1": "https://www.renderhub.com/markos3d/srt-hellcat-dodge-challenger-2021/srt-hellcat-dodge-challenger-2021-08.jpg",
-              "img2": "https://www.renderhub.com/markos3d/srt-hellcat-dodge-challenger-2021/srt-hellcat-dodge-challenger-2021-01.jpg",
-              "img3": "https://www.renderhub.com/markos3d/srt-hellcat-dodge-challenger-2021/srt-hellcat-dodge-challenger-2021-07.jpg"
+              "img1": "https://apollo-singapore.akamaized.net/v1/files/7qfr4vi9vvgq2-IN/image;s=300x600;q=60",
+              "img2": "https://apollo-singapore.akamaized.net/v1/files/hfscjmv4hq1w-IN/image;s=780x0;q=60",
+              "img3": "https://apollo-singapore.akamaized.net/v1/files/pjt3dpzsqswa2-IN/image;s=780x0;q=60"
             },
             "ads_location": {
               "state": "M.P.",
@@ -8500,7 +8470,6 @@
       "login": false,
       "isPremium": false,
       "id": 31,
-
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -8521,7 +8490,7 @@
             "date_to": "DEC 8, 22 ",
             "category": "OLX Auto(Cars)",
             "category_type": "Cars",
-            "car_name": "Rolls Royce Sentra",
+            "car_name": "Tata Nexon",
             "car_brand": "Tata",
             "car_varient": "Minivan",
             "year_buy": 2000,
@@ -8533,9 +8502,9 @@
             "description": "Amazing car with good experience of driving not too old with good condition contact me fast for best offer",
             "set_price": 533200,
             "car_images": {
-              "img1": "https://imgd.aeplcdn.com/0x0/n/cw/ec/100121/i20-n-line-exterior-right-front-three-quarter-12.jpeg?isig=0",
-              "img2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPWHQX9wdXc_cRhBFsOT4SKoqI36Rm2WW00G10Lwx2cqfyCd3pEbs9Md3Phmpglqhw6l8&usqp=CAU",
-              "img3": "https://english.cdn.zeenews.com/sites/default/files/styles/zm_700x400/public/2021/09/02/966881-i20nline.jpg"
+              "img1": "https://apollo-singapore.akamaized.net/v1/files/bpatgo65ed3t3-IN/image;s=300x600;q=60",
+              "img2": "https://apollo-singapore.akamaized.net/v1/files/xm588725yeiu-IN/image;s=780x0;q=60",
+              "img3": "https://apollo-singapore.akamaized.net/v1/files/7fa2aklmgrxi-IN/image;s=780x0;q=60"
             },
             "ads_location": {
               "state": "M.P.",
@@ -8792,7 +8761,6 @@
       "login": false,
       "isPremium": false,
       "id": 32,
-
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -8813,7 +8781,7 @@
             "date_to": "DEC 8, 22 ",
             "category": "OLX Auto(Cars)",
             "category_type": "Cars",
-            "car_name": "Jaguar Silverado",
+            "car_name": "Tata Nexon",
             "car_brand": "Tata",
             "car_varient": "Convertible",
             "year_buy": 2013,
@@ -8825,9 +8793,9 @@
             "description": "Iam willing to sell my lovely car due to financial issues want a buyer fast giving amazing offer for first comer.",
             "set_price": 144700,
             "car_images": {
-              "img1": "https://freevector-images.s3.amazonaws.com/uploads/vector/preview/30435/431.jpg",
-              "img2": "https://image.shutterstock.com/image-vector/vector-layout-muscle-car-dodge-600w-1344972059.jpg",
-              "img3": "https://cdn.dealeraccelerate.com/streetside/4/17567/545741/1920x1440/2009-dodge-challenger-srt-8"
+              "img1": "https://apollo-singapore.akamaized.net/v1/files/6ym832i8t20p2-IN/image;s=300x600;q=60",
+              "img2": "https://apollo-singapore.akamaized.net/v1/files/q1k7d2liewzp1-IN/image;s=780x0;q=60",
+              "img3": "https://apollo-singapore.akamaized.net/v1/files/48fme78w6l3s3-IN/image;s=780x0;q=60"
             },
             "ads_location": {
               "state": "M.P.",
@@ -9119,7 +9087,6 @@
       "login": false,
       "isPremium": false,
       "id": 33,
-
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -9140,7 +9107,7 @@
             "date_to": "DEC 8, 22 ",
             "category": "OLX Auto(Cars)",
             "category_type": "Cars",
-            "car_name": "Volvo Corvette",
+            "car_name": "Tata Vista",
             "car_brand": "Tata",
             "car_varient": "SUV",
             "year_buy": 2009,
@@ -9152,9 +9119,9 @@
             "description": "Iam willing to sell my lovely car due to financial issues want a buyer fast giving amazing offer for first comer.",
             "set_price": 438900,
             "car_images": {
-              "img1": "https://images.vexels.com/media/users/3/169874/raw/ec441a7efeb5ffa0e612d030bb3e28d7-car-side-view-design.jpg",
-              "img2": "https://img.freepik.com/premium-vector/front-view-orange-off-road-truck-suv-pickup-jeep-car-flat-vector-illustration_648968-46.jpg?w=2000",
-              "img3": "https://img.freepik.com/premium-vector/red-jeep-car-illustration_173474-66.jpg?w=2000"
+              "img1": "https://apollo-singapore.akamaized.net/v1/files/w9dag7rcie7i3-IN/image;s=300x600;q=60",
+              "img2": "https://apollo-singapore.akamaized.net/v1/files/8ucpvync7gpt1-IN/image;s=780x0;q=60",
+              "img3": "https://apollo-singapore.akamaized.net/v1/files/4chazxa1xcea3-IN/image;s=780x0;q=60"
             },
             "ads_location": {
               "state": "Jharkhand",
@@ -9462,7 +9429,6 @@
       "login": false,
       "isPremium": false,
       "id": 34,
-
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -9483,7 +9449,7 @@
             "date_to": "DEC 8, 22 ",
             "category": "OLX Auto(Cars)",
             "category_type": "Cars",
-            "car_name": "Aston Martin Expedition",
+            "car_name": "Hyundai Verna",
             "car_brand": "Hyundai",
             "car_varient": "Minivan",
             "year_buy": 2012,
@@ -9493,10 +9459,10 @@
             "no_of_oweners": 4,
             "key_feature": "sunt eiusmod enim labore",
             "description": "Want to sell this car, with lot of amazing feature buyer can inspect first then buy call me aor msg me urgent to sell so best deal available.",
-            "set_price": 891600,
+            "set_price": 1591600,
             "car_images": {
-              "img1": "https://www.seekpng.com/png/full/56-569744_classic-car-3-svg-transparent-library-vintage-car.png",
-              "img2": "https://media.istockphoto.com/vectors/black-because-xix-vector-id165064117?b=1&k=20&m=165064117&s=612x612&w=0&h=GPkBEVk_7i7jtqLxdJcGe6hol0EnXeAaFgov91oIFZI="
+              "img1": "https://apollo-singapore.akamaized.net/v1/files/hdvqzsgvmp5q2-IN/image;s=300x600;q=60",
+              "img2": "https://apollo-singapore.akamaized.net/v1/files/oo0vs1u9plpf1-IN/image;s=780x0;q=60"
             },
             "ads_location": {
               "state": "M.P.",
@@ -9756,7 +9722,6 @@
       "login": false,
       "isPremium": false,
       "id": 35,
-
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -9777,7 +9742,7 @@
             "date_to": "DEC 8, 22 ",
             "category": "OLX Auto(Cars)",
             "category_type": "Cars",
-            "car_name": "Toyota Model S",
+            "car_name": "Hyundai Verna",
             "car_brand": "Hyundai",
             "car_varient": "Convertible",
             "year_buy": 2005,
@@ -9789,8 +9754,8 @@
             "description": "Amazing car with good experience of driving not too old with good condition contact me fast for best offer",
             "set_price": 941300,
             "car_images": {
-              "img1": "https://www.seekpng.com/png/full/56-569744_classic-car-3-svg-transparent-library-vintage-car.png",
-              "img2": "https://media.istockphoto.com/vectors/black-because-xix-vector-id165064117?b=1&k=20&m=165064117&s=612x612&w=0&h=GPkBEVk_7i7jtqLxdJcGe6hol0EnXeAaFgov91oIFZI="
+              "img1": "https://apollo-singapore.akamaized.net/v1/files/bzcm41k5wu1j-IN/image;s=300x600;q=60",
+              "img2": "https://apollo-singapore.akamaized.net/v1/files/a3zoq6atwfyo1-IN/image;s=780x0;q=60"
             },
             "ads_location": {
               "state": "Jharkhand",
@@ -10034,7 +9999,6 @@
       "login": false,
       "isPremium": false,
       "id": 36,
-
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -10055,7 +10019,7 @@
             "date_to": "DEC 8, 22 ",
             "category": "OLX Auto(Cars)",
             "category_type": "Cars",
-            "car_name": "Hyundai XTS",
+            "car_name": "Hyundai Verna",
             "car_brand": "Hyundai",
             "car_varient": "Extended Cab Pickup",
             "year_buy": 2013,
@@ -10067,9 +10031,9 @@
             "description": "Iam willing to sell my lovely car due to financial issues want a buyer fast giving amazing offer for first comer.",
             "set_price": 358100,
             "car_images": {
-              "img1": "https://imgd.aeplcdn.com/0x0/n/cw/ec/100121/i20-n-line-exterior-right-front-three-quarter-12.jpeg?isig=0",
-              "img2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPWHQX9wdXc_cRhBFsOT4SKoqI36Rm2WW00G10Lwx2cqfyCd3pEbs9Md3Phmpglqhw6l8&usqp=CAU",
-              "img3": "https://english.cdn.zeenews.com/sites/default/files/styles/zm_700x400/public/2021/09/02/966881-i20nline.jpg"
+              "img1": "https://apollo-singapore.akamaized.net/v1/files/fa30y2752zci1-IN/image;s=300x600;q=60",
+              "img2": "https://apollo-singapore.akamaized.net/v1/files/umbr4x6ureob1-IN/image;s=780x0;q=60",
+              "img3": "https://apollo-singapore.akamaized.net/v1/files/oem6tjw7zlkn1-IN/image;s=780x0;q=60"
             },
             "ads_location": {
               "state": "Maharastra",
@@ -10297,7 +10261,6 @@
       "login": false,
       "isPremium": false,
       "id": 37,
-
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -10318,7 +10281,7 @@
             "date_to": "DEC 8, 22 ",
             "category": "OLX Auto(Cars)",
             "category_type": "Cars",
-            "car_name": "Ferrari Ranchero",
+            "car_name": "Hyundai Verna",
             "car_brand": "Hyundai",
             "car_varient": "Passenger Van",
             "year_buy": 2013,
@@ -10330,9 +10293,9 @@
             "description": "Iam willing to sell my lovely car due to financial issues want a buyer fast giving amazing offer for first comer.",
             "set_price": 513100,
             "car_images": {
-              "img1": "https://images.vexels.com/media/users/3/169874/raw/ec441a7efeb5ffa0e612d030bb3e28d7-car-side-view-design.jpg",
-              "img2": "https://img.freepik.com/premium-vector/front-view-orange-off-road-truck-suv-pickup-jeep-car-flat-vector-illustration_648968-46.jpg?w=2000",
-              "img3": "https://img.freepik.com/premium-vector/red-jeep-car-illustration_173474-66.jpg?w=2000"
+              "img1": "https://apollo-singapore.akamaized.net/v1/files/x8ti192u2cag-IN/image;s=300x600;q=60",
+              "img2": "https://apollo-singapore.akamaized.net/v1/files/177ii57321nb-IN/image;s=780x0;q=60",
+              "img3": "https://apollo-singapore.akamaized.net/v1/files/5aq2laeq79ti-IN/image;s=780x0;q=60"
             },
             "ads_location": {
               "state": "Delhi",
@@ -10541,7 +10504,6 @@
       "login": false,
       "isPremium": false,
       "id": 38,
-
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -10562,7 +10524,7 @@
             "date_to": "DEC 8, 22 ",
             "category": "OLX Auto(Cars)",
             "category_type": "Cars",
-            "car_name": "Lamborghini Jetta",
+            "car_name": "Hyundai Verna",
             "car_brand": "Hyundai",
             "car_varient": "Convertible",
             "year_buy": 2009,
@@ -10574,8 +10536,8 @@
             "description": "Want to sell this car, with lot of amazing feature buyer can inspect first then buy call me aor msg me urgent to sell so best deal available.",
             "set_price": 399500,
             "car_images": {
-              "img1": "https://www.seekpng.com/png/full/56-569744_classic-car-3-svg-transparent-library-vintage-car.png",
-              "img2": "https://media.istockphoto.com/vectors/black-because-xix-vector-id165064117?b=1&k=20&m=165064117&s=612x612&w=0&h=GPkBEVk_7i7jtqLxdJcGe6hol0EnXeAaFgov91oIFZI="
+              "img1": "https://apollo-singapore.akamaized.net/v1/files/o4tceuvf2zjh2-IN/image;s=300x600;q=60",
+              "img2": "https://apollo-singapore.akamaized.net/v1/files/qc4wjoi5nkcq3-IN/image;s=780x0;q=60"
             },
             "ads_location": {
               "state": "Delhi",
@@ -10803,7 +10765,6 @@
       "login": false,
       "isPremium": false,
       "id": 39,
-
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -10824,7 +10785,7 @@
             "date_to": "DEC 8, 22 ",
             "category": "OLX Auto(Cars)",
             "category_type": "Cars",
-            "car_name": "Mini Colorado",
+            "car_name": "Hyundai Creta",
             "car_brand": "Hyundai",
             "car_varient": "Passenger Van",
             "year_buy": 2012,
@@ -10834,11 +10795,11 @@
             "no_of_oweners": 1,
             "key_feature": "commodo amet",
             "description": "Purchased this car on mu birthday but now buying new one bored with this one if you are intrested to buy contact soon cover and interior will be free.",
-            "set_price": 560300,
+            "set_price": 960300,
             "car_images": {
-              "img1": "https://www.renderhub.com/markos3d/srt-hellcat-dodge-challenger-2021/srt-hellcat-dodge-challenger-2021-08.jpg",
-              "img2": "https://www.renderhub.com/markos3d/srt-hellcat-dodge-challenger-2021/srt-hellcat-dodge-challenger-2021-01.jpg",
-              "img3": "https://www.renderhub.com/markos3d/srt-hellcat-dodge-challenger-2021/srt-hellcat-dodge-challenger-2021-07.jpg"
+              "img1": "https://apollo-singapore.akamaized.net/v1/files/lq3h7y21z8k63-IN/image;s=780x0;q=60",
+              "img2": "https://apollo-singapore.akamaized.net/v1/files/2pmh7b4zlp302-IN/image;s=780x0;q=60",
+              "img3": "https://apollo-singapore.akamaized.net/v1/files/eiahosaanlch3-IN/image;s=780x0;q=60"
             },
             "ads_location": {
               "state": "M.P.",
@@ -11083,7 +11044,6 @@
       "login": false,
       "isPremium": false,
       "id": 40,
-
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -11104,7 +11064,7 @@
             "date_to": "DEC 8, 22 ",
             "category": "OLX Auto(Cars)",
             "category_type": "Cars",
-            "car_name": "Aston Martin Land Cruiser",
+            "car_name": "Hyundai Creta",
             "car_brand": "Hyundai",
             "car_varient": "SUV",
             "year_buy": 2000,
@@ -11116,9 +11076,9 @@
             "description": "Iam willing to sell my lovely car due to financial issues want a buyer fast giving amazing offer for first comer.",
             "set_price": 390500,
             "car_images": {
-              "img1": "https://imgd.aeplcdn.com/0x0/n/cw/ec/100121/i20-n-line-exterior-right-front-three-quarter-12.jpeg?isig=0",
-              "img2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPWHQX9wdXc_cRhBFsOT4SKoqI36Rm2WW00G10Lwx2cqfyCd3pEbs9Md3Phmpglqhw6l8&usqp=CAU",
-              "img3": "https://english.cdn.zeenews.com/sites/default/files/styles/zm_700x400/public/2021/09/02/966881-i20nline.jpg"
+              "img1": "https://apollo-singapore.akamaized.net/v1/files/9ceoc5gjcc7i-IN/image;s=300x600;q=60",
+              "img2": "https://apollo-singapore.akamaized.net/v1/files/9ceoc5gjcc7i-IN/image;s=300x600;q=60",
+              "img3": "https://apollo-singapore.akamaized.net/v1/files/xixndi1nmcf1-IN/image;s=780x0;q=60"
             },
             "ads_location": {
               "state": "M.P.",
@@ -11377,7 +11337,6 @@
       "login": false,
       "isPremium": false,
       "id": 41,
-
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -11398,8 +11357,8 @@
             "date_to": "DEC 8, 22 ",
             "category": "OLX Auto(Cars)",
             "category_type": "Cars",
-            "car_name": "Lamborghini Aventador",
-            "car_brand": "Honda",
+            "car_name": "Hyundai Creta",
+            "car_brand": "Hyundai",
             "car_varient": "Wagon",
             "year_buy": 2005,
             "fuel": "CNG",
@@ -11410,9 +11369,9 @@
             "description": "Purchased this car on mu birthday but now buying new one bored with this one if you are intrested to buy contact soon cover and interior will be free.",
             "set_price": 477600,
             "car_images": {
-              "img1": "https://images.vexels.com/media/users/3/169874/raw/ec441a7efeb5ffa0e612d030bb3e28d7-car-side-view-design.jpg",
-              "img2": "https://img.freepik.com/premium-vector/front-view-orange-off-road-truck-suv-pickup-jeep-car-flat-vector-illustration_648968-46.jpg?w=2000",
-              "img3": "https://img.freepik.com/premium-vector/red-jeep-car-illustration_173474-66.jpg?w=2000"
+              "img1": "https://apollo-singapore.akamaized.net/v1/files/rkj5m3hvuy7p3-IN/image;s=300x600;q=60",
+              "img2": "https://apollo-singapore.akamaized.net/v1/files/xrl42zcurak1-IN/image;s=780x0;q=60",
+              "img3": "https://apollo-singapore.akamaized.net/v1/files/exdllat9w5dd3-IN/image;s=780x0;q=60"
             },
             "ads_location": {
               "state": "M.P.",
@@ -11672,7 +11631,6 @@
       "login": false,
       "isPremium": false,
       "id": 42,
-
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -11693,7 +11651,7 @@
             "date_to": "DEC 8, 22 ",
             "category": "OLX Auto(Cars)",
             "category_type": "Cars",
-            "car_name": "Volvo Aventador",
+            "car_name": "Honda Amaze",
             "car_brand": "Honda",
             "car_varient": "Wagon",
             "year_buy": 2017,
@@ -11705,8 +11663,8 @@
             "description": "Purchased this car on mu birthday but now buying new one bored with this one if you are intrested to buy contact soon cover and interior will be free.",
             "set_price": 767000,
             "car_images": {
-              "img1": "https://www.seekpng.com/png/full/56-569744_classic-car-3-svg-transparent-library-vintage-car.png",
-              "img2": "https://media.istockphoto.com/vectors/black-because-xix-vector-id165064117?b=1&k=20&m=165064117&s=612x612&w=0&h=GPkBEVk_7i7jtqLxdJcGe6hol0EnXeAaFgov91oIFZI="
+              "img1": "https://apollo-singapore.akamaized.net/v1/files/9vabnmemzsfg1-IN/image;s=300x600;q=60",
+              "img2": "https://in.fcgapi.com/image/olxautos-prd-inspection-images-ap-southeast-1/773e937a-7ded-459a-a157-e14059d3d671/frontPhoto/850/478?watermark=false&country=in&cache=true"
             },
             "ads_location": {
               "state": "Karnatak",
@@ -11932,7 +11890,6 @@
       "login": false,
       "isPremium": false,
       "id": 43,
-
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -11953,7 +11910,7 @@
             "date_to": "DEC 8, 22 ",
             "category": "OLX Auto(Cars)",
             "category_type": "Cars",
-            "car_name": "Dodge Element",
+            "car_name": "Honda Amaze",
             "car_brand": "Honda",
             "car_varient": "Convertible",
             "year_buy": 1995,
@@ -11965,9 +11922,9 @@
             "description": "Iam willing to sell my lovely car due to financial issues want a buyer fast giving amazing offer for first comer.",
             "set_price": 855900,
             "car_images": {
-              "img1": "https://www.renderhub.com/markos3d/srt-hellcat-dodge-challenger-2021/srt-hellcat-dodge-challenger-2021-08.jpg",
-              "img2": "https://www.renderhub.com/markos3d/srt-hellcat-dodge-challenger-2021/srt-hellcat-dodge-challenger-2021-01.jpg",
-              "img3": "https://www.renderhub.com/markos3d/srt-hellcat-dodge-challenger-2021/srt-hellcat-dodge-challenger-2021-07.jpg"
+              "img1": "https://apollo-singapore.akamaized.net/v1/files/f9sdqkgob06r-IN/image;s=300x600;q=60",
+              "img2": "https://apollo-singapore.akamaized.net/v1/files/d9onzp9x2vgs2-IN/image;s=780x0;q=60",
+              "img3": "https://apollo-singapore.akamaized.net/v1/files/f3ibllqhise01-IN/image;s=780x0;q=60"
             },
             "ads_location": {
               "state": "Jharkhand",
@@ -12258,7 +12215,6 @@
       "login": false,
       "isPremium": false,
       "id": 44,
-
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -12279,7 +12235,7 @@
             "date_to": "DEC 8, 22 ",
             "category": "OLX Auto(Cars)",
             "category_type": "Cars",
-            "car_name": "Porsche Mercielago",
+            "car_name": "Honade City",
             "car_brand": "Honda",
             "car_varient": "Cargo Van",
             "year_buy": 2005,
@@ -12291,8 +12247,8 @@
             "description": "Iam willing to sell my lovely car due to financial issues want a buyer fast giving amazing offer for first comer.",
             "set_price": 136900,
             "car_images": {
-              "img1": "https://www.seekpng.com/png/full/56-569744_classic-car-3-svg-transparent-library-vintage-car.png",
-              "img2": "https://media.istockphoto.com/vectors/black-because-xix-vector-id165064117?b=1&k=20&m=165064117&s=612x612&w=0&h=GPkBEVk_7i7jtqLxdJcGe6hol0EnXeAaFgov91oIFZI="
+              "img1": "https://apollo-singapore.akamaized.net/v1/files/ygf3lapu47r33-IN/image;s=300x600;q=60",
+              "img2": "https://apollo-singapore.akamaized.net/v1/files/m0yxlualyojv3-IN/image;s=780x0;q=60"
             },
             "ads_location": {
               "state": "U.P.",
@@ -12520,7 +12476,6 @@
       "login": false,
       "isPremium": false,
       "id": 45,
-
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -12541,7 +12496,7 @@
             "date_to": "DEC 8, 22 ",
             "category": "OLX Auto(Cars)",
             "category_type": "Cars",
-            "car_name": "Dodge Silverado",
+            "car_name": "Honade City",
             "car_brand": "Honda",
             "car_varient": "Crew Cab Pickup",
             "year_buy": 2020,
@@ -12553,9 +12508,9 @@
             "description": "Purchased this car on mu birthday but now buying new one bored with this one if you are intrested to buy contact soon cover and interior will be free.",
             "set_price": 195100,
             "car_images": {
-              "img1": "https://www.renderhub.com/markos3d/srt-hellcat-dodge-challenger-2021/srt-hellcat-dodge-challenger-2021-08.jpg",
-              "img2": "https://www.renderhub.com/markos3d/srt-hellcat-dodge-challenger-2021/srt-hellcat-dodge-challenger-2021-01.jpg",
-              "img3": "https://www.renderhub.com/markos3d/srt-hellcat-dodge-challenger-2021/srt-hellcat-dodge-challenger-2021-07.jpg"
+              "img1": "https://apollo-singapore.akamaized.net/v1/files/qkzbfbsobkmp-IN/image;s=300x600;q=60",
+              "img2": "https://in.fcgapi.com/image/olxautos-prd-inspection-images-ap-southeast-1/4bc6059e-f920-4428-8920-ef6568a6a457/10123/850/478?watermark=false&country=in&cache=true",
+              "img3": "https://in.fcgapi.com/image/olxautos-prd-inspection-images-ap-southeast-1/4bc6059e-f920-4428-8920-ef6568a6a457/10107/850/478?watermark=false&country=in&cache=true"
             },
             "ads_location": {
               "state": "U.P.",
@@ -12781,7 +12736,6 @@
       "login": false,
       "isPremium": false,
       "id": 46,
-
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -12802,7 +12756,7 @@
             "date_to": "DEC 8, 22 ",
             "category": "OLX Auto(Cars)",
             "category_type": "Cars",
-            "car_name": "Mercedes Benz Mercielago",
+            "car_name": "Honade City",
             "car_brand": "Honda",
             "car_varient": "Minivan",
             "year_buy": 2007,
@@ -12814,9 +12768,9 @@
             "description": "Amazing car with good experience of driving not too old with good condition contact me fast for best offer",
             "set_price": 869400,
             "car_images": {
-              "img1": "https://static.vecteezy.com/system/resources/thumbnails/008/278/157/small/perspective-view-car-illustration-for-conceptual-design-free-vector.jpg",
-              "img2": "https://thumbs.dreamstime.com/b/sports-car-238733268.jpg",
-              "img3": "https://img.freepik.com/premium-vector/car-vector-illustration-conceptual-design_85054-173.jpg?w=360"
+              "img1": "https://apollo-singapore.akamaized.net/v1/files/n0g6grfj2r9e2-IN/image;s=300x600;q=60",
+              "img2": "https://apollo-singapore.akamaized.net/v1/files/wtfex9lwd9hw-IN/image;s=780x0;q=60",
+              "img3": "https://apollo-singapore.akamaized.net/v1/files/k6xrthnpg09g2-IN/image;s=780x0;q=60"
             },
             "ads_location": {
               "state": "Delhi",
@@ -13075,7 +13029,6 @@
       "login": false,
       "isPremium": false,
       "id": 47,
-
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -13096,7 +13049,7 @@
             "date_to": "DEC 8, 22 ",
             "category": "OLX Auto(Cars)",
             "category_type": "Cars",
-            "car_name": "BMW LeBaron",
+            "car_name": "Honade City",
             "car_brand": "Honda",
             "car_varient": "Coupe",
             "year_buy": 2007,
@@ -13108,8 +13061,8 @@
             "description": "Purchased this car on mu birthday but now buying new one bored with this one if you are intrested to buy contact soon cover and interior will be free.",
             "set_price": 203300,
             "car_images": {
-              "img1": "https://cdn5.vectorstock.com/i/1000x1000/49/99/modern-generic-car-front-view-vector-18244999.jpg",
-              "img2": "https://st3.depositphotos.com/4559725/17918/v/1600/depositphotos_179189572-stock-illustration-realistic-car-sedan-back-view.jpg"
+              "img1": "https://apollo-singapore.akamaized.net/v1/files/eqm34zsldajv3-IN/image;s=300x600;q=60",
+              "img2": "https://in.fcgapi.com/image/olxautos-prd-inspection-images-ap-southeast-1/08237ba3-aea9-4c21-b8cd-0f2ee2ec7526/frontPhoto/850/478?watermark=false&country=in&cache=true"
             },
             "ads_location": {
               "state": "U.P.",
@@ -13385,7 +13338,6 @@
       "login": false,
       "isPremium": false,
       "id": 48,
-
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -13406,7 +13358,7 @@
             "date_to": "DEC 8, 22 ",
             "category": "OLX Auto(Cars)",
             "category_type": "Cars",
-            "car_name": "Cadillac Durango",
+            "car_name": "Honda Accord",
             "car_brand": "Honda",
             "car_varient": "Wagon",
             "year_buy": 1996,
@@ -13418,9 +13370,9 @@
             "description": "Amazing car with good experience of driving not too old with good condition contact me fast for best offer",
             "set_price": 962700,
             "car_images": {
-              "img1": "https://static.vecteezy.com/system/resources/thumbnails/008/278/157/small/perspective-view-car-illustration-for-conceptual-design-free-vector.jpg",
-              "img2": "https://thumbs.dreamstime.com/b/sports-car-238733268.jpg",
-              "img3": "https://img.freepik.com/premium-vector/car-vector-illustration-conceptual-design_85054-173.jpg?w=360"
+              "img1": "https://apollo-singapore.akamaized.net/v1/files/smruj94ys81k-IN/image;s=300x600;q=60",
+              "img2": "https://apollo-singapore.akamaized.net/v1/files/q8558gaf4hfe1-IN/image;s=780x0;q=60",
+              "img3": "https://apollo-singapore.akamaized.net/v1/files/0o9j9n1wvvqv2-IN/image;s=780x0;q=60"
             },
             "ads_location": {
               "state": "U.P.",
@@ -13663,7 +13615,6 @@
       "login": false,
       "isPremium": false,
       "id": 49,
-
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -13684,7 +13635,7 @@
             "date_to": "DEC 8, 22 ",
             "category": "OLX Auto(Cars)",
             "category_type": "Cars",
-            "car_name": "Jaguar 911",
+            "car_name": "Honda Accord",
             "car_brand": "Honda",
             "car_varient": "Cargo Van",
             "year_buy": 2005,
@@ -13696,9 +13647,9 @@
             "description": "Amazing car with good experience of driving not too old with good condition contact me fast for best offer",
             "set_price": 891500,
             "car_images": {
-              "img1": "https://images.vexels.com/media/users/3/169874/raw/ec441a7efeb5ffa0e612d030bb3e28d7-car-side-view-design.jpg",
-              "img2": "https://img.freepik.com/premium-vector/front-view-orange-off-road-truck-suv-pickup-jeep-car-flat-vector-illustration_648968-46.jpg?w=2000",
-              "img3": "https://img.freepik.com/premium-vector/red-jeep-car-illustration_173474-66.jpg?w=2000"
+              "img1": "https://apollo-singapore.akamaized.net/v1/files/g4jt7lgmay7m1-IN/image;s=300x600;q=60",
+              "img2": "https://apollo-singapore.akamaized.net/v1/files/rgy6usarlk9k1-IN/image;s=780x0;q=60",
+              "img3": "https://apollo-singapore.akamaized.net/v1/files/0xqw7v5297ba-IN/image;s=780x0;q=60"
             },
             "ads_location": {
               "state": "Rajasthan",
@@ -13978,18 +13929,26 @@
           }
         ]
       }
-    },
-    {
-      "user_id": "f9ae8344-f202-41e0-b350-c428e1dcb7fe",
-      "img_url": "https://png.pngtree.com/png-clipart/20190924/original/pngtree-human-avatar-free-vector-png-image_4825373.jpg",
-      "full_name": "Doug Deckow",
-      "email_id": "Doug.Deckow57@hotmail.com",
-      "followers": 173,
-      "following": 44,
-      "login": false,
-      "isPremium": false,
-      "id": 50,
+    }
+  ],
 
+
+
+
+
+  "data2":[
+    {
+      "id": 1,
+      "user_id": "bbdd236b-5dc5-4a85-99dc-2019ee7f1b17",
+      "img_url": "https://png.pngtree.com/png-clipart/20190924/original/pngtree-human-avatar-free-vector-png-image_4825373.jpg",
+      "full_name": "Katrina Mills",
+      "email_id": "Katrina_Mills@hotmail.com",
+      "followers": 338,
+      "following": 88,
+      "mobile":8359900115,
+      "password":123,
+      "login": false,
+      "isPremium": true,
       "favourite_ads": [
         {
           "fav_user_id": "",
@@ -14001,260 +13960,650 @@
           "msg_user_id": ""
         }
       ],
-      "published_ads": {
-        "cars": [
-          {
-            "ad_id": "160993ad-0e3f-4350-8944-b36200055d61",
-            "ad_active": true,
-            "date_from": "NOV 9, 22",
-            "date_to": "DEC 8, 22 ",
-            "category": "OLX Auto(Cars)",
-            "category_type": "Cars",
-            "car_name": "Porsche 911",
-            "car_brand": "Maruti Suzuki",
-            "car_varient": "Convertible",
-            "year_buy": 2001,
-            "fuel": "Diesel",
-            "transmission": "Automatic",
-            "km_driven": 18732,
-            "no_of_oweners": 2,
-            "key_feature": "tempor ipsum",
-            "description": "Want to sell this car, with lot of amazing feature buyer can inspect first then buy call me aor msg me urgent to sell so best deal available.",
-            "set_price": 203900,
-            "car_images": {
-              "img1": "https://images.vexels.com/media/users/3/169874/raw/ec441a7efeb5ffa0e612d030bb3e28d7-car-side-view-design.jpg",
-              "img2": "https://img.freepik.com/premium-vector/front-view-orange-off-road-truck-suv-pickup-jeep-car-flat-vector-illustration_648968-46.jpg?w=2000",
-              "img3": "https://img.freepik.com/premium-vector/red-jeep-car-illustration_173474-66.jpg?w=2000"
-            },
-            "ads_location": {
-              "state": "U.P.",
-              "city": "Jaunpur",
-              "neighbour": "Railway station"
-            },
-            "likes": 29,
-            "views": 15,
-            "inspected": false
+      "published_ads": [
+        {
+          "ad_id": "b0d96509-e7b7-4e83-a2b5-2e99da32c0dd",
+          "ad_active": "active",
+          "product_name": "Skoda Fabia",
+          "date_from": "JUN 5, 22",
+          "date_to": "DEC 8, 22 ",
+          "category": "OLX Auto(Cars)",
+          "category_type": "Cars",
+          "car_name": "Skoda Fabia",
+          "car_brand": "Skoda",
+          "car_varient": "Passenger Van",
+          "year_buy": 2001,
+          "fuel": "CNG",
+          "transmission": "Manual",
+          "km_driven": 89484,
+          "no_of_oweners": 3,
+          "key_feature": "veniam nostrud est",
+          "description": "Iam willing to sell my lovely car due to financial issues want a buyer fast giving amazing offer for first comer.",
+          "set_price": 918000,
+          "car_images": {
+            "img1": "https://apollo-singapore.akamaized.net/v1/files/m8vuc9zh3zzb2-IN/image;s=300x600;q=60",
+            "img2": "https://in.fcgapi.com/image/olxautos-prd-inspection-images-ap-southeast-1/21a4a6bf-277a-424c-b02b-e4e153ef661d/209361/850/478?watermark=false&country=in&cache=true",
+            "img3": "https://apollo-singapore.akamaized.net/v1/files/ow03morzl3mu3-IN/image;s=400x0"
           },
-          {
-            "ad_id": "865f53db-b719-402a-9762-bc68601f560e",
-            "ad_active": true,
-            "date_from": "NOV 9, 22",
-            "date_to": "DEC 8, 22 ",
-            "category": "OLX Auto(Cars)",
-            "category_type": "Cars",
-            "car_name": "Aston Martin Mercielago",
-            "car_brand": "XC90",
-            "car_varient": "Hatchback",
-            "year_buy": 2016,
-            "fuel": "Diesel",
-            "transmission": "Automatic",
-            "km_driven": 89116,
-            "no_of_oweners": 3,
-            "key_feature": "eu reprehenderit ut cillum",
-            "description": "Purchased this car on mu birthday but now buying new one bored with this one if you are intrested to buy contact soon cover and interior will be free.",
-            "set_price": 891900,
-            "car_images": {
-              "img1": "https://static.vecteezy.com/system/resources/thumbnails/008/278/157/small/perspective-view-car-illustration-for-conceptual-design-free-vector.jpg",
-              "img2": "https://thumbs.dreamstime.com/b/sports-car-238733268.jpg",
-              "img3": "https://img.freepik.com/premium-vector/car-vector-illustration-conceptual-design_85054-173.jpg?w=360"
-            },
-            "ads_location": {
-              "state": "U.P.",
-              "city": "Lucknow",
-              "neighbour": "Gomti nagar"
-            },
-            "likes": 31,
-            "views": 35,
-            "inspected": true
+          "ads_location": {
+            "state": "M.P.",
+            "city": "Indore",
+            "neighbour": "Railway station"
           },
-          {
-            "ad_id": "7cdae10d-2b52-46c7-aff0-17909e17ec5d",
-            "ad_active": true,
-            "date_from": "NOV 9, 22",
-            "date_to": "DEC 8, 22 ",
-            "category": "OLX Auto(Cars)",
-            "category_type": "Cars",
-            "car_name": "Kia Land Cruiser",
-            "car_brand": "Cruze",
-            "car_varient": "Cargo Van",
-            "year_buy": 1999,
-            "fuel": "Electric",
-            "transmission": "Automatic",
-            "km_driven": 21412,
-            "no_of_oweners": 3,
-            "key_feature": "Lorem magna mollit aliqua",
-            "description": "Purchased this car on mu birthday but now buying new one bored with this one if you are intrested to buy contact soon cover and interior will be free.",
-            "set_price": 267000,
-            "car_images": {
-              "img1": "https://www.seekpng.com/png/full/56-569744_classic-car-3-svg-transparent-library-vintage-car.png",
-              "img2": "https://media.istockphoto.com/vectors/black-because-xix-vector-id165064117?b=1&k=20&m=165064117&s=612x612&w=0&h=GPkBEVk_7i7jtqLxdJcGe6hol0EnXeAaFgov91oIFZI="
-            },
-            "ads_location": {
-              "state": "Delhi",
-              "city": "Delhi",
-              "neighbour": "Railway station"
-            },
-            "likes": 22,
-            "views": 49,
-            "inspected": false
+          "likes": 33,
+          "views": 45,
+          "inspected": true
+        },
+        {
+          "ad_id": "380fcb56-365d-4dee-9472-c86b82408635",
+          "ad_active": "inactive",
+          "product_name": "Bugatti Model S",
+          "date_from": "JUN 5, 22",
+          "date_to": "DEC 8, 22 ",
+          "category": "OLX Auto(Cars)",
+          "category_type": "Cars",
+          "car_name": "Bugatti Model S",
+          "car_brand": "A4",
+          "car_varient": "Convertible",
+          "year_buy": 2011,
+          "fuel": "Petrol",
+          "transmission": "Automatic",
+          "km_driven": 55439,
+          "no_of_oweners": 1,
+          "key_feature": "sunt aute est",
+          "description": "Amazing car with good experience of driving not too old with good condition contact me fast for best offer",
+          "set_price": 354700,
+          "car_images": {
+            "img1": "https://www.renderhub.com/markos3d/srt-hellcat-dodge-challenger-2021/srt-hellcat-dodge-challenger-2021-08.jpg",
+            "img2": "https://www.renderhub.com/markos3d/srt-hellcat-dodge-challenger-2021/srt-hellcat-dodge-challenger-2021-01.jpg",
+            "img3": "https://www.renderhub.com/markos3d/srt-hellcat-dodge-challenger-2021/srt-hellcat-dodge-challenger-2021-07.jpg"
           },
-          {
-            "ad_id": "09122b3b-01e4-4a9e-871a-75a4b54c84d3",
-            "ad_active": true,
-            "date_from": "NOV 9, 22",
-            "date_to": "DEC 8, 22 ",
-            "category": "OLX Auto(Cars)",
-            "category_type": "Cars",
-            "car_name": "Ford Model S",
-            "car_brand": "Expedition",
-            "car_varient": "Crew Cab Pickup",
-            "year_buy": 2008,
-            "fuel": "Electric",
-            "transmission": "Automatic",
-            "km_driven": 50023,
-            "no_of_oweners": 3,
-            "key_feature": "culpa nulla deserunt est",
-            "description": "Want to sell this car, with lot of amazing feature buyer can inspect first then buy call me aor msg me urgent to sell so best deal available.",
-            "set_price": 493200,
-            "car_images": {
-              "img1": "https://static.vecteezy.com/system/resources/thumbnails/008/278/157/small/perspective-view-car-illustration-for-conceptual-design-free-vector.jpg",
-              "img2": "https://thumbs.dreamstime.com/b/sports-car-238733268.jpg",
-              "img3": "https://img.freepik.com/premium-vector/car-vector-illustration-conceptual-design_85054-173.jpg?w=360"
-            },
-            "ads_location": {
-              "state": "Delhi",
-              "city": "Delhi",
-              "neighbour": "Railway station"
-            },
-            "likes": 14,
-            "views": 42,
-            "inspected": true
+          "ads_location": {
+            "state": "Rajasthan",
+            "city": "Jaipur",
+            "neighbour": "Railway station"
+          },
+          "likes": 20,
+          "views": 17,
+          "inspected": true
+        },
+        {
+          "ad_id": "56acebe2-11d5-4f4a-b51b-f98af4ff9a15",
+          "ad_active": "inactive",
+          "product_name": "Bentley LeBaron",
+          "date_from": "NOV 9, 22",
+          "date_to": "DEC 8, 22 ",
+          "category": "OLX Auto(Cars)",
+          "category_type": "Cars",
+          "car_name": "Bentley LeBaron",
+          "car_brand": "Wrangler",
+          "car_varient": "Extended Cab Pickup",
+          "year_buy": 2003,
+          "fuel": "CNG",
+          "transmission": "Manual",
+          "km_driven": 30579,
+          "no_of_oweners": 1,
+          "key_feature": "exercitation proident officia",
+          "description": "Want to sell this car, with lot of amazing feature buyer can inspect first then buy call me aor msg me urgent to sell so best deal available.",
+          "set_price": 568200,
+          "car_images": {
+            "img1": "https://www.renderhub.com/markos3d/srt-hellcat-dodge-challenger-2021/srt-hellcat-dodge-challenger-2021-08.jpg",
+            "img2": "https://www.renderhub.com/markos3d/srt-hellcat-dodge-challenger-2021/srt-hellcat-dodge-challenger-2021-01.jpg",
+            "img3": "https://www.renderhub.com/markos3d/srt-hellcat-dodge-challenger-2021/srt-hellcat-dodge-challenger-2021-07.jpg"
+          },
+          "ads_location": {
+            "state": "M.P.",
+            "city": "Bhopal",
+            "neighbour": "Railway station"
+          },
+          "likes": 13,
+          "views": 35,
+          "inspected": false
+        },
+        {
+          "ad_id": "9b9dad2f-05f9-436c-aa8a-746c97d21d07",
+          "ad_active": "active",
+          "product_name": "Kia XTS",
+          "date_from": "NOV 9, 22",
+          "date_to": "DEC 8, 22 ",
+          "category": "OLX Auto(Cars)",
+          "category_type": "Cars",
+          "car_name": "Kia XTS",
+          "car_brand": "Fortwo",
+          "car_varient": "Minivan",
+          "year_buy": 2008,
+          "fuel": "CNG",
+          "transmission": "Automatic",
+          "km_driven": 21763,
+          "no_of_oweners": 3,
+          "key_feature": "labore non cillum",
+          "description": "Want to sell this car, with lot of amazing feature buyer can inspect first then buy call me aor msg me urgent to sell so best deal available.",
+          "set_price": 470500,
+          "car_images": {
+            "img1": "https://imgd.aeplcdn.com/0x0/n/cw/ec/100121/i20-n-line-exterior-right-front-three-quarter-12.jpeg?isig=0",
+            "img2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPWHQX9wdXc_cRhBFsOT4SKoqI36Rm2WW00G10Lwx2cqfyCd3pEbs9Md3Phmpglqhw6l8&usqp=CAU",
+            "img3": "https://english.cdn.zeenews.com/sites/default/files/styles/zm_700x400/public/2021/09/02/966881-i20nline.jpg"
+          },
+          "ads_location": {
+            "state": "U.P.",
+            "city": "Jaunpur",
+            "neighbour": "Railway station"
+          },
+          "likes": 30,
+          "views": 21,
+          "inspected": false
+        },
+        {
+          "ad_id": "1dd53afe-d9d5-4bfa-8257-f9b5f0ec5f23",
+          "ad_active": "active",
+          "product_name": "Lamborghini Alpine",
+          "date_from": "NOV 9, 22",
+          "date_to": "DEC 8, 22 ",
+          "category": "OLX Auto(Cars)",
+          "category_type": "Cars",
+          "car_name": "Lamborghini Alpine",
+          "car_brand": "Cruze",
+          "car_varient": "Passenger Van",
+          "year_buy": 2009,
+          "fuel": "Diesel",
+          "transmission": "Manual",
+          "km_driven": 65785,
+          "no_of_oweners": 2,
+          "key_feature": "sunt non",
+          "description": "Purchased this car on mu birthday but now buying new one bored with this one if you are intrested to buy contact soon cover and interior will be free.",
+          "set_price": 421600,
+          "car_images": {
+            "img1": "https://www.renderhub.com/markos3d/srt-hellcat-dodge-challenger-2021/srt-hellcat-dodge-challenger-2021-08.jpg",
+            "img2": "https://www.renderhub.com/markos3d/srt-hellcat-dodge-challenger-2021/srt-hellcat-dodge-challenger-2021-01.jpg",
+            "img3": "https://www.renderhub.com/markos3d/srt-hellcat-dodge-challenger-2021/srt-hellcat-dodge-challenger-2021-07.jpg"
+          },
+          "ads_location": {
+            "state": "U.P.",
+            "city": "Lucknow",
+            "neighbour": "Gomti nagar"
+          },
+          "likes": 23,
+          "views": 19,
+          "inspected": false
+        },
+        {
+          "ad_id": "UTIBINB1020",
+          "category": "Books Sports & Hoobies",
+          "category_type": "Books",
+          "ad_active": "active",
+          "product_name": "cupidatat consectetur proident tempor",
+          "ad_title": "cupidatat consectetur proident tempor",
+          "description": "Labore sint fugiat sunt nostrud amet eiusmod esse velit et minim deserunt culpa. Aliquip qui do pariatur sint non.",
+          "set_price": 200,
+          "books_images": {
+            "img1": "https://m.media-amazon.com/images/I/51d+PgAtmUL._SY407_BO1,204,203,200_.jpg",
+            "img2": "https://images-eu.ssl-images-amazon.com/images/I/71YC9m2412L._AC_UL160_SR160,160_.jpg"
+          },
+          "ads_location": {
+            "state": "U.P.",
+            "city": "Jaunpur",
+            "neighbour": "Railway station"
           }
-        ],
-        "books": [
-          {
-            "ad_id": "BKIDINBBNRP",
-            "category": "Books Sports & Hoobies",
-            "category_type": "Books",
-            "ad_title": "duis exercitation magna veniam",
-            "description": "Ex velit aute sint do anim voluptate aliqua reprehenderit excepteur qui. Nulla eiusmod aliquip enim pariatur tempor. Deserunt voluptate nostrud veniam id consequat. Sunt sint incididunt deserunt nisi officia irure laborum qui consequat cupidatat ipsum elit.",
-            "set_price": 750,
-            "books_images": {
-              "img1": "https://images.indianexpress.com/2020/04/books_759.jpg",
-              "img2": "https://static.scientificamerican.com/sciam/cache/file/1DDFE633-2B85-468D-B28D05ADAE7D1AD8_source.jpg?w=590&h=800&D80F3D79-4382-49FA-BE4B4D0C62A5C3ED"
-            },
-            "ads_location": {
-              "state": "M.P.",
-              "city": "Indore",
-              "neighbour": "Railway station"
-            }
+        },
+        {
+          "ad_id": "SBININBB701",
+          "ad_active": "active",
+          "product_name": "eiusmod sit aliqua minim sunt",
+          "category": "Books Sports & Hoobies",
+          "category_type": "Books",
+          "ad_title": "eiusmod sit aliqua minim sunt",
+          "description": "Quis amet veniam minim aliquip elit occaecat anim reprehenderit cillum nostrud. Sit id pariatur consequat nulla cupidatat adipisicing ipsum aliquip in et labore veniam.",
+          "set_price": 400,
+          "books_images": {
+            "img1": "https://images.indianexpress.com/2020/04/books_759.jpg",
+            "img2": "https://static.scientificamerican.com/sciam/cache/file/1DDFE633-2B85-468D-B28D05ADAE7D1AD8_source.jpg?w=590&h=800&D80F3D79-4382-49FA-BE4B4D0C62A5C3ED"
           },
-          {
-            "ad_id": "UBININBBTRR",
-            "category": "Books Sports & Hoobies",
-            "category_type": "Books",
-            "ad_title": "sint exercitation consectetur fugiat sunt reprehenderit nostrud",
-            "description": "Proident est labore officia elit ut ex nostrud in proident ullamco deserunt. Duis sint sunt eu amet eiusmod mollit nisi nostrud.",
-            "set_price": 300,
-            "books_images": {
-              "img1": "https://m.media-amazon.com/images/I/51d+PgAtmUL._SY407_BO1,204,203,200_.jpg",
-              "img2": "https://images-eu.ssl-images-amazon.com/images/I/71YC9m2412L._AC_UL160_SR160,160_.jpg"
-            },
-            "ads_location": {
-              "state": "Karnatak",
-              "city": "Banglore",
-              "neighbour": "Railway station"
-            }
-          },
-          {
-            "ad_id": "IDIBINBBGDY",
-            "category": "Books Sports & Hoobies",
-            "category_type": "Books",
-            "ad_title": "laborum adipisicing pariatur tempor nisi",
-            "description": "Velit do quis mollit eiusmod occaecat pariatur cupidatat fugiat sunt proident. Cupidatat aliquip non labore est ullamco id ex dolor cillum culpa veniam veniam proident sint.",
-            "set_price": 550,
-            "books_images": {
-              "img1": "https://m.media-amazon.com/images/I/51d+PgAtmUL._SY407_BO1,204,203,200_.jpg",
-              "img2": "https://images-eu.ssl-images-amazon.com/images/I/71YC9m2412L._AC_UL160_SR160,160_.jpg"
-            },
-            "ads_location": {
-              "state": "M.P.",
-              "city": "Bhopal",
-              "neighbour": "Railway station"
-            }
-          },
-          {
-            "ad_id": "MAHBINBBNSK",
-            "category": "Books Sports & Hoobies",
-            "category_type": "Books",
-            "ad_title": "adipisicing in eiusmod excepteur esse consectetur",
-            "description": "Deserunt sit reprehenderit veniam ipsum magna qui occaecat minim in sit. Enim adipisicing cillum sit pariatur eu incididunt officia consectetur ullamco labore. Amet laboris dolor ad est quis irure excepteur qui esse consectetur ex velit sint exercitation.",
-            "set_price": 300,
-            "books_images": {
-              "img1": "https://m.media-amazon.com/images/I/51d+PgAtmUL._SY407_BO1,204,203,200_.jpg",
-              "img2": "https://images-eu.ssl-images-amazon.com/images/I/71YC9m2412L._AC_UL160_SR160,160_.jpg"
-            },
-            "ads_location": {
-              "state": "Rajasthan",
-              "city": "Jaipur",
-              "neighbour": "Railway station"
-            }
+          "ads_location": {
+            "state": "U.P.",
+            "city": "Jaunpur",
+            "neighbour": "Railway station"
           }
-        ],
-        "mobile": [
-          {
-            "ad_id": "148o9WBPR18JqjeYRUQRCNm2XvHoydyenn",
-            "category": "Mobiles",
-            "category_type": "Mobile Phones",
-            "ad_title": "OnePlus 9.",
-            "description": "Dolore labore enim mollit aliquip. Ex incididunt proident voluptate eu in proident et culpa sunt amet.",
-            "set_price": 5150,
-            "mobile_images": {
-              "img1": "https://images.hindustantimes.com/img/2021/06/08/1600x900/IMG_5223_1623145084295_1623145098953.jpg",
-              "img2": "https://cms-assets.bajajfinserv.in/is/image/bajajfinance/realme-5g-mobile-in-india?scl=1"
-            },
-            "ads_location": {
-              "state": "Rajasthan",
-              "city": "Jaipur",
-              "neighbour": "Railway station"
-            }
+        },
+        {
+          "ad_id": "SBININBB798",
+          "ad_active": "active",
+          "product_name": "minim est eiusmod cupidatat ad in deserunt",
+          "category": "Books Sports & Hoobies",
+          "category_type": "Books",
+          "ad_title": "minim est eiusmod cupidatat ad in deserunt",
+          "description": "Amet culpa veniam et do ea duis. Est aute do velit nulla aliquip proident deserunt veniam officia elit. Exercitation dolor cillum tempor ad velit laboris labore labore exercitation nulla ut laborum. Deserunt laborum enim culpa consequat laboris.",
+          "set_price": 650,
+          "books_images": {
+            "img1": "https://m.media-amazon.com/images/I/81CxXmRFnBL.jpg",
+            "img2": "https://cdn.shopify.com/s/files/1/0261/7291/5805/products/9781797205151.jpg?v=1635886444"
           },
-          {
-            "ad_id": "1MDADJ8ifDEdHCZmNGdVfFniMShkUQbLta",
-            "category": "Mobiles",
-            "category_type": "Mobile Phones",
-            "ad_title": "OPPO A53",
-            "description": "Deserunt proident ullamco minim sit est consequat ullamco. Culpa ea officia esse aute excepteur exercitation ullamco quis incididunt do dolore qui. Reprehenderit nulla officia adipisicing ex officia anim adipisicing aute ipsum occaecat.",
-            "set_price": 7100,
-            "mobile_images": {
-              "img1": "https://assetscdn1.paytm.com/images/catalog/view_item/849242/1625207102211.png?imwidth=414&impolicy=hq",
-              "img2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTu-fqswy7Fzvlybc83A3UU4hgT0s4z110Fzh_w_qSat48j_-QeMVhL2v4eAd43NE0p0k&usqp=CAU"
-            },
-            "ads_location": {
-              "state": "U.P.",
-              "city": "Jaunpur",
-              "neighbour": "Railway station"
-            }
-          },
-          {
-            "ad_id": "1LCrNaCZaDxKcYabpFpUjTZjWkcSpRgr47",
-            "category": "Mobiles",
-            "category_type": "Mobile Phones",
-            "ad_title": "OnePlus 9.",
-            "description": "Do deserunt dolor proident et labore incididunt est ut. Aliqua aliqua id quis sit pariatur id et commodo consectetur ut commodo amet exercitation. Enim cupidatat adipisicing excepteur ipsum. Ut adipisicing ipsum ex mollit enim officia elit quis anim occaecat.",
-            "set_price": 15450,
-            "mobile_images": {
-              "img1": "https://www.suprememobiles.in/public/vendor/conceps-admin/assets/uploads/category/anzh61601356819/mobiles.jpg",
-              "img2": "https://photo-cdn.urdupoint.com/show_img_new/mobile/mobile_images_new/160x220/1618484949_2600.jpg._2"
-            },
-            "ads_location": {
-              "state": "M.P.",
-              "city": "Indore",
-              "neighbour": "Railway station"
-            }
+          "ads_location": {
+            "state": "M.P.",
+            "city": "Indore",
+            "neighbour": "Railway station"
           }
-        ]
-      }
+        },
+        {
+          "ad_active": "active",
+          "product_name": "irure voluptate quis anim",
+          "ad_id": "AXISINBB067",
+          "category": "Books Sports & Hoobies",
+          "category_type": "Books",
+          "ad_title": "irure voluptate quis anim",
+          "description": "Fugiat enim aliquip commodo laborum irure tempor aute do nulla tempor sunt. Nisi sit do nulla adipisicing cupidatat dolore elit ipsum proident eiusmod veniam elit. Nisi irure et laboris ea id. Culpa mollit minim quis ullamco sit veniam aliqua deserunt nulla voluptate.",
+          "set_price": 550,
+          "books_images": {
+            "img1": "https://m.media-amazon.com/images/I/81CxXmRFnBL.jpg",
+            "img2": "https://cdn.shopify.com/s/files/1/0261/7291/5805/products/9781797205151.jpg?v=1635886444"
+          },
+          "ads_location": {
+            "state": "M.P.",
+            "city": "Indore",
+            "neighbour": "Railway station"
+          }
+        },
+        {
+          "ad_active": "active",
+          "product_name": "Google Pixel 6A.",
+          "ad_id": "1FSfyxTv5NHe5jgchbWpWu1UGQ4mwLUDAi",
+          "category": "Mobiles",
+          "category_type": "Mobile Phones",
+          "ad_title": "Google Pixel 6A.",
+          "description": "Est adipisicing dolor consectetur sunt eiusmod. Do sint qui cillum proident labore incididunt officia ea Lorem ea.",
+          "set_price": 5250,
+          "mobile_images": {
+            "img1": "https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1662441614/Croma%20Assets/Communication/Mobiles/Images/249619_by8njn.png/mxw_640,f_auto",
+            "img2": "https://images.priceoye.pk/samsung-galaxy-a73-pakistan-priceoye-1y28r.jpg"
+          },
+          "ads_location": {
+            "state": "Jharkhand",
+            "city": "Ranchi",
+            "neighbour": "Railway station"
+          }
+        },
+        {
+          "ad_active": "inactive",
+          "product_name": "Google Pixel 6A.",
+          "ad_id": "16aHyKWoU8HhKYG5sCMrE8x4RkWM5Badaw",
+          "category": "Mobiles",
+          "category_type": "Mobile Phones",
+          "ad_title": "Google Pixel 6A.",
+          "description": "Reprehenderit ex esse sunt et sunt eu commodo dolore officia pariatur ullamco non reprehenderit. Ea adipisicing occaecat nostrud est anim excepteur Lorem aliqua ad eu ullamco ipsum laborum est.",
+          "set_price": 5350,
+          "mobile_images": {
+            "img1": "https://images.hindustantimes.com/img/2021/06/08/1600x900/IMG_5223_1623145084295_1623145098953.jpg",
+            "img2": "https://cms-assets.bajajfinserv.in/is/image/bajajfinance/realme-5g-mobile-in-india?scl=1"
+          },
+          "ads_location": {
+            "state": "Jharkhand",
+            "city": "Ranchi",
+            "neighbour": "Railway station"
+          }
+        },
+        {
+          "ad_active": "active",
+          "product_name": "OnePlus 9.",
+          "ad_id": "1NM3ujHcGuCYa9AdSxbkN6iEACrkSMQ4Nz",
+          "category": "Mobiles",
+          "category_type": "Mobile Phones",
+          "ad_title": "OnePlus 9.",
+          "description": "Ad et eu aliquip adipisicing laboris. Tempor consequat do ex enim. Duis est dolore in nostrud aute consectetur aliqua quis tempor ex enim fugiat id velit. Est Lorem Lorem esse sint sint nulla.",
+          "set_price": 9000,
+          "mobile_images": {
+            "img1": "https://images.hindustantimes.com/img/2021/06/08/1600x900/IMG_5223_1623145084295_1623145098953.jpg",
+            "img2": "https://cms-assets.bajajfinserv.in/is/image/bajajfinance/realme-5g-mobile-in-india?scl=1"
+          },
+          "ads_location": {
+            "state": "Karnatak",
+            "city": "Banglore",
+            "neighbour": "Railway station"
+          }
+        }
+      ]
+    },
+    {
+      "user_id": "81e0dcca-2366-4a34-9ba2-166a85eb038a",
+      "img_url": "https://png.pngtree.com/png-clipart/20190924/original/pngtree-human-avatar-free-vector-png-image_4825373.jpg",
+      "full_name": "Genevieve Luettgen",
+      "email_id": "Genevieve29@gmail.com",
+      "followers": 391,
+      "following": 62,
+      "login": false,
+      "isPremium": true,
+      "id": 2,
+      "favourite_ads": [
+        {
+          "fav_user_id": "",
+          "fav_ad_id": ""
+        }
+      ],
+      "messaged_to": [
+        {
+          "msg_user_id": ""
+        }
+      ],
+      "published_ads": [
+        {
+          "ad_active": "pending",
+          "product_name": "Skoda Fabia",
+          "ad_id": "e2b5ed88-5cda-4573-bb7c-0297436b22f2",
+          "date_from": "NOV 9, 22",
+          "date_to": "DEC 8, 22 ",
+          "category": "OLX Auto(Cars)",
+          "category_type": "Cars",
+          "car_name": "Skoda Fabia",
+          "car_brand": "Skoda",
+          "car_varient": "Sedan",
+          "year_buy": 2013,
+          "fuel": "Electric",
+          "transmission": "Manual",
+          "km_driven": 54716,
+          "no_of_oweners": 2,
+          "key_feature": "dolor mollit",
+          "description": "Want to sell this car, with lot of amazing feature buyer can inspect first then buy call me aor msg me urgent to sell so best deal available.",
+          "set_price": 479500,
+          "car_images": {
+            "img1": "https://apollo-singapore.akamaized.net/v1/files/v1pux3leur2k2-IN/image;s=300x600;q=60",
+            "img2": "https://apollo-singapore.akamaized.net/v1/files/0fv0zlkbdf042-IN/image;s=780x0;q=60",
+            "img3": "https://apollo-singapore.akamaized.net/v1/files/mu77gshne33w-IN/image;s=780x0;q=60",
+            "img4": "https://apollo-singapore.akamaized.net/v1/files/qjy4u0s9h6q32-IN/image;s=780x0;q=60"
+          },
+          "ads_location": {
+            "state": "Delhi",
+            "city": "Delhi",
+            "neighbour": "Railway station"
+          },
+          "likes": 3,
+          "views": 22,
+          "inspected": true
+        },
+        {
+          "ad_id": "7e7a19f7-99c9-491c-bf07-17b9a0bfe184",
+          "ad_active": "pending",
+          "product_name": "Lamborghini Prius",
+          "date_from": "NOV 9, 22",
+          "date_to": "DEC 8, 22 ",
+          "category": "OLX Auto(Cars)",
+          "category_type": "Cars",
+          "car_name": "Lamborghini Prius",
+          "car_brand": "ATS",
+          "car_varient": "Sedan",
+          "year_buy": 2005,
+          "fuel": "Diesel",
+          "transmission": "Manual",
+          "km_driven": 59813,
+          "no_of_oweners": 2,
+          "key_feature": "ea nostrud ea",
+          "description": "Purchased this car on mu birthday but now buying new one bored with this one if you are intrested to buy contact soon cover and interior will be free.",
+          "set_price": 481700,
+          "car_images": {
+            "img1": "https://images.vexels.com/media/users/3/169874/raw/ec441a7efeb5ffa0e612d030bb3e28d7-car-side-view-design.jpg",
+            "img2": "https://img.freepik.com/premium-vector/front-view-orange-off-road-truck-suv-pickup-jeep-car-flat-vector-illustration_648968-46.jpg?w=2000",
+            "img3": "https://img.freepik.com/premium-vector/red-jeep-car-illustration_173474-66.jpg?w=2000"
+          },
+          "ads_location": {
+            "state": "Delhi",
+            "city": "Delhi",
+            "neighbour": "Railway station"
+          },
+          "likes": 3,
+          "views": 5,
+          "inspected": true
+        },
+        {
+          "ad_id": "9ef30be1-8f73-4686-b93e-fd633ec891c1",
+          "ad_active": "pending",
+          "product_name": "Volvo Wrangler",
+          "date_from": "NOV 9, 22",
+          "date_to": "DEC 8, 22 ",
+          "category": "OLX Auto(Cars)",
+          "category_type": "Cars",
+          "car_name": "Volvo Wrangler",
+          "car_brand": "Civic",
+          "car_varient": "Extended Cab Pickup",
+          "year_buy": 2018,
+          "fuel": "CNG",
+          "transmission": "Automatic",
+          "km_driven": 18677,
+          "no_of_oweners": 3,
+          "key_feature": "ea excepteur",
+          "description": "Iam willing to sell my lovely car due to financial issues want a buyer fast giving amazing offer for first comer.",
+          "set_price": 866800,
+          "car_images": {
+            "img1": "https://images.vexels.com/media/users/3/169874/raw/ec441a7efeb5ffa0e612d030bb3e28d7-car-side-view-design.jpg",
+            "img2": "https://img.freepik.com/premium-vector/front-view-orange-off-road-truck-suv-pickup-jeep-car-flat-vector-illustration_648968-46.jpg?w=2000",
+            "img3": "https://img.freepik.com/premium-vector/red-jeep-car-illustration_173474-66.jpg?w=2000"
+          },
+          "ads_location": {
+            "state": "M.P.",
+            "city": "Bhopal",
+            "neighbour": "Railway station"
+          },
+          "likes": 3,
+          "views": 28,
+          "inspected": true
+        },
+        {
+          "ad_id": "1ad104cb-4a6b-4b2b-8b39-b9b3ea8fb32b",
+          "ad_active": "moderated",
+          "product_name": "Volkswagen A8",
+          "date_from": "NOV 9, 22",
+          "date_to": "DEC 8, 22 ",
+          "category": "OLX Auto(Cars)",
+          "category_type": "Cars",
+          "car_name": "Volkswagen A8",
+          "car_brand": "Charger",
+          "car_varient": "Extended Cab Pickup",
+          "year_buy": 2010,
+          "fuel": "Diesel",
+          "transmission": "Manual",
+          "km_driven": 58837,
+          "no_of_oweners": 3,
+          "key_feature": "enim id sint",
+          "description": "Purchased this car on mu birthday but now buying new one bored with this one if you are intrested to buy contact soon cover and interior will be free.",
+          "set_price": 559300,
+          "car_images": {
+            "img1": "https://images.vexels.com/media/users/3/169874/raw/ec441a7efeb5ffa0e612d030bb3e28d7-car-side-view-design.jpg",
+            "img2": "https://img.freepik.com/premium-vector/front-view-orange-off-road-truck-suv-pickup-jeep-car-flat-vector-illustration_648968-46.jpg?w=2000",
+            "img3": "https://img.freepik.com/premium-vector/red-jeep-car-illustration_173474-66.jpg?w=2000"
+          },
+          "ads_location": {
+            "state": "U.P.",
+            "city": "Jaunpur",
+            "neighbour": "Railway station"
+          },
+          "likes": 5,
+          "views": 24,
+          "inspected": true
+        },
+        {
+          "ad_id": "baf9c303-87e8-4997-af49-cfbdc65e8036",
+          "ad_active": "active",
+          "product_name": "Jeep 911",
+          "date_from": "NOV 9, 22",
+          "date_to": "DEC 8, 22 ",
+          "category": "OLX Auto(Cars)",
+          "category_type": "Cars",
+          "car_name": "Jeep 911",
+          "car_brand": "A8",
+          "car_varient": "Coupe",
+          "year_buy": 2020,
+          "fuel": "Diesel",
+          "transmission": "Manual",
+          "km_driven": 49863,
+          "no_of_oweners": 3,
+          "key_feature": "cupidatat sint reprehenderit do",
+          "description": "Want to sell this car, with lot of amazing feature buyer can inspect first then buy call me aor msg me urgent to sell so best deal available.",
+          "set_price": 177700,
+          "car_images": {
+            "img1": "https://images.vexels.com/media/users/3/169874/raw/ec441a7efeb5ffa0e612d030bb3e28d7-car-side-view-design.jpg",
+            "img2": "https://img.freepik.com/premium-vector/front-view-orange-off-road-truck-suv-pickup-jeep-car-flat-vector-illustration_648968-46.jpg?w=2000",
+            "img3": "https://img.freepik.com/premium-vector/red-jeep-car-illustration_173474-66.jpg?w=2000"
+          },
+          "ads_location": {
+            "state": "Delhi",
+            "city": "Delhi",
+            "neighbour": "Railway station"
+          },
+          "likes": 25,
+          "views": 42,
+          "inspected": false
+        },
+        {
+          "ad_id": "SBININBB762",
+          "ad_active": "active",
+          "product_name": "nisi eu nisi in in Lorem",
+          "category": "Books Sports & Hoobies",
+          "category_type": "Books",
+          "ad_title": "nisi eu nisi in in Lorem",
+          "description": "Voluptate nulla et aute dolore fugiat adipisicing nisi dolore occaecat. Quis ea sunt enim cillum excepteur eiusmod tempor culpa deserunt. Ad ad exercitation non laboris labore sunt irure eiusmod pariatur proident voluptate.",
+          "set_price": 150,
+          "books_images": {
+            "img1": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkCC0LDYjbhiMtO9xW9YpxBI96ucnxKaKD69wrzltqisCdqG7GNFGjEbN4KfAmvvilQgU&usqp=CAU",
+            "img2": "https://images-na.ssl-images-amazon.com/images/I/916xd9oJssL._AC_UL600_SR600,600_.jpg"
+          },
+          "ads_location": {
+            "state": "U.P.",
+            "city": "Lucknow",
+            "neighbour": "Gomti nagar"
+          }
+        },
+        {
+          "ad_id": "IBKLINBBHYD",
+          "category": "Books Sports & Hoobies",
+          "ad_active": "active",
+          "product_name": "Lorem culpa enim eu nostrud",
+          "category_type": "Books",
+          "ad_title": "Lorem culpa enim eu nostrud",
+          "description": "Minim excepteur mollit aliqua proident cillum id adipisicing cupidatat culpa qui. Est aliquip in est minim sit commodo excepteur reprehenderit consectetur cillum consequat voluptate. Ullamco quis cupidatat commodo non non. Esse ea fugiat dolor labore nisi deserunt.",
+          "set_price": 650,
+          "books_images": {
+            "img1": "https://m.media-amazon.com/images/I/81CxXmRFnBL.jpg",
+            "img2": "https://cdn.shopify.com/s/files/1/0261/7291/5805/products/9781797205151.jpg?v=1635886444"
+          },
+          "ads_location": {
+            "state": "U.P.",
+            "city": "Jaunpur",
+            "neighbour": "Railway station"
+          }
+        },
+        {
+          "ad_id": "SBININBB843",
+          "ad_active": "active",
+          "product_name": "ea aute deserunt laboris anim culpa proident",
+          "category": "Books Sports & Hoobies",
+          "category_type": "Books",
+          "ad_title": "ea aute deserunt laboris anim culpa proident",
+          "description": "Fugiat anim ipsum qui amet mollit. Adipisicing minim culpa incididunt reprehenderit aliquip nulla nulla cillum ut ut. Pariatur exercitation voluptate eiusmod ad non excepteur Lorem labore.",
+          "set_price": 600,
+          "books_images": {
+            "img1": "https://images.indianexpress.com/2020/04/books_759.jpg",
+            "img2": "https://static.scientificamerican.com/sciam/cache/file/1DDFE633-2B85-468D-B28D05ADAE7D1AD8_source.jpg?w=590&h=800&D80F3D79-4382-49FA-BE4B4D0C62A5C3ED"
+          },
+          "ads_location": {
+            "state": "U.P.",
+            "city": "Jaunpur",
+            "neighbour": "Railway station"
+          }
+        },
+        {
+          "ad_id": "SBININBBH25",
+          "ad_active": "active",
+          "product_name": "dolore labore esse eu consequat",
+          "category": "Books Sports & Hoobies",
+          "category_type": "Books",
+          "ad_title": "dolore labore esse eu consequat",
+          "description": "Occaecat incididunt deserunt aliquip non voluptate ex. Sit aliqua qui nulla id culpa dolor minim deserunt esse nulla consectetur do fugiat reprehenderit. Nulla cillum elit cillum mollit consequat cillum. Mollit excepteur nisi consectetur deserunt laboris culpa et fugiat ex sit exercitation eiusmod pariatur.",
+          "set_price": 700,
+          "books_images": {
+            "img1": "https://images.indianexpress.com/2020/04/books_759.jpg",
+            "img2": "https://static.scientificamerican.com/sciam/cache/file/1DDFE633-2B85-468D-B28D05ADAE7D1AD8_source.jpg?w=590&h=800&D80F3D79-4382-49FA-BE4B4D0C62A5C3ED"
+          },
+          "ads_location": {
+            "state": "U.P.",
+            "city": "Lucknow",
+            "neighbour": "Gomti nagar"
+          }
+        },
+        {
+          "ad_id": "1Q1ZoJhEzsM8bQp524kuk9zfMEe37iwgCS",
+          "category": "Mobiles",
+          "ad_active": "active",
+          "product_name": "OnePlus 9.",
+          "category_type": "Mobile Phones",
+          "ad_title": "OnePlus 9.",
+          "description": "Voluptate elit veniam eiusmod pariatur. Velit labore qui ex esse adipisicing. Incididunt sunt duis sit consectetur do culpa amet ex eiusmod sit. Duis nulla consequat officia magna sunt non cupidatat labore eu ut adipisicing.",
+          "set_price": 2400,
+          "mobile_images": {
+            "img1": "https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1662443638/Croma%20Assets/Communication/Mobiles/Images/251802_on6al4.png/mxw_640,f_auto",
+            "img2": "https://images-eu.ssl-images-amazon.com/images/I/617MPEZB5mL._AC._SR360,460.jpg"
+          },
+          "ads_location": {
+            "state": "Jharkhand",
+            "city": "Ranchi",
+            "neighbour": "Railway station"
+          }
+        },
+        {
+          "ad_id": "1PWGHXs6YJefL4xxUGhdVksitFJNTHAkJy",
+          "category": "Mobiles",
+          "ad_active": "pending",
+          "product_name": "OnePlus 9.",
+          "category_type": "Mobile Phones",
+          "ad_title": "OnePlus 9.",
+          "description": "Et consequat do incididunt sit qui sunt duis. Sunt in esse deserunt ex consectetur duis. Non eu culpa commodo aliqua aliquip do culpa labore ea adipisicing. Lorem ad est aute in incididunt aliqua aliquip nisi nulla.",
+          "set_price": 16700,
+          "mobile_images": {
+            "img1": "https://assetscdn1.paytm.com/images/catalog/view_item/849242/1625207102211.png?imwidth=414&impolicy=hq",
+            "img2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTu-fqswy7Fzvlybc83A3UU4hgT0s4z110Fzh_w_qSat48j_-QeMVhL2v4eAd43NE0p0k&usqp=CAU"
+          },
+          "ads_location": {
+            "state": "M.P.",
+            "city": "Indore",
+            "neighbour": "Railway station"
+          }
+        },
+        {
+          "ad_id": "1Bf1uBPaeuCJq7HcUV2G8aXmy28kEs4k4o",
+          "category": "Mobiles",
+          "ad_active": "active",
+          "product_name": "iPhone SE 2022 ",
+          "category_type": "Mobile Phones",
+          "ad_title": "iPhone SE 2022 ",
+          "description": "Officia nisi officia ut ea officia officia eiusmod proident consectetur laboris proident. Aliquip adipisicing occaecat occaecat ex qui exercitation nisi. Tempor non Lorem aliquip nulla non duis laborum eiusmod. Veniam laboris pariatur sint fugiat ea elit sit elit cupidatat non ut laboris ea.",
+          "set_price": 9300,
+          "mobile_images": {
+            "img1": "https://in-exstatic-vivofs.vivo.com/gdHFRinHEMrj3yPG/1657192245628/203773b7c46bbb1ba4e7c355fb048842.jpg",
+            "img2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlaFe33lYsZ9ioc1LEldaorbU4Fv6KY1Y3KNhl3GT3EzaOmM9UFDx8k3_OjCAwjq_XdYQ&usqp=CAU"
+          },
+          "ads_location": {
+            "state": "M.P.",
+            "city": "Indore",
+            "neighbour": "Railway station"
+          }
+        },
+        {
+          "ad_id": "1MnfKPAjcLPX46n5HDeCMANXP8Z1ZRrgPZ",
+          "category": "Mobiles",
+          "ad_active": "active",
+          "product_name": "Samsung Galaxy F62",
+          "category_type": "Mobile Phones",
+          "ad_title": "Samsung Galaxy F62",
+          "description": "Nostrud laborum id sunt velit dolore nisi ea laboris nostrud et cillum. Dolor nulla do sit labore occaecat non non eiusmod. Aliquip exercitation magna Lorem laboris pariatur aute qui id enim et quis anim amet. Enim sint veniam deserunt nostrud pariatur eu enim consequat sint.",
+          "set_price": 9750,
+          "mobile_images": {
+            "img1": "https://assetscdn1.paytm.com/images/catalog/view_item/849242/1625207102211.png?imwidth=414&impolicy=hq",
+            "img2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTu-fqswy7Fzvlybc83A3UU4hgT0s4z110Fzh_w_qSat48j_-QeMVhL2v4eAd43NE0p0k&usqp=CAU"
+          },
+          "ads_location": {
+            "state": "U.P.",
+            "city": "Jaunpur",
+            "neighbour": "Railway station"
+          }
+        }
+      ]
     }
+    
   ]
+
 }
