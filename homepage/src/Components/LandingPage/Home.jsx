@@ -14,6 +14,8 @@ import { IoIosArrowUp } from "react-icons/io";
 const Home = () => {
   return (
     <div className="Container">
+      {/* Scroll to top button */}
+
       <ScrollToTop
         smooth="true"
         top={80}

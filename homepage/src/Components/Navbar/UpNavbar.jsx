@@ -38,7 +38,7 @@ import { GiEarthAmerica } from "react-icons/gi";
 import { Link } from "react-router-dom";
 import { useMediaQuery } from "@chakra-ui/react";
 import { HiOutlineLocationMarker } from "react-icons/hi";
-import { MdContentCopy } from "react-icons/md";
+import { MdContentCopy, MdNotificationsNone } from "react-icons/md";
 import { RiChat1Line } from "react-icons/ri";
 // import { IoEarthOutline } from "react-icons/io";
 // import { IoEarthSharp } from "react-icons/io";
@@ -64,6 +64,7 @@ import { ReactNode } from "react";
 //   Stack,
 // } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+import ProfileBtn from "./ProfileBtn";
 
 const UpNavbar = () => {
   const [isLargerThan425] = useMediaQuery("(min-width: 426px)");
@@ -117,7 +118,7 @@ const UpNavbar = () => {
               />
             </InputGroup>
           </Box>
-          <Box width="50%">
+          <Box width="45%">
             <Flex
               border="1px solid #002f34"
               alignItems="center"
@@ -171,11 +172,11 @@ const UpNavbar = () => {
             </Menu>
           </Box>
           {/* <Box cursor="pointer">
-          <RiChat1Line />
-        </Box>
-        <Box cursor="pointer">
-          <MdNotificationsNone />
-        </Box> */}
+            <RiChat1Line />
+          </Box>
+          <Box cursor="pointer">
+            <MdNotificationsNone />
+          </Box> */}
           <Box>
             <Button
               colorScheme="black"
@@ -187,6 +188,7 @@ const UpNavbar = () => {
             >
               Login
             </Button>
+            {/* <ProfileBtn /> */}
           </Box>
         </HStack>
       </Box>
@@ -526,138 +528,3 @@ const UpNavbar = () => {
 };
 
 export default UpNavbar;
-
-// const Links = ['Dashboard', 'Projects', 'Team'];
-
-// const NavLink = ({ children }: { children: ReactNode }) => (
-//   <Link
-//     px={2}
-//     py={1}
-//     rounded={'md'}
-//     _hover={{
-//       textDecoration: 'none',
-//       bg: useColorModeValue('gray.200', 'gray.700'),
-//     }}
-//     href={'#'}>
-//     {children}
-//   </Link>
-// );
-
-// export default function Simple() {
-
-//   );
-// }
-
-{
-  /* <div class="_2H-tJ">
- 
-  </div>
-  <div class="_1Up9t" data-aut-id="menu">
-    <a class="_243cz" rel="nofollow" data-aut-id="btnProfileStartSell">
-      <div class="cfoYk">
-        <svg
-          width="23px"
-          height="23px"
-          viewBox="0 0 1024 1024"
-          data-aut-id="icon"
-          class=""
-          fill-rule="evenodd"
-        >
-          <path
-            class="rui-4K4Y7"
-            d="M670.72 128l42.667 128h182.613l42.667 42.667v554.667l-42.667 42.667h-768l-42.667-42.667v-554.667l42.667-42.667h182.613l42.667-128h317.44zM609.28 213.333h-194.56l-42.667 128h-201.387v469.333h682.667v-469.333h-201.387l-42.667-128zM512 341.333c117.632 0 213.333 95.701 213.333 213.333s-95.701 213.333-213.333 213.333-213.333-95.701-213.333-213.333 95.701-213.333 213.333-213.333zM512 426.667c-70.613 0-128 57.387-128 128s57.387 128 128 128 128-57.387 128-128-57.387-128-128-128z"
-          ></path>
-        </svg>
-      </div>
-      <span>Start selling</span>
-    </a>
-    <a class="_243cz" rel="nofollow" data-aut-id="btnProfileMyAds">
-      <div class="cfoYk">
-        <svg
-          width="23px"
-          height="23px"
-          viewBox="0 0 1024 1024"
-          data-aut-id="icon"
-          class=""
-          fill-rule="evenodd"
-        >
-          <path
-            class="rui-4K4Y7"
-            d="M349.46 85.333h487.619l40.635 40.635v609.524l-40.635 40.635h-487.619l-40.635-40.635v-609.524l40.635-40.635zM390.095 694.857h406.35v-528.254h-406.35v528.254zM146.286 247.873l40.635-40.635 40.635 40.635v609.524h528.254l40.635 40.635-40.635 40.635h-568.889l-40.635-40.635v-650.159zM512 329.143h162.54l40.635 40.635-40.635 40.635h-162.54l-40.635-40.635 40.635-40.635zM512 491.683h81.27l40.635 40.635-40.635 40.635h-81.27l-40.635-40.635 40.635-40.635z"
-          ></path>
-        </svg>
-      </div>
-      <span>My ADS</span>
-    </a>
-    <a class="_243cz" rel="" data-aut-id="btnProfileChat">
-      <div class="cfoYk">
-        <svg
-          width="23px"
-          height="23px"
-          viewBox="0 0 1024 1024"
-          data-aut-id="icon"
-          class=""
-          fill-rule="evenodd"
-        >
-          <path
-            class="rui-4K4Y7"
-            d="M469.333 171.119c-164.693 0-298.667 134.684-298.667 300.25v359.529l108.907-54.753 19.093-4.525h256c164.693 0 298.667-134.684 298.667-300.25s-133.973-300.25-298.667-300.25h-85.333zM147.093 938.667l-61.76-38.368v-428.929c0-212.856 172.267-386.036 384-386.036h85.333c211.733 0 384 173.18 384 386.036s-172.267 386.036-384 386.036h-245.931l-161.643 81.261z"
-          ></path>
-        </svg>
-      </div>
-      <span>Chat</span>
-    </a>
-    <a
-      href="https://help.olx.in/hc/en-us"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="_243cz aTsM5"
-      data-aut-id="btnProfileHelp"
-    >
-      <div class="cfoYk">
-        <svg
-          width="23px"
-          height="23px"
-          viewBox="0 0 1024 1024"
-          data-aut-id="icon"
-          class=""
-          fill-rule="evenodd"
-        >
-          <path
-            class="rui-4K4Y7"
-            d="M550.789 744.728c0 21.41-17.377 38.789-38.789 38.789s-38.789-17.377-38.789-38.789 17.377-38.789 38.789-38.789 38.789 17.377 38.789 38.789zM686.546 415.030c0 82.89-58.105 152.513-135.757 170.201v43.131l-38.789 38.789-38.789-38.789v-77.575l38.789-38.789c53.489 0 96.97-43.481 96.97-96.97s-43.481-96.97-96.97-96.97-96.97 43.481-96.97 96.97l-38.789 38.789-38.789-38.789c0-96.232 78.312-174.546 174.546-174.546s174.546 78.312 174.546 174.546zM512 861.090c-192.505 0-349.090-156.626-349.090-349.090 0-192.505 156.587-349.090 349.090-349.090 192.466 0 349.090 156.587 349.090 349.090 0 192.466-156.626 349.090-349.090 349.090zM512 85.333c-235.288 0-426.667 191.379-426.667 426.667s191.379 426.667 426.667 426.667 426.667-191.379 426.667-426.667-191.379-426.667-426.667-426.667z"
-          ></path>
-        </svg>
-      </div>
-      <span>Help</span>
-    </a>
-    <span class="_243cz _1Lsah" data-aut-id="btnProfileLanguage">
-      <div class="cfoYk _1u1x6">
-        <svg
-          width="25px"
-          height="25px"
-          viewBox="0 0 1024 1024"
-          data-aut-id="icon"
-          class=""
-          fill-rule="evenodd"
-        >
-          <path
-            class="rui-4K4Y7"
-            d="M679.214 818.309l-77.189-77.189 78.312-104.494 131.801 52.751c-32 53.915-77.809 98.715-132.927 128.93zM434.425 852.091v-184.941l-38.789-38.789h-212.364c-12.955-36.461-20.364-75.52-20.364-116.364 0-14.235 1.125-28.237 2.792-42.047l53.294 35.53 38.827 2.405 124.51-62.254 58.609 87.854 49.649 13.189 232.728-116.364 16.29-53.915-110.080-192.737c134.75 48.408 231.564 177.106 231.564 328.339 0 37.197-5.973 72.999-16.795 106.667l-162.715-65.125-45.459 12.761-116.364 155.151 3.608 50.695 77.15 77.15c-28.315 7.409-57.871 11.791-88.513 11.791-26.687 0-52.557-3.297-77.575-8.999zM221.945 705.939h134.905v118.303c-54.535-27.23-101.159-67.995-134.905-118.303zM512 162.91c5.663 0 11.17 0.582 16.795 0.853l123.112 215.506-165.43 82.734-58.57-87.893-49.649-13.189-134.982 67.49-57.871-38.555c49.649-132.306 177.106-226.949 326.593-226.949zM512 85.333c-235.249 0-426.667 191.379-426.667 426.667 0 235.249 191.418 426.667 426.667 426.667 235.288 0 426.667-191.418 426.667-426.667 0-235.288-191.379-426.667-426.667-426.667z"
-          ></path>
-        </svg>
-      </div>
-      Select language / भाषा चुनें
-    </span>
-    <div class="_2ahNv">
-      <button
-        type="button"
-        data-aut-id="btnProfileLogin"
-        class="rui-39-wj rui-3mpqt rui-1JPTg rui-2NuAg"
-      >
-        <span>Login</span>
-      </button>
-    </div>
-  </div>
-</div>; */
-}
