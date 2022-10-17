@@ -1,0 +1,19 @@
+.track{
+    width: 100%;
+    margin: auto;
+}
+
+.track::-webkit-scrollbar{
+    width: 3px;
+    border-radius: 50px;
+}
+.track::-webkit-scrollbar-thumb{
+    background-color: black;
+    border-radius: 50px;
+}
+.track::-webkit-scrollbar-track{
+    background-color: rgb(218, 212, 212);
+    border-radius: 50px;
+}
+
+/* Recursive Components in react */
