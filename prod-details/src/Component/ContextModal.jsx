@@ -23,7 +23,7 @@ export const ContextModal = createContext();
 
 const ContextModalProvider = ({ children }) => {
     const [currPage, setCurrPage] = useState(pages.Page_1);
-    const [isAuth, setIsAuth] = useState(false);
+    const [isAuth, setIsAuth] = useState(true);
 
     const handleLogin = () => {
         setIsAuth(true);

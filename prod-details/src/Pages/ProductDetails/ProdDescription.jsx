@@ -1,10 +1,43 @@
-import { AspectRatio, Box, Button, Text } from "@chakra-ui/react"
+import { AspectRatio, Box, Button, Image, Text } from "@chakra-ui/react"
 import { BiShareAlt } from "react-icons/bi"
 import { AiOutlineHeart } from "react-icons/ai"
 import { MdArrowForwardIos } from "react-icons/md"
-import { GiCircle } from "react-icons/gi"
+import { useEffect, useState } from "react"
+import axios from "axios"
+
+
+// let DateGenerator = require('random-date-generator');
+// DateGenerator.getRandomDate(); // random date
+
+// let startDate = new Date(2017, 2, 2);
+// let endDate = new Date(2017, 3, 3);
+// DateGenerator.getRandomDateInRange(startDate, endDate)
+// function randomDate(start, end) {
+//     return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
+// }
+// let res = randomDate(new Date(2012, 0, 1), new Date())
 
 function ProdDescription() {
+        const [user, setUser] = useState("");
+
+
+    useEffect(() => {
+        axios.get('http://localhost:5000/product/1')
+            .then((response) => {
+                setUser(response.data)
+                // console.log(response.data)
+})
+            .catch((err) => console.log(err))
+            .finally(() => console.log("success"))
+    }, [])
+
+    if (
+        user === undefined
+    ) {
+        return <h1>Loading</h1>
+    }
+    const { full_name, img_url } = user
+
     return (
         <Box>
             <Box
@@ -30,21 +63,23 @@ function ProdDescription() {
 
             <Box
                 boxShadow='xs' p='6' rounded='md' bg='white'
-                border="1px solid #ecebeb" height="170px"
+                border="1px solid #ecebeb" height="190px"
                 width="100%">
-                <Text fontSize='lg'>Seller Description</Text>
+                <Text fontSize='lg' marginBottom="10px">Seller Description</Text>
                 <Box display="flex" justifyContent="space-between"
-                    textAlign="left">
-                    <Box marginTop="7px"><GiCircle fontSize="30px" /></Box>
+                    alignItems="center"
+                    // border="1px solid teal"
+                    >
+                    <Box ><Image src={img_url} alt="user" borderRadius="50%" height="40px" width="40px" /></Box>
                     <Box >
-                        <Text as='b'>User Name</Text><br />
-                        <Text fontSize='xs'>Member Since {"data to be fetched"}</Text>
+                        <Text as='b'>{full_name}</Text><br />
+                        <Text fontSize='xs'>Member Since {"Dummy Data 2022"}</Text>
                     </Box>
                     <Box>
-                        <Box marginTop="7px"><MdArrowForwardIos fontSize="15px" /></Box>
+                        <Box ><MdArrowForwardIos fontSize="15px" /></Box>
                     </Box>
                 </Box>
-                <Box textAlign="center">
+                <Box textAlign="center" marginTop={2}>
                     <Button
                         size='md'
                         height='48px'
@@ -57,8 +92,6 @@ function ProdDescription() {
                             transform: 'scale(0.98)',
                             // borderColor: '#bec3c9',
                         }}
-                       
-
                     >
                         Chat With Seller
                     </Button>
@@ -66,13 +99,14 @@ function ProdDescription() {
             </Box><br />
             
             <Box boxShadow='xs' p='6' rounded='md' bg='white'
+            margin="auto"
                 border="1px solid #ecebeb" 
              padding="10px" alignContent="center" height="240px" width="100%">
                 <Text as="b">Posted In</Text>
                 <Text fontSize='xs'>South Pateri, Satna, Madhya Pradesh</Text>
                 <AspectRatio ratio={16 / 9}>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96237.7898914364!2d80.75351566396952!3d24.57265753729708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39847f12a0d55141%3A0xa6208334386e35e2!2sSatna%2C%20Madhya%20Pradesh!5e0!3m2!1sen!2sin!4v1665818720941!5m2!1sen!2sin" title="map" 
-                style={{width:"366px" ,height:"166px" ,style:"border:0;" ,allowfullscreen:"" ,loading:"lazy" ,referrerpolicy:"no-referrer-when-downgrade"}}></iframe>
+                style={{ margin:"auto",width:"100%" ,height:"166px" ,style:"border:0;" ,allowfullscreen:"" ,loading:"lazy" ,referrerpolicy:"no-referrer-when-downgrade"}}></iframe>
                 </AspectRatio>
             </Box>
         </Box>

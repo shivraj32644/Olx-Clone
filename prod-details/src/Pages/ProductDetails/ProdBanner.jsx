@@ -1,52 +1,85 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Box, SimpleGrid, Text } from "@chakra-ui/react";
 import { Carousel } from "react-responsive-carousel";
+import axios from "axios";
+import { useEffect } from "react";
+import { useState } from "react";
+
 
 function ProdBanner() {
+    // const axios = require('axios').default;
+    const [myData, setMyData] = useState();
+
+    useEffect(() => {
+        axios.get('http://localhost:5000/product/1')
+            .then((response) => {
+                // setUser(response.data)
+            setMyData(response.data.published_ads)
+            })
+            .catch((err) => console.log(err))
+
+            .finally(() => console.log("success"))
+    }, [])
+    // console.log()
+    // console.log(user.full_name,
+    //     "baar nhi chal rha")
+    // published_ads.cars[0].car_images.img1, 
+    if (myData === undefined
+        // &&
+        // user !== undefined
+    ) {
+        return <h1>Loading</h1>
+    }
+    const carImages = (myData.cars[0].car_images)
+
+    // console.log(carImages, "sab bhadiya hai");
+    // const {} = myData
     return (
         <Box >
+
             <Box
-            boxShadow='xs' p='6' rounded='md' bg='white'
-            width="100%"
-            margin="auto"
-           
+                boxShadow='xs' p='3' rounded='md' bg='white'
+            // key={id}
+            // height="200px"
+            // width="50%"
             >
-                <Carousel autoPlay
-                    height="200px"
-                    width="700px"
-                >
+                <Carousel autoPlay >
+
                     <div>
                         <img
-                            alt=""
-                            src="https://apollo-singapore.akamaized.net/v1/files/8vmbf07qk7uv2-IN/image;s=780x0;q=60"
+                            alt="Prod-1"
+                            src={carImages.img1}
                         />
-                        {/* <p className="legend">Legend 1</p> */}
                     </div>
+
                     <div>
                         <img
-                            alt=""
-                            src="https://apollo-singapore.akamaized.net/v1/files/8vmbf07qk7uv2-IN/image;s=780x0;q=60"
+                            alt="Prod-2"
+                            src={carImages.img2}
                         />
-                        {/* <p className="legend">Legend 2</p> */}
+
                     </div>
+
                     <div>
                         <img
-                            alt=""
-                            src="https://apollo-singapore.akamaized.net/v1/files/8vmbf07qk7uv2-IN/image;s=780x0;q=60"
+                            alt="Prod-3"
+                            src={carImages.img3}
+
                         />
-                        {/* <p className="legend">Legend 3</p> */}
                     </div>
                 </Carousel>
             </Box>
 
 
-            <Box
+            <Box marginTop=" 20px"
                 boxShadow='xs' p='6' rounded='md' bg='white'
                 border="1px solid black" height="0%"
                 width="100%">
-                <Text as='b' fontSize='xl'>Details</Text>
+                <Text as='b' fontSize='xl'>Details
+                    {/* {full_name} */}
+                </Text>
 
                 <Box >
-                    <Box display="flex" justifyContent="space-between" gap="10">
+                    <SimpleGrid columns={[1, 2, 4]} justifyContent="space-between" gap="5">
 
                         <Box>
                             <Text fontSize='sm'>Furnishing</Text>
@@ -72,7 +105,7 @@ function ProdBanner() {
                             <Text fontSize='sm'>Maintenance (Monthly)</Text>
                             <Text fontSize='sm'>Washrooms</Text>
                         </Box>
-                    </Box>
+                    </SimpleGrid>
 
                     <hr />
                     <Box>
@@ -83,7 +116,7 @@ function ProdBanner() {
 
                 <Box textAlign="center">
 
-                </Box>
+                </ Box>
             </Box>
         </Box>
     )
