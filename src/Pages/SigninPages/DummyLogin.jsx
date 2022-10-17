@@ -59,7 +59,7 @@ const items =
                     border='2px'
                     borderColor='#002F34.500'
                     gap={2}
-                    onClick={()=>setCurrPage(pages.Page_4)}
+                    onClick={()=>console.log(setCurrPage(pages.Page_4),"is it working")}
                 >
                     <span>
                         <AiOutlineMobile />
