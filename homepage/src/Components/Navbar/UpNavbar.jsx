@@ -171,14 +171,14 @@ const UpNavbar = () => {
               </MenuList>
             </Menu>
           </Box>
-          {/* <Box cursor="pointer">
+          <Box cursor="pointer">
             <RiChat1Line />
           </Box>
           <Box cursor="pointer">
             <MdNotificationsNone />
-          </Box> */}
+          </Box>
           <Box>
-            <Button
+            {/* <Button
               colorScheme="black"
               variant="link"
               fontSize="17px"
@@ -187,14 +187,14 @@ const UpNavbar = () => {
               borderRadius="none"
             >
               Login
-            </Button>
-            {/* <ProfileBtn /> */}
+            </Button> */}
+            <ProfileBtn />
           </Box>
         </HStack>
       </Box>
     );
   } else {
-    // return <h1>Hello</h1>;
+    // ........Responsive code for mobile...........
     // return (
     //   <Box
     //     bg="red"
@@ -481,7 +481,7 @@ const UpNavbar = () => {
                   </Box>
                 </Flex>
 
-                <Divider orientation="horizontal" />
+                <Divider color="black" orientation="horizontal" />
 
                 <Flex alignItems="center" my="10px" fontSize="20px">
                   <Box mx="5px">
