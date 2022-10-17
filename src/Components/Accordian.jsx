@@ -22,13 +22,24 @@ import { CheckboxC } from "./Checkbox";
 import { useContext } from "react";
 import { ParamContext } from "../Context/CarParamContext";
 import { AllBrands, AllCarModel, carCategory, familyTree } from "../Data/AllData";
+import { useDispatch } from "react-redux";
+import { fetchData } from "../data_redux/action";
+import { Navigate } from "react-router-dom";
 
 
-
+// car acordian
 export const Accordian = () => {
-  const { setUpperValue,setLowerValue, clearAll,setBrand,upp ,low} = useContext(ParamContext);
+  const { setUpperValue,setLowerValue,setBrand,upp ,clearAll,low} = useContext(ParamContext);
   const [sliderVal, setSliderVal] = useState([low,upp]);
   const [Check, setCheck] = useState([]);
+  const dispatch = useDispatch();
+
+  function clear() { 
+    dispatch(fetchData({}));
+    setTimeout(() => {
+      clearAll();
+    },100)
+  }
 
   var lowVal = sliderVal[0];
   var upperVal = sliderVal[1];
@@ -185,7 +196,7 @@ export const Accordian = () => {
           ))}
         </AccordionPanel>
       </AccordionItem>
-      <Button onClick={clearAll} > Clear All </Button>
+      <Button onClick={clear}  > Clear All </Button>
     </Accordion>
   );
 };

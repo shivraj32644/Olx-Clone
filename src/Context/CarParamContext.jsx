@@ -4,7 +4,7 @@ import { createContext } from "react";
 import { useEffect } from "react";
 import { useContext } from "react";
 import { useDispatch } from "react-redux";
-import { useSearchParams } from "react-router-dom";
+import { Navigate, useSearchParams } from "react-router-dom";
 import { fetchData } from "../data_redux/action";
 
 export const ParamContext = createContext();
@@ -17,6 +17,7 @@ export const ParamContextProvider = ({ children }) => {
   var upp = searchParams.get("published_ads.cars.0.set_price_lte");
   var low = searchParams.get("published_ads.cars.0.set_price_gte");
   var brd = searchParams.getAll("published_ads.cars.0.car_brand");
+  console.log(Price, upp, low, brd);
  
 
   // STATES FOR SORTING
@@ -119,13 +120,6 @@ export const ParamContextProvider = ({ children }) => {
 
 
 
-  function clearAll() {
-    axiosObject = {};
-    searchParamObject = {};
-    setSearchParams({});
-    
-    dispatch(fetchData(axiosObject));
-  }
 
 
 
@@ -133,10 +127,14 @@ export const ParamContextProvider = ({ children }) => {
 
   useEffect(() => {
     dispatch(fetchData(axiosObject));
-    
   },[PriceOrder,lowerValue,upperValue,brand])
 
-
+  function clearAll() {
+    // axiosObject = {};
+    searchParamObject = {};
+    setSearchParams();
+  }
+  
 
   
   var dispatchValues = {
