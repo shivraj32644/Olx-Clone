@@ -7,13 +7,16 @@ import SellingForm from "../Pages/Selling Pages/SellingForm";
 import Home from "../Pages/Home/Home";
 
 const AllRoutes = () => {
+  
+
   return (
   <div>
     <Routes>
       <Route path="/" element={<Home/>}></Route>
       <Route path="/login" element={<Login/>}></Route>
       <Route path="/sellcategories" element={<PrivateRoute2><SellCategories/></PrivateRoute2>}></Route>
-      <Route path="/sellingform" element={<SellingForm/>}></Route>
+      <Route path="/sellingform" element={<SellingForm  />}></Route>
+      
     </Routes>
   </div>
   )

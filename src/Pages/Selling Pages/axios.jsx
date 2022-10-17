@@ -1,12 +1,46 @@
 import axios from "axios"
 
-const handleAddSellPosts=(data={})=>{
-    console.log("post command got-->")
-    return axios.post(`http://localhost:5000/sellPosts`,{
-        user_id: data.user_id,
-        ad_id: data.ad_id,
-        category: data.category,
-        car_name: data.car_name,
-    })
+
+
+const handleAddSellPosts=(newSellPost,user)=>{
+    console.log("calling axios page")
+    console.log(user)
+    console.log(newSellPost)
+    let newUser=user
+    newUser.published_ads.push(newSellPost)
+   console.log(newUser)
+    favUpdater(user.id,newUser)
+    
+
 }
 export default handleAddSellPosts
+
+
+const favUpdater = async (id,newuser) => {
+    console.log("calling patch request")
+        
+    try{
+      var data = await fetch(`http://localhost:5000/data/${id}`,
+
+      {
+        method:"PATCH",
+        body:JSON.stringify(newuser),
+        headers:{
+          "Content-Type":'application/json'
+        }
+
+      }
+      )
+      let r = await data.json();
+    
+      console.log(r)
+    //   dispater(OnSuccess(r))
+
+    }catch(e){
+        console.log(e)
+
+    }finally{
+       
+    }
+  };
+
