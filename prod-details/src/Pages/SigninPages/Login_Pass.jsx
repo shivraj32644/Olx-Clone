@@ -1,6 +1,6 @@
 import {Box,Button,Image, Input, InputGroup, InputRightElement,Text} from "@chakra-ui/react"
 import { useState } from "react"
-import {BsEye,BsEyeSlash} from "../../prod-details/node_modules/react-icons/bs"
+import {BsEye,BsEyeSlash} from "react-icons/bs"
 import { Link } from "react-router-dom"
 
 const LoginPass=()=>{
@@ -24,7 +24,7 @@ const LoginPass=()=>{
             
                  {/* Input Password Starts Here */}
             <Box>
-             <Text as='b'>Enter Your Password</Text><br /><br />
+             <Text as='b'>Enter Your Password</Text>
                     <Text>Welcome Back { }
                         <Text as='b'>
                             mail id

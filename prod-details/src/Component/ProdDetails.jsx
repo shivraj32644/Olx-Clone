@@ -1,25 +1,39 @@
-import { Box } from "@chakra-ui/react";
+import { Box, useMediaQuery } from "@chakra-ui/react";
 import ProdBanner from "../Pages/ProductDetails/ProdBanner";
 import ProdDescription from "../Pages/ProductDetails/ProdDescription";
-const ProductDetails = () => {
-  return (
-    <Box  
-    gap="6"
-    display="flex"
-    justifyContent="center"
-      paddingLeft="50px"
-      paddingRight="50px"
-      // width="100%"
-      bg="#f2f4f5"
-    //  const breakpoints = {{
-    //   sm: '30em',
-    //   md: '48em',
-    //   lg: '62em',
-    //   xl: '80em',
-    //   '2xl': '96em',
-    //  }} 
-    >
 
+
+const ProductDetails = () => {
+  const [isLessThan426] = useMediaQuery('(max-width: 426px)')
+
+  const fullScreen = {
+    columnGap :"20px",
+      display : "flex",
+      justifyContent:"center",
+      paddingRight: "50px",
+      paddingLeft : "50px",
+      backgroundColor:  "#f2f4f5"
+      // backgroundColor:" red"
+    }
+
+    const medScreen= {
+      display: "grid",
+      gridTemplateColumns: "repeat(1,1fr)",
+     paddingLeft: "20px",
+     paddingRight: "20px",
+     backgroundColor: "aliceblue",
+      height: "100vh",
+      width: "100%"
+    }
+
+  return (
+    <Box
+      style={isLessThan426 ? 
+        medScreen
+        :
+        fullScreen
+         }
+    >
 
       <Box width="-moz-min-content">
         <ProdBanner />

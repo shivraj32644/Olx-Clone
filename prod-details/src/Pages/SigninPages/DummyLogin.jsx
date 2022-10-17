@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import { ContextModal } from "../Component/ContextModal"
+import { ContextModal } from "../../Context_V.jsx/ContextModal"
 
 
 // import { Link } from "react-router-dom"
@@ -59,6 +59,7 @@ const items =
                     border='2px'
                     borderColor='#002F34.500'
                     gap={2}
+                    onClick={()=>setCurrPage(pages.Page_4)}
                 >
                     <span>
                         <AiOutlineMobile />
@@ -83,9 +84,9 @@ const items =
             <Box textAlign='center'>
 
 
-                    <Button onClick={()=>setCurrPage(pages.Page_2)}>
-                    <Text>Login With Email</Text>
-                    </Button>
+                    {/* <Button > */}
+                    <Text onClick={()=>setCurrPage(pages.Page_2)}>Login With Email</Text>
+                    {/* </Button> */}
 
             
 
