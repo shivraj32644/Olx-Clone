@@ -21,6 +21,14 @@ import {
   import { CheckIcon, ChevronRightIcon } from "@chakra-ui/icons";
 import { HiOutlineLightBulb } from "react-icons/hi";
 import { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+
+import {
+  OnError,
+  OnLoading,
+  OnSuccess,
+} from "../../Redux/UserProfile/Action";
+import {Link} from "react-router-dom"
 
 
 function ProfileDetailForm(props){
@@ -35,6 +43,7 @@ function ProfileDetailForm(props){
   //   "isPremium": false,
   //   "user_number":8210106539,
   //   "id": 1}:props.user
+  let dispater = useDispatch();
   let user = props.user
 
     let [userData,setUserData] = useState(user)
@@ -44,12 +53,44 @@ function ProfileDetailForm(props){
     const formHandler =(e)=>{
         console.log(userData)
        setUserData({...userData, [e.target.name]:e.target.value  })
+        console.log(userData)
+        
       
        
 
        
 
     }
+
+
+    const favUpdater = async (id,newuser) => {
+   
+        
+      try{
+        dispater(OnLoading())
+        var data = await fetch(`http://localhost:5000/data/${id}`,
+  
+        {
+          method:"PATCH",
+          body:JSON.stringify(newuser),
+          headers:{
+            "Content-Type":'application/json'
+          }
+  
+        }
+        )
+        let r = await data.json();
+      
+        console.log(r)
+        dispater(OnSuccess(r))
+  
+      }catch(e){
+        
+        dispater(OnError())
+      }finally{
+         
+      }
+    };
 
 
     // "user_id": "bbdd236b-5dc5-4a85-99dc-2019ee7f1b17",
@@ -325,7 +366,7 @@ function ProfileDetailForm(props){
         <Divider></Divider>
 
         <HStack padding={5}>
-          <Button
+          <Link to="/editProfile"><Button
             size="lg"
             borderRadius={"none"}
             borderBottom="2px solid black"
@@ -335,7 +376,7 @@ function ProfileDetailForm(props){
             _hover={{ border: "none", variant: "ghost" }}
           >
             Discard
-          </Button>
+          </Button></Link>
 
           <Spacer></Spacer>
 
@@ -345,6 +386,9 @@ function ProfileDetailForm(props){
             px="8px"
             border="2px"
             color={"white"}
+            onClick={()=>{
+              favUpdater(userData.id,userData)
+            }}
             borderColor="black"
             background={"#002f34"}
             disabled={userData.full_name.length==0?true:userData.email_id.length ==0?true:false  }

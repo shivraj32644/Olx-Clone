@@ -28,7 +28,7 @@ import { ParamContext } from "../Context/CarParamContext";
 import { SkelotonCard } from "../Components/Skeleton";
 // import { useContext } from "react";
 import { useBreakpointValue } from "@chakra-ui/react";
-import { CarDrawer } from "../Components/CarDrawer";
+import  CarDrawer  from "../Components/CarDrawer";
 import UpNavbar from "../Components/Navbar/UpNavbar";
 import DownNavbar from "../Components/Navbar/DownNavbar";
 import SellButton from "../Components/LandingPage/SellButton";
@@ -88,7 +88,7 @@ export const ProducPage = () => {
                 alignItems="center"
                 justifyContent="space-between"
               >
-                <CarDrawer />
+                {/* <CarDrawer /> */}
                 <SortMenu />
               </GridItem>
 

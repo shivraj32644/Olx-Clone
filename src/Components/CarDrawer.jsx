@@ -14,7 +14,7 @@ import React from 'react'
 import { Accordian } from './Accordian'
 // import { TbMist } from "react-icons/tb";
 
-export function CarDrawer() {
+ function CarDrawer() {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const [placement, setPlacement] = React.useState('bottom')
   
@@ -38,3 +38,5 @@ export function CarDrawer() {
       </>
     )
   }
+
+  export default CarDrawer

@@ -80,7 +80,7 @@ function EditProfile({userData,getUser}) {
         <Box textAlign={"left"} width="30%" marginRight="20px" marginTop={4}>
          <NavLink
         
-         to="/"
+         to="/editProfile"
           style={({ isActive }) => {
             return isActive ? activeStyle : defaultStyle;
           }}
