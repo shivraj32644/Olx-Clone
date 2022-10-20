@@ -41,5 +41,6 @@
 <h3>Work description-</h3>
 <ul list-style-type="square">
   <li><h5>Home Page</h5>
+  <div><img href="" alt=""/></div>
     <li><h5>Home Page</h5>
 </ul>
