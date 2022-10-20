@@ -52,4 +52,4 @@
 </ul>
 <br/>
 </br>
-<h3>Editor-<a href="https://www.linkedin.com/in/krishna-chaturvedi-765026231/" target="_blank">Krishna Chaturvedi</a>
+<h5><i>Editor-<a href="https://www.linkedin.com/in/krishna-chaturvedi-765026231/" target="_blank">Krishna Chaturvedi</i></a></h5>
