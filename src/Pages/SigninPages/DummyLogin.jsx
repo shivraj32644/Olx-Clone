@@ -1,15 +1,18 @@
-import { useContext } from "react"
-import { ContextModal } from "../../Context_V.jsx/ContextModal"
+// import { useContext } from "react"
+// import { ContextModal } from "../Context_V/ContextModal"
 
 
-// import { Link } from "react-router-dom"
+import { Link } from "react-router-dom"
 
-import { Box, Button, Link, Text } from "@chakra-ui/react"
+import { Box, Button, 
+    // Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay,
+     Text, 
+    //  useDisclosure
+     } from "@chakra-ui/react"
 import Carousel from "react-elastic-carousel";
 import { AiOutlineMobile } from "react-icons/ai"
-import { FcGoogle } from 'react-icons/fc'
-// import LoginEmail from "./Login_Email";
-// import LoginPass from "./Login_Pass";
+import { FcGoogle } from "react-icons/fc"
+
 
 
 const items =
@@ -29,13 +32,12 @@ const items =
 
 
 
-    export default function DummyLogin() {
-    // const [currPage, setCurrPage] = useState(Page1);
-    const {pages,setCurrPage} = useContext(ContextModal);
+const DummyLogin = () => {
+
+    // const { isOpen, onOpen, onClose } = useDisclosure()
 
     return (
         <>
-
             <Box className="App">
                 {/* <hr className="seperator" /> */}
                 {/* <div className="carousel-wrapper"> */}
@@ -52,6 +54,7 @@ const items =
             </Box>
             <br />
             <Box>
+                <Link to="/contwithphone" >
                 <Button
                     size='md'
                     height='45px'
@@ -59,13 +62,14 @@ const items =
                     border='2px'
                     borderColor='#002F34.500'
                     gap={2}
-                    onClick={()=>console.log(setCurrPage(pages.Page_4),"is it working")}
-                >
+                    // variant='ghost'
+                    // onClick={onOpen}
+                    >
                     <span>
                         <AiOutlineMobile />
-                    </span>
-                    Continue With Phone
-                </Button>
+                    </span>Continue With Phone</Button>
+                </Link>             
+
             </Box><br />
             <Box>
                 <Button
@@ -80,15 +84,14 @@ const items =
                 </Button>
             </Box>
             <p style={{ textAlign: "center", textTransform: "uppercase" }}>or</p>
-            {/* <Link to="/" ></Link> */}
             <Box textAlign='center'>
 
-
-                    {/* <Button > */}
-                    <Text onClick={()=>setCurrPage(pages.Page_2)}>Login With Email</Text>
-                    {/* </Button> */}
-
-            
+                <Link to ="/contwithemail">
+                <Text
+             
+                >Login With Email</Text>
+             
+                    </Link>
 
                 <br />
                 <Text fontSize='xs'>All Your Presonal Details Are Safe With Us</Text><br />
@@ -103,4 +106,4 @@ const items =
         </>
     )
 }
-// export default DummyLogin
+export default DummyLogin

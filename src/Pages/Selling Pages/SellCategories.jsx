@@ -10,6 +10,7 @@ import { useContext, useState } from "react"
 import { Link } from "react-router-dom"
 import { CategoryDataContext } from "../../Context/AuthContext/SellingDetail"
 import { ArrowBackIcon } from '@chakra-ui/icons'
+import SellPagesFooter from "./Form Components/SellPagesFooter"
 
 const categoryArray=[
   { 
@@ -209,12 +210,11 @@ const SellCategories=()=>{
        </VStack> 
 
      </VStack>
+     <Box mt="20vh" >
+       
+     <SellPagesFooter/>
 
-
-     <HStack bg="#002F34" h="38px" w="100%" color="white" spacing="50px" justifyContent="space-around" alignItem="centre" fontSize="10px">
-      <Box>Other Countries Pakistan - South Africa - Indonesia</Box>
-      <Box>Free Classifieds in India. © 2006-2022 OLX</Box>
-     </HStack>
+      </Box>
     </Box>
  )
 }

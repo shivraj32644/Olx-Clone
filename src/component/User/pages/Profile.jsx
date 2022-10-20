@@ -56,7 +56,7 @@ function Profile({userData,getUser}) {
             padding='5px'
             alt="Dan Abramov"
           />
-          
+         <Link to="/editProfile/picture">
          <Flex
          padding={"10px"}
          textAlign={"center"}
@@ -85,6 +85,9 @@ function Profile({userData,getUser}) {
           />
          </Flex>
 
+         
+         </Link> 
+         
         </Box>
 
         {/* fllowers */}

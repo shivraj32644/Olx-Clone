@@ -7,6 +7,7 @@ import { Homereducer } from "../Components/redux/reducer";
 import { ParamReducer } from "../param_reducer/reducer";
 import { reducer } from "../data_redux/reducer";
 import MyAddReducer from "../Redux/UserProfile/Reducer";
+import thunk from 'redux-thunk';
 
 const thunkmiddleware = (store) => (next) => (action) => {
   if (typeof action === "function") {
@@ -15,7 +16,7 @@ const thunkmiddleware = (store) => (next) => (action) => {
   next(action);
 };
 
-const think = applyMiddleware(thunkmiddleware);
+const think = applyMiddleware(thunk);
 
 const rootReducer = combineReducers({
   reducer: reducer,

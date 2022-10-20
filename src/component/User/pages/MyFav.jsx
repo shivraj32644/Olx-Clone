@@ -142,7 +142,7 @@ function MyFav({ userData, getUser }) {
 
   return (
     <>
-      <Grid marginTop={6} templateColumns="repeat(4, 1fr)" gap={4} width="100%">
+      <Grid py="40px" marginTop={6} templateColumns="repeat(4, 1fr)" gap={4} width="100%">
         {demoData}
       </Grid>
     </>

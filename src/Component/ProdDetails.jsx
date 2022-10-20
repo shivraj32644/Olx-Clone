@@ -1,5 +1,6 @@
 import { Box, useMediaQuery } from "@chakra-ui/react";
 import { useParams } from "react-router-dom";
+import UpNavbar from "../Components/Navbar/UpNavbar";
 import ProdBanner from "../Pages/ProductDetails/ProdBanner";
 import ProdDescription from "../Pages/ProductDetails/ProdDescription";
 
@@ -29,7 +30,10 @@ const ProductDetails = () => {
     }
 
   return (
+    <>
+      <UpNavbar/>
     <Box
+      mt="90px"
       style={isLessThan426 ? 
         medScreen
         :
@@ -37,14 +41,15 @@ const ProductDetails = () => {
          }
     >
 
-      <Box width="-moz-min-content">
+      <Box >
         <ProdBanner id={val} />
       </Box>
 
       <Box>
         <ProdDescription id={val} />
       </Box>
-    </Box>
+      </Box>
+      </>
   )
 }
 export default ProductDetails

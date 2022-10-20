@@ -2,25 +2,13 @@ import { FormControl, FormErrorMessage, FormHelperText, FormLabel, Input } from 
 import { useRef, useState } from "react"
 
 
-function YearInput() {
-    const [input, setInput] = useState(null)
-    const inputYear=Number(input)
-    
-    console.log("Year->"+ typeof input2)
-    console.log("Year->"+ inputYear)
-
-
-    const handleInputChange = (e) => {
-      setInput(e.target.value)
-     
-    }
+function YearInput({input,isError,handleInputChange}) {
   
-    const isError = input === ''
   
     return (
       <FormControl isInvalid={isError} mb="15px">
         <FormLabel fontSize="12px" mb="1px" >Year *</FormLabel>
-        <Input fontSize="12px" h="38px" borderRadius="2px"  type='number' value={input} onChange={handleInputChange} />
+        <Input fontSize="12px" h="38px" borderRadius="2px" name="year_buy" type='number' value={input} onChange={handleInputChange} />
         {!isError ? (
           <FormHelperText fontSize="12px">
             

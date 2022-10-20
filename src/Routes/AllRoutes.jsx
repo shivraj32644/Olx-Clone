@@ -15,26 +15,29 @@ import NewProfilePicForm from "../Component/User/newPicFrom";
 import Profile from "../Component/User/pages/Profile";
 import { useSelector, useDispatch } from "react-redux";
 
-import {
-  OnError,
-  OnLoading,
-  OnSuccess,
-} from "../Redux/UserProfile/Action";
+import { OnError, OnLoading, OnSuccess } from "../Redux/UserProfile/Action";
 import ProductDetails from "../Component/ProdDetails";
 import SellCategories from "../Pages/Selling Pages/SellCategories";
 import SellingForm from "../Pages/Selling Pages/SellingForm";
+import { LoginPage } from "../Component/Login";
 
+import DummyLogin from "../Pages/SigninPages/DummyLogin";
+import LoginEmail from "../Pages/SigninPages/Login_Email";
+import LoginMobile from "../Pages/SigninPages/LoginMoblie";
+import UserName from "../Pages/SigninPages/Login_Pass";
+import { PrivateRoute } from "./PrivateRoute";
 
 export const AllRoutes = () => {
-
   let userState = useSelector((user) => user.MyAddReducer);
   let Dispatcher = useDispatch();
 
+  let curId =Number(localStorage.getItem("currentUserId"));
+  
 
-  console.log(userState)
+  console.log(userState);
   // forGetingDataFun
   const getUser = () => {
-    let id = "1";
+    let id = curId;
     Dispatcher(OnLoading());
     fetch(`http://localhost:5000/data/${id}`)
       .then((res) => {
@@ -57,64 +60,92 @@ export const AllRoutes = () => {
 
 
 
+/*
+
+
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   return (
     <div>
       <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path ='/cars' element={<ProducPage/>}></Route>
-        <Route path ='/books' element={<Books/>}></Route>
-        <Route path='/mobile' element={<Mobile />}></Route>
-        
+        <Route path="/" element={<Home />}>
+
+        <Route path="/" element={ <DummyLogin/>  }></Route>
+          <Route path="/contwithphone" element={<LoginMobile />}></Route>
+          <Route path="/contwithemail" element={<LoginEmail />}></Route>
+          {/* <Route path="/contwithname" element={<UserName />}></Route> */}
+
+
+        </Route>
+        <Route path="/cars" element={<ProducPage />}></Route>
+        <Route path="/books" element={<Books />}></Route>
+        <Route path="/mobile" element={<Mobile />}></Route>
+
         <Route path="/yourads" element={<FavPage />}></Route>
 
-      <Route element={<FavPage />}>
+        <Route element={<FavPage />}>
+          <Route
+            path="/myads"
+            element={<MyAds userData={userState} getUser={getUser} />}
+          ></Route>
+          <Route
+            path="/myfavorites"
+            element={<MyFav userData={userState} getUser={getUser} />}
+          ></Route>
+        </Route>
+        {/* editProfile this will be updated */}
         <Route
-          path="/myads"
-          element={<MyAds userData={userState} getUser={getUser} />}
+          path="/editProfile"
+          element={<EditProfile userData={userState} getUser={getUser} />}
         ></Route>
         <Route
-          path="/myfavorites"
-          element={<MyFav userData={userState} getUser={getUser} />}
+          path="/editProfile/picture"
+          element={<NewProfilePicForm userData={userState} getUser={getUser} />}
         ></Route>
-      </Route>
-      {/* editProfile this will be updated */}
-      <Route
-        path="/editProfile"
-        element={<EditProfile userData={userState} getUser={getUser} />}
-      ></Route>
-      <Route
-        path="/editProfile/picture"
-        element={<NewProfilePicForm userData={userState} getUser={getUser} />}
-      ></Route>
-      <Route
-        path="/profile"
-        element={<Profile userData={userState} getUser={getUser} />}
-      ></Route>
-     <Route path='/productDetails/:product_id' element={<ProductDetails/>} ></Route>  
-      <Route path="/post" element={<SellCategories/>}></Route>
-        <Route path ='/post/attribute' element={<SellingForm/>}></Route>
-        {/* <Route path='/books' element={<Books/>} ></Route>
-        <Route path='/mobile' element={<Mobile/>} ></Route>
-        <Route path='/' element={<ProducPage/>} ></Route>
-  {/* <Route path="/" element={<Home/>}></Route>
-      <Route path="/login" element={<Login/>}></Route>
-      <Route path="/sellcategories" element={<PrivateRoute2><SellCategories/></PrivateRoute2>}></Route>
-      <Route path="/sellingform" element={<SellingForm  />}></Route>
-       */}
-        
+        <Route
+          path="/profile"
+          element={<Profile userData={userState} getUser={getUser} />}
+        ></Route>
+        <Route
+          path="/productDetails/:product_id"
+          element={<ProductDetails />}
+        ></Route>
+        <Route path="/post" element={ <PrivateRoute><SellCategories /></PrivateRoute> }></Route>
+        <Route path="/post/attribute" element={<PrivateRoute><SellingForm /></PrivateRoute>}></Route>
 
-        {/* <Route path="/"
-        element={<LoginPage />} >
-      </Route>
-      <Route path="/homepage" element={<ProductDetails/>}></Route>
-      <Route path="/loginemail" element={<LoginEmail /> }>
+        {/* <Route path="/new" element={<Home />}></Route> */}
 
-      </Route> */}
+        {/* <Route path="/" element={<LoginPage />}>
+          
+          <Route path="/" element={<DummyLogin />}></Route>
+          <Route path="/contwithphone" element={<LoginMobile />}></Route>
+          <Route path="/contwithemail" element={<LoginEmail />}></Route>
 
 
-
+        </Route> */}
       </Routes>
     </div>
   );

@@ -1,59 +1,79 @@
-import {Box,Button,Image, Input, InputGroup, InputRightElement,Text} from "@chakra-ui/react"
-import { useState } from "react"
-import {BsEye,BsEyeSlash} from "react-icons/bs"
-import { Link } from "react-router-dom"
+import { Box, Button, Input,Text } from "@chakra-ui/react"
+import { FormControl, FormErrorMessage, FormHelperText, FormLabel, HStack } from "@chakra-ui/react"
+import {useState} from "react"
 
-const LoginPass=()=>{
-    const [show, setShow] = useState(false)
-    const handleClick = () => setShow(!show)
+const UserName = ({input , setInput}) => {
+
+    // const [input, setInput] = useState('')
+    const [textAreaCount,settextAreaCount]=useState(0)
+
+  
+    const handleInputChange = (e) => {
+        setInput(e.target.value)
+        settextAreaCount(e.target.value.length)
+    }
+    let isError=false
+    if(textAreaCount>0 && textAreaCount<4) { isError= true} 
 
 
-    return(
-        <Box  
-        textAlign='center'
-        width="100%"
-        border="1px solid black">
-            
-            <Image boxSize='100px'
-                objectFit='cover'
-                src='https://pixlok.com/wp-content/uploads/2021/04/OLX-Logo-PNG-768x768.jpg'
-                alt='Dan Abramov'
-                alignContent="center"
-                marginLeft='35%'
-                 />
-            
-                 {/* Input Password Starts Here */}
+    return (
+        <Box
+            textAlign='center'>
+
             <Box>
-             <Text as='b'>Enter Your Password</Text>
-                    <Text>Welcome Back { }
-                        <Text as='b'>
-                            mail id
-                        </Text>
-                    </Text><br />
-                <InputGroup size='md'>
+                <br />
+                {/* <hr style={{
+                    width:"30%",
+                    border: "4px solid #012f35",
+                }} /> */}
+                <Text as='b' fontSize='3xl'>What's Your Name ? </Text>
+                <Text>"Stranger" ,Feels so impersonal, you Know ?
+
+                </Text><br />
+                
+                {/* <InputGroup size='md'>
                     <Input
-                    width="95%"
+                        width="95%"
                         pr='4rem'
-                        type={show ? 'text' : 'password'}
-                        placeholder='Enter password'
+                        placeholder='Name Or NickName'
                         marginLeft="2%"
+                        focusBorderColor="#00a49f"
                     />
-                    <InputRightElement width='4.5rem'>
-                        <Button h='1.75rem' size='sm' onClick={handleClick}>
-                            {show ? <BsEyeSlash/> : <BsEye/>}
-                        </Button>
-                    </InputRightElement>
-                </InputGroup>
-            </Box><br /><br /><br/>
-            <Button colorScheme='teal' size='md'
+                </InputGroup> */}
+
+<FormControl isInvalid={isError}  mb="15px" >
+        {/* <FormLabel fontSize="12px" mb="1px" >Ad title *</FormLabel> */}
+        <Input maxLength={30} fontSize="12px" h="32px"  borderRadius="2px" type='text' colorScheme="blackAlpha"
+         value={input} pr="55px" focusBorderColor="#00a49f" onChange={(e)=>{
+            handleInputChange(e)
+        }} />
+      
+       <HStack justifyContent="space-between">
+        {!isError  ? (
+          <FormHelperText fontSize="8px">
+           
+          </FormHelperText>
+        ) : (
+          <FormErrorMessage mt="5px" fontSize="8px">
+           Username is required. Please edit the field.
+          </FormErrorMessage>
+        )}
+        <FormLabel fontSize="10px" >{textAreaCount}/30</FormLabel>
+        </HStack>
+
+      </FormControl>
+
+            </Box>
+            {/* <Button colorScheme='teal' size='md'
                 height='48px'
                 width='300px'
                 border='2px'>
-                Next
-            </Button><br /><br />
-            <Link to='/'>Forgot Your Password</Link>
-            <hr /><br /><br />
-        </Box>   
+                Continue
+            </Button> */}
+
+            
+
+        </Box>
     )
 }
-export default LoginPass
+export default UserName

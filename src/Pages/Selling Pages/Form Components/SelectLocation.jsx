@@ -29,7 +29,7 @@ const Neighbourhoods=[
     {id:"22", neighbourhoodId:"10",name:"Pune Neighbour 2"},
 ]
 
-const SelectLocation=({collectAllFormData})=>{
+const SelectLocation=({handleLocationObj})=>{
     const [input, setInput] = useState({
         location_state:"",
         location_city:"",
@@ -43,6 +43,10 @@ const SelectLocation=({collectAllFormData})=>{
     useEffect(()=>{
         setState(States)
     },[])
+
+    useEffect(()=>{
+        handleLocationObj(input)
+    },[state,city,neighbourhood,input])
 
     const handleChooseCountry = (id) =>{ 
         if(id==0){ 

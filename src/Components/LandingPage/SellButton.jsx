@@ -10,7 +10,7 @@ const SellButton = () => {
 
   if (isLargerThan780) {
     return (
-      <Box position="sticky" top="1.5%" ml="83%" mt={-8} zIndex="1000">
+      <Box position="sticky" top="1.5%" ml="85%" mt={-8} zIndex="1000">
         <Link to="/post">
           <Button
             bg="white"

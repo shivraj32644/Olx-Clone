@@ -44,15 +44,10 @@ export const ProducPage = () => {
   });
   const dispatch = useDispatch();
   const { loading, error, data } = useSelector((store) => store.reducer);
-  const { globalParams } = useSelector((store) => store.ParamReducer);
-  const [searchParams, setSearchParams] = useSearchParams();
   const { axiosObject } = useContext(ParamContext);
-  const { setLimit } = useContext(ParamContext);
-  // console.log(axiosObject);
-  useEffect(() => {
-    setSearchParams(globalParams);
-  }, [globalParams]);
 
+  // console.log(dispatch(fetchData({})));
+   
   useEffect(() => {
     dispatch(fetchData(axiosObject));
   }, [axiosObject]);
@@ -71,7 +66,7 @@ export const ProducPage = () => {
           gridTemplateColumns={{
             base: "0",
             sm: "0 ",
-            md: "303px 1fr",
+            md: "203px 1fr",
             lg: "303px 1fr",
           }}
           gridTemplateRows={"30px 1fr 30px"}

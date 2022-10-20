@@ -66,8 +66,18 @@ import { ReactNode } from "react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import ProfileBtn from "./ProfileBtn";
 import { LoginPage } from "../../Component/Login";
+import { useState } from "react";
+import { useContext } from "react";
+import { AuthContext } from "../../Context/AuthContext/AuthContextProvider";
+// import { LoginPage } from "../../Component/Login";
 
 const UpNavbar = () => {
+  
+  // var log = localStorage.getItem("isLogin");
+  const { isAuth } = useContext(AuthContext);
+
+  console.log(isAuth);
+
   const [isLargerThan425] = useMediaQuery("(min-width: 426px)");
 
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -77,6 +87,8 @@ const UpNavbar = () => {
       <Box
         position="fixed"
         top="0"
+        // left={4}
+        // pl={8}
         zIndex="900"
         width="100%"
         background="#fff"
@@ -85,7 +97,7 @@ const UpNavbar = () => {
         display="block"
         className="NavContainer"
       >
-        <HStack p="2" bg="#eff1f3" spacing="18px">
+        <HStack  p="2" bg="#eff1f3" spacing="18px">
           <Box>
             <Link to="/" cursor="pointer">
               <svg
@@ -172,26 +184,29 @@ const UpNavbar = () => {
               </MenuList>
             </Menu>
           </Box>
-          {/* <Box cursor="pointer">
-            <RiChat1Line />
-          </Box>
-          <Box cursor="pointer">
-            <MdNotificationsNone />
-          </Box> */}
-          <Box>
-            <Button
+
+          {isAuth ? (
+            <>
+              <Box cursor="pointer">
+                <RiChat1Line />
+              </Box>
+              <Box cursor="pointer">
+                <MdNotificationsNone />
+              </Box>
+              <ProfileBtn/>
+            </>
+          ) : (
+            <Box
               colorScheme="black"
               variant="link"
-              // fontSize="17px"
               fontWeight="600"
               // borderBottom=" 2px solid black"
               borderRadius="none"
+             mb={80}
             >
-              <LoginPage/>
-            </Button>
-
-            {/* <ProfileBtn  /> */}
-          </Box>
+              <LoginPage />
+            </Box>
+          )}
         </HStack>
       </Box>
     );

@@ -3,10 +3,15 @@ import React from "react"
 export const AuthContext =React.createContext()
 
 const AuthContextProvider = ({children}) => {
-  const [isAuth,setIsAuth]=React.useState(false)
-  const toggleAuth=()=>{
-    setIsAuth(!isAuth)
+  const isLogin = localStorage.getItem("isLogin");
+  const [isAuth, setIsAuth] = React.useState(isLogin)
+
+
+  function toggleAuth() {
+    setIsAuth(!isAuth);
   }
+
+
   return (
   <AuthContext.Provider value={{isAuth,toggleAuth}}>
     {children}

@@ -18,14 +18,26 @@ import {
   MenuList,
   Text,
   Divider,
+  Button,
 } from "@chakra-ui/react";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { BsMenuDown } from "react-icons/bs";
 import { MdContentCopy } from "react-icons/md";
 import { RiLogoutBoxRLine } from "react-icons/ri";
+import { useContext } from "react";
+import { AuthContext } from "../../Context/AuthContext/AuthContextProvider";
 
 const ProfileBtn = () => {
+  const { toggleAuth } = useContext(AuthContext);
+  const handleLogOut = () => {
+    localStorage.setItem("isLogin", false);
+    console.log("hello");
+    toggleAuth()
+    // return <Navigate to='/' />
+}
+
+
   return (
     <Box>
       <Menu>
@@ -80,8 +92,8 @@ const ProfileBtn = () => {
           <MenuItem icon={<BsMenuDown />}>Buy Business Packages</MenuItem>
           <MenuItem icon={<RepeatIcon />}>Open Closed</MenuItem>
           <MenuItem icon={<RiLogoutBoxRLine />}>
-            <Link to="#">Logout</Link>
           </MenuItem>
+            <Button onClick={handleLogOut }>Logout</Button>
         </MenuList>
       </Menu>
     </Box>

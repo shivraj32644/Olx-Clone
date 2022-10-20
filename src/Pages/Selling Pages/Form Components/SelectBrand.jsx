@@ -29,7 +29,7 @@ const Varients=[
     {id:"22", varientId:"10",name:"BMW M2 V2"},
 ]
 
-const SelectBrand=({collectAllFormData})=>{
+const SelectBrand=({handleBrandObj})=>{
     const [input, setInput] = useState({
         car_name:"",
         car_model:"",
@@ -40,9 +40,14 @@ const SelectBrand=({collectAllFormData})=>{
     const [varient,setVarient]=useState([])
 
 
+
     useEffect(()=>{
         setBrand(Brands)
     },[])
+
+    useEffect(()=>{
+     handleBrandObj(input)
+    },[brand,model,varient,input])
 
     const handleChooseCountry = (id) =>{ 
         if(id==0){ 

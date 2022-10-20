@@ -1,25 +1,12 @@
 import { FormControl, FormErrorMessage, FormHelperText, FormLabel, HStack, Input, Textarea } from "@chakra-ui/react"
 import {useState} from "react"
 
-export default function AddTitle(){
-
-    const [input, setInput] = useState('')
-    const [textAreaCount,settextAreaCount]=useState(0)
-
-  
-    const handleInputChange = (e) => {
-        setInput(e.target.value)
-        settextAreaCount(e.target.value.length)
-
-    }
-    let isError=false
-    if(textAreaCount>0 && textAreaCount<10) { isError= true} 
-
-  
+export default function AddTitle({input,textAreaCount,isError,handleInputChange}){
+     
     return (
       <FormControl isInvalid={isError}  mb="15px">
         <FormLabel fontSize="12px" mb="1px" >Ad title *</FormLabel>
-        <Input maxLength={70} fontSize="12px" h="32px" borderRadius="2px" type='text' value={input} pr="55px" onChange={(e)=>{
+        <Input maxLength={70} fontSize="12px" h="32px" borderRadius="2px" name="key_feature" type='text' value={input} pr="55px" onChange={(e)=>{
             handleInputChange(e)
         }} />
       

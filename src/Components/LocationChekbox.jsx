@@ -13,6 +13,51 @@ export function LocationChekbox({ familyTree }) {
     }
   };
 
+  const valfun = (e) => {
+    var val = "";
+
+    switch (e) {
+      case "India": {
+        // setDateOrder("asc");
+        break;
+      }
+      case "Madhya Pradesh": {
+        // setPriceOrder("");
+        break;
+      }
+      case "Indore": {
+        // setPriceOrder("asc");
+        break;
+      }
+      case "Bhopal": {
+        // setPriceOrder("desc")
+        break;
+      }
+      case "Gwalior": {
+        // setDistanceOrder("asc");
+      }
+      case "Jabalpur": {
+        // setDistanceOrder("asc");
+      }
+      case "Ujjain": {
+        // setDistanceOrder("asc");
+      }
+      case "Maharashtra": {
+        // setDistanceOrder("asc");
+      }
+      case "Uttar Pradesh": {
+        // setDistanceOrder("asc");
+      }
+  
+      default: {
+        return (val = {});
+      }
+    }
+  };
+
+
+
+
   return (
     <>
       <div className={styles.container}>

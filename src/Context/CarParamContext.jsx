@@ -17,7 +17,8 @@ export const ParamContextProvider = ({ children }) => {
   var upp = searchParams.get("published_ads.cars.0.set_price_lte");
   var low = searchParams.get("published_ads.cars.0.set_price_gte");
   var brd = searchParams.getAll("published_ads.cars.0.car_brand");
-  console.log(Price, upp, low, brd);
+  var cName = searchParams.getAll("published_ads.cars.0.car_name");
+ 
  
 
   // STATES FOR SORTING
@@ -32,6 +33,7 @@ export const ParamContextProvider = ({ children }) => {
   // STATES FOR CARBRAND
 
   const [brand, setBrand] = useState(brd);
+  const [carName, setCarName] = useState(cName);
 
   // STATES FOR LIMIT
 
@@ -64,18 +66,22 @@ export const ParamContextProvider = ({ children }) => {
       searchParamObject["published_ads.cars.0.car_brand"] = brand;
     }
 
-   
+    if (carName) {
+      searchParamObject["published_ads.cars.0.car_name"] = carName;
+     }
 
-    if (PriceOrder && lowerValue && upperValue && brand) {
+    if (PriceOrder && lowerValue && upperValue && brand && carName) {
       searchParamObject._sort = "published_ads.cars.0.set_price";
       searchParamObject._order = PriceOrder;
       searchParamObject["published_ads.cars.0.set_price_lte"] = upperValue;
       searchParamObject["published_ads.cars.0.set_price_gte"] = lowerValue;
       searchParamObject["published_ads.cars.0.car_brand"] = brand;
+      searchParamObject["published_ads.cars.0.car_name"] = carName;
+
     }
 
     setSearchParams(searchParamObject);
-  }, [PriceOrder, upperValue, lowerValue, brand]);
+  }, [PriceOrder, upperValue, lowerValue, brand,carName]);
 
   // ===========================================================================================================================================
 
@@ -102,13 +108,18 @@ export const ParamContextProvider = ({ children }) => {
   // if (limit) {
   //     axiosObject._limit=limit
   // }
+  if (carName) {
+    axiosObject["published_ads.cars.0.car_name"] = carName;
+   }
 
-  if (PriceOrder && lowerValue && upperValue && brand) {
+  if (PriceOrder && lowerValue && upperValue && brand && carName ) {
     axiosObject._sort = "published_ads.cars.0.set_price";
     axiosObject._order = PriceOrder;
     axiosObject["published_ads.cars.0.set_price_lte"] = upperValue;
     axiosObject["published_ads.cars.0.set_price_gte"] = lowerValue;
     axiosObject["published_ads.cars.0.car_brand"] = brand;
+    axiosObject["published_ads.cars.0.car_name"] = carName;
+
   }
 
   // ===========================================================================================================================================
@@ -127,7 +138,7 @@ export const ParamContextProvider = ({ children }) => {
 
   useEffect(() => {
     dispatch(fetchData(axiosObject));
-  },[PriceOrder,lowerValue,upperValue,brand])
+  },[PriceOrder,lowerValue,upperValue,brand,carName])
 
 
   
@@ -144,6 +155,7 @@ export const ParamContextProvider = ({ children }) => {
     setBrand,
     upp,
     low,
+    setCarName
     // setLimit
   };
   return (

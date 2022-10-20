@@ -112,15 +112,15 @@ function ProdDescription({id}) {
                 </Box>
             </Box><br />
             
-            <Box boxShadow='xs' p='6' rounded='md' bg='white'
-            margin="auto"
+            <Box boxShadow='xs' p='0' rounded='md' bg='white'
+            
                 border="1px solid #ecebeb" 
              padding="10px" alignContent="center" height="240px" width="100%">
                 <Text as="b">Posted In</Text>
                 <Text fontSize='xs'>{resData.ads_location.neighbour},{resData.ads_location.city},{resData.ads_location.state}</Text>
                 <AspectRatio ratio={16 / 9}>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96237.7898914364!2d80.75351566396952!3d24.57265753729708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39847f12a0d55141%3A0xa6208334386e35e2!2sSatna%2C%20Madhya%20Pradesh!5e0!3m2!1sen!2sin!4v1665818720941!5m2!1sen!2sin" title="map" 
-                style={{ margin:"auto",width:"100%" ,height:"166px" ,style:"border:0;" ,allowfullscreen:"" ,loading:"lazy" ,referrerpolicy:"no-referrer-when-downgrade"}}></iframe>
+                style={{ width:"100%" ,height:"166px" ,style:"border:0;" ,allowfullscreen:"" ,loading:"lazy" ,referrerpolicy:"no-referrer-when-downgrade"}}></iframe>
                 </AspectRatio>
             </Box>
         </Box>

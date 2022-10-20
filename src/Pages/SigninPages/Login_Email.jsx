@@ -4,7 +4,8 @@ import { BsEye, BsEyeSlash } from "react-icons/bs";
 // import { useContext } from "react"
 // import {Link} from "react-router-dom"
 // import { ContextModal } from "../Component/ContextModal"
-
+import {AiOutlineArrowLeft} from 'react-icons/ai'
+import { Link } from "react-router-dom";
 
 function LoginEmail() {
     const [show, setShow] = useState(false)
@@ -13,11 +14,15 @@ function LoginEmail() {
     // const {pages,setCurrPage} = useContext(ContextModal)
 
     return (
+        
         <Box boxSize='sm'
             textAlign='center'
             // border='1px solid black'
             height='90vh'
         >
+             <Link to="/">
+            <AiOutlineArrowLeft/>
+            </Link>
             <Image  boxSize='200px'
                     height="60px"
                     width="80px"

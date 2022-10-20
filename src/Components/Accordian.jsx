@@ -29,9 +29,10 @@ import { Navigate } from "react-router-dom";
 
 // car acordian
 export const Accordian = () => {
-  const { setUpperValue,setLowerValue,setBrand,upp ,clearAll,low} = useContext(ParamContext);
+  const {setCarName, setUpperValue,setLowerValue,setBrand,upp ,clearAll,low} = useContext(ParamContext);
   const [sliderVal, setSliderVal] = useState([low,upp]);
   const [Check, setCheck] = useState([]);
+  const [Check2, setCheck2] = useState([]);
   const dispatch = useDispatch();
 
   function clear() { 
@@ -64,6 +65,21 @@ export const Accordian = () => {
 
   };
 
+  const handleCarName = (id, value) => {
+    const currIndex = Check2.indexOf(value);
+    const newChecked = [...Check2];
+    
+    if (currIndex === -1) {
+      newChecked.push(value);
+    } else {
+      newChecked.splice(currIndex, 1);
+    }
+    console.log(newChecked)
+    setCheck2(newChecked);
+
+    setCarName(newChecked)
+  }
+
 
   return (
     <Accordion defaultIndex={[0, 1, 2, 3, 4]} allowMultiple>
@@ -95,13 +111,13 @@ export const Accordian = () => {
             <AccordionIcon />
           </AccordionButton>
         </h2>
-        <AccordionPanel h={170}
+        <AccordionPanel maxH={170}
           className={styles.track}
           overflow="auto" pb={4}>
           
 
 
-          <LocationChekbox familyTree={familyTree} />
+          <LocationChekbox  familyTree={familyTree} />
 
 
 
@@ -188,7 +204,7 @@ export const Accordian = () => {
         >
            {AllCarModel.map(({ id, brand }) => (
             <CheckboxC
-              handleCarModel={handleCarModel}
+              handleCarModel={handleCarName}
               id={id}
               key={id}
               value={brand}
@@ -196,7 +212,6 @@ export const Accordian = () => {
           ))}
         </AccordionPanel>
       </AccordionItem>
-      <Button onClick={clear}  > Clear All </Button>
     </Accordion>
   );
 };

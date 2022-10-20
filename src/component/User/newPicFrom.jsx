@@ -83,7 +83,7 @@ function NewProfilePicForm({userData,getUser}) {
         <Box textAlign={"left"} width="30%" marginRight="20px">
          <NavLink
         
-         to="/"
+         to="/editProfile"
           style={({ isActive }) => {
             return isActive ? activeStyle : defaultStyle;
           }}end
