@@ -8,7 +8,7 @@ var url = `http://localhost:5000/data`;
 
 
 export const axiosdata = (params) => {
-    return axios.get(`http://localhost:5000/allOlxData`, {
+    return axios.get(`https://olx-clone-mock-database.herokuapp.com/allOlxData`, {
         params: params
         
     })
@@ -16,7 +16,7 @@ export const axiosdata = (params) => {
 
 }
 export const axiosdata2 = () => {
-    return axios.get(`http://localhost:5000/data`
+    return axios.get(`https://olx-clone-mock-database.herokuapp.com/allOlxData`
        
     )
 }

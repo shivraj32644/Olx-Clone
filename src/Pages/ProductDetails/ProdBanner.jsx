@@ -16,7 +16,7 @@ function ProdBanner({ id }) {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/allOlxData/${id}`)
+      .get(`https://olx-clone-mock-database.herokuapp.com/allOlxData/${id}`)
       .then((response) => {
         // setUser(response.data)
         setMyData(response.data.published_ads.cars[0]);

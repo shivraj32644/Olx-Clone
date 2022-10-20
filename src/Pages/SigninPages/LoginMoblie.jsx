@@ -73,7 +73,7 @@ const LoginMobile = () => {
   };
 
   const handleLogin = () => {
-    fetch(`http://localhost:5000/data`, {
+    fetch(`https://olx-clone-mock-database.herokuapp.com/data`, {
       method: "POST",
       body: JSON.stringify(user),
       headers: {

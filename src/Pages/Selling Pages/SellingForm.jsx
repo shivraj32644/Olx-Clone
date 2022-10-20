@@ -138,7 +138,7 @@ console.log(sellingFormObj)
     const user_id=curId   
 
     useEffect(()=>{
-      axios.get(`http://localhost:5000/data/${user_id}`).then((res)=>setUser(res.data))
+      axios.get(`https://olx-clone-mock-database.herokuapp.com/data/${user_id}`).then((res)=>setUser(res.data))
 
       
       setSellingFormObj({...sellingFormObj,category:category,category_type:subcategory,user_id:user_id,ad_id:uuidv4()})

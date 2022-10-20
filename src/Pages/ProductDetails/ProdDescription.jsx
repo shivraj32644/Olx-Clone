@@ -22,7 +22,7 @@ function ProdDescription({id}) {
     const [myData,setMyData] = useState()
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/allOlxData/${id}`)
+        axios.get(`https://olx-clone-mock-database.herokuapp.com/allOlxData/${id}`)
             .then((response) => {
                 setUser(response.data)
                 return setMyData(response.data.published_ads.cars[0])

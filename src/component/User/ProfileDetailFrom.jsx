@@ -68,7 +68,7 @@ let user = props.user
       
     try{
       dispater(OnLoading())
-      var data = await fetch(`http://localhost:5000/data/${id}`,
+      var data = await fetch(`https://olx-clone-mock-database.herokuapp.com/data/${id}`,
 
       {
         method:"PATCH",

@@ -19,7 +19,7 @@ export const getData = (payload) => ({
 
 export const fetchData = () => (dispatch) => {
   dispatch(isloading(true));
-  fetch(`http://localhost:5000/homedata`)
+  fetch(`https://olx-clone-mock-database.herokuapp.com/homedata`)
     .then((res) => res.json())
     .then((res) => dispatch(getData(res)))
     .catch(() => dispatch(isError()))

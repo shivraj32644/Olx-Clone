@@ -15447,6 +15447,61 @@
         }
       ],
       "id": 5
+    },
+    {
+      "mobile": "8359900115",
+      "full_name": "Shivraj Dangi",
+      "img_url": "https://png.pngtree.com/png-clipart/20190924/original/pngtree-human-avatar-free-vector-png-image_4825373.jpg",
+      "email_id": "",
+      "followers": "",
+      "following": "",
+      "isPremium": false,
+      "favourite_ads": [
+        {
+          "fav_user_id": "",
+          "fav_ad_id": ""
+        }
+      ],
+      "messaged_to": [
+        {
+          "msg_user_id": ""
+        }
+      ],
+      "published_ads": [
+        {
+          "ad_active": "active",
+          "user_id": 6,
+          "ad_id": "3b0c71c1-2171-4066-b721-21741fe9289e",
+          "date_from": "Oct 18, 22",
+          "date_to": "Nov 19, 22 ",
+          "category": "OLX Autos (Cars)",
+          "category_type": "Cars",
+          "car_name": "",
+          "name": "",
+          "car_model": "",
+          "car_varient": "",
+          "year_buy": null,
+          "fuel": "",
+          "transmission": "",
+          "km_driven": null,
+          "no_of_oweners": null,
+          "key_feature": "",
+          "description": "",
+          "set_price": null,
+          "images": {
+            "img1": "https://www.renderhub.com/markos3d/srt-hellcat-dodge-challenger-2021/srt-hellcat-dodge-challenger-2021-08.jpg",
+            "img2": "https://cdni.autocarindia.com/utils/imageresizer.ashx?n=https://cms.haymarketindia.net/model/uploads/modelimages/Mahindra-Scorpio-N-300620221053.jpg&w=872&h=578&q=75&c=1",
+            "img3": "https://www.renderhub.com/markos3d/srt-hellcat-dodge-challenger-2021/srt-hellcat-dodge-challenger-2021-07.jpg"
+          },
+          "ads_location": {
+            "city": "Bhopal"
+          },
+          "likes": 0,
+          "views": 1,
+          "inspected": true
+        }
+      ],
+      "id": 6
     }
   ]
 }
