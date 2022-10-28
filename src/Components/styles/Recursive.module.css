@@ -1,0 +1,18 @@
+
+.container{
+    padding-left: 10px;
+}
+.item{
+    cursor: pointer;
+    
+}
+.rDiv{
+    padding-left: 10px;
+    margin-top: 10px;
+}
+.active{
+    background-color: #c8f8f6;
+}
+.default{
+    /* background-color: green; */
+}
