@@ -12,8 +12,6 @@ import {
   Button,
   Spacer,
   useDisclosure,
-  useColorModeValue,
-  Avatar,
   IconButton,
   MenuDivider,
   Text,
@@ -31,7 +29,6 @@ import {
   CheckIcon,
   Search2Icon,
   QuestionOutlineIcon,
-  AddIcon,
 } from "@chakra-ui/icons";
 import { FiCamera } from "react-icons/fi";
 import { GiEarthAmerica } from "react-icons/gi";
@@ -43,8 +40,6 @@ import { RiChat1Line } from "react-icons/ri";
 // import { IoEarthOutline } from "react-icons/io";
 // import { IoEarthSharp } from "react-icons/io";
 // import { IoEarthOutline } from "react-icons/io/EarthOutline";
-
-import { ReactNode } from "react";
 
 // import {
 //   Box,
@@ -78,6 +73,7 @@ const UpNavbar = () => {
         top="0"
         zIndex="900"
         width="100%"
+        margin="auto"
         background="#fff"
         boxSizing="border-box"
         boxShadow="0 1px 5px 0 rgb(0 0 0 / 10%)"

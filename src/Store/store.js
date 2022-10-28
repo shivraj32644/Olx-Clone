@@ -1,5 +1,5 @@
 import { legacy_createStore as createStore, applyMiddleware } from "redux";
-import { reducer } from "./reducer";
+import { reducer } from "../redux/reducer";
 
 const thunkMiddleware = (store) => (next) => (action) => {
   if (typeof action === "function") {
