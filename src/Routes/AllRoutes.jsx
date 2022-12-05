@@ -39,7 +39,7 @@ export const AllRoutes = () => {
   const getUser = () => {
     let id = curId;
     Dispatcher(OnLoading());
-    fetch(`https://olx-clone-mock-database.herokuapp.com/data/${id}`)
+    fetch(`https://olx-server.cyclic.app/data/${id}`)
       .then((res) => {
         res
           .json()

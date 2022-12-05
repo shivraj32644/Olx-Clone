@@ -56,7 +56,7 @@ function MyCard( {img,fav,price,title,date,getAllData,cardClick,user,index}){
    
         
     try{
-      var data = await fetch(`http://localhost:5000/data/${id}`,
+      var data = await fetch(`https://olx-server.cyclic.app/data/${id}`,
 
       {
         method:"PATCH",

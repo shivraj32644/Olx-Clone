@@ -14,13 +14,14 @@ import { FaRegHeart } from "react-icons/fa";
 import { BsFillHeartFill } from "react-icons/bs";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchData } from "../redux/action";
+// import { fetchData } from "../redux/action";
 import heart from "./Images/heart.png";
 
 // import HeartLogo from "./Images/svg10.svg";
 // import HeartLogo from "../Images/.svg10.svg";
 // import HeartLogo from "./Images/svg10.svg";
 import { ReactComponent as HeartLogo } from "./Images/svg10.svg";
+import { fetchData } from "../../data_redux/action";
 
 const FreshRecom = () => {
   const dispatch = useDispatch();

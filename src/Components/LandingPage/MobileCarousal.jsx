@@ -33,7 +33,7 @@ function MobileCarousal() {
   ];
   const getMobile = () => {
     setLoading(true);
-    fetch("https://olx-clone-mock-database.herokuapp.com/homedata")
+    fetch("https://olx-server.cyclic.app/homedata")
       .then((res) => res.json())
       .then((res) => setappliances(res))
       .catch((err) => setError(true))
