@@ -7,17 +7,16 @@ import { Homereducer } from "../Redux/UserProfile/redux/reducer";
 import { ParamReducer } from "../param_reducer/reducer";
 import { reducer } from "../data_redux/reducer";
 import MyAddReducer from "../Redux/UserProfile/Reducer";
-import thunk from 'redux-thunk';
+import thunk from "redux-thunk";
 
-const thunkmiddleware = (store) => (next) => (action) => {
-  if (typeof action === "function") {
-    return action(store.dispatch);
-  }
-  next(action);
-};
+// const thunkmiddleware = (store) => (next) => (action) => {
+//   if (typeof action === "function") {
+//     return action(store.dispatch);
+//   }
+//   next(action);
+// };
 
 const think = applyMiddleware(thunk);
-
 
 const rootReducer = combineReducers({
   reducer: reducer,

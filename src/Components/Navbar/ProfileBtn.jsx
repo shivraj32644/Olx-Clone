@@ -1,10 +1,4 @@
-import {
-  AddIcon,
-  ChevronDownIcon,
-  EditIcon,
-  ExternalLinkIcon,
-  RepeatIcon,
-} from "@chakra-ui/icons";
+import { ChevronDownIcon, RepeatIcon } from "@chakra-ui/icons";
 import {
   Box,
   Flex,
@@ -13,15 +7,13 @@ import {
   Image,
   Menu,
   MenuButton,
-  MenuDivider,
   MenuItem,
   MenuList,
   Text,
-  Divider,
   Button,
 } from "@chakra-ui/react";
 import React from "react";
-import { Link, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { BsMenuDown } from "react-icons/bs";
 import { MdContentCopy } from "react-icons/md";
 import { RiLogoutBoxRLine } from "react-icons/ri";
@@ -33,10 +25,8 @@ const ProfileBtn = () => {
   const handleLogOut = () => {
     localStorage.setItem("isLogin", false);
     console.log("hello");
-    toggleAuth()
-    // return <Navigate to='/' />
-}
-
+    toggleAuth();
+  };
 
   return (
     <Box>
@@ -91,9 +81,8 @@ const ProfileBtn = () => {
           </Link>
           <MenuItem icon={<BsMenuDown />}>Buy Business Packages</MenuItem>
           <MenuItem icon={<RepeatIcon />}>Open Closed</MenuItem>
-          <MenuItem icon={<RiLogoutBoxRLine />}>
-          </MenuItem>
-            <Button onClick={handleLogOut }>Logout</Button>
+          <MenuItem icon={<RiLogoutBoxRLine />}></MenuItem>
+          <Button onClick={handleLogOut}>Logout</Button>
         </MenuList>
       </Menu>
     </Box>

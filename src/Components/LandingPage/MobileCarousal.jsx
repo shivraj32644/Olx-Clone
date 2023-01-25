@@ -4,12 +4,8 @@ import {
   AlertIcon,
   AlertTitle,
   Box,
-  Button,
-  Img,
   SkeletonCircle,
   SkeletonText,
-  Text,
-  WrapItem,
   Flex,
   Badge,
   Image,
@@ -17,13 +13,12 @@ import {
 } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import Carousel from "react-elastic-carousel";
-import { FaRegHeart } from "react-icons/fa";
 
 function MobileCarousal() {
   const [appliances, setappliances] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
-  const [isFaver, setIsFaver] = useState(false);
+  const [setIsFaver] = useState(false);
 
   const breakPoints = [
     { width: 1, itemsToShow: 1 },
@@ -33,7 +28,7 @@ function MobileCarousal() {
   ];
   const getMobile = () => {
     setLoading(true);
-    fetch("https://olx-server.cyclic.app/homedata")
+    fetch("https://olx-database-3xly.onrender.com/homedata")
       .then((res) => res.json())
       .then((res) => setappliances(res))
       .catch((err) => setError(true))

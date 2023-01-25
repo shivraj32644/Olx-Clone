@@ -1,13 +1,4 @@
-import {
-  Box,
-  Container,
-  Input,
-  Stack,
-  Grid,
-  GridItem,
-  Button,
-  getSlideTransition,
-} from "@chakra-ui/react";
+import { Box, Container, Grid, GridItem } from "@chakra-ui/react";
 import React, { useContext } from "react";
 import { Accordian } from "../Components/Accordian";
 import { Card } from "../Components/Card";
@@ -15,15 +6,9 @@ import { SortMenu } from "../Components/SortMenu";
 import { Divider } from "@chakra-ui/react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  fetchBooks,
-  fetchCars,
-  fetchData,
-  fetchMobile,
-  getData,
-} from "../data_redux/action";
-import { Link, NavLink, useSearchParams } from "react-router-dom";
-import { useState } from "react";
+import { fetchData } from "../data_redux/action";
+import { NavLink } from "react-router-dom";
+// import { useState } from "react";
 import { ParamContext } from "../Context/CarParamContext";
 import { SkelotonCard } from "../Components/Skeleton";
 // import { useContext } from "react";
@@ -43,11 +28,11 @@ export const ProducPage = () => {
     lg: false,
   });
   const dispatch = useDispatch();
-  const { loading, error, data } = useSelector((store) => store.reducer);
+  const { loading, data } = useSelector((store) => store.reducer);
   const { axiosObject } = useContext(ParamContext);
 
   // console.log(dispatch(fetchData({})));
-   
+
   useEffect(() => {
     dispatch(fetchData(axiosObject));
   }, [axiosObject]);
@@ -55,10 +40,9 @@ export const ProducPage = () => {
   return (
     <>
       <UpNavbar />
-      <SellButton/>
+      <SellButton />
       <Box mt={1}>
-      <DownNavbar />
-
+        <DownNavbar />
       </Box>
       <Container mt={10} maxW="84%">
         <Grid
@@ -217,10 +201,9 @@ export const ProducPage = () => {
             </>
           )}
         </Grid>
-
       </Container>
-      <Footer1/>
-      <Footer2/>
+      <Footer1 />
+      <Footer2 />
     </>
   );
 };

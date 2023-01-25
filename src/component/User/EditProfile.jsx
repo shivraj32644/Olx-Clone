@@ -1,42 +1,15 @@
 import { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
 
-import { CheckIcon, ChevronRightIcon } from "@chakra-ui/icons";
-import { HiOutlineLightBulb } from "react-icons/hi";
 import LoadingPage from "./util/Loading";
-import { NavLink, Link } from "react-router-dom"
-import {
-  Box,
-  Flex,
-  Text,
-  CircularProgress,
-  Button,
-  Spinner,
-  VStack,
-  StackDivider,
-  Divider,
-  FormControl,
-  FormLabel,
-  FormErrorMessage,
-  FormHelperText,
-  Input,
-  Textarea,
-  InputRightElement,
-  InputGroup,
-  InputLeftElement,
-  Spacer,
-  HStack,
-  
-} from "@chakra-ui/react";
+import { NavLink, Link } from "react-router-dom";
+import { Box, Flex, Text, Button, Divider } from "@chakra-ui/react";
 import { useState } from "react";
 
-import ProfilePicForm from "./ProfilePicForm";
 import ProfileDetailForm from "./ProfileDetailFrom";
 
-function EditProfile({userData,getUser}) {
- 
-    let {loading,error,user} = userData
- 
+function EditProfile({ userData, getUser }) {
+  let { loading, error, user } = userData;
+
   //for windows size paging hook
   let [profileInDetails, setProfileInDetails] = useState(true);
 
@@ -44,48 +17,40 @@ function EditProfile({userData,getUser}) {
     getUser();
   }, []);
 
- 
-  let activeStyle ={
-    fontWeight:"bold",
-    fontSize:"17px",
-    marginBottom:"30px"
-  }
-  let defaultStyle ={
-   fontSize:"17px",
-   color:"gray",
-   marginBottom:"30px"
-  }
-
- 
+  let activeStyle = {
+    fontWeight: "bold",
+    fontSize: "17px",
+    marginBottom: "30px",
+  };
+  let defaultStyle = {
+    fontSize: "17px",
+    color: "gray",
+    marginBottom: "30px",
+  };
 
   if (error) {
     return <h1>error..</h1>;
   }
- 
-  if(loading){
-    
-    return <LoadingPage/>
+
+  if (loading) {
+    return <LoadingPage />;
   }
 
-  if(!error && !loading && Object.keys(user).length ==0){
-     return<></>
+  if (!error && !loading && Object.keys(user).length == 0) {
+    return <></>;
   }
-   
-
-
 
   return (
-    <Box position={"relative"}  >
+    <Box position={"relative"}>
       <Flex font-family="'Roboto', sans-serif" width="95%" margin="auto">
         <Box textAlign={"left"} width="30%" marginRight="20px" marginTop={4}>
-         <NavLink
-        
-         to="/editProfile"
-          style={({ isActive }) => {
-            return isActive ? activeStyle : defaultStyle;
-          }}
-         >
-         {/* <Text
+          <NavLink
+            to="/editProfile"
+            style={({ isActive }) => {
+              return isActive ? activeStyle : defaultStyle;
+            }}
+          >
+            {/* <Text
               paddingBottom={"8px"}
               fontWeight="bold"
               color={"black"}
@@ -93,48 +58,42 @@ function EditProfile({userData,getUser}) {
                 setProfileInDetails(true);
               }}
             > */}
-              Edit profile
+            Edit profile
             {/* </Text> */}
-         </NavLink><br />
-         <NavLink   to="/editProfile/picture" 
-          style={({ isActive }) => {
-            return isActive ? activeStyle : defaultStyle;
-          }}
-         >
-
-         {/* <Text
+          </NavLink>
+          <br />
+          <NavLink
+            to="/editProfile/picture"
+            style={({ isActive }) => {
+              return isActive ? activeStyle : defaultStyle;
+            }}
+          >
+            {/* <Text
               color={"gray"}
               onClick={() => {
                 setProfileInDetails(false);
               }}
             > */}
-              Profile picture
+            Profile picture
             {/* </Text> */}
-         </NavLink>
-        
+          </NavLink>
 
-           
-         
-          
-         
-
-         <Link  to="/profile" >
-         <Button
-            marginTop={"20px"}
-            size="md"
-            borderRadius={"4px"}
-            height="40px"
-            width="100%"
-            border="2px"
-            color={"black"}
-            borderColor="black"
-            background={"white"}
-            _hover={{ border: "5px solid black", backgroundColor: "white" }}
-          >
-            View profile
-          </Button>
-         
-         </Link>
+          <Link to="/profile">
+            <Button
+              marginTop={"20px"}
+              size="md"
+              borderRadius={"4px"}
+              height="40px"
+              width="100%"
+              border="2px"
+              color={"black"}
+              borderColor="black"
+              background={"white"}
+              _hover={{ border: "5px solid black", backgroundColor: "white" }}
+            >
+              View profile
+            </Button>
+          </Link>
         </Box>
 
         <Box
@@ -151,17 +110,12 @@ function EditProfile({userData,getUser}) {
           <Divider />
 
           {/* // for data */}
-          
-          <ProfileDetailForm user={user}/>
-         
+
+          <ProfileDetailForm user={user} />
         </Box>
       </Flex>
-
-   
     </Box>
   );
-
-
 }
 
 export default EditProfile;

@@ -2,9 +2,9 @@ import React from "react";
 import { useState } from "react";
 import { createContext } from "react";
 import { useEffect } from "react";
-import { useContext } from "react";
+// import { useContext } from "react";
 import { useDispatch } from "react-redux";
-import { Navigate, useSearchParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import { fetchData } from "../data_redux/action";
 
 export const ParamContext = createContext();
@@ -12,19 +12,17 @@ export const ParamContext = createContext();
 export const ParamContextProvider = ({ children }) => {
   const dispatch = useDispatch();
   const [searchParams, setSearchParams] = useSearchParams();
-  
+
   var Price = searchParams.get("_order");
   var upp = searchParams.get("published_ads.cars.0.set_price_lte");
   var low = searchParams.get("published_ads.cars.0.set_price_gte");
   var brd = searchParams.getAll("published_ads.cars.0.car_brand");
   var cName = searchParams.getAll("published_ads.cars.0.car_name");
- 
- 
 
   // STATES FOR SORTING
   const [DateOrder, setDateOrder] = useState("");
   const [PriceOrder, setPriceOrder] = useState(Price);
-  const [DistaceOrder, setDistanceOrder] = useState("");
+  const [setDistanceOrder] = useState("");
 
   // STATES FOR SLIDER
   const [lowerValue, setLowerValue] = useState(low);
@@ -39,14 +37,11 @@ export const ParamContextProvider = ({ children }) => {
 
   // const [limit, setLimit] = useState(30)
 
-
   // ===========================================================================================================================================
 
   // THIS IS FOR SEARCH PARAMS
   var searchParamObject = {};
   useEffect(() => {
-    
-
     if (PriceOrder) {
       searchParamObject._sort = "published_ads.cars.0.set_price";
       searchParamObject._order = PriceOrder;
@@ -68,7 +63,7 @@ export const ParamContextProvider = ({ children }) => {
 
     if (carName) {
       searchParamObject["published_ads.cars.0.car_name"] = carName;
-     }
+    }
 
     if (PriceOrder && lowerValue && upperValue && brand && carName) {
       searchParamObject._sort = "published_ads.cars.0.set_price";
@@ -77,11 +72,10 @@ export const ParamContextProvider = ({ children }) => {
       searchParamObject["published_ads.cars.0.set_price_gte"] = lowerValue;
       searchParamObject["published_ads.cars.0.car_brand"] = brand;
       searchParamObject["published_ads.cars.0.car_name"] = carName;
-
     }
 
     setSearchParams(searchParamObject);
-  }, [PriceOrder, upperValue, lowerValue, brand,carName]);
+  }, [PriceOrder, upperValue, lowerValue, brand, carName]);
 
   // ===========================================================================================================================================
 
@@ -110,16 +104,15 @@ export const ParamContextProvider = ({ children }) => {
   // }
   if (carName) {
     axiosObject["published_ads.cars.0.car_name"] = carName;
-   }
+  }
 
-  if (PriceOrder && lowerValue && upperValue && brand && carName ) {
+  if (PriceOrder && lowerValue && upperValue && brand && carName) {
     axiosObject._sort = "published_ads.cars.0.set_price";
     axiosObject._order = PriceOrder;
     axiosObject["published_ads.cars.0.set_price_lte"] = upperValue;
     axiosObject["published_ads.cars.0.set_price_gte"] = lowerValue;
     axiosObject["published_ads.cars.0.car_brand"] = brand;
     axiosObject["published_ads.cars.0.car_name"] = carName;
-
   }
 
   // ===========================================================================================================================================
@@ -129,21 +122,10 @@ export const ParamContextProvider = ({ children }) => {
   //   console.log(PriceOrder);
   // }
 
-
-
-
-
-
-
-
   useEffect(() => {
     dispatch(fetchData(axiosObject));
-  },[PriceOrder,lowerValue,upperValue,brand,carName])
+  }, [PriceOrder, lowerValue, upperValue, brand, carName]);
 
-
-  
-
-  
   var dispatchValues = {
     DateOrder,
     setDateOrder,
@@ -155,7 +137,7 @@ export const ParamContextProvider = ({ children }) => {
     setBrand,
     upp,
     low,
-    setCarName
+    setCarName,
     // setLimit
   };
   return (

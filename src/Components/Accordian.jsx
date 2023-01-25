@@ -12,34 +12,44 @@ import {
   Button,
 } from "@chakra-ui/react";
 import React from "react";
-import {
-} from "@chakra-ui/react";
+import {} from "@chakra-ui/react";
 import styles from "./styles/Accordian.module.css";
 import { useState } from "react";
-import { Indeterminate } from "./Indeterminate";
+
 import { LocationChekbox } from "./LocationChekbox";
 import { CheckboxC } from "./Checkbox";
 import { useContext } from "react";
 import { ParamContext } from "../Context/CarParamContext";
-import { AllBrands, AllCarModel, carCategory, familyTree } from "../Data/AllData";
+import {
+  AllBrands,
+  AllCarModel,
+  carCategory,
+  familyTree,
+} from "../Data/AllData";
 import { useDispatch } from "react-redux";
 import { fetchData } from "../data_redux/action";
-import { Navigate } from "react-router-dom";
-
 
 // car acordian
 export const Accordian = () => {
-  const {setCarName, setUpperValue,setLowerValue,setBrand,upp ,clearAll,low} = useContext(ParamContext);
-  const [sliderVal, setSliderVal] = useState([low,upp]);
+  const {
+    setCarName,
+    setUpperValue,
+    setLowerValue,
+    setBrand,
+    upp,
+    clearAll,
+    low,
+  } = useContext(ParamContext);
+  const [sliderVal, setSliderVal] = useState([low, upp]);
   const [Check, setCheck] = useState([]);
   const [Check2, setCheck2] = useState([]);
   const dispatch = useDispatch();
 
-  function clear() { 
+  function clear() {
     dispatch(fetchData({}));
     setTimeout(() => {
       clearAll();
-    },100)
+    }, 100);
   }
 
   var lowVal = sliderVal[0];
@@ -53,7 +63,7 @@ export const Accordian = () => {
   const handleCarModel = (id, value, e) => {
     const currIndex = Check.indexOf(value);
     const newChecked = [...Check];
-    
+
     if (currIndex === -1) {
       newChecked.push(value);
     } else {
@@ -62,24 +72,22 @@ export const Accordian = () => {
 
     setCheck(newChecked);
     setBrand(newChecked);
-
   };
 
   const handleCarName = (id, value) => {
     const currIndex = Check2.indexOf(value);
     const newChecked = [...Check2];
-    
+
     if (currIndex === -1) {
       newChecked.push(value);
     } else {
       newChecked.splice(currIndex, 1);
     }
-    console.log(newChecked)
+    console.log(newChecked);
     setCheck2(newChecked);
 
-    setCarName(newChecked)
-  }
-
+    setCarName(newChecked);
+  };
 
   return (
     <Accordion defaultIndex={[0, 1, 2, 3, 4]} allowMultiple>
@@ -93,12 +101,7 @@ export const Accordian = () => {
           </AccordionButton>
         </h2>
         <AccordionPanel pb={4}>
-
-
-        <LocationChekbox familyTree={carCategory} />
-
-
-
+          <LocationChekbox familyTree={carCategory} />
         </AccordionPanel>
       </AccordionItem>
 
@@ -111,16 +114,13 @@ export const Accordian = () => {
             <AccordionIcon />
           </AccordionButton>
         </h2>
-        <AccordionPanel maxH={170}
+        <AccordionPanel
+          maxH={170}
           className={styles.track}
-          overflow="auto" pb={4}>
-          
-
-
-          <LocationChekbox  familyTree={familyTree} />
-
-
-
+          overflow="auto"
+          pb={4}
+        >
+          <LocationChekbox familyTree={familyTree} />
         </AccordionPanel>
       </AccordionItem>
 
@@ -134,9 +134,9 @@ export const Accordian = () => {
           </AccordionButton>
         </h2>
         <AccordionPanel pb={4}>
-          <Box  display={"flex"} justifyContent="space-between" >
-            <h3>₹  {new Intl.NumberFormat('en-IN').format(lowVal)}</h3>
-            <h3> ₹  { new Intl.NumberFormat('en-IN').format(upperVal)  }</h3>
+          <Box display={"flex"} justifyContent="space-between">
+            <h3>₹ {new Intl.NumberFormat("en-IN").format(lowVal)}</h3>
+            <h3> ₹ {new Intl.NumberFormat("en-IN").format(upperVal)}</h3>
           </Box>
           <RangeSlider
             onChange={(e) => setSliderVal(e)}
@@ -202,7 +202,7 @@ export const Accordian = () => {
           overflow="auto"
           pb={4}
         >
-           {AllCarModel.map(({ id, brand }) => (
+          {AllCarModel.map(({ id, brand }) => (
             <CheckboxC
               handleCarModel={handleCarName}
               id={id}

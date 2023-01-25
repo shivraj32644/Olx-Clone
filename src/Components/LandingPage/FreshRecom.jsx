@@ -1,38 +1,31 @@
-import {
-  Box,
-  Button,
-  Heading,
-  Image,
-  SimpleGrid,
-  Text,
-  Flex,
-  Badge,
-} from "@chakra-ui/react";
-import styles from "../LandingPage/Card.module.css";
-import React, { useState } from "react";
-import { FaRegHeart } from "react-icons/fa";
-import { BsFillHeartFill } from "react-icons/bs";
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-// import { fetchData } from "../redux/action";
-import heart from "./Images/heart.png";
+import { Box, Heading, Image, SimpleGrid, Flex, Badge } from "@chakra-ui/react";
 
-// import HeartLogo from "./Images/svg10.svg";
-// import HeartLogo from "../Images/.svg10.svg";
-// import HeartLogo from "./Images/svg10.svg";
-import { ReactComponent as HeartLogo } from "./Images/svg10.svg";
-import { fetchData } from "../../data_redux/action";
+import React, { useState } from "react";
+
+import { useEffect } from "react";
+// import { useDispatch, useSelector } from "react-redux";
+
+// import { fetchData } from "../../data_redux/action";
 
 const FreshRecom = () => {
-  const dispatch = useDispatch();
-  const  {data}  = useSelector((store) => store.HomeReducer);
-  console.log("data is looks like ", data);
-  const [isFaver, setIsFaver] = useState(false);
-  const [isFav, setIsFav] = useState(false);
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
 
+  const getData = () => {
+    setLoading(true);
+    fetch("https://olx-database-3xly.onrender.com/homedata")
+      .then((res) => res.json())
+      .then((res) => setData(res))
+      .catch((err) => setError(true))
+      .finally(() => setLoading(false));
+  };
   useEffect(() => {
-    dispatch(fetchData());
+    getData();
   }, []);
+
+  // error ? alert("Something went wrong!");
+  // loading ?
 
   return (
     <>
@@ -59,19 +52,6 @@ const FreshRecom = () => {
                     margin="8px"
                     justifyContent="center"
                   >
-                    {/* {premium ? (
-                      <Badge
-                        zIndex={580}
-                        position="absolute"
-                        left={1}
-                        px="2"
-                        bg="#ffce32"
-                        color="black"
-                      >
-                        Featured
-                      </Badge>
-                    ) : null} */}
-
                     <Image height="160px" src={elem.img_url} alt="product" />
 
                     <Badge
@@ -80,13 +60,7 @@ const FreshRecom = () => {
                       right="0.1px"
                       bg="none"
                     >
-                      <button
-                        type="button"
-                        title="Favourite"
-                        tabIndex="0"
-                        onClick={() => setIsFaver(true)}
-                        // className={styles.heartBtn}
-                      >
+                      <button type="button" title="Favourite" tabIndex="0">
                         <svg
                           width="24px"
                           height="24px"

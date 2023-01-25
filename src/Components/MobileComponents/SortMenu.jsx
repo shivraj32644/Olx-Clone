@@ -12,14 +12,13 @@ import { MobileParamContext } from "../../Context/MobileParamContext";
 
 export const SortMenu = () => {
   const [currValue, setCurValue] = useState("Date Published");
-  
-  const {setDateOrder,setPriceOrder,setDistanceOrder} = useContext(MobileParamContext)
- 
+
+  const { setDateOrder, setPriceOrder, setDistanceOrder } =
+    useContext(MobileParamContext);
 
   const handleChange = (e) => {
     setCurValue(e);
-    const sort = valfun(e);
-   
+    valfun(e);
   };
 
   const valfun = (e) => {
@@ -39,11 +38,12 @@ export const SortMenu = () => {
         break;
       }
       case "Price : High to Low": {
-        setPriceOrder("desc")
+        setPriceOrder("desc");
         break;
       }
       case "Distance": {
         setDistanceOrder("asc");
+        break;
       }
       default: {
         return (val = {});

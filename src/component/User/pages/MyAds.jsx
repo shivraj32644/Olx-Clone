@@ -8,20 +8,15 @@ import {
   Spacer,
   HStack,
   FormHelperText,
-  InputLeftAddon,
   InputGroup,
   InputLeftElement,
   Tab,
   Tabs,
   TabList,
   Divider,
-  Grid,
-  SkeletonText,
-  SkeletonCircle,
   Skeleton,
   FormControl,
   Input,
-  Textarea,
   VStack,
 } from "@chakra-ui/react";
 import { BiDotsHorizontalRounded, BiErrorCircle } from "react-icons/bi";
@@ -33,9 +28,6 @@ import { PhoneIcon, SearchIcon } from "@chakra-ui/icons";
 import { useState } from "react";
 import { useSearchParams } from "react-router-dom";
 function MyAds({ userData, getUser }) {
-
-
-
   // const getUser = () => {
   //   let id = "1";
   //   Dispatcher(OnLoading());
@@ -56,25 +48,20 @@ function MyAds({ userData, getUser }) {
   //     });
   // };
 
-  
-
   // for filtters
-   let one = [];
-   let two =[];
-   let three =[];
-   let four =[];
-   let five =[];
-   let newSearch =[];
-   
- 
+  let one = [];
+  let two = [];
+  let three = [];
+  let four = [];
+  let five = [];
+  let newSearch = [];
 
-  let [all,setAll] = useState([]);
-  let [searchPeram,setSearchPram] = useState(2);
- 
-  let [allInactive,setAllInactive] = useState([]);
-  let [allPending,setAllPending] = useState([]);
-  let [allModerated,setAlModerated] = useState([]);
+  let [all, setAll] = useState([]);
+  let [searchPeram, setSearchPram] = useState(2);
 
+  let [allInactive, setAllInactive] = useState([]);
+  let [allPending, setAllPending] = useState([]);
+  let [allModerated, setAlModerated] = useState([]);
 
   useEffect(() => {
     getUser();
@@ -82,15 +69,7 @@ function MyAds({ userData, getUser }) {
   let { loading, error, user } = userData;
   let [search, setSearch] = useState("");
 
-
-  
-   
-    console.log(user.published_ads  +"hi this is mycode")
-
-  
-  
-
-  
+  console.log(user.published_ads + "hi this is mycode");
 
   const rejected = (props) => {
     console.log(props.date_from);
@@ -392,7 +371,6 @@ function MyAds({ userData, getUser }) {
     );
   };
 
-
   const pending = (props) => {
     return (
       <HStack
@@ -687,24 +665,16 @@ function MyAds({ userData, getUser }) {
     );
   };
 
-
-  
-
-
-
   if (error) {
     return <h1>error..</h1>;
   }
 
   if (loading) {
-      return <>
-<Skeleton height={"127px"}>
-
-
-  
-</Skeleton>
-        
+    return (
+      <>
+        <Skeleton height={"127px"}></Skeleton>
       </>
+    );
   }
 
   if (!error && !loading && Object.keys(user).length == 0) {
@@ -750,119 +720,105 @@ function MyAds({ userData, getUser }) {
     );
   }
 
-  
   let nameIsError = search.length > 0 && search.length < 3;
 
-
-   user.published_ads.map((el)=>{
-           
+  user.published_ads.map((el) => {
     one.push(el);
 
-        if(el.ad_active ==="inactive"){
-           three.push(el);
-        }else if(el.ad_active ==="active"){
-           two.push(el);
-        }else if(el.ad_active ==="moderated"){
-            five.push(el);
-        }else if(el.ad_active ==="pending"){
-          four.push(el)
-         }
-    })
-
-    let show ;
-    if(searchPeram==0){
-       show = one;
-    }else if(searchPeram==1){
-       show =two;
-    }else if(searchPeram==2){
-        show= three
-    }else if(searchPeram==3){
-       show = four
-    }else if(searchPeram==4){
-             show =five
-    }else if(searchPeram==5){
-       show = newSearch
+    if (el.ad_active === "inactive") {
+      three.push(el);
+    } else if (el.ad_active === "active") {
+      two.push(el);
+    } else if (el.ad_active === "moderated") {
+      five.push(el);
+    } else if (el.ad_active === "pending") {
+      four.push(el);
     }
+  });
 
+  let show;
+  if (searchPeram == 0) {
+    show = one;
+  } else if (searchPeram == 1) {
+    show = two;
+  } else if (searchPeram == 2) {
+    show = three;
+  } else if (searchPeram == 3) {
+    show = four;
+  } else if (searchPeram == 4) {
+    show = five;
+  } else if (searchPeram == 5) {
+    show = newSearch;
+  }
 
-    let data = show.map((el) => {
-      let check = el.ad_active;
-      if (check ==="moderated") {
-        return Moderated(el);
-      }else if(check==="inactive"){
-        return rejected(el);
-      }else if(check==="pending"){
-        return pending(el)
-      }else{
-        return active(el)
-      }
-      
-    });
+  let data = show.map((el) => {
+    let check = el.ad_active;
+    if (check === "moderated") {
+      return Moderated(el);
+    } else if (check === "inactive") {
+      return rejected(el);
+    } else if (check === "pending") {
+      return pending(el);
+    } else {
+      return active(el);
+    }
+  });
 
-    const formHandler = (e) => {
-     
-   };
-  
+  const formHandler = (e) => {};
 
-    // setAllActive(two)
-    // let [allActive,setAllActive] = useState(two);
+  // setAllActive(two)
+  // let [allActive,setAllActive] = useState(two);
 
-    // if (show.length == 0) {
-    //   return (
-    //     <>
-    //       <Stack
-    //         width="100%"
-    //         height={"90vh"}
-    //         justifyContent={"center"}
-    //         alignItems={"center"}
-    //         textAlign={"center"}
-    //         margin="auto"
-    //       >
-    //         <Image
-    //           src="https://statics.olx.in/external/base/img/no-favorites.png"
-    //           height={"200px"}
-    //           alt="Dan Abramov"
-    //         />
-    //         <Text as={"b"} color="#5c7a81">
-    //           You haven't liked any ads yet
-    //         </Text>
-    //         <Text color={"#5c7a81"} fontSize="sm">
-    //           {" "}
-    //           `Like ads and share <br /> them with the world`
-    //         </Text>
-    //         <Button
-    //           size="md"
-    //           borderRadius={"4px"}
-    //           border="2px"
-    //           color={"black"}
-    //           borderColor="black"
-    //           background={"white"}
-    //           _hover={{ border: "5px solid black", backgroundColor: "white" }}
-    //         >
-    //           Discover
-    //         </Button>
-    //       </Stack>
-    //     </>
-    //   );
-    // }
-
+  // if (show.length == 0) {
+  //   return (
+  //     <>
+  //       <Stack
+  //         width="100%"
+  //         height={"90vh"}
+  //         justifyContent={"center"}
+  //         alignItems={"center"}
+  //         textAlign={"center"}
+  //         margin="auto"
+  //       >
+  //         <Image
+  //           src="https://statics.olx.in/external/base/img/no-favorites.png"
+  //           height={"200px"}
+  //           alt="Dan Abramov"
+  //         />
+  //         <Text as={"b"} color="#5c7a81">
+  //           You haven't liked any ads yet
+  //         </Text>
+  //         <Text color={"#5c7a81"} fontSize="sm">
+  //           {" "}
+  //           `Like ads and share <br /> them with the world`
+  //         </Text>
+  //         <Button
+  //           size="md"
+  //           borderRadius={"4px"}
+  //           border="2px"
+  //           color={"black"}
+  //           borderColor="black"
+  //           background={"white"}
+  //           _hover={{ border: "5px solid black", backgroundColor: "white" }}
+  //         >
+  //           Discover
+  //         </Button>
+  //       </Stack>
+  //     </>
+  //   );
+  // }
 
   return (
     <>
-      <HStack marginTo="20px"
+      <HStack
+        marginTo="20px"
         width={"100%"}
         marginBottom="20px"
         margin="auto"
         py="40px"
-       
         alignItems="center"
       >
-        <FormControl
-         
-          width="300px"
-          alignItems="center"
-          height={"36px"}
-        >
+        <FormControl width="300px" alignItems="center" height={"36px"}>
           <InputGroup alignItems="center">
             <InputLeftElement
               alignItems={"center"}
@@ -882,21 +838,19 @@ function MyAds({ userData, getUser }) {
                 borderColor="black"
                 name="full_name"
                 width="300px"
-                onChange={(e)=>{
+                onChange={(e) => {
                   // console.log("key toh clk hua")
                   // //setSearch(e.target.value)
                   // console.log("key toh clk hua")
-         
-              //  if(e.key === 'Enter'){
-              //    //  show.map((el)=>{
-              //    //      if(el.name === search ){
-              //    //        newSearch.push(el);
-              //    //        setSearchPram(5);
-              //    //      }
-              //    //  })
-              //    console.log("my key")
-              //  }
-
+                  //  if(e.key === 'Enter'){
+                  //    //  show.map((el)=>{
+                  //    //      if(el.name === search ){
+                  //    //        newSearch.push(el);
+                  //    //        setSearchPram(5);
+                  //    //      }
+                  //    //  })
+                  //    console.log("my key")
+                  //  }
                 }}
               />
             ) : (
@@ -907,9 +861,8 @@ function MyAds({ userData, getUser }) {
                 borderRadius="4px"
                 focusBorderColor={"#22c2ba"}
                 placeholder={""}
-               
                 borderColor="black"
-                onChange={(e)=>{
+                onChange={(e) => {
                   //  if(e.target.value.length==0){
                   //   if(searchPeram==0){
                   //     show = one;
@@ -925,25 +878,21 @@ function MyAds({ userData, getUser }) {
                   //     show = newSearch
                   //  }
                   //  }
-
                 }}
                 name="full_name"
-                onKeyPress={(e)=>{
+                onKeyPress={(e) => {
+                  console.log("key toh clk hua");
 
-                  console.log("key toh clk hua")
-               
-         
-                  if(e.key === 'Enter') {
-                     show.map((el)=>{
-                      if(el.name === e.target.value ){
+                  if (e.key === "Enter") {
+                    show.map((el) => {
+                      if (el.name === e.target.value) {
                         newSearch.push(el);
                         setSearchPram(5);
                       }
-                  })
-                 console.log("my key")
-               }      
-                }
-                }
+                    });
+                    console.log("my key");
+                  }
+                }}
               />
             )}
           </InputGroup>
@@ -960,10 +909,17 @@ function MyAds({ userData, getUser }) {
 
         {/* for filltter */}
 
-        <HStack  alignItems="center">
+        <HStack alignItems="center">
           <Text>Filter By:</Text>
 
-          <Tabs index={searchPeram<5 && searchPeram} onChange={(i)=>{setSearchPram(i)}} variant="soft-rounded" colorScheme="green">
+          <Tabs
+            index={searchPeram < 5 && searchPeram}
+            onChange={(i) => {
+              setSearchPram(i);
+            }}
+            variant="soft-rounded"
+            colorScheme="green"
+          >
             <TabList gap="2">
               <Tab
                 height={"34px"}
@@ -1026,26 +982,27 @@ function MyAds({ userData, getUser }) {
       </HStack>
 
       <VStack gap={1} width="100%">
-        {show.length==0 &&  <>
-          <Stack
-            width="100%"
-            height={"90vh"}
-            justifyContent={"center"}
-            alignItems={"center"}
-            textAlign={"center"}
-            margin="auto"
-          >
-            <Image
-              src="https://statics.olx.in/external/base/img/no-favorites.png"
-              height={"200px"}
-              alt="Dan Abramov"
-            />
-            <Text as={"b"} color="#5c7a81">
-             Do non't have any Item
-            </Text>
-          
-          </Stack>
-        </>}
+        {show.length == 0 && (
+          <>
+            <Stack
+              width="100%"
+              height={"90vh"}
+              justifyContent={"center"}
+              alignItems={"center"}
+              textAlign={"center"}
+              margin="auto"
+            >
+              <Image
+                src="https://statics.olx.in/external/base/img/no-favorites.png"
+                height={"200px"}
+                alt="Dan Abramov"
+              />
+              <Text as={"b"} color="#5c7a81">
+                Do non't have any Item
+              </Text>
+            </Stack>
+          </>
+        )}
         {data}
       </VStack>
     </>

@@ -5,7 +5,6 @@ import {
   AccordionItem,
   AccordionPanel,
   Box,
-  Checkbox,
   RangeSlider,
   RangeSliderFilledTrack,
   RangeSliderThumb,
@@ -13,16 +12,10 @@ import {
   Button,
 } from "@chakra-ui/react";
 import React from "react";
-import {
-  List,
-  ListItem,
-  ListIcon,
-  OrderedList,
-  UnorderedList,
-} from "@chakra-ui/react";
+
 import styles from "../styles/Accordian.module.css";
 import { useState } from "react";
-import { Indeterminate } from "../Indeterminate";
+
 import { LocationChekbox } from "../LocationChekbox";
 import { CheckboxC } from "../Checkbox";
 import { useContext } from "react";

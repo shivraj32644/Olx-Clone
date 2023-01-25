@@ -1,12 +1,4 @@
-import {
-  Box,
-  Container,
-  Input,
-  Stack,
-  Grid,
-  GridItem,
-  Button,
-} from "@chakra-ui/react";
+import { Box, Container, Stack, Grid, GridItem } from "@chakra-ui/react";
 import React from "react";
 import { Accordian } from "../Components/Accordian";
 import { Card } from "../Components/Card";
@@ -14,22 +6,15 @@ import { SortMenu } from "../Components/SortMenu";
 import { Divider } from "@chakra-ui/react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  fetchBooks,
-  fetchCars,
-  fetchData,
-  fetchMobile,
-  getData,
-} from "../data_redux/action";
-import { Link, NavLink } from "react-router-dom";
+import { fetchData } from "../data_redux/action";
+import { NavLink } from "react-router-dom";
 // import { useContext } from "react";
 
 export const Books = () => {
   const dispatch = useDispatch();
-  const {data} = useSelector((store) => store.reducer);
-  console.log(data,"data at line 30");
+  const { data } = useSelector((store) => store.reducer);
+  // console.log(data,"data at line 30");
   const params = {};
-
 
   useEffect(() => {
     dispatch(fetchData(params));

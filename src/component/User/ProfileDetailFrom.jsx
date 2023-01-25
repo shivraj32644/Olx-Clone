@@ -8,7 +8,6 @@ import {
   Divider,
   FormControl,
   FormLabel,
-  FormErrorMessage,
   FormHelperText,
   Input,
   Textarea,
@@ -18,221 +17,187 @@ import {
   Spacer,
   HStack,
 } from "@chakra-ui/react";
-import { CheckIcon, ChevronRightIcon } from "@chakra-ui/icons";
+import { ChevronRightIcon } from "@chakra-ui/icons";
 import { HiOutlineLightBulb } from "react-icons/hi";
 import { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 
-import {
-OnError,
-OnLoading,
-OnSuccess,
-} from "../../Redux/UserProfile/Action";
-import {Link} from "react-router-dom"
+import { OnError, OnLoading, OnSuccess } from "../../Redux/UserProfile/Action";
+import { Link } from "react-router-dom";
 
+function ProfileDetailForm(props) {
+  let dispater = useDispatch();
+  let user = props.user;
 
-function ProfileDetailForm(props){
-//  let user = (Object.keys(props.user).length === 0)?{
-//   "user_id": "bbdd236b-5dc5-4a85-99dc-2019ee7f1b17",
-//   "img_url": "https://png.pngtree.com/png-clipart/20190924/original/pngtree-human-avatar-free-vector-png-image_4825373.jpg",
-//   "full_name": "Katrina Mills",
-//   "email_id": "Katrina_Mills@hotmail.com",
-//   "followers": 338,
-//   "following": 88,
-//   "login": false,
-//   "isPremium": false,
-//   "user_number":8210106539,
-//   "id": 1}:props.user
-let dispater = useDispatch();
-let user = props.user
+  let [userData, setUserData] = useState(user);
+  let nameIsError = userData.full_name.length < 3;
 
-  let [userData,setUserData] = useState(user)
-  let nameIsError = (userData.full_name.length<3)
-  
+  const formHandler = (e) => {
+    console.log(userData);
+    setUserData({ ...userData, [e.target.name]: e.target.value });
+    console.log(userData);
+  };
 
-  const formHandler =(e)=>{
-      console.log(userData)
-     setUserData({...userData, [e.target.name]:e.target.value  })
-      console.log(userData)
-      
-    
-     
+  const favUpdater = async (id, newuser) => {
+    try {
+      dispater(OnLoading());
+      var data = await fetch(
+        `https://olx-database-3xly.onrender.com/data/${id}`,
 
-     
-
-  }
-
-
-  const favUpdater = async (id,newuser) => {
- 
-      
-    try{
-      dispater(OnLoading())
-      var data = await fetch(`https://olx-server.cyclic.app/data/${id}`,
-
-      {
-        method:"PATCH",
-        body:JSON.stringify(newuser),
-        headers:{
-          "Content-Type":'application/json'
+        {
+          method: "PATCH",
+          body: JSON.stringify(newuser),
+          headers: {
+            "Content-Type": "application/json",
+          },
         }
-
-      }
-      )
+      );
       let r = await data.json();
-    
-      console.log(r)
-      dispater(OnSuccess(r))
 
-    }catch(e){
-      
-      dispater(OnError())
-    }finally{
-       
+      console.log(r);
+      dispater(OnSuccess(r));
+    } catch (e) {
+      dispater(OnError());
+    } finally {
     }
   };
 
-
-  // "user_id": "bbdd236b-5dc5-4a85-99dc-2019ee7f1b17",
-  // "img_url": "https://png.pngtree.com/png-clipart/20190924/original/pngtree-human-avatar-free-vector-png-image_4825373.jpg",
-  // "full_name": "Katrina Mills",
-  // "email_id": "Katrina_Mills@hotmail.com",
-  // "followers": 338,
-  // "following": 88,
-  // "login": false,
-  // "isPremium": false,
-  // "favourite_ads": [
-
-
-  return(
-      <>
-      
-      <VStack
-        p={5}
-        
-        spacing={2}
-        align="stretch"
-      >
-        <FormLabel fontWeight={'bold'} >Basic information</FormLabel>
+  return (
+    <>
+      <VStack p={5} spacing={2} align="stretch">
+        <FormLabel fontWeight={"bold"}>Basic information</FormLabel>
         <Flex gap={4} width="100%">
           <Box width={"50%"} textAlign="left">
-            <FormControl   >
-              {nameIsError?
-              <Input
-              isInvalid={nameIsError}
-              size={"lg"}
-              width="100%"
-              _placeholder={{ color: "Gray" }}
-              border="1px"
-              borderRadius="4px"
-              focusBorderColor={"red"}
-             _focus={{border:"2px solid red"}}
-              placeholder={"Name"}
-              value={userData.full_name}
-              borderColor="black"
-              name="full_name"
-              onChange={formHandler}
-            />
-              :<Input
-               maxLength={"30"}
-                isInvalid={nameIsError}
-                size={"lg"}
-                width="100%"
-                _placeholder={{ color: "Gray" }}
-                border="1px"
-                borderRadius="4px"
-                focusBorderColor={"#22c2ba"}
-               _focus={{border:"2px solid #22c2ba"}}
-                placeholder={"Name"}
-                value={userData.full_name}
-                borderColor="black"
-                name="full_name"
-                onChange={formHandler}
-              />}
+            <FormControl>
+              {nameIsError ? (
+                <Input
+                  isInvalid={nameIsError}
+                  size={"lg"}
+                  width="100%"
+                  _placeholder={{ color: "Gray" }}
+                  border="1px"
+                  borderRadius="4px"
+                  focusBorderColor={"red"}
+                  _focus={{ border: "2px solid red" }}
+                  placeholder={"Name"}
+                  value={userData.full_name}
+                  borderColor="black"
+                  name="full_name"
+                  onChange={formHandler}
+                />
+              ) : (
+                <Input
+                  maxLength={"30"}
+                  isInvalid={nameIsError}
+                  size={"lg"}
+                  width="100%"
+                  _placeholder={{ color: "Gray" }}
+                  border="1px"
+                  borderRadius="4px"
+                  focusBorderColor={"#22c2ba"}
+                  _focus={{ border: "2px solid #22c2ba" }}
+                  placeholder={"Name"}
+                  value={userData.full_name}
+                  borderColor="black"
+                  name="full_name"
+                  onChange={formHandler}
+                />
+              )}
               <Flex gap={4}>
-             
-              
-              <FormHelperText fontSize={"xs"}  >{userData.full_name.length==0?"This field is mandatory":userData.full_name.length<3?"Must contain between 3 and 30 characters":""}
-              
-              
-              </FormHelperText>
+                <FormHelperText fontSize={"xs"}>
+                  {userData.full_name.length === 0
+                    ? "This field is mandatory"
+                    : userData.full_name.length < 3
+                    ? "Must contain between 3 and 30 characters"
+                    : ""}
+                </FormHelperText>
 
+                <Spacer></Spacer>
 
-              <Spacer></Spacer>
-
-
-              <FormHelperText fontSize={"xs"}  textAlign="end" >{userData.full_name.length} / 30</FormHelperText>
+                <FormHelperText fontSize={"xs"} textAlign="end">
+                  {userData.full_name.length} / 30
+                </FormHelperText>
               </Flex>
             </FormControl>
 
             <FormControl marginTop={"20px"}>
-            {userData.user_about !=null && (userData.user_about.length>0 && userData.user_about.length<5 ) ?
-              <Textarea
-              // isInvalid={nameIsError}
-             height={"78px"}
-              width="100%"
-              _placeholder={{ color: "Gray" }}
-              border="1px"
-              borderRadius="4px"
-              _autofill="none"
-              focusBorderColor={"red"}
-             _focus={{border:"3px solid red"}}
-              placeholder={"About me (optional)"}
-              value={userData.user_about}
-              borderColor="black"
-              name="user_about"
-              onChange={formHandler}
-              resize="none"
-              maxLength="200"
-            />
-              :<Textarea
-              // isInvalid={nameIsError}
-           
-           
-            height={"fit-content"}
-            overflow="hidden"
-             maxLength="200"
-              width="100%"
-              _placeholder={{ color: "Gray" }}
-              border="1px"
-              borderRadius="4px"
-              focusBorderColor={"#22c2ba"}
-             _focus={{border:"2px solid #22c2ba"}}
-              placeholder={"About me (optional)"}
-              value={userData.user_about}
-              borderColor="black"
-              name="user_about"
-              onChange={formHandler}
+              {userData.user_about !== null &&
+              userData.user_about.length > 0 &&
+              userData.user_about.length < 5 ? (
+                <Textarea
+                  // isInvalid={nameIsError}
+                  height={"78px"}
+                  width="100%"
+                  _placeholder={{ color: "Gray" }}
+                  border="1px"
+                  borderRadius="4px"
+                  _autofill="none"
+                  focusBorderColor={"red"}
+                  _focus={{ border: "3px solid red" }}
+                  placeholder={"About me (optional)"}
+                  value={userData.user_about}
+                  borderColor="black"
+                  name="user_about"
+                  onChange={formHandler}
+                  resize="none"
+                  maxLength="200"
+                />
+              ) : (
+                <Textarea
+                  // isInvalid={nameIsError}
 
-            />}
+                  height={"fit-content"}
+                  overflow="hidden"
+                  maxLength="200"
+                  width="100%"
+                  _placeholder={{ color: "Gray" }}
+                  border="1px"
+                  borderRadius="4px"
+                  focusBorderColor={"#22c2ba"}
+                  _focus={{ border: "2px solid #22c2ba" }}
+                  placeholder={"About me (optional)"}
+                  value={userData.user_about}
+                  borderColor="black"
+                  name="user_about"
+                  onChange={formHandler}
+                />
+              )}
               <Flex gap={4}>
-             
-              
-              <FormHelperText fontSize={"xs"}  >{(userData.user_about !=null && (userData.user_about.length>0 && userData.user_about.length<5))?"Must contain between 5 and 200 characters":""}
-              
-              
-              </FormHelperText>
+                <FormHelperText fontSize={"xs"}>
+                  {userData.user_about !== null &&
+                  userData.user_about.length > 0 &&
+                  userData.user_about.length < 5
+                    ? "Must contain between 5 and 200 characters"
+                    : ""}
+                </FormHelperText>
 
+                <Spacer></Spacer>
 
-              <Spacer></Spacer>
-
-
-              <FormHelperText fontSize={"xs"}  textAlign="end" >{userData.user_about == null?0:userData.user_about.length} / 200</FormHelperText>
+                <FormHelperText fontSize={"xs"} textAlign="end">
+                  {userData.user_about == null ? 0 : userData.user_about.length}{" "}
+                  / 200
+                </FormHelperText>
               </Flex>
             </FormControl>
           </Box>
 
-          <Box paddingBottom={"10px"} height={"max-content"} border="1px solid #cfcdcd" textAlign="left" width="30%">
+          <Box
+            paddingBottom={"10px"}
+            height={"max-content"}
+            border="1px solid #cfcdcd"
+            textAlign="left"
+            width="30%"
+          >
             <HStack px="15px" paddingTop={"10px"} spacing={1}>
               <HiOutlineLightBulb fontSize={"24px"} />
               <Text as="b" fontSize={"sm"}>
                 Why is it important?
               </Text>
             </HStack>
-            <Text px="10px" py='5px' color="#5c7a7d" fontSize="xs">
+            <Text px="10px" py="5px" color="#5c7a7d" fontSize="xs">
               OLX is built on trust. Help other people get to know you. Tell
-              them about the things you like. Share your favorite brands,
-              books, movies, shows, music, food. And you will see the results…
+              them about the things you like. Share your favorite brands, books,
+              movies, shows, music, food. And you will see the results…
             </Text>
           </Box>
         </Flex>
@@ -271,11 +236,9 @@ let user = props.user
                     paddingLeft={"60px"}
                     borderRadius="4px"
                     focusBorderColor={"#22c2ba"}
-                    _focus={{border:"2px solid #22c2ba"}}
+                    _focus={{ border: "2px solid #22c2ba" }}
                     maxLength="10"
-                    placeholder={
-                      "Number"
-                    }
+                    placeholder={"Number"}
                     value={userData.user_number}
                     name="user_number"
                     borderColor="black"
@@ -304,10 +267,8 @@ let user = props.user
                     border="1px"
                     borderRadius="4px"
                     focusBorderColor={"#22c2ba"}
-                    _focus={{border:"2px solid #22c2ba"}}
-                    placeholder={
-                     "Email"
-                    }
+                    _focus={{ border: "2px solid #22c2ba" }}
+                    placeholder={"Email"}
                     value={userData.email_id}
                     name="email_id"
                     onChange={formHandler}
@@ -325,8 +286,8 @@ let user = props.user
                 </InputGroup>
 
                 <Text fontSize={"xs"} width="45%" color="#5c7a7d">
-                  Your email is never shared with external parties nor do we
-                  use it to spam you in any way.
+                  Your email is never shared with external parties nor do we use
+                  it to spam you in any way.
                 </Text>
               </Flex>
             </FormControl>
@@ -366,17 +327,19 @@ let user = props.user
       <Divider></Divider>
 
       <HStack padding={5}>
-        <Link to="/editProfile"><Button
-          size="lg"
-          borderRadius={"none"}
-          borderBottom="2px solid black"
-          px="0px"
-          variant="ghost"
-          color={"black"}
-          _hover={{ border: "none", variant: "ghost" }}
-        >
-          Discard
-        </Button></Link>
+        <Link to="/editProfile">
+          <Button
+            size="lg"
+            borderRadius={"none"}
+            borderBottom="2px solid black"
+            px="0px"
+            variant="ghost"
+            color={"black"}
+            _hover={{ border: "none", variant: "ghost" }}
+          >
+            Discard
+          </Button>
+        </Link>
 
         <Spacer></Spacer>
 
@@ -386,13 +349,18 @@ let user = props.user
           px="8px"
           border="2px"
           color={"white"}
-          onClick={()=>{
-            favUpdater(userData.id,userData)
+          onClick={() => {
+            favUpdater(userData.id, userData);
           }}
           borderColor="black"
           background={"#002f34"}
-          disabled={userData.full_name.length==0?true:userData.email_id.length ==0?true:false  }
-          
+          disabled={
+            userData.full_name.length == 0
+              ? true
+              : userData.email_id.length == 0
+              ? true
+              : false
+          }
           _hover={{
             border: "5px solid black",
             backgroundColor: "white",
@@ -402,9 +370,8 @@ let user = props.user
           Save changes
         </Button>
       </HStack>
-      
-      </>
-  )
+    </>
+  );
 }
 
-export default ProfileDetailForm
+export default ProfileDetailForm;

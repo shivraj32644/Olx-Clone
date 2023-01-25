@@ -5,7 +5,7 @@ import {
   SkeletonText,
   Text,
 } from "@chakra-ui/react";
-import { Carousel } from "react-responsive-carousel";
+// import { Carousel } from "react-responsive-carousel";
 import axios from "axios";
 import { useEffect } from "react";
 import { useState } from "react";
@@ -16,7 +16,7 @@ function ProdBanner({ id }) {
 
   useEffect(() => {
     axios
-      .get(`https://olx-server.cyclic.app/allOlxData/${id}`)
+      .get(`https://olx-database-3xly.onrender.com/allOlxData/${id}`)
       .then((response) => {
         // setUser(response.data)
         setMyData(response.data.published_ads.cars[0]);
@@ -38,13 +38,12 @@ function ProdBanner({ id }) {
   const carImages = myData.car_images;
 
   return (
-      <Box >
-          
+    <Box>
       <Box boxShadow="xs" p="3" rounded="md" bg="white">
         <img
           style={{
-                      objectFit: "contain",
-              width:"700px"
+            objectFit: "contain",
+            width: "700px",
           }}
           alt="Prod-1"
           src={carImages.img1}

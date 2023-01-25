@@ -19,27 +19,26 @@ import { OnError, OnLoading, OnSuccess } from "../Redux/UserProfile/Action";
 import ProductDetails from "../Component/ProdDetails";
 import SellCategories from "../Pages/Selling Pages/SellCategories";
 import SellingForm from "../Pages/Selling Pages/SellingForm";
-import { LoginPage } from "../Component/Login";
+// import { LoginPage } from "../Component/Login";
 
 import DummyLogin from "../Pages/SigninPages/DummyLogin";
 import LoginEmail from "../Pages/SigninPages/Login_Email";
 import LoginMobile from "../Pages/SigninPages/LoginMoblie";
-import UserName from "../Pages/SigninPages/Login_Pass";
+// import UserName from "../Pages/SigninPages/Login_Pass";
 import { PrivateRoute } from "./PrivateRoute";
 
 export const AllRoutes = () => {
   let userState = useSelector((user) => user.MyAddReducer);
   let Dispatcher = useDispatch();
 
-  let curId =Number(localStorage.getItem("currentUserId"));
-  
+  let curId = Number(localStorage.getItem("currentUserId"));
 
-  console.log(userState);
+  // console.log(userState);
   // forGetingDataFun
   const getUser = () => {
     let id = curId;
     Dispatcher(OnLoading());
-    fetch(`https://olx-server.cyclic.app/data/${id}`)
+    fetch(`https://olx-database-3xly.onrender.com/data/${id}`)
       .then((res) => {
         res
           .json()
@@ -56,49 +55,14 @@ export const AllRoutes = () => {
       });
   };
 
-
-
-
-
-/*
-
-
-
-
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   return (
     <div>
       <Routes>
         <Route path="/" element={<Home />}>
-
-        <Route path="/" element={ <DummyLogin/>  }></Route>
+          <Route path="/" element={<DummyLogin />}></Route>
           <Route path="/contwithphone" element={<LoginMobile />}></Route>
           <Route path="/contwithemail" element={<LoginEmail />}></Route>
           {/* <Route path="/contwithname" element={<UserName />}></Route> */}
-
-
         </Route>
         <Route path="/cars" element={<ProducPage />}></Route>
         <Route path="/books" element={<Books />}></Route>
@@ -133,8 +97,22 @@ export const AllRoutes = () => {
           path="/productDetails/:product_id"
           element={<ProductDetails />}
         ></Route>
-        <Route path="/post" element={ <PrivateRoute><SellCategories /></PrivateRoute> }></Route>
-        <Route path="/post/attribute" element={<PrivateRoute><SellingForm /></PrivateRoute>}></Route>
+        <Route
+          path="/post"
+          element={
+            <PrivateRoute>
+              <SellCategories />
+            </PrivateRoute>
+          }
+        ></Route>
+        <Route
+          path="/post/attribute"
+          element={
+            <PrivateRoute>
+              <SellingForm />
+            </PrivateRoute>
+          }
+        ></Route>
 
         {/* <Route path="/new" element={<Home />}></Route> */}
 

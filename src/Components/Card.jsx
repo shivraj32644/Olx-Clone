@@ -1,27 +1,15 @@
-import {
-  Badge,
-  Box,
-  Flex,
-  Heading,
-  HStack,
-  Image,
-  Text,
-} from "@chakra-ui/react";
+import { Badge, Box, Flex, Image } from "@chakra-ui/react";
 import React from "react";
-import { StarIcon } from "@chakra-ui/icons";
-import { AiOutlineHeart } from "react-icons/ai";
-import styles from './styles/Card.module.css'
-export const Card = ({img,des,price,city,state,date,premium}) => {
+
+export const Card = ({ img, des, price, city, state, date, premium }) => {
   const property = {
-    imageUrl:img,
+    imageUrl: img,
     imageAlt: "Rear view of modern home with pool",
     title: des,
-    formattedPrice: `₹ ${new Intl.NumberFormat('en-IN').format(price) }`,
+    formattedPrice: `₹ ${new Intl.NumberFormat("en-IN").format(price)}`,
     date: date,
     address: `${city} ${state}`,
   };
-
-  
 
   return (
     <Box
@@ -39,20 +27,19 @@ export const Card = ({img,des,price,city,state,date,premium}) => {
         justifyContent="center"
         align="start"
       >
+        {premium ? (
+          <Badge
+            zIndex={580}
+            position="absolute"
+            left={1}
+            px="2"
+            bg="#ffce32"
+            color="black"
+          >
+            Featured
+          </Badge>
+        ) : null}
 
-        {
-          premium ? <Badge
-          zIndex={580}
-          position="absolute"
-          left={1}
-          px="2"
-          bg="#ffce32"
-          color="black"
-        >
-          Featured
-          </Badge> : null
-        }
-        
         {/* <AiOutlineHeart  className={styles.heart}  /> */}
 
         <Image height="160px" src={property.imageUrl} alt={property.imageAlt} />

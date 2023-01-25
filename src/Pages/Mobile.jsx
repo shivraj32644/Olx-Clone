@@ -1,12 +1,4 @@
-import {
-  Box,
-  Container,
-  Input,
-  Stack,
-  Grid,
-  GridItem,
-  Button,
-} from "@chakra-ui/react";
+import { Box, Container, Stack, Grid, GridItem } from "@chakra-ui/react";
 import React from "react";
 import { Accordian } from "../Components/MobileComponents/Accordian";
 import { Card } from "../Components/Card";
@@ -14,15 +6,9 @@ import { SortMenu } from "../Components/MobileComponents/SortMenu";
 import { Divider } from "@chakra-ui/react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  fetchBooks,
-  fetchCars,
-  fetchData,
-  fetchMobile,
-  getData,
-} from "../data_redux/action";
-import { Link, NavLink } from "react-router-dom";
-import { useBreakpointValue } from "@chakra-ui/react";
+import { fetchData } from "../data_redux/action";
+import { NavLink } from "react-router-dom";
+// import { useBreakpointValue } from "@chakra-ui/react";
 import { useContext } from "react";
 import { MobileParamContext } from "../Context/MobileParamContext";
 import UpNavbar from "../Components/Navbar/UpNavbar";
@@ -34,15 +20,14 @@ import Footer2 from "../Components/LandingPage/Footer2";
 // import { useContext } from "react";
 
 export const Mobile = () => {
-  const variant = useBreakpointValue({
-    base: true,
-    md: false,
-    lg: false,
-  });
+  // const variant = useBreakpointValue({
+  //   base: true,
+  //   md: false,
+  //   lg: false,
+  // });
   const dispatch = useDispatch();
-  const { loading, error, data } = useSelector((store) => store.reducer);
-  const {axiosObject} =  useContext(MobileParamContext)
-  
+  const { data } = useSelector((store) => store.reducer);
+  const { axiosObject } = useContext(MobileParamContext);
 
   useEffect(() => {
     dispatch(fetchData(axiosObject));
@@ -53,7 +38,7 @@ export const Mobile = () => {
       <UpNavbar />
       <SellButton />
       <Box mt={1}>
-        <DownNavbar/>
+        <DownNavbar />
       </Box>
       <Container mt={10} maxW="84%">
         <Grid
@@ -122,7 +107,7 @@ export const Mobile = () => {
         </Stack>
       </Container>
       <Footer1 />
-      <Footer2/>
+      <Footer2 />
     </>
   );
 };

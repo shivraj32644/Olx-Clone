@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { createContext } from "react";
 import { useEffect } from "react";
-import { useContext } from "react";
+// import { useContext } from "react";
 import { useDispatch } from "react-redux";
 import { useSearchParams } from "react-router-dom";
 import { fetchData } from "../data_redux/action";
@@ -22,7 +22,7 @@ export const BooksParamContextProvider = ({ children }) => {
   // STATES FOR SORTING
   const [DateOrder, setDateOrder] = useState("");
   const [PriceOrder, setPriceOrder] = useState(Price);
-  const [DistaceOrder, setDistanceOrder] = useState("");
+  const [setDistanceOrder] = useState("");
 
   // STATES FOR SLIDER
   const [lowerValue, setLowerValue] = useState(low);
@@ -34,8 +34,7 @@ export const BooksParamContextProvider = ({ children }) => {
 
   // STATES FOR LIMIT
 
-  const [limit, setLimit] = useState(30)
-
+  const [limit, setLimit] = useState(30);
 
   // ===========================================================================================================================================
 
@@ -61,8 +60,6 @@ export const BooksParamContextProvider = ({ children }) => {
     if (brand) {
       searchParamObject["published_ads.cars.0.car_brand"] = brand;
     }
-
-   
 
     if (PriceOrder && lowerValue && upperValue && brand) {
       searchParamObject._sort = "published_ads.cars.0.set_price";
@@ -98,7 +95,7 @@ export const BooksParamContextProvider = ({ children }) => {
   }
 
   if (limit) {
-      axiosObject._limit=limit
+    axiosObject._limit = limit;
   }
 
   if (PriceOrder && lowerValue && upperValue && brand) {
@@ -117,12 +114,8 @@ export const BooksParamContextProvider = ({ children }) => {
   // }
   useEffect(() => {
     dispatch(fetchData(axiosObject));
-    
-  },[])
+  }, []);
 
-
-
-  
   var dispatchValues = {
     DateOrder,
     setDateOrder,
@@ -134,7 +127,7 @@ export const BooksParamContextProvider = ({ children }) => {
     setBrand,
     upp,
     low,
-    setLimit
+    setLimit,
   };
   return (
     <BooksParamContext.Provider value={dispatchValues}>

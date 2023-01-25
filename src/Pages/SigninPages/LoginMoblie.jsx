@@ -10,7 +10,6 @@ import {
   PinInputField,
   Text,
   useToast,
-  useDisclosure,
 } from "@chakra-ui/react";
 import { useContext, useState } from "react";
 // import { useContext } from "react";
@@ -18,7 +17,7 @@ import { useContext, useState } from "react";
 // import { AuthContext } from "../Context_V/ContextModal";
 // import { Popover } from "@chakra-ui/react";
 import { AiOutlineArrowLeft } from "react-icons/ai";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { AuthContext } from "../../Context/AuthContext/AuthContextProvider";
 import UserName from "./Login_Pass";
 const GenOtp = (otpLength) => {
@@ -32,22 +31,12 @@ const GenOtp = (otpLength) => {
 };
 
 const LoginMobile = () => {
-  const [input, setInput] = useState('')
-  const {isAuth, toggleAuth}= useContext(AuthContext)  
+  const [input, setInput] = useState("");
+  const { toggleAuth } = useContext(AuthContext);
   const toast = useToast();
   const [MobileNum, setMobileNum] = useState("");
 
   localStorage.setItem("currentUserId", "");
- 
-  
- 
-
- 
-
-
-
-
-
 
   const user = {
     mobile: MobileNum,
@@ -73,18 +62,18 @@ const LoginMobile = () => {
   };
 
   const handleLogin = () => {
-    fetch(`https://olx-clone-mock-database.herokuapp.com/data`, {
+    fetch(`https://olx-database-3xly.onrender.com/data`, {
       method: "POST",
       body: JSON.stringify(user),
       headers: {
         "content-type": "application/json",
       },
     })
-      .then((res) =>  res.json())
+      .then((res) => res.json())
       .then((res) => {
         localStorage.setItem("currentUserId", res.id);
         localStorage.setItem("isLogin", true);
-        toggleAuth()
+        toggleAuth();
       })
       .catch((res) => {
         localStorage.setItem("isLogin", false);
@@ -156,7 +145,6 @@ const LoginMobile = () => {
       <UserName input={input} setInput={setInput} />
       <br />
       <Box>
-      
         <Button
           colorScheme="teal"
           size="md"

@@ -1,9 +1,9 @@
 import { Tabs, TabList, Tab, Flex, VStack } from "@chakra-ui/react";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Outlet } from "react-router-dom";
 import UpNavbar from "../../../Components/Navbar/UpNavbar";
-import MyFav from "./MyFav";
+// import MyFav from "./MyFav";
 
 function FavPage() {
   //   let {loading,error,user} = userData

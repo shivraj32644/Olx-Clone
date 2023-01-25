@@ -8,53 +8,53 @@ import {
 import React from "react";
 import { useContext } from "react";
 import { useState } from "react";
-import { useDispatch } from "react-redux";
-import { useSearchParams } from "react-router-dom";
+// import { useDispatch } from "react-redux";
+// import { useSearchParams } from "react-router-dom";
 import { ParamContext } from "../Context/CarParamContext";
 
-import { fetchData } from "../data_redux/action";
-import { addParams } from "../param_reducer/action";
+// import { fetchData } from "../data_redux/action";
+// import { addParams } from "../param_reducer/action";
 
 export const SortMenu = () => {
   const [currValue, setCurValue] = useState("Date Published");
-  
-  const {setDateOrder,setPriceOrder,setDistanceOrder} = useContext(ParamContext)
- 
+
+  const { setDateOrder, setPriceOrder, setDistanceOrder } =
+    useContext(ParamContext);
 
   const handleChange = (e) => {
     setCurValue(e);
-    const sort = valfun(e);
-   
+    // const sort = valfun(e);
   };
 
-  const valfun = (e) => {
-    var val = "";
+  // const valfun = (e) => {
+  //   var val = "";
 
-    switch (e) {
-      case "Date Published": {
-        setDateOrder("asc");
-        break;
-      }
-      case "Relevance": {
-        setPriceOrder("");
-        break;
-      }
-      case "Price : Low to High": {
-        setPriceOrder("asc");
-        break;
-      }
-      case "Price : High to Low": {
-        setPriceOrder("desc")
-        break;
-      }
-      case "Distance": {
-        setDistanceOrder("asc");
-      }
-      default: {
-        return (val = {});
-      }
-    }
-  };
+  //   switch (e) {
+  //     case "Date Published": {
+  //       setDateOrder("asc");
+  //       break;
+  //     }
+  //     case "Relevance": {
+  //       setPriceOrder("");
+  //       break;
+  //     }
+  //     case "Price : Low to High": {
+  //       setPriceOrder("asc");
+  //       break;
+  //     }
+  //     case "Price : High to Low": {
+  //       setPriceOrder("desc");
+  //       break;
+  //     }
+  //     case "Distance": {
+  //       setDistanceOrder("asc");
+  //       break;
+  //     }
+  //     default: {
+  //       return (val = {});
+  //     }
+  //   }
+  // };
 
   return (
     <Menu zIndex={582} closeOnSelect={true}>

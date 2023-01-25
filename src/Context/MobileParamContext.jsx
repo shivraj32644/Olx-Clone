@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { createContext } from "react";
 import { useEffect } from "react";
-import { useContext } from "react";
+// import { useContext } from "react";
 import { useDispatch } from "react-redux";
 import { useSearchParams } from "react-router-dom";
 import { fetchData } from "../data_redux/action";
@@ -17,12 +17,12 @@ export const MobileContextProvider = ({ children }) => {
   var upp = searchParams.get("published_ads.mobile.0.set_price_lte");
   var low = searchParams.get("published_ads.mobile.0.set_price_gte");
   var brd = searchParams.getAll("published_ads.mobile.0.ad_title");
-  
+
   // console.log(upp, low, brd, Price);
   // STATES FOR SORTING
   const [DateOrder, setDateOrder] = useState("");
   const [PriceOrder, setPriceOrder] = useState(Price);
-  const [DistaceOrder, setDistanceOrder] = useState("");
+  const [setDistanceOrder] = useState("");
 
   // STATES FOR SLIDER
   const [lowerValue, setLowerValue] = useState(low);
@@ -32,11 +32,9 @@ export const MobileContextProvider = ({ children }) => {
 
   const [brand, setBrand] = useState(brd);
 
-
   // STATES FOR LIMIT
 
-  const [limit, setLimit] = useState(30)
-
+  const [limit, setLimit] = useState(30);
 
   // ===========================================================================================================================================
 
@@ -62,8 +60,6 @@ export const MobileContextProvider = ({ children }) => {
     if (brand) {
       searchParamObject["published_ads.mobile.0.ad_title"] = brand;
     }
-
-   
 
     if (PriceOrder && lowerValue && upperValue && brand) {
       searchParamObject._sort = "published_ads.mobile.0.set_price";
@@ -99,7 +95,7 @@ export const MobileContextProvider = ({ children }) => {
   }
 
   if (limit) {
-      axiosObject._limit=limit
+    axiosObject._limit = limit;
   }
 
   if (PriceOrder && lowerValue && upperValue && brand) {
@@ -120,11 +116,8 @@ export const MobileContextProvider = ({ children }) => {
   // console.log(axiosObject)
   useEffect(() => {
     dispatch(fetchData(axiosObject));
-  },[PriceOrder,lowerValue,upperValue,brand,limit])
-  
+  }, [PriceOrder, lowerValue, upperValue, brand, limit]);
 
-
-  
   var dispatchValues = {
     DateOrder,
     setDateOrder,
@@ -136,7 +129,7 @@ export const MobileContextProvider = ({ children }) => {
     setBrand,
     upp,
     low,
-    setLimit
+    setLimit,
   };
   return (
     <MobileParamContext.Provider value={dispatchValues}>

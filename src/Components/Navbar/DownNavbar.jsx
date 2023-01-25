@@ -4,13 +4,8 @@ import {
   Menu,
   MenuButton,
   MenuList,
-  MenuItem,
-  MenuItemOption,
-  MenuDivider,
   SimpleGrid,
   Text,
-  Heading,
-  Flex,
   useMediaQuery,
 } from "@chakra-ui/react";
 import React from "react";
@@ -52,7 +47,7 @@ const DownNavbar = () => {
 
   if (isLargerThan425) {
     return (
-      <Box mt={10} >
+      <Box mt={10}>
         <HStack padding="25px 16px 0" boxShadow=" 0 1px 4px 0 rgb(0 0 0 / 10%)">
           <Box>
             <Menu>
@@ -61,10 +56,6 @@ const DownNavbar = () => {
                 py={2}
                 transition="all 0.2s"
                 borderRadius="md"
-                // borderWidth="1px"
-                // _hover={{ bg: "gray.400" }}
-                // _expanded={{ bg: "blue.400" }}
-                // _focus={{ boxShadow: "outline" }}
                 fontWeight="700"
               >
                 ALL CATEGORIES
